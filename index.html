@@ -1,1223 +1,219 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="th">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Japan Trip 2026 ✈️</title>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --cream: #fdf6ec;
-    --ink: #1a1209;
-    --gold: #c9943a;
-    --gold-light: #e8c97a;
-    --sakura: #e8889a;
-    --sakura-pale: #fce8ed;
-    --matcha: #6b8f5e;
-    --matcha-light: #c4d9bc;
-    --indigo: #2d3a6b;
-    --indigo-light: #d0d6f0;
-    --warm-gray: #8a7d6b;
-    --card-bg: #fff9f2;
-    --border: #e8ddd0;
-  }
-
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-
-  body {
-    font-family: 'Noto Sans Thai', sans-serif;
-    background: var(--cream);
-    color: var(--ink);
-    overflow-x: hidden;
-  }
-
-  /* ========== HERO ========== */
-  .hero {
-    min-height: 100vh;
-    background: var(--indigo);
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    padding: 60px 24px;
-  }
-
-  .hero-bg {
-    position: absolute; inset: 0;
-    background:
-      radial-gradient(ellipse at 20% 50%, rgba(201,148,58,0.15) 0%, transparent 60%),
-      radial-gradient(ellipse at 80% 20%, rgba(232,136,154,0.12) 0%, transparent 50%),
-      radial-gradient(ellipse at 60% 80%, rgba(107,143,94,0.1) 0%, transparent 50%);
-  }
-
-  /* Decorative circles */
-  .hero-deco {
-    position: absolute;
-    border-radius: 50%;
-    border: 1px solid rgba(255,255,255,0.07);
-  }
-  .deco-1 { width: 600px; height: 600px; top: -150px; right: -150px; }
-  .deco-2 { width: 400px; height: 400px; bottom: -100px; left: -100px; }
-  .deco-3 { width: 200px; height: 200px; top: 50%; left: 10%; border-color: rgba(201,148,58,0.2); }
-
-  /* Sakura petals */
-  .petals { position: absolute; inset: 0; pointer-events: none; }
-  .petal {
-    position: absolute;
-    width: 8px; height: 8px;
-    background: rgba(232,136,154,0.4);
-    border-radius: 50% 0 50% 0;
-    animation: fall linear infinite;
-  }
-  @keyframes fall {
-    0% { transform: translateY(-20px) rotate(0deg); opacity: 0; }
-    10% { opacity: 1; }
-    90% { opacity: 0.5; }
-    100% { transform: translateY(110vh) rotate(720deg); opacity: 0; }
-  }
-
-  .hero-flag {
-    font-size: 3rem;
-    margin-bottom: 12px;
-    animation: fadeUp 0.8s ease both;
-  }
-
-  .hero-title {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(2.2rem, 6vw, 4rem);
-    color: #fff;
-    text-align: center;
-    line-height: 1.15;
-    animation: fadeUp 0.9s 0.1s ease both;
-    letter-spacing: -0.5px;
-  }
-
-  .hero-title span { color: var(--gold-light); font-style: italic; }
-
-  .hero-sub {
-    margin-top: 12px;
-    color: rgba(255,255,255,0.6);
-    font-size: 0.95rem;
-    text-align: center;
-    animation: fadeUp 1s 0.2s ease both;
-    letter-spacing: 0.5px;
-  }
-
-  .hero-tags {
-    display: flex; flex-wrap: wrap; gap: 8px;
-    justify-content: center;
-    margin-top: 20px;
-    animation: fadeUp 1s 0.3s ease both;
-  }
-
-  .tag {
-    background: rgba(255,255,255,0.1);
-    border: 1px solid rgba(255,255,255,0.2);
-    color: rgba(255,255,255,0.85);
-    padding: 5px 14px;
-    border-radius: 999px;
-    font-size: 0.82rem;
-    backdrop-filter: blur(8px);
-  }
-  .tag.gold { background: rgba(201,148,58,0.25); border-color: var(--gold); color: var(--gold-light); }
-
-  .hero-dates {
-    margin-top: 28px;
-    display: flex; align-items: center; gap: 12px;
-    animation: fadeUp 1s 0.35s ease both;
-  }
-
-  .date-badge {
-    background: var(--gold);
-    color: var(--ink);
-    padding: 10px 20px;
-    border-radius: 8px;
-    font-weight: 700;
-    font-size: 1rem;
-    letter-spacing: 0.3px;
-  }
-
-  .date-sep { color: rgba(255,255,255,0.4); font-size: 1.2rem; }
-
-  /* Countdown */
-  .countdown {
-    margin-top: 32px;
-    animation: fadeUp 1s 0.4s ease both;
-    text-align: center;
-  }
-  .countdown-label {
-    color: rgba(255,255,255,0.5);
-    font-size: 0.78rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 12px;
-  }
-  .countdown-boxes {
-    display: flex; gap: 10px; justify-content: center;
-  }
-  .cd-box {
-    background: rgba(255,255,255,0.08);
-    border: 1px solid rgba(255,255,255,0.15);
-    border-radius: 10px;
-    padding: 12px 16px;
-    min-width: 64px;
-    text-align: center;
-    backdrop-filter: blur(8px);
-  }
-  .cd-num {
-    font-family: 'DM Mono', monospace;
-    font-size: 1.6rem;
-    color: #fff;
-    font-weight: 300;
-    line-height: 1;
-  }
-  .cd-unit {
-    font-size: 0.68rem;
-    color: rgba(255,255,255,0.45);
-    margin-top: 4px;
-    letter-spacing: 1px;
-  }
-
-  .hero-scroll {
-    position: absolute; bottom: 30px;
-    display: flex; flex-direction: column; align-items: center; gap: 6px;
-    color: rgba(255,255,255,0.35);
-    font-size: 0.72rem;
-    letter-spacing: 2px;
-    animation: bob 2s ease-in-out infinite;
-  }
-  @keyframes bob { 0%,100%{transform:translateY(0)} 50%{transform:translateY(6px)} }
-
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-
-  /* ========== NAV DOTS ========== */
-  .day-nav {
-    position: sticky;
-    top: 0; z-index: 100;
-    background: rgba(253,246,236,0.92);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--border);
-    padding: 12px 16px;
-    display: flex; gap: 6px;
-    overflow-x: auto;
-    scrollbar-width: none;
-  }
-  .day-nav::-webkit-scrollbar { display: none; }
-
-  .nav-btn {
-    flex-shrink: 0;
-    padding: 6px 14px;
-    border-radius: 999px;
-    border: 1px solid var(--border);
-    background: transparent;
-    font-family: 'Noto Sans Thai', sans-serif;
-    font-size: 0.78rem;
-    color: var(--warm-gray);
-    cursor: pointer;
-    transition: all 0.2s;
-    white-space: nowrap;
-  }
-  .nav-btn:hover, .nav-btn.active {
-    background: var(--indigo);
-    border-color: var(--indigo);
-    color: #fff;
-  }
-  .nav-btn.tw { }
-  .nav-btn.tw.active { background: #c0392b; border-color: #c0392b; }
-
-  /* ========== DAY SECTION ========== */
-  .day-section {
-    max-width: 760px;
-    margin: 0 auto;
-    padding: 40px 20px 20px;
-  }
-
-  .day-header {
-    display: flex; align-items: flex-start; gap: 16px;
-    margin-bottom: 28px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid var(--border);
-  }
-
-  .day-number {
-    flex-shrink: 0;
-    width: 56px; height: 56px;
-    border-radius: 12px;
-    display: flex; flex-direction: column;
-    align-items: center; justify-content: center;
-    font-family: 'DM Mono', monospace;
-  }
-  .day-number .num { font-size: 1.4rem; font-weight: 400; line-height: 1; }
-  .day-number .lbl { font-size: 0.6rem; letter-spacing: 1px; margin-top: 2px; opacity: 0.7; }
-  .day-number.taiwan { background: #fde8e8; color: #c0392b; }
-  .day-number.japan { background: var(--indigo-light); color: var(--indigo); }
-  .day-number.kobe { background: #e8f0ff; color: #1a3a8f; }
-  .day-number.special { background: #fff3e0; color: #e65100; }
-
-  .day-meta h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.4rem;
-    color: var(--ink);
-    line-height: 1.2;
-  }
-  .day-meta .day-date {
-    font-size: 0.82rem;
-    color: var(--warm-gray);
-    margin-top: 4px;
-  }
-  .day-meta .day-vibe {
-    margin-top: 6px;
-    display: flex; flex-wrap: wrap; gap: 5px;
-  }
-  .vibe-tag {
-    font-size: 0.72rem;
-    padding: 3px 10px;
-    border-radius: 999px;
-    background: var(--sakura-pale);
-    color: var(--sakura);
-    border: 1px solid rgba(232,136,154,0.3);
-  }
-  .vibe-tag.matcha { background: #eef5eb; color: var(--matcha); border-color: rgba(107,143,94,0.3); }
-  .vibe-tag.gold { background: #fdf3e3; color: var(--gold); border-color: rgba(201,148,58,0.3); }
-  .vibe-tag.indigo { background: var(--indigo-light); color: var(--indigo); border-color: rgba(45,58,107,0.3); }
-
-  /* ========== PHOTO STRIP ========== */
-  .photo-strip {
-    display: grid;
-    gap: 6px;
-    margin-bottom: 24px;
-    border-radius: 12px;
-    overflow: hidden;
-  }
-  .photo-strip.cols-2 { grid-template-columns: 1fr 1fr; }
-  .photo-strip.cols-4 { grid-template-columns: 1fr 1fr 1fr 1fr; }
-  .photo-strip.cols-3 { grid-template-columns: 2fr 1fr 1fr; }
-
-  .photo-strip img {
-    width: 100%; height: 140px;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.3s;
-  }
-  .photo-strip img:hover { transform: scale(1.03); }
-
-  /* ========== TIMELINE ========== */
-  .timeline {
-    position: relative;
-    padding-left: 28px;
-  }
-  .timeline::before {
-    content: '';
-    position: absolute;
-    left: 8px; top: 8px; bottom: 8px;
-    width: 1px;
-    background: linear-gradient(to bottom, var(--gold) 0%, var(--sakura) 50%, var(--matcha) 100%);
-    opacity: 0.4;
-  }
-
-  .tl-item {
-    position: relative;
-    margin-bottom: 16px;
-    opacity: 0;
-    transform: translateX(-8px);
-    transition: all 0.4s ease;
-  }
-  .tl-item.visible { opacity: 1; transform: translateX(0); }
-
-  .tl-dot {
-    position: absolute;
-    left: -23px; top: 14px;
-    width: 10px; height: 10px;
-    border-radius: 50%;
-    background: var(--gold);
-    border: 2px solid var(--cream);
-    box-shadow: 0 0 0 2px var(--gold);
-  }
-  .tl-dot.sakura { background: var(--sakura); box-shadow: 0 0 0 2px var(--sakura); }
-  .tl-dot.matcha { background: var(--matcha); box-shadow: 0 0 0 2px var(--matcha); }
-  .tl-dot.indigo { background: var(--indigo); box-shadow: 0 0 0 2px var(--indigo); }
-
-  .tl-card {
-    background: var(--card-bg);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 14px 16px;
-    position: relative;
-  }
-  .tl-card:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
-
-  .tl-time {
-    font-family: 'DM Mono', monospace;
-    font-size: 0.72rem;
-    color: var(--gold);
-    font-weight: 400;
-    margin-bottom: 4px;
-    letter-spacing: 0.5px;
-  }
-
-  .tl-title {
-    font-weight: 600;
-    font-size: 0.95rem;
-    color: var(--ink);
-    line-height: 1.3;
-  }
-
-  .tl-desc {
-    margin-top: 6px;
-    font-size: 0.82rem;
-    color: var(--warm-gray);
-    line-height: 1.6;
-  }
-
-  .tl-chips {
-    display: flex; flex-wrap: wrap; gap: 6px;
-    margin-top: 10px;
-  }
-  .chip {
-    font-size: 0.72rem;
-    padding: 4px 10px;
-    border-radius: 999px;
-    background: var(--indigo-light);
-    color: var(--indigo);
-    text-decoration: none;
-    transition: all 0.2s;
-    display: inline-flex; align-items: center; gap: 4px;
-  }
-  .chip:hover { background: var(--indigo); color: #fff; }
-  .chip.map { background: #e8f5e9; color: var(--matcha); }
-  .chip.map:hover { background: var(--matcha); color: #fff; }
-  .chip.food { background: #fff3e0; color: var(--gold); }
-  .chip.food:hover { background: var(--gold); color: #fff; }
-
-  /* ========== SPOT CARDS ========== */
-  .spots-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-    margin-bottom: 20px;
-  }
-
-  .spot-card {
-    background: var(--card-bg);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 14px;
-  }
-  .spot-card .spot-icon { font-size: 1.4rem; margin-bottom: 6px; }
-  .spot-card .spot-name { font-weight: 600; font-size: 0.88rem; }
-  .spot-card .spot-note { font-size: 0.76rem; color: var(--warm-gray); margin-top: 3px; line-height: 1.4; }
-
-  /* ========== HOTEL BANNER ========== */
-  .hotel-banner {
-    background: linear-gradient(135deg, var(--indigo) 0%, #1a2450 100%);
-    border-radius: 14px;
-    padding: 20px;
-    color: #fff;
-    margin-bottom: 24px;
-    position: relative;
-    overflow: hidden;
-  }
-  .hotel-banner::after {
-    content: '🏨';
-    position: absolute;
-    right: 20px; top: 50%;
-    transform: translateY(-50%);
-    font-size: 3rem;
-    opacity: 0.15;
-  }
-  .hotel-banner .hb-label { font-size: 0.72rem; color: rgba(255,255,255,0.55); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 6px; }
-  .hotel-banner .hb-name { font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 4px; }
-  .hotel-banner .hb-period { font-size: 0.82rem; color: var(--gold-light); }
-
-  /* ========== SECTION DIVIDER ========== */
-  .country-divider {
-    max-width: 760px;
-    margin: 10px auto;
-    padding: 0 20px;
-  }
-  .cd-inner {
-    border-radius: 16px;
-    padding: 24px;
-    display: flex; align-items: center; gap: 16px;
-  }
-  .cd-inner.taiwan { background: linear-gradient(135deg, #c0392b, #922b21); }
-  .cd-inner.japan { background: linear-gradient(135deg, var(--indigo), #1a2450); }
-  .cd-flag { font-size: 2.5rem; }
-  .cd-text h3 { font-family: 'Playfair Display', serif; color: #fff; font-size: 1.3rem; }
-  .cd-text p { color: rgba(255,255,255,0.65); font-size: 0.82rem; margin-top: 3px; }
-
-  /* ========== FOOTER ========== */
-  footer {
-    max-width: 760px;
-    margin: 40px auto 60px;
-    padding: 30px 20px;
-    text-align: center;
-    border-top: 1px solid var(--border);
-  }
-  footer p { color: var(--warm-gray); font-size: 0.82rem; line-height: 1.7; }
-  footer .footer-emoji { font-size: 1.5rem; margin-bottom: 8px; }
-
-  /* ========== RESPONSIVE ========== */
-  @media (max-width: 480px) {
-    .spots-grid { grid-template-columns: 1fr; }
-    .photo-strip.cols-4 { grid-template-columns: 1fr 1fr; }
-    .photo-strip img { height: 110px; }
-    .countdown-boxes { gap: 6px; }
-    .cd-box { min-width: 52px; padding: 10px 10px; }
-    .cd-num { font-size: 1.3rem; }
-  }
-</style>
-</head>
-<body>
-
-<!-- ===== HERO ===== -->
-<section class="hero">
-  <div class="hero-bg"></div>
-  <div class="hero-deco deco-1"></div>
-  <div class="hero-deco deco-2"></div>
-  <div class="hero-deco deco-3"></div>
-
-  <div class="petals" id="petals"></div>
-
-  <div class="hero-flag">🇹🇼 ✈️ 🇯🇵</div>
-  <h1 class="hero-title">Taipei × <span>Osaka</span><br>Slow Life 2026</h1>
-  <p class="hero-sub">คู่รักวัย 40s · คาเฟ่ · ไวน์ · เดินไม่รีบ</p>
-
-  <div class="hero-tags">
-    <span class="tag">☕ Specialty Coffee</span>
-    <span class="tag">🍷 Wine Bar</span>
-    <span class="tag gold">🌸 Slow Travel</span>
-    <span class="tag">🍜 Local Food</span>
-    <span class="tag">🏯 Heritage</span>
-  </div>
-
-  <div class="hero-dates">
-    <div class="date-badge">16 พ.ค. 2026</div>
-    <span class="date-sep">→</span>
-    <div class="date-badge">24 พ.ค. 2026</div>
-  </div>
-
-  <div class="countdown">
-    <div class="countdown-label">นับถอยหลัง</div>
-    <div class="countdown-boxes" id="countdown"></div>
-  </div>
-
-  <div class="hero-scroll">
-    <span>SCROLL</span>
-    <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
-  </div>
-</section>
-
-<!-- ===== NAV ===== -->
-<nav class="day-nav" id="dayNav">
-  <button class="nav-btn tw active" onclick="scrollTo('taiwan')">🇹🇼 Transit</button>
-  <button class="nav-btn tw" onclick="scrollTo('day0')">Day 0</button>
-  <button class="nav-btn tw" onclick="scrollTo('day1tw')">Day 1 (TW)</button>
-  <button class="nav-btn" onclick="scrollTo('day1jp')">Day 1 🇯🇵</button>
-  <button class="nav-btn" onclick="scrollTo('day2')">Day 2</button>
-  <button class="nav-btn" onclick="scrollTo('day3')">Day 3</button>
-  <button class="nav-btn" onclick="scrollTo('day4')">Day 4</button>
-  <button class="nav-btn" onclick="scrollTo('day5')">Day 5</button>
-  <button class="nav-btn" onclick="scrollTo('day6')">Day 6</button>
-  <button class="nav-btn" onclick="scrollTo('day7')">Day 7</button>
-  <button class="nav-btn" onclick="scrollTo('day8')">Day 8 ✈️</button>
-</nav>
-
-<!-- ===== TAIWAN DIVIDER ===== -->
-<div class="country-divider" id="taiwan">
-  <div class="cd-inner taiwan">
-    <span class="cd-flag">🇹🇼</span>
-    <div class="cd-text">
-      <h3>Taipei Transit Stop</h3>
-      <p>16–17 พฤษภาคม 2026 · City Suites Gateway</p>
-    </div>
-  </div>
-</div>
-
-<!-- ===== DAY 0 ===== -->
-<section class="day-section" id="day0">
-  <div class="day-header">
-    <div class="day-number taiwan"><span class="num">D0</span><span class="lbl">TW</span></div>
-    <div class="day-meta">
-      <h2>ถึงไต้หวัน — คืนสบาย</h2>
-      <div class="day-date">วันศุกร์ที่ 16 พฤษภาคม 2026</div>
-      <div class="day-vibe">
-        <span class="vibe-tag">🛬 Arrival</span>
-        <span class="vibe-tag gold">🛍️ Gloria Outlets</span>
-        <span class="vibe-tag">🥟 Din Tai Fung</span>
-      </div>
-    </div>
-  </div>
-
-  <div class="photo-strip cols-4">
-    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/19/b9/5f/18/din.jpg?h=500&s=1&w=900" alt="Din Tai Fung" loading="lazy" onerror="this.style.background='#eee';this.removeAttribute('src')">
-    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/19/a8/e3/95/din.jpg?h=500&s=1&w=900" alt="Din Tai Fung" loading="lazy" onerror="this.style.background='#eee';this.removeAttribute('src')">
-    <img src="https://s3-ap-southeast-1.amazonaws.com/atap-main/gallery-full/efe0feb1-4ff6-4264-a0b4-b1d3d90e98b1/energ-x-park.jpg" alt="Xpark" loading="lazy" onerror="this.style.background='#eee';this.removeAttribute('src')">
-    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/f0/be/f5/caption.jpg?h=500&s=1&w=900" alt="Gloria Outlets" loading="lazy" onerror="this.style.background='#eee';this.removeAttribute('src')">
-  </div>
-
-  <div class="timeline">
-    <div class="tl-item">
-      <div class="tl-dot indigo"></div>
-      <div class="tl-card">
-        <div class="tl-time">13:25 — 14:30</div>
-        <div class="tl-title">✈️ BR062 ถึง Taoyuan Airport</div>
-        <div class="tl-desc">ผ่าน ตม. รับกระเป๋า ออกจากสนามบินประมาณ 14:15–14:30</div>
-      </div>
-    </div>
-    <div class="tl-item">
-      <div class="tl-dot"></div>
-      <div class="tl-card">
-        <div class="tl-time">14:30 — 14:45</div>
-        <div class="tl-title">🚕 Taxi → City Suites Gateway</div>
-        <div class="tl-desc">ประมาณ 5–10 นาที · ค่า Taxi ~NT$200–250</div>
-      </div>
-    </div>
-    <div class="tl-item">
-      <div class="tl-dot sakura"></div>
-      <div class="tl-card">
-        <div class="tl-time">14:45 — 16:15</div>
-        <div class="tl-title">🏨 Check-in + พักผ่อน</div>
-        <div class="tl-desc">อาบน้ำ เปลี่ยนเสื้อผ้า พักให้หายเหนื่อย</div>
-      </div>
-    </div>
-    <div class="tl-item">
-      <div class="tl-dot"></div>
-      <div class="tl-card">
-        <div class="tl-time">16:30 — 19:30</div>
-        <div class="tl-title">🛍️ Gloria Outlets + Xpark</div>
-        <div class="tl-desc">เดินเล่น Outlet · แวะดู Xpark ด้านนอก · นั่งกาแฟที่ Starbucks Reserve · ช้อปปิ้งเบาๆ</div>
-        <div class="tl-chips">
-          <a href="https://maps.app.goo.gl/4cXA4CiSGQVPrBqH9" target="_blank" class="chip map">📍 แผนที่</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Taipei Transit + Osaka Slow Life</title>
+    <meta
+      name="description"
+      content="A bright, mobile-first itinerary for a Taipei transit night and Osaka slow-life couple trip in May 2026."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Noto+Sans+Thai:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="topbar-actions">
+          <a class="ghost-button" href="#summary">สรุปค่าใช้จ่าย</a>
+          <a class="ghost-button" id="today-anchor" href="#days">ดูแผนวันนี้</a>
+          <button
+            class="icon-button"
+            id="theme-toggle"
+            type="button"
+            aria-label="Toggle dark mode"
+            aria-pressed="false"
+          >
+            <span class="theme-icon" aria-hidden="true">☾</span>
+          </button>
         </div>
-      </div>
-    </div>
-    <div class="tl-item">
-      <div class="tl-dot gold"></div>
-      <div class="tl-card">
-        <div class="tl-time">19:30 — 21:00</div>
-        <div class="tl-title">🥟 Dinner · Din Tai Fung Gloria Outlets</div>
-        <div class="tl-desc">ถ้าอยากดื่มต่อ: Blu Bar · เหมาะกับไวน์หรือเบียร์เบาๆ 🍷</div>
-        <div class="tl-chips">
-          <a href="https://www.dintaifung.com.tw" target="_blank" class="chip food">🥟 Din Tai Fung</a>
-        </div>
-      </div>
-    </div>
-    <div class="tl-item">
-      <div class="tl-dot"></div>
-      <div class="tl-card">
-        <div class="tl-time">21:00 — 22:30</div>
-        <div class="tl-title">🏨 กลับโรงแรม + เตรียมของ</div>
-        <div class="tl-desc">Taxi / Uber กลับโรงแรม · เตรียมของและพักผ่อน · เข้านอน 22:30</div>
-      </div>
-    </div>
-  </div>
-</section>
+      </header>
 
-<!-- ===== DAY 1 TW ===== -->
-<section class="day-section" id="day1tw">
-  <div class="day-header">
-    <div class="day-number taiwan"><span class="num">D1</span><span class="lbl">TW</span></div>
-    <div class="day-meta">
-      <h2>บินต่อ → โอซากะ</h2>
-      <div class="day-date">วันเสาร์ที่ 17 พฤษภาคม 2026</div>
-      <div class="day-vibe">
-        <span class="vibe-tag indigo">✈️ EVA Air</span>
-        <span class="vibe-tag gold">⭐ Star Lounge</span>
-      </div>
-    </div>
-  </div>
+      <main>
+        <section class="hero" id="hero">
+          <div class="hero-bg"></div>
+          <div class="hero-deco deco-1"></div>
+          <div class="hero-deco deco-2"></div>
+          <div class="hero-deco deco-3"></div>
+          <div class="petals" id="petals"></div>
 
-  <div class="photo-strip cols-4">
-    <img src="https://images.squarespace-cdn.com/content/v1/52ccee75e4b00bc0dba03f46/1590891440489-5S8I6Z6OMMOT4Y8ZPKZ4/image-asset.jpeg" alt="EVA Air" loading="lazy" onerror="this.style.background='#eee';this.removeAttribute('src')">
-    <img src="https://www.kupi.com/kland-storage/images/670x0/30x30/anyports/tw/taiwan-taoyuan-international-airport/819d0796-56dd-459d-87ef-d05e3f858457.webp" alt="Taoyuan Airport" loading="lazy" onerror="this.style.background='#eee';this.removeAttribute('src')">
-    <img src="https://static.wixstatic.com/media/021768_8250150f48b143769b62d6e290092326~mv2.png/v1/fill/w_980%2Ch_735%2Cal_c%2Cq_90%2Cusm_0.66_1.00_0.01%2Cenc_avif%2Cquality_auto/021768_8250150f48b143769b62d6e290092326~mv2.png" alt="EVA Lounge" loading="lazy" onerror="this.style.background='#eee';this.removeAttribute('src')">
-    <img src="https://ak-d.tripcdn.com/images/1mi43224x98rwvdjaCE49.jpg" alt="Osaka" loading="lazy" onerror="this.style.background='#eee';this.removeAttribute('src')">
-  </div>
+          <div class="hero-inner">
+            <div class="hero-copy">
+              <div class="hero-flag">🇹🇼 ✈️ 🇯🇵</div>
+              <p class="eyebrow">16–24 พฤษภาคม 2026</p>
+              <h1 class="hero-title">Taipei × <span>Osaka</span><br />Slow Life 2026</h1>
+              <p class="hero-summary">
+                เวอร์ชันสุดท้ายของทริปคู่รักสาย slow life ที่ค่อย ๆ ไหลจากคืน
+                transit ในไต้หวันไปสู่โอซากะ เกียวโต มิโนะ อุจิ และโกเบแบบสบาย
+                หรู นุ่ม และบาลานซ์
+              </p>
+              <div class="hero-pills hero-tags" id="member-pills"></div>
+              <div class="hero-dates">
+                <div class="date-badge">16 พ.ค. 2026</div>
+                <span class="date-sep">→</span>
+                <div class="date-badge">24 พ.ค. 2026</div>
+              </div>
+              <div class="hero-metrics" id="hero-metrics"></div>
+            </div>
 
-  <div class="timeline">
-    <div class="tl-item">
-      <div class="tl-dot"></div>
-      <div class="tl-card">
-        <div class="tl-time">05:45</div>
-        <div class="tl-title">⏰ ตื่น / เช็กของ</div>
-      </div>
-    </div>
-    <div class="tl-item">
-      <div class="tl-dot"></div>
-      <div class="tl-card">
-        <div class="tl-time">06:10</div>
-        <div class="tl-title">🚕 Taxi → สนามบิน</div>
-        <div class="tl-desc">5–10 นาที ถึงสนามบิน</div>
-      </div>
-    </div>
-    <div class="tl-item">
-      <div class="tl-dot indigo"></div>
-      <div class="tl-card">
-        <div class="tl-time">06:20 — 06:45</div>
-        <div class="tl-title">🛂 Check-in / ตม. / Security</div>
-        <div class="tl-desc">ใช้ช่อง Priority ของ Royal Laurel</div>
-      </div>
-    </div>
-    <div class="tl-item">
-      <div class="tl-dot gold"></div>
-      <div class="tl-card">
-        <div class="tl-time">06:45 — 07:50</div>
-        <div class="tl-title">⭐ EVA Air · The Star Lounge</div>
-        <div class="tl-desc">อาหารเช้า · กาแฟ · Shower · นั่งพักก่อนบิน</div>
-      </div>
-    </div>
-    <div class="tl-item">
-      <div class="tl-dot sakura"></div>
-      <div class="tl-card">
-        <div class="tl-time">08:20</div>
-        <div class="tl-title">✈️ BR132 · Taipei → Osaka KIX</div>
-        <div class="tl-desc">เดินไป Gate เวลา 07:50 · เที่ยวบินออกเดินทาง 08:20</div>
-      </div>
-    </div>
-  </div>
-</section>
+            <div class="hero-side">
+              <section class="countdown-card">
+                <p class="card-label">Countdown</p>
+                <h2 id="countdown-title">กำลังเตรียมตัวออกเดินทาง</h2>
+                <div class="countdown-grid" id="countdown-grid"></div>
+                <p class="helper-text" id="countdown-helper">
+                  นับถอยหลังสู่วันเริ่มทริป
+                </p>
+              </section>
 
-<!-- ===== JAPAN DIVIDER ===== -->
-<div class="country-divider" id="day1jp">
-  <div class="cd-inner japan">
-    <span class="cd-flag">🇯🇵</span>
-    <div class="cd-text">
-      <h3>Osaka · Kyoto · Minoh · Uji · Kobe</h3>
-      <p>17–24 พฤษภาคม 2026 · ใช้ ICOCA ¥10,000/คน</p>
-    </div>
-  </div>
-</div>
+              <section class="status-card">
+                <p class="card-label">Trip Snapshot</p>
+                <div class="status-copy" id="status-copy"></div>
+              </section>
+            </div>
+          </div>
 
-<!-- HOTEL BANNER -->
-<div style="max-width:760px;margin:0 auto;padding:0 20px 10px;">
-  <div class="hotel-banner">
-    <div class="hb-label">🏨 ที่พัก Osaka</div>
-    <div class="hb-name">VIA INN PRIME Shinsaibashi Yotsubashi</div>
-    <div class="hb-period">17–22 พ.ค. · จากนั้น Swissôtel Nankai Osaka (22–24 พ.ค.)</div>
-  </div>
-</div>
+          <div class="hero-scroll">
+            <span>SCROLL</span>
+            <span aria-hidden="true">↓</span>
+          </div>
+        </section>
 
-<!-- ===== DAY 1 JP ===== -->
-<section class="day-section">
-  <div class="day-header">
-    <div class="day-number japan"><span class="num">D1</span><span class="lbl">JP</span></div>
-    <div class="day-meta">
-      <h2>Arrival Osaka 🛬</h2>
-      <div class="day-date">วันเสาร์ที่ 17 พฤษภาคม 2026</div>
-      <div class="day-vibe">
-        <span class="vibe-tag indigo">🛬 KIX</span>
-        <span class="vibe-tag">🏙️ Shinsaibashi</span>
-        <span class="vibe-tag gold">🥩 Gyutoroya</span>
-      </div>
-    </div>
-  </div>
+        <nav class="day-nav" id="day-nav"></nav>
 
-  <div class="photo-strip cols-4">
-    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0b/84/8a/c6/beautiful-evening-scenes.jpg?h=500&s=1&w=900" alt="Osaka Night" loading="lazy" onerror="this.style.background='#eee';this.removeAttribute('src')">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/e/ee/Amerikamura.jpg" alt="Amerikamura" loading="lazy" onerror="this.style.background='#eee';this.removeAttribute('src')">
-    <img src="https://www.gyutoroya.com/shared/img/index/key_img03.jpg" alt="Gyutoroya" loading="lazy" onerror="this.style.background='#eee';this.removeAttribute('src')">
-    <img src="https://www.gyutoroya.com/shared/img/english/about_img03.png" alt="Gyutoroya" loading="lazy" onerror="this.style.background='#eee';this.removeAttribute('src')">
-  </div>
+        <section class="overview-grid">
+          <article class="panel">
+            <div class="section-intro">
+              <div>
+                <p class="eyebrow">Hotels</p>
+                <h2>ที่พักทั้งหมด</h2>
+              </div>
+            </div>
+            <div class="hotel-list" id="hotel-list"></div>
+          </article>
 
-  <div class="timeline">
-    <div class="tl-item">
-      <div class="tl-dot indigo"></div>
-      <div class="tl-card">
-        <div class="tl-time">12:10</div>
-        <div class="tl-title">🛬 ถึง Kansai International Airport</div>
-      </div>
-    </div>
-    <div class="tl-item">
-      <div class="tl-dot"></div>
-      <div class="tl-card">
-        <div class="tl-time">12:45 — 13:45</div>
-        <div class="tl-title">🚌 Airport Limousine → Namba</div>
-      </div>
-    </div>
-    <div class="tl-item">
-      <div class="tl-dot sakura"></div>
-      <div class="tl-card">
-        <div class="tl-time">14:00</div>
-        <div class="tl-title">🏨 Check-in VIA INN PRIME</div>
-      </div>
-    </div>
-    <div class="tl-item">
-      <div class="tl-dot"></div>
-      <div class="tl-card">
-        <div class="tl-time">16:00 — 17:30</div>
-        <div class="tl-title">🚶 เดิน Shinsaibashi / Amerikamura</div>
-        <div class="tl-desc">เริ่มสัมผัสบรรยากาศโอซากะ ช้อปปิ้งเบาๆ ย่านวัยรุ่น</div>
-      </div>
-    </div>
-    <div class="tl-item">
-      <div class="tl-dot gold"></div>
-      <div class="tl-card">
-        <div class="tl-time">18:30</div>
-        <div class="tl-title">🥩 Dinner · Gyutoroya Fukushima</div>
-        <div class="tl-desc">เนื้อย่างญี่ปุ่นสไตล์เต็มคัน</div>
-        <div class="tl-chips">
-          <a href="https://www.gyutoroya.com" target="_blank" class="chip food">🥩 เว็บไซต์</a>
-        </div>
-      </div>
-    </div>
-    <div class="tl-item">
-      <div class="tl-dot"></div>
-      <div class="tl-card">
-        <div class="tl-time">21:00</div>
-        <div class="tl-title">🍺 Craft Beer Works Kamikaze</div>
-        <div class="tl-desc">ปิดคืนแรกด้วย Craft Beer ท้องถิ่น</div>
-      </div>
-    </div>
-  </div>
-</section>
+          <article class="panel">
+            <div class="section-intro">
+              <div>
+                <p class="eyebrow">Trip Mood</p>
+                <h2>ภาพรวมทริป</h2>
+              </div>
+            </div>
+            <div class="note-list" id="note-list"></div>
+          </article>
+        </section>
 
-<!-- ===== DAY 2 ===== -->
-<section class="day-section" id="day2">
-  <div class="day-header">
-    <div class="day-number japan"><span class="num">D2</span><span class="lbl">OSK</span></div>
-    <div class="day-meta">
-      <h2>Osaka Classic Day</h2>
-      <div class="day-date">วันอาทิตย์ที่ 18 พฤษภาคม 2026</div>
-      <div class="day-vibe">
-        <span class="vibe-tag matcha">🏯 Castle</span>
-        <span class="vibe-tag">🍣 Dotonbori</span>
-        <span class="vibe-tag gold">🍷 Bar Nayuta</span>
-      </div>
-    </div>
-  </div>
+        <section class="section-header" id="summary">
+          <div>
+            <p class="eyebrow">Budget & Cards</p>
+            <h2>สรุปบัตรเดินทาง ค่าใช้จ่าย และของที่ต้องเตรียม</h2>
+          </div>
+          <p class="section-copy">
+            อ่านหน้านี้รอบเดียวก่อนบินแล้วใช้เป็น reference ระหว่างทริปได้เลย
+          </p>
+        </section>
 
-  <div class="photo-strip cols-4">
-    <img src="https://pic.k-cdn.media/2022/05/20220513-spring-blossoms-at-osaka-castle-park-main.jpg" alt="Osaka Castle" loading="lazy" onerror="this.style.background='#eee';this.removeAttribute('src')">
-    <img src="https://cdn.gaijinpot.com/app/uploads/sites/6/2016/09/iStock-900771306.jpg" alt="Shinsekai" loading="lazy" onerror="this.style.background='#eee';this.removeAttribute('src')">
-    <img src="https://i.pinimg.com/736x/51/9b/0e/519b0e2d67b3fe476725faf01c37a049.jpg" alt="Namba Yasaka" loading="lazy" onerror="this.style.background='#eee';this.removeAttribute('src')">
-    <img src="https://live.staticflickr.com/65535/47999147332_e23444abd0_b.jpg" alt="Dotonbori" loading="lazy" onerror="this.style.background='#eee';this.removeAttribute('src')">
-  </div>
+        <section class="summary-grid">
+          <article class="panel">
+            <div class="section-intro">
+              <div>
+                <p class="eyebrow">Travel Cards</p>
+                <h2>บัตรและวิธีจ่ายที่ใช้จริง</h2>
+              </div>
+            </div>
+            <div class="fare-card-list" id="transport-card-list"></div>
+          </article>
 
-  <div class="spots-grid">
-    <div class="spot-card">
-      <div class="spot-icon">🏯</div>
-      <div class="spot-name">Osaka Castle Park</div>
-      <div class="spot-note">สวนสวย เดินเล่นรอบปราสาทยามเช้า</div>
-    </div>
-    <div class="spot-card">
-      <div class="spot-icon">🍜</div>
-      <div class="spot-name">Ramen Jinsei Jet600</div>
-      <div class="spot-note">Lunch · ราเม็งชื่อดัง</div>
-    </div>
-    <div class="spot-card">
-      <div class="spot-icon">🗼</div>
-      <div class="spot-name">Shinsekai</div>
-      <div class="spot-note">ย่านเก่าโอซากะ บรรยากาศย้อนยุค</div>
-    </div>
-    <div class="spot-card">
-      <div class="spot-icon">⛩️</div>
-      <div class="spot-name">Namba Yasaka Jinja</div>
-      <div class="spot-note">ศาลเจ้าปากสิงห์ขนาดยักษ์</div>
-    </div>
-    <div class="spot-card">
-      <div class="spot-icon">🌉</div>
-      <div class="spot-name">Dotonbori</div>
-      <div class="spot-note">เดินเล่นย่านไนท์ไลฟ์ยอดฮิต</div>
-    </div>
-    <div class="spot-card">
-      <div class="spot-icon">🍷</div>
-      <div class="spot-name">Bar Nayuta</div>
-      <div class="spot-note">Nightcap · ไวน์ปิดคืน</div>
-    </div>
-  </div>
+          <article class="panel">
+            <div class="section-intro">
+              <div>
+                <p class="eyebrow">Prep List</p>
+                <h2>สิ่งที่ต้องซื้อจริงก่อนเดินทาง</h2>
+              </div>
+            </div>
+            <div class="prep-list" id="prep-list"></div>
+            <div class="quote-card" id="summary-quote"></div>
+          </article>
+        </section>
 
-  <div class="tl-card" style="margin-left:28px;">
-    <div class="tl-time">DINNER</div>
-    <div class="tl-title">🍣 Sushi Daizen หรือ Yakiniku M</div>
-    <div class="tl-desc">เลือกได้สองแบบ: ซูชิเกรด premium หรือย่างเนื้อสไตล์โมเดิร์น</div>
-  </div>
-</section>
+        <section class="budget-grid">
+          <article class="panel">
+            <div class="section-intro">
+              <div>
+                <p class="eyebrow">Japan Transit</p>
+                <h2>ค่าเดินทางในญี่ปุ่น</h2>
+              </div>
+            </div>
+            <div class="budget-table" id="transit-budget"></div>
+          </article>
 
-<!-- ===== DAY 3 ===== -->
-<section class="day-section" id="day3">
-  <div class="day-header">
-    <div class="day-number japan"><span class="num">D3</span><span class="lbl">KYO</span></div>
-    <div class="day-meta">
-      <h2>Kyoto Slow Heritage</h2>
-      <div class="day-date">วันจันทร์ที่ 19 พฤษภาคม 2026</div>
-      <div class="day-vibe">
-        <span class="vibe-tag">⛩️ Fushimi Inari</span>
-        <span class="vibe-tag matcha">🏛️ Kiyomizu-dera</span>
-        <span class="vibe-tag gold">☕ % Arabica</span>
-      </div>
-    </div>
-  </div>
+          <article class="panel">
+            <div class="section-intro">
+              <div>
+                <p class="eyebrow">Taxi & Extras</p>
+                <h2>ค่าเดินทางที่ไม่ใช้ ICOCA</h2>
+              </div>
+            </div>
+            <div class="budget-table" id="special-budget"></div>
+          </article>
+        </section>
 
-  <div class="photo-strip cols-4">
-    <img src="https://www.japan-guide.com/g18/3915_top.jpg" alt="To-ji" loading="lazy" onerror="this.style.background='#eee';this.removeAttribute('src')">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/66/Pedestrian_road_with_pavements_and_paper_umbrellas%2C_Higashiyama-ku%2C_Kyoto%2C_Japan%2C_early_morning.jpg" alt="Higashiyama" loading="lazy" onerror="this.style.background='#eee';this.removeAttribute('src')">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Kiyomizu.jpg" alt="Kiyomizudera" loading="lazy" onerror="this.style.background='#eee';this.removeAttribute('src')">
-    <img src="https://res.cloudinary.com/jnto/image/upload/w_1440%2Ch_900%2Cc_fill%2Cf_auto%2Cfl_lossy%2Cq_auto/v1/media/filer_public/f9/37/f937fc3e-0f7a-4655-a599-110331a1e8a2/shutterstock_526378609_d0hq41" alt="Gion" loading="lazy" onerror="this.style.background='#eee';this.removeAttribute('src')">
-  </div>
+        <section class="budget-grid">
+          <article class="panel">
+            <div class="section-intro">
+              <div>
+                <p class="eyebrow">Food & Drinks</p>
+                <h2>งบอาหารและเครื่องดื่ม</h2>
+              </div>
+            </div>
+            <div class="budget-table" id="food-budget"></div>
+          </article>
 
-  <div class="spots-grid">
-    <div class="spot-card">
-      <div class="spot-icon">🏛️</div>
-      <div class="spot-name">To-ji Temple</div>
-      <div class="spot-note">เจดีย์ 5 ชั้นสูงที่สุดในญี่ปุ่น</div>
-    </div>
-    <div class="spot-card">
-      <div class="spot-icon">☕</div>
-      <div class="spot-name">Kurasu Kyoto</div>
-      <div class="spot-note">Specialty Coffee บรรยากาศงดงาม</div>
-    </div>
-    <div class="spot-card">
-      <div class="spot-icon">⛩️</div>
-      <div class="spot-name">Fushimi Inari</div>
-      <div class="spot-note">ประตู Torii สีแดงพันๆ ต้น</div>
-    </div>
-    <div class="spot-card">
-      <div class="spot-icon">☕</div>
-      <div class="spot-name">% Arabica Kyoto</div>
-      <div class="spot-note">คาเฟ่ไอคอนิกวิวแม่น้ำ</div>
-    </div>
-    <div class="spot-card">
-      <div class="spot-icon">🧱</div>
-      <div class="spot-name">Ninenzaka / Sannenzaka</div>
-      <div class="spot-note">ถนนหินปูเก่าแก่ ช็อปและถ่ายรูป</div>
-    </div>
-    <div class="spot-card">
-      <div class="spot-icon">🏛️</div>
-      <div class="spot-name">Kiyomizu-dera</div>
-      <div class="spot-note">วัดมรดกโลก วิวเมืองเกียวโต</div>
-    </div>
-  </div>
+          <article class="panel total-panel">
+            <div class="section-intro">
+              <div>
+                <p class="eyebrow">Grand Total</p>
+                <h2>สรุปงบคร่าว ๆ สำหรับ 2 คน</h2>
+              </div>
+            </div>
+            <div class="total-list" id="total-list"></div>
+            <p class="total-note" id="total-note"></p>
+          </article>
+        </section>
 
-  <div class="tl-card" style="margin-left:28px; margin-top: 8px;">
-    <div class="tl-time">EVENING</div>
-    <div class="tl-title">🌆 Gion + Dinner · Gion Duck Rice</div>
-    <div class="tl-desc">เดินย่าน Gion ยามเย็น · ปิดวันด้วย Duck Rice ท้องถิ่น</div>
-  </div>
-</section>
+        <section class="section-header">
+          <div>
+            <p class="eyebrow">Daily Timeline</p>
+            <h2>แผนรายวันแบบเปิดดูง่ายบนมือถือ</h2>
+          </div>
+          <p class="section-copy">
+            กดที่การ์ดแต่ละช่วงเวลาเพื่อดูโน้ตละเอียด พร้อมปุ่มแผนที่และเว็บไซต์ที่เกี่ยวข้อง
+          </p>
+        </section>
 
-<!-- ===== DAY 4 ===== -->
-<section class="day-section" id="day4">
-  <div class="day-header">
-    <div class="day-number special"><span class="num">D4</span><span class="lbl">MINOH</span></div>
-    <div class="day-meta">
-      <h2>Minoh + Katsuoji</h2>
-      <div class="day-date">วันอังคารที่ 20 พฤษภาคม 2026</div>
-      <div class="day-vibe">
-        <span class="vibe-tag matcha">🌿 Nature</span>
-        <span class="vibe-tag">💧 น้ำตก</span>
-        <span class="vibe-tag gold">🍷 Wine Cave</span>
-      </div>
+        <section class="day-list" id="days"></section>
+      </main>
     </div>
-  </div>
 
-  <div class="photo-strip cols-4">
-    <img src="https://www.japan-guide.com/g18/4019_02.jpg" alt="Minoh Falls" loading="lazy" onerror="this.style.background='#eee';this.removeAttribute('src')">
-    <img src="https://katsuo-ji-temple.or.jp/audioguidance/img/img_enjoy03.png" alt="Katsuoji" loading="lazy" onerror="this.style.background='#eee';this.removeAttribute('src')">
-    <img src="https://hh-cross-towns.imgix.net/uploads/place_cover_image/image/4318/158eadc36a7effc98c4b82d910908920.jpg" alt="Yuzan Cafe" loading="lazy" onerror="this.style.background='#eee';this.removeAttribute('src')">
-    <img src="https://hh-cross-towns.imgix.net/uploads/place_cover_image/image/4319/eca638ccc1fa7e45e5c012fdebb8f49c.jpg" alt="Wine Cave" loading="lazy" onerror="this.style.background='#eee';this.removeAttribute('src')">
-  </div>
-
-  <div class="spots-grid">
-    <div class="spot-card">
-      <div class="spot-icon">💧</div>
-      <div class="spot-name">Minoh Falls</div>
-      <div class="spot-note">เดินป่าเบาๆ ตามลำธาร ถึงน้ำตกสวย</div>
-    </div>
-    <div class="spot-card">
-      <div class="spot-icon">🍵</div>
-      <div class="spot-name">Lunch · Yuzan Café</div>
-      <div class="spot-note">คาเฟ่ธรรมชาติในป่า บรรยากาศงดงาม</div>
-    </div>
-    <div class="spot-card">
-      <div class="spot-icon">⛩️</div>
-      <div class="spot-name">Katsuoji Temple</div>
-      <div class="spot-note">วัดดารุมะสีแดงนับร้อย ความหวัง</div>
-    </div>
-    <div class="spot-card">
-      <div class="spot-icon">🍷</div>
-      <div class="spot-name">Dinner · Wine Bar Cave</div>
-      <div class="spot-note">ไวน์บาร์บรรยากาศถ้ำ ปิดวันธรรมชาติ</div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== DAY 5 ===== -->
-<section class="day-section" id="day5">
-  <div class="day-header">
-    <div class="day-number special"><span class="num">D5</span><span class="lbl">UJI</span></div>
-    <div class="day-meta">
-      <h2>Uji Slow Half-Day 🍵</h2>
-      <div class="day-date">วันพุธที่ 21 พฤษภาคม 2026</div>
-      <div class="day-vibe">
-        <span class="vibe-tag matcha">🍵 Matcha</span>
-        <span class="vibe-tag">🏛️ Byodo-in</span>
-        <span class="vibe-tag gold">🛀 Spa</span>
-      </div>
-    </div>
-  </div>
-
-  <div class="photo-strip cols-4">
-    <img src="https://www.japan-guide.com/g17/3923_01.jpg" alt="Byodo-in" loading="lazy" onerror="this.style.background='#eee';this.removeAttribute('src')">
-    <img src="https://byfood.b-cdn.net/api/public/assets/37446/content?optimizer=image" alt="Uji Matcha" loading="lazy" onerror="this.style.background='#eee';this.removeAttribute('src')">
-    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0c/f3/b5/de/caption.jpg?h=500&s=1&w=900" alt="Tsujirihei" loading="lazy" onerror="this.style.background='#eee';this.removeAttribute('src')">
-    <img src="https://maisonkoko.com/cdn/shop/files/Uji_Competition_Grade_Matcha_Tenkei_Maison_Koko.png?v=1749617420&width=533" alt="Matcha" loading="lazy" onerror="this.style.background='#eee';this.removeAttribute('src')">
-  </div>
-
-  <div class="spots-grid">
-    <div class="spot-card">
-      <div class="spot-icon">🏛️</div>
-      <div class="spot-name">Byodo-in</div>
-      <div class="spot-note">วัดมรดกโลก · ภาพบนเหรียญ 10 เยน</div>
-    </div>
-    <div class="spot-card">
-      <div class="spot-icon">🍜</div>
-      <div class="spot-name">Ramen Tanaka Kyu Shoten</div>
-      <div class="spot-note">Lunch · ราเม็งเก่าแก่ท้องถิ่น</div>
-    </div>
-    <div class="spot-card">
-      <div class="spot-icon">🍵</div>
-      <div class="spot-name">Tsujirihei Honten</div>
-      <div class="spot-note">ขนมหวานมัทฉะชั้นนำ · ร้านเก่า 100 ปี</div>
-    </div>
-    <div class="spot-card">
-      <div class="spot-icon">🛀</div>
-      <div class="spot-name">กลับ Osaka · Spa + Wine</div>
-      <div class="spot-note">พักผ่อนแบบ Slow Life แท้ๆ</div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== DAY 6 ===== -->
-<section class="day-section" id="day6">
-  <div class="day-header">
-    <div class="day-number special"><span class="num">D6</span><span class="lbl">MOVE</span></div>
-    <div class="day-meta">
-      <h2>ย้ายไป Swissôtel 🏨</h2>
-      <div class="day-date">วันพฤหัสที่ 22 พฤษภาคม 2026</div>
-      <div class="day-vibe">
-        <span class="vibe-tag gold">👑 Upgrade</span>
-        <span class="vibe-tag">🍽️ Table36</span>
-      </div>
-    </div>
-  </div>
-
-  <div class="photo-strip cols-4">
-    <img src="https://www.swissotel.com/assets/0/92/2119/4011/4029/4031/6442451752/d1920536-82ab-488d-aa3e-517262ff29fa.jpg" alt="Swissotel" loading="lazy" onerror="this.style.background='#eee';this.removeAttribute('src')">
-    <img src="https://www.swissotel.com/assets/0/92/2119/4011/4029/4031/6442451752/15cdce6f-8a98-47db-8f29-98f01c5f81c2.jpg" alt="Swissotel Room" loading="lazy" onerror="this.style.background='#eee';this.removeAttribute('src')">
-    <img src="https://res.cloudinary.com/dbm1qiew0/image/upload/blog-images/2024/09/fujiko11621122600011421_TP_V4.jpg" alt="Namba" loading="lazy" onerror="this.style.background='#eee';this.removeAttribute('src')">
-    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/14/5f/0c/34/caption.jpg?h=500&s=1&w=900" alt="Osaka Night" loading="lazy" onerror="this.style.background='#eee';this.removeAttribute('src')">
-  </div>
-
-  <div class="timeline">
-    <div class="tl-item">
-      <div class="tl-dot"></div>
-      <div class="tl-card">
-        <div class="tl-time">MORNING</div>
-        <div class="tl-title">🧳 Check-out VIA INN · ฝากกระเป๋า Swissôtel</div>
-      </div>
-    </div>
-    <div class="tl-item">
-      <div class="tl-dot gold"></div>
-      <div class="tl-card">
-        <div class="tl-time">AFTERNOON</div>
-        <div class="tl-title">🚶 Lunch + เดินเล่น Namba</div>
-        <div class="tl-desc">เดินสบายๆ รอ Check-in ช่วงบ่าย</div>
-      </div>
-    </div>
-    <div class="tl-item">
-      <div class="tl-dot sakura"></div>
-      <div class="tl-card">
-        <div class="tl-time">AFTERNOON</div>
-        <div class="tl-title">👑 Check-in Swissôtel Nankai Osaka</div>
-        <div class="tl-desc">โรงแรมหรูริมแม่น้ำ วิวเมืองโอซากะ 360°</div>
-      </div>
-    </div>
-    <div class="tl-item">
-      <div class="tl-dot gold"></div>
-      <div class="tl-card">
-        <div class="tl-time">EVENING</div>
-        <div class="tl-title">🍽️ Dinner · Table36 หรือ Wine Bar</div>
-        <div class="tl-desc">ฉลอง Upgrade กับ Dinner บนชั้น 36 หรือ Wine Bar บรรยากาศ premium</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== DAY 7 ===== -->
-<section class="day-section" id="day7">
-  <div class="day-header">
-    <div class="day-number kobe"><span class="num">D7</span><span class="lbl">KOBE</span></div>
-    <div class="day-meta">
-      <h2>Kobe — Mature City Walk ⚓</h2>
-      <div class="day-date">วันศุกร์ที่ 23 พฤษภาคม 2026</div>
-      <div class="day-vibe">
-        <span class="vibe-tag indigo">⚓ Harbor</span>
-        <span class="vibe-tag gold">🥩 Kobe Beef</span>
-        <span class="vibe-tag">☕ Blue Bottle</span>
-      </div>
-    </div>
-  </div>
-
-  <div class="photo-strip cols-4">
-    <img src="https://live.staticflickr.com/7380/12644851733_4c52c80c6b_b.jpg" alt="Kobe Harborland" loading="lazy" onerror="this.style.background='#eee';this.removeAttribute('src')">
-    <img src="https://cdn.gaijinpot.com/app/uploads/sites/6/2017/09/kitacho-Ijinkan.jpg" alt="Kitano Ijinkan" loading="lazy" onerror="this.style.background='#eee';this.removeAttribute('src')">
-    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/13/7d/22/d3/caption.jpg?h=500&s=1&w=900" alt="Kobe Beef" loading="lazy" onerror="this.style.background='#eee';this.removeAttribute('src')">
-    <img src="https://images.squarespace-cdn.com/content/v1/62f1cb15a2cb083186ccd6d1/1fec1ced-4523-4906-9178-533175e3585d/BA211FCD-E6AE-40D7-A328-026E9E1E7C3D-1595-000002273550ADF9.JPG" alt="Motomachi" loading="lazy" onerror="this.style.background='#eee';this.removeAttribute('src')">
-  </div>
-
-  <div class="spots-grid">
-    <div class="spot-card">
-      <div class="spot-icon">⚓</div>
-      <div class="spot-name">Harborland</div>
-      <div class="spot-note">ริมท่าเรือ วิวสะพาน Akashi</div>
-    </div>
-    <div class="spot-card">
-      <div class="spot-icon">🏠</div>
-      <div class="spot-name">Kitano Ijinkan</div>
-      <div class="spot-note">ย่านบ้านชาวต่างชาติ สไตล์ยุโรป</div>
-    </div>
-    <div class="spot-card">
-      <div class="spot-icon">🥩</div>
-      <div class="spot-name">Kobe Beef</div>
-      <div class="spot-note">เนื้อโกเบแท้ · ต้องกินที่เมืองโกเบ!</div>
-    </div>
-    <div class="spot-card">
-      <div class="spot-icon">☕</div>
-      <div class="spot-name">Blue Bottle Coffee</div>
-      <div class="spot-note">สาขาโกเบ · บรรยากาศ Warehouse</div>
-    </div>
-    <div class="spot-card">
-      <div class="spot-icon">🛍️</div>
-      <div class="spot-name">Motomachi</div>
-      <div class="spot-note">ย่านช้อปคลาสสิก สถาปัตยกรรมเก่า</div>
-    </div>
-    <div class="spot-card">
-      <div class="spot-icon">🍷</div>
-      <div class="spot-name">Dinner + Wine</div>
-      <div class="spot-note">ปิดทริปด้วยไวน์คืนสุดท้าย 🥂</div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== DAY 8 ===== -->
-<section class="day-section" id="day8">
-  <div class="day-header">
-    <div class="day-number japan"><span class="num">D8</span><span class="lbl">HOME</span></div>
-    <div class="day-meta">
-      <h2>Fly Home ✈️</h2>
-      <div class="day-date">วันเสาร์ที่ 24 พฤษภาคม 2026</div>
-      <div class="day-vibe">
-        <span class="vibe-tag gold">👑 Swissôtel</span>
-        <span class="vibe-tag indigo">✈️ KIX</span>
-      </div>
-    </div>
-  </div>
-
-  <div class="timeline">
-    <div class="tl-item">
-      <div class="tl-dot gold"></div>
-      <div class="tl-card">
-        <div class="tl-time">MORNING</div>
-        <div class="tl-title">🏨 Check-out Swissôtel Nankai Osaka</div>
-        <div class="tl-desc">เก็บกระเป๋า · Breakfast สุดท้ายในโอซากะ</div>
-      </div>
-    </div>
-    <div class="tl-item">
-      <div class="tl-dot indigo"></div>
-      <div class="tl-card">
-        <div class="tl-time">ก่อนบิน</div>
-        <div class="tl-title">🚌 Airport Limousine / Nankai → KIX</div>
-        <div class="tl-desc">เดินทางสบายๆ · ไม่ต้องรีบ</div>
-      </div>
-    </div>
-    <div class="tl-item">
-      <div class="tl-dot sakura"></div>
-      <div class="tl-card">
-        <div class="tl-time">✈️</div>
-        <div class="tl-title">กลับบ้านแบบไม่เหนื่อย 🌸</div>
-        <div class="tl-desc">9 วัน 8 คืน · คาเฟ่ · ไวน์ · Slow Life · ความทรงจำตลอดชีพ</div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Summary -->
-  <div style="background: linear-gradient(135deg, var(--indigo), #1a2450); border-radius: 16px; padding: 24px; margin-top: 24px; color: #fff; text-align: center;">
-    <div style="font-size: 2rem; margin-bottom: 8px;">🇹🇼 ✈️ 🇯🇵</div>
-    <div style="font-family: 'Playfair Display', serif; font-size: 1.3rem; margin-bottom: 8px;">Taipei × Osaka · Complete</div>
-    <div style="color: rgba(255,255,255,0.6); font-size: 0.82rem; line-height: 1.8;">
-      16–24 พฤษภาคม 2026 · 9 วัน 8 คืน<br>
-      Taiwan 1 คืน · Osaka/Kyoto/Uji/Minoh/Kobe 7 คืน<br>
-      <span style="color: var(--gold-light);">ICOCA ¥10,000/คน · VIA INN → Swissôtel</span>
-    </div>
-  </div>
-</section>
-
-<footer>
-  <div class="footer-emoji">🌸</div>
-  <p>Taipei × Osaka Slow Life 2026<br>
-  คาเฟ่ · ไวน์ · เดินไม่รีบ · ความทรงจำตลอดชีพ ❤️</p>
-</footer>
-
-<script>
-  // Petals
-  const petalsEl = document.getElementById('petals');
-  for (let i = 0; i < 20; i++) {
-    const p = document.createElement('div');
-    p.className = 'petal';
-    p.style.left = Math.random() * 100 + '%';
-    p.style.animationDelay = Math.random() * 8 + 's';
-    p.style.animationDuration = (6 + Math.random() * 6) + 's';
-    p.style.width = p.style.height = (5 + Math.random() * 6) + 'px';
-    petalsEl.appendChild(p);
-  }
-
-  // Countdown
-  function updateCountdown() {
-    const target = new Date('2026-05-16T00:00:00+07:00');
-    const now = new Date();
-    const diff = target - now;
-    const el = document.getElementById('countdown');
-    if (!el) return;
-
-    if (diff <= 0) {
-      el.innerHTML = '<div class="cd-box"><div class="cd-num">🌸</div><div class="cd-unit">NOW!</div></div>';
-      return;
-    }
-    const days = Math.floor(diff / 86400000);
-    const hours = Math.floor((diff % 86400000) / 3600000);
-    const mins = Math.floor((diff % 3600000) / 60000);
-    const secs = Math.floor((diff % 60000) / 1000);
-
-    el.innerHTML = `
-      <div class="cd-box"><div class="cd-num">${String(days).padStart(2,'0')}</div><div class="cd-unit">วัน</div></div>
-      <div class="cd-box"><div class="cd-num">${String(hours).padStart(2,'0')}</div><div class="cd-unit">ชั่วโมง</div></div>
-      <div class="cd-box"><div class="cd-num">${String(mins).padStart(2,'0')}</div><div class="cd-unit">นาที</div></div>
-      <div class="cd-box"><div class="cd-num">${String(secs).padStart(2,'0')}</div><div class="cd-unit">วินาที</div></div>
-    `;
-  }
-  updateCountdown();
-  setInterval(updateCountdown, 1000);
-
-  // Intersection observer for timeline
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) e.target.classList.add('visible');
-    });
-  }, { threshold: 0.1 });
-  document.querySelectorAll('.tl-item').forEach(el => observer.observe(el));
-
-  // Nav scroll
-  window.scrollTo = function(id) {
-    const el = document.getElementById(id);
-    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
-  };
-</script>
-</body>
+    <dialog class="detail-sheet" id="detail-sheet">
+      <form method="dialog" class="detail-backdrop">
+        <article class="detail-card">
+          <button class="detail-close" value="cancel" aria-label="Close detail">
+            ×
+          </button>
+          <p class="detail-time" id="detail-time"></p>
+          <h3 id="detail-title"></h3>
+          <p class="detail-summary" id="detail-summary"></p>
+          <ul class="detail-list" id="detail-list"></ul>
+          <div class="detail-links" id="detail-links"></div>
+        </article>
+      </form>
+    </dialog>
+  </body>
 </html>
