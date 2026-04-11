@@ -1,5 +1,5 @@
 const tripData = {
-  title: "Taipei Transit + Osaka Slow Life",
+  title: "Osaka Slow Life 2026",
   dateLabel: "16–24 พฤษภาคม 2026",
   countdownTarget: "2026-05-16T00:00:00+07:00",
   tripStart: "2026-05-16T00:00:00+07:00",
@@ -12,9 +12,142 @@ const tripData = {
   ],
   metrics: [
     { label: "รวม", value: "9 วัน 8 คืน" },
-    { label: "Transit", value: "Taipei 1 คืน" },
+    { label: "Airline", value: "EVA via TPE" },
     { label: "Base", value: "Namba + Shinsaibashi" },
     { label: "Transit Card", value: "ICOCA ใบเดียว" },
+  ],
+  flights: [
+    {
+      phase: "ขาไป 1/2",
+      leg: "outbound",
+      number: "BR062",
+      date: "16 MAY 2026",
+      fromCode: "BKK",
+      fromName: "สุวรรณภูมิ",
+      toCode: "TPE",
+      toName: "เถาหยวน",
+      departTime: "08:30",
+      arriveTime: "13:25",
+    },
+    {
+      phase: "ขาไป 2/2",
+      leg: "outbound",
+      number: "BR132",
+      date: "17 MAY 2026",
+      fromCode: "TPE",
+      fromName: "เถาหยวน",
+      toCode: "KIX",
+      toName: "คันไซ",
+      departTime: "08:20",
+      arriveTime: "12:10",
+    },
+    {
+      phase: "ขากลับ 1/2",
+      leg: "return",
+      number: "BR131",
+      date: "24 MAY 2026",
+      fromCode: "KIX",
+      fromName: "คันไซ",
+      toCode: "TPE",
+      toName: "เถาหยวน",
+      departTime: "13:10",
+      arriveTime: "15:05",
+    },
+    {
+      phase: "ขากลับ 2/2",
+      leg: "return",
+      number: "BR205",
+      date: "24 MAY 2026",
+      fromCode: "TPE",
+      fromName: "เถาหยวน",
+      toCode: "BKK",
+      toName: "สุวรรณภูมิ",
+      departTime: "20:45",
+      arriveTime: "23:30",
+    },
+  ],
+  dayOverviews: [
+    {
+      target: "day-0",
+      day: "Day 0",
+      emoji: "🌙",
+      date: "16 พ.ค. เสาร์",
+      theme: "Taiwan transit night",
+      route: "BKK → TPE → Gloria Outlets",
+      gradient: "linear-gradient(135deg, #6b7b88 0%, #98a9b8 100%)",
+    },
+    {
+      target: "day-1",
+      day: "Day 1",
+      emoji: "✈️",
+      date: "17 พ.ค. อาทิตย์",
+      theme: "บินเข้า Osaka + ease-in night",
+      route: "TPE → KIX → Namba",
+      gradient: "linear-gradient(135deg, #2f63b4 0%, #6ea1ec 100%)",
+    },
+    {
+      target: "day-2",
+      day: "Day 2",
+      emoji: "🏯",
+      date: "18 พ.ค. จันทร์",
+      theme: "แลนด์มาร์ก Osaka + Namba Yasaka",
+      route: "Castle Park → Shinsekai → Dotonbori",
+      gradient: "linear-gradient(135deg, #c45f67 0%, #e8a0a6 100%)",
+    },
+    {
+      target: "day-3",
+      day: "Day 3",
+      emoji: "⛩️",
+      date: "19 พ.ค. อังคาร",
+      theme: "Kyoto slow heritage day",
+      route: "Osaka → Kyoto → Gion",
+      gradient: "linear-gradient(135deg, #2b8d93 0%, #70c9d1 100%)",
+    },
+    {
+      target: "day-4",
+      day: "Day 4",
+      emoji: "🍃",
+      date: "20 พ.ค. พุธ",
+      theme: "Minoh Falls + Katsuoji",
+      route: "Namba → Minoh → Katsuoji",
+      gradient: "linear-gradient(135deg, #5b8f51 0%, #94c37e 100%)",
+    },
+    {
+      target: "day-5",
+      day: "Day 5",
+      emoji: "🍵",
+      date: "21 พ.ค. พฤหัส",
+      theme: "Uji half day + Osaka reset",
+      route: "Osaka → Uji → Shinsaibashi",
+      gradient: "linear-gradient(135deg, #7c5ba7 0%, #b78bd6 100%)",
+    },
+    {
+      target: "day-6",
+      day: "Day 6",
+      emoji: "🛍️",
+      date: "22 พ.ค. ศุกร์",
+      theme: "Shopping day หลังย้ายโรงแรม",
+      route: "Namba → Shinsaibashi → PARCO",
+      gradient: "linear-gradient(135deg, #c98532 0%, #f0bd67 100%)",
+    },
+    {
+      target: "day-7",
+      day: "Day 7",
+      emoji: "⚓",
+      date: "23 พ.ค. เสาร์",
+      theme: "Kobe mature slow day",
+      route: "Namba → Kobe → Harborland",
+      gradient: "linear-gradient(135deg, #2e61a8 0%, #6794e2 100%)",
+    },
+    {
+      target: "day-8",
+      day: "Day 8",
+      emoji: "🏠",
+      date: "24 พ.ค. อาทิตย์",
+      theme: "บินกลับบ้าน via Taipei",
+      route: "Namba → KIX → TPE → BKK",
+      gradient: "linear-gradient(135deg, #443f8e 0%, #7d75d8 100%)",
+    },
   ],
   notes: [
     {
@@ -122,6 +255,54 @@ const tripData = {
       "มีแค่ ICOCA ใบเดียว แล้วใช้ได้ทั้งทริป ส่วนไต้หวันใช้ taxi กับบัตรเครดิตไปเลยให้ชีวิตง่ายที่สุด",
     kicker: "เรียบง่าย = เดินทางสบาย",
   },
+  emergencyContacts: [
+    {
+      title: "ตำรวจญี่ปุ่น",
+      phone: "110",
+      detail: "เหตุฉุกเฉินด้านความปลอดภัยหรืออุบัติเหตุ",
+      action: "โทรทันที",
+      href: "tel:110",
+    },
+    {
+      title: "รถพยาบาล / ดับเพลิง",
+      phone: "119",
+      detail: "กรณีเจ็บป่วยฉุกเฉิน อุบัติเหตุ หรือไฟไหม้",
+      action: "โทรทันที",
+      href: "tel:119",
+    },
+    {
+      title: "Japan Visitor Hotline",
+      phone: "+81-50-3816-2787",
+      detail: "JNTO ช่วยนักท่องเที่ยว 24/7 ภาษาอังกฤษ จีน และเกาหลี",
+      action: "ดูรายละเอียด",
+      href: "https://www.japan.travel/en/plan/hotline/",
+    },
+    {
+      title: "EVA Air Japan Hotline",
+      phone: "+81-3-4212-3806",
+      detail: "ใช้ติดต่อเรื่อง reservation, ticketing และปัญหาเที่ยวบินในญี่ปุ่น",
+      action: "เว็บไซต์ EVA",
+      href: "https://www.evaair.com/en-us/customer-services/contact-us/contact/?countryCode=Osaka",
+    },
+  ],
+  emergencyNotes: [
+    {
+      label: "โรงแรม",
+      value: "เซฟชื่อ City Suites Gateway, VIA INN PRIME และ Swissôtel Nankai Osaka ไว้ใน Maps",
+    },
+    {
+      label: "ไฟลต์",
+      value: "ทริปนี้มี 4 ขาและ transit ที่ Taipei 2 ครั้ง เช็ก gate กับเวลา boarding ทุกครั้ง",
+    },
+    {
+      label: "เอกสาร",
+      value: "พกพาสปอร์ตจริง, booking โรงแรม และ boarding pass ในมือถือไว้ตลอดวันเดินทาง",
+    },
+    {
+      label: "ขอความช่วยเหลือ",
+      value: "ถ้าหลง เจ็บป่วย หรือสื่อสารไม่คล่อง ให้เริ่มจาก 110 / 119 หรือ JNTO Hotline ได้เลย",
+    },
+  ],
   budgets: {
     transit: [
       {
@@ -1397,6 +1578,8 @@ const countdownTitle = document.querySelector("#countdown-title");
 const countdownHelper = document.querySelector("#countdown-helper");
 const memberPills = document.querySelector("#member-pills");
 const heroMetrics = document.querySelector("#hero-metrics");
+const flightList = document.querySelector("#flight-list");
+const miniDaysStrip = document.querySelector("#mini-days-strip");
 const hotelList = document.querySelector("#hotel-list");
 const noteList = document.querySelector("#note-list");
 const transportCardList = document.querySelector("#transport-card-list");
@@ -1407,6 +1590,8 @@ const specialBudget = document.querySelector("#special-budget");
 const foodBudget = document.querySelector("#food-budget");
 const totalList = document.querySelector("#total-list");
 const totalNote = document.querySelector("#total-note");
+const emergencyContactList = document.querySelector("#emergency-contact-list");
+const emergencyNoteList = document.querySelector("#emergency-note-list");
 const daysContainer = document.querySelector("#days");
 const statusCopy = document.querySelector("#status-copy");
 const dayNav = document.querySelector("#day-nav");
@@ -1432,8 +1617,12 @@ function createLink(label, url, extraClass = "event-link") {
   const link = document.createElement("a");
   link.className = extraClass;
   link.href = url;
-  link.target = "_blank";
-  link.rel = "noreferrer";
+
+  if (/^https?:/i.test(url)) {
+    link.target = "_blank";
+    link.rel = "noreferrer";
+  }
+
   link.textContent = label;
   return link;
 }
@@ -1456,7 +1645,7 @@ function getDayRegion(day) {
 
 function getNavLabel(day) {
   if (day.id === "day-0") {
-    return "🇹🇼 Transit";
+    return "Transit";
   }
 
   if (day.id === "day-8") {
@@ -1594,6 +1783,66 @@ function renderOverview() {
   });
 }
 
+function renderFlights() {
+  tripData.flights.forEach((flight) => {
+    const card = document.createElement("article");
+    card.className = "flight-card";
+    card.dataset.leg = flight.leg;
+    card.innerHTML = `
+      <div class="flight-topline">
+        <span class="flight-phase">${flight.phase}</span>
+        <span class="flight-number">${flight.number}</span>
+      </div>
+      <div class="flight-route">
+        <div class="flight-airport">
+          <strong>${flight.fromCode}</strong>
+          <span>${flight.fromName}</span>
+        </div>
+        <div class="flight-center">
+          <span class="flight-line">──✈──</span>
+          <span class="flight-airline">EVA Air</span>
+        </div>
+        <div class="flight-airport">
+          <strong>${flight.toCode}</strong>
+          <span>${flight.toName}</span>
+        </div>
+      </div>
+      <div class="flight-meta">
+        <strong>${flight.departTime} → ${flight.arriveTime}</strong>
+        <span>${flight.date}</span>
+      </div>
+    `;
+    flightList.appendChild(card);
+  });
+}
+
+function renderMiniOverview() {
+  tripData.dayOverviews.forEach((item) => {
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "mini-day-card";
+    button.dataset.target = item.target;
+    button.innerHTML = `
+      <div class="mini-day-header" style="background:${item.gradient}">
+        <div class="mini-day-num">${item.day}</div>
+        <div class="mini-day-emoji">${item.emoji}</div>
+        <div class="mini-day-date">${item.date}</div>
+      </div>
+      <div class="mini-day-body">
+        <strong>${item.theme}</strong>
+        <span>${item.route}</span>
+      </div>
+    `;
+
+    button.addEventListener("click", () => {
+      document.getElementById(item.target)?.scrollIntoView({ behavior: "smooth", block: "start" });
+      setActiveNav(item.target);
+    });
+
+    miniDaysStrip.appendChild(button);
+  });
+}
+
 function renderBudgetRows(container, rows) {
   rows.forEach((row) => {
     const item = document.createElement("div");
@@ -1667,6 +1916,36 @@ function renderSummary() {
   });
 
   totalNote.textContent = tripData.budgets.note;
+}
+
+function renderEmergency() {
+  tripData.emergencyContacts.forEach((item) => {
+    const card = document.createElement("article");
+    card.className = "emergency-item";
+    card.innerHTML = `
+      <div>
+        <strong>${item.title}</strong>
+        <p>${item.detail}</p>
+      </div>
+      <div class="emergency-phone">${item.phone}</div>
+    `;
+
+    const actions = document.createElement("div");
+    actions.className = "hotel-actions";
+    actions.appendChild(createLink(item.action, item.href, "chip-link"));
+    card.appendChild(actions);
+    emergencyContactList.appendChild(card);
+  });
+
+  tripData.emergencyNotes.forEach((item) => {
+    const row = document.createElement("div");
+    row.className = "info-note-item";
+    row.innerHTML = `
+      <span class="info-note-label">${item.label}</span>
+      <p>${item.value}</p>
+    `;
+    emergencyNoteList.appendChild(row);
+  });
 }
 
 function openDetail(eventData) {
@@ -1954,7 +2233,10 @@ function init() {
   renderHeroBits();
   renderDayNav();
   renderOverview();
+  renderFlights();
+  renderMiniOverview();
   renderSummary();
+  renderEmergency();
   renderDays();
   initPetals();
   initNavObserver();
