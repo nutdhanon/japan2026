@@ -1610,6 +1610,12 @@ const detailNodes = {
 const themeKey = "osaka-trip-theme-v2";
 const previewKey = "osaka-trip-preview-now";
 
+function normalizePreviewDateString(value) {
+  return value
+    .trim()
+    .replace(/(T\d{2}:\d{2}(?::\d{2})?) (\d{2}:\d{2})$/, "$1+$2");
+}
+
 function getPreviewNow() {
   const params = new URLSearchParams(window.location.search);
   const queryValue = params.get("previewNow");
@@ -1626,13 +1632,14 @@ function getPreviewNow() {
     return null;
   }
 
-  const parsed = new Date(rawValue);
+  const normalizedValue = normalizePreviewDateString(rawValue);
+  const parsed = new Date(normalizedValue);
   if (Number.isNaN(parsed.getTime())) {
     return null;
   }
 
   if (queryValue) {
-    localStorage.setItem(previewKey, queryValue);
+    localStorage.setItem(previewKey, normalizedValue);
   }
 
   return parsed;
