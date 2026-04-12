@@ -1608,9 +1608,70 @@ const detailNodes = {
 };
 
 const themeKey = "osaka-trip-theme-v2";
+const previewKey = "osaka-trip-preview-now";
+
+function getPreviewNow() {
+  const params = new URLSearchParams(window.location.search);
+  const queryValue = params.get("previewNow");
+
+  if (queryValue === "off") {
+    localStorage.removeItem(previewKey);
+    return null;
+  }
+
+  const storedValue = localStorage.getItem(previewKey);
+  const rawValue = queryValue || storedValue;
+
+  if (!rawValue) {
+    return null;
+  }
+
+  const parsed = new Date(rawValue);
+  if (Number.isNaN(parsed.getTime())) {
+    return null;
+  }
+
+  if (queryValue) {
+    localStorage.setItem(previewKey, queryValue);
+  }
+
+  return parsed;
+}
 
 function createMapsUrl(query) {
   return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query)}`;
+}
+
+function parseTimeWindow(label) {
+  const matches = [...label.matchAll(/\b(\d{1,2}):(\d{2})\b/g)];
+
+  if (!matches.length) {
+    return null;
+  }
+
+  const toMinutes = (match) => Number(match[1]) * 60 + Number(match[2]);
+  const start = toMinutes(matches[0]);
+  const end = matches[1] ? toMinutes(matches[1]) : null;
+
+  return { start, end };
+}
+
+function formatNowLabel(now) {
+  return now.toLocaleTimeString("th-TH", {
+    hour: "2-digit",
+    minute: "2-digit",
+    hour12: false,
+  });
+}
+
+function formatMinutesUntil(targetMinutes, now) {
+  const nowMs =
+    now.getHours() * 3600000 +
+    now.getMinutes() * 60000 +
+    now.getSeconds() * 1000 +
+    now.getMilliseconds();
+  const targetMs = targetMinutes * 60000;
+  return Math.max(0, Math.ceil((targetMs - nowMs) / 60000));
 }
 
 function createLink(label, url, extraClass = "event-link") {
@@ -1948,6 +2009,91 @@ function renderEmergency() {
   });
 }
 
+function updateNowMarkers(currentDayId, now) {
+  document.querySelectorAll(".now-marker").forEach((marker) => marker.remove());
+  document.querySelectorAll(".event-card.is-live").forEach((card) => {
+    card.classList.remove("is-live");
+  });
+
+  if (!currentDayId) {
+    return;
+  }
+
+  const currentDayCard = document.getElementById(currentDayId);
+  const eventList = currentDayCard?.querySelector(".event-list");
+
+  if (!eventList) {
+    return;
+  }
+
+  const eventCards = [...eventList.querySelectorAll(".event-card")];
+  const nowMinutes = now.getHours() * 60 + now.getMinutes();
+  const nowExactMinutes =
+    now.getHours() * 60 + now.getMinutes() + now.getSeconds() / 60 + now.getMilliseconds() / 60000;
+  let insertBefore = null;
+  let liveCard = null;
+  let nextCard = null;
+
+  for (const card of eventCards) {
+    const start = Number(card.dataset.startMinutes);
+    const hasStart = Number.isFinite(start);
+
+    if (!hasStart) {
+      continue;
+    }
+
+    const rawEnd = Number(card.dataset.endMinutes);
+    const end = Number.isFinite(rawEnd) ? rawEnd : null;
+
+    if (!nextCard && start > nowExactMinutes) {
+      nextCard = card;
+    }
+
+    if (end !== null && nowMinutes >= start && nowMinutes <= end) {
+      insertBefore = card;
+      liveCard = card;
+      continue;
+    }
+
+    if (!insertBefore && nowMinutes < start) {
+      insertBefore = card;
+    }
+  }
+
+  if (!insertBefore) {
+    insertBefore = eventCards.find((card) => !card.dataset.startMinutes) || null;
+  }
+
+  let nextCopy = "ไม่มีกิจกรรมถัดไปตามเวลาแล้ววันนี้";
+  if (nextCard) {
+    const nextStartMinutes = Number(nextCard.dataset.startMinutes);
+    const waitMinutes = formatMinutesUntil(nextStartMinutes, now);
+    nextCopy = `กิจกรรมถัดไปในอีก ${waitMinutes} นาที · ${nextCard.dataset.eventTitle}`;
+  }
+
+  const marker = document.createElement("div");
+  marker.className = "now-marker";
+  marker.innerHTML = `
+    <span class="now-line" aria-hidden="true"></span>
+    <span class="now-pill">
+      <span class="now-pill-main"><span aria-hidden="true">🕰</span> ตอนนี้ ${formatNowLabel(now)}</span>
+      <span class="now-pill-sub">${nextCopy}</span>
+    </span>
+    <span class="now-line" aria-hidden="true"></span>
+  `;
+
+  if (liveCard) {
+    liveCard.classList.add("is-live");
+  }
+
+  if (insertBefore) {
+    eventList.insertBefore(marker, insertBefore);
+    return;
+  }
+
+  eventList.appendChild(marker);
+}
+
 function openDetail(eventData) {
   detailNodes.time.textContent = eventData.time;
   detailNodes.title.textContent = eventData.title;
@@ -2025,6 +2171,16 @@ function renderDays() {
       eventCard.tabIndex = 0;
       eventCard.setAttribute("role", "button");
       eventCard.setAttribute("aria-label", `${eventItem.time} ${eventItem.title}`);
+
+      const timeWindow = parseTimeWindow(eventItem.time);
+      if (timeWindow) {
+        eventCard.dataset.startMinutes = String(timeWindow.start);
+        if (timeWindow.end !== null) {
+          eventCard.dataset.endMinutes = String(timeWindow.end);
+        }
+      }
+      eventCard.dataset.eventTitle = eventItem.title;
+
       eventCard.addEventListener("click", () => openDetail(eventItem));
       eventCard.addEventListener("keydown", (keyboardEvent) => {
         if (keyboardEvent.key === "Enter" || keyboardEvent.key === " ") {
@@ -2105,7 +2261,7 @@ function initNavObserver() {
 }
 
 function updateCountdown() {
-  const now = new Date();
+  const now = getPreviewNow() || new Date();
   const target = new Date(tripData.countdownTarget);
   const start = new Date(tripData.tripStart);
   const end = new Date(tripData.tripEnd);
@@ -2159,6 +2315,8 @@ function updateCountdown() {
     const currentCard = document.querySelector(`#${currentDay}`);
     currentCard?.classList.add("is-current-day");
   }
+
+  updateNowMarkers(currentDay, now);
 }
 
 function findCurrentDayId(now, start, end) {

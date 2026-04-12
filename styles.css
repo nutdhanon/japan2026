@@ -135,6 +135,22 @@ body[data-theme="dark"] .emergency-phone {
   color: #ffe0a7;
 }
 
+body[data-theme="dark"] .now-line {
+  background: rgba(240, 167, 185, 0.42);
+}
+
+body[data-theme="dark"] .now-pill {
+  background: linear-gradient(135deg, #cc5564 0%, #8d2744 100%);
+  box-shadow: 0 10px 24px rgba(141, 39, 68, 0.28);
+}
+
+body[data-theme="dark"] .event-card.is-live {
+  border-color: rgba(240, 167, 185, 0.35);
+  box-shadow:
+    0 12px 28px rgba(141, 39, 68, 0.18),
+    var(--shadow-soft);
+}
+
 * {
   box-sizing: border-box;
 }
@@ -1345,6 +1361,50 @@ body[data-theme="dark"] .day-nav {
   content: "";
 }
 
+.now-marker {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 2px 0 18px;
+}
+
+.now-line {
+  flex: 1 1 auto;
+  height: 2px;
+  border-radius: 999px;
+  background: rgba(189, 57, 70, 0.55);
+}
+
+.now-pill {
+  display: grid;
+  gap: 3px;
+  justify-items: center;
+  min-height: 38px;
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #c63f4b 0%, #a9293b 100%);
+  color: #fff;
+  box-shadow: 0 10px 24px rgba(169, 41, 59, 0.22);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.now-pill-main {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  white-space: nowrap;
+}
+
+.now-pill-sub {
+  font-size: 0.68rem;
+  font-weight: 500;
+  line-height: 1.3;
+  opacity: 0.9;
+  text-align: center;
+}
+
 .event-card {
   position: relative;
   display: grid;
@@ -1358,6 +1418,13 @@ body[data-theme="dark"] .day-nav {
   box-shadow: var(--shadow-soft);
   cursor: pointer;
   text-align: left;
+}
+
+.event-card.is-live {
+  border-color: rgba(198, 63, 75, 0.45);
+  box-shadow:
+    0 10px 24px rgba(198, 63, 75, 0.12),
+    var(--shadow-soft);
 }
 
 .event-card::before {
@@ -1593,6 +1660,21 @@ body[data-theme="dark"] .day-nav {
   .event-card,
   .budget-row {
     grid-template-columns: 1fr;
+  }
+
+  .now-marker {
+    gap: 8px;
+  }
+
+  .now-pill {
+    min-height: 34px;
+    padding: 9px 12px;
+    font-size: 0.74rem;
+  }
+
+  .now-pill-sub {
+    max-width: 210px;
+    font-size: 0.64rem;
   }
 
   .flight-route {
