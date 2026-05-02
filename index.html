@@ -3,273 +3,651 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Osaka Slow Life 2026</title>
+    <title>Osaka Slow Life 2026 — Belmond x Aman Edition</title>
     <meta
       name="description"
-      content="A bright, mobile-first itinerary for an Osaka slow-life couple trip in May 2026 with EVA Air flights, daily overview, and emergency contacts."
+      content="คู่มือทริปส่วนตัวสำหรับ Osaka Slow Life 2026 พร้อมเที่ยวบิน แผนรายวัน งบ และ Help Mode ใช้งานระหว่างเที่ยว"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Noto+Sans+Thai:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,400&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&family=Noto+Serif+Thai:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./styles.css" />
     <script src="./script.js" defer></script>
   </head>
   <body>
-    <div class="page-shell">
-      <header class="topbar">
-        <div class="topbar-actions">
-          <a class="ghost-button" href="#summary">สรุปค่าใช้จ่าย</a>
-          <a class="ghost-button" id="today-anchor" href="#days">ดูแผนวันนี้</a>
-          <button
-            class="icon-button"
-            id="theme-toggle"
-            type="button"
-            aria-label="Toggle dark mode"
-            aria-pressed="false"
-          >
-            <span class="theme-icon" aria-hidden="true">☾</span>
+    <div class="page-frame">
+      <header class="masthead">
+        <div class="brand-mark">
+          <span class="brand-dot"></span>
+          <div>
+            <p class="brand-label" data-i18n="brand.label">คู่มือทริปส่วนตัว</p>
+            <strong>Osaka Slow Life 2026</strong>
+          </div>
+        </div>
+
+        <div class="masthead-tools">
+          <div class="page-lang-menu" id="page-lang-menu">
+            <button
+              type="button"
+              class="page-lang-toggle"
+              id="page-lang-toggle"
+              aria-haspopup="true"
+              aria-expanded="false"
+              aria-controls="page-lang-options"
+              aria-label="Select language"
+            >
+              <span class="page-lang-current">
+                <span class="page-lang-flag" aria-hidden="true">🇹🇭</span>
+                <span class="page-lang-code">TH</span>
+              </span>
+              <span class="page-lang-caret" aria-hidden="true">▾</span>
+            </button>
+
+            <div class="page-lang-options" id="page-lang-options" hidden>
+              <button type="button" class="page-lang-option is-active" data-lang="th">
+                <span class="page-lang-flag" aria-hidden="true">🇹🇭</span>
+                <span>ไทย</span>
+              </button>
+              <button type="button" class="page-lang-option" data-lang="en">
+                <span class="page-lang-flag" aria-hidden="true">🇬🇧</span>
+                <span>English</span>
+              </button>
+              <button type="button" class="page-lang-option" data-lang="ja">
+                <span class="page-lang-flag" aria-hidden="true">🇯🇵</span>
+                <span>日本語</span>
+              </button>
+              <button type="button" class="page-lang-option" data-lang="zh">
+                <span class="page-lang-flag" aria-hidden="true">🇨🇳</span>
+                <span>中文</span>
+              </button>
+            </div>
+          </div>
+
+          <button type="button" class="theme-toggle" id="theme-toggle" aria-pressed="false">
+            <span class="theme-icon">☾</span>
+          </button>
+
+          <button type="button" class="help-shortcut" data-open-help data-help-id="nut">
+            <span data-i18n="help.shortcut">Help Mode</span>
           </button>
         </div>
+
+        <nav class="masthead-nav">
+          <a href="#flights" data-i18n="nav.flights">เที่ยวบิน</a>
+          <a href="#overview" data-i18n="nav.overview">ภาพรวม</a>
+          <a href="#trip-intel" data-i18n="nav.intel">เตรียมตัว</a>
+          <a href="#chapters" data-i18n="nav.highlights">ไฮไลต์</a>
+          <a href="#day-details" data-i18n="nav.dayDetails">รายละเอียดรายวัน</a>
+          <a href="#help-mode" data-i18n="nav.help">Help Mode</a>
+          <a href="#contacts" data-i18n="nav.contacts">ฉุกเฉิน</a>
+        </nav>
       </header>
 
       <main>
-        <section class="hero" id="hero">
-          <div class="hero-bg"></div>
-          <div class="hero-deco deco-1"></div>
-          <div class="hero-deco deco-2"></div>
-          <div class="hero-deco deco-3"></div>
-          <div class="petals" id="petals"></div>
-
-          <div class="hero-inner">
-            <div class="hero-copy">
-              <div class="hero-flag">✈️ 🇯🇵</div>
-              <p class="eyebrow">16–24 พฤษภาคม 2026</p>
-              <h1 class="hero-title"><span>Osaka</span><br />Slow Life 2026</h1>
-              <p class="hero-summary">
-                เวอร์ชันสุดท้ายของทริปคู่รักสาย slow life ที่ค่อย ๆ ไหลจากคืน
-                transit ในไต้หวันไปสู่โอซากะ เกียวโต มิโนะ อุจิ และโกเบแบบสบาย
-                หรู นุ่ม และบาลานซ์
-              </p>
-              <div class="hero-pills hero-tags" id="member-pills"></div>
-              <div class="hero-dates">
-                <div class="date-badge">16 พ.ค. 2026</div>
-                <span class="date-sep">→</span>
-                <div class="date-badge">24 พ.ค. 2026</div>
-              </div>
-              <div class="hero-metrics" id="hero-metrics"></div>
-            </div>
-
-            <div class="hero-side">
-              <section class="countdown-card">
-                <p class="card-label">Countdown</p>
-                <h2 id="countdown-title">กำลังเตรียมตัวออกเดินทาง</h2>
-                <div class="countdown-grid" id="countdown-grid"></div>
-                <p class="helper-text" id="countdown-helper">
-                  นับถอยหลังสู่วันเริ่มทริป
-                </p>
-              </section>
-
-              <section class="status-card">
-                <p class="card-label">Trip Snapshot</p>
-                <div class="status-copy" id="status-copy"></div>
-              </section>
-            </div>
-          </div>
-
-          <div class="hero-scroll">
-            <span>SCROLL</span>
-            <span aria-hidden="true">↓</span>
-          </div>
-        </section>
-
-        <nav class="day-nav" id="day-nav"></nav>
-
-        <section class="overview-grid">
-          <article class="panel">
-            <div class="section-intro">
-              <div>
-                <p class="eyebrow">Hotels</p>
-                <h2>ที่พักทั้งหมด</h2>
-              </div>
-            </div>
-            <div class="hotel-list" id="hotel-list"></div>
-          </article>
-
-          <article class="panel">
-            <div class="section-intro">
-              <div>
-                <p class="eyebrow">Trip Mood</p>
-                <h2>ภาพรวมทริป</h2>
-              </div>
-            </div>
-            <div class="note-list" id="note-list"></div>
-          </article>
-        </section>
-
-        <section class="wide-shell" id="flights">
-          <div class="section-header wide-header">
-            <div>
-              <p class="eyebrow">Flights</p>
-              <h2>เที่ยวบิน EVA Air</h2>
-            </div>
-            <p class="section-copy">
-              ขาไปและขากลับทั้งหมดแบบ transit ผ่าน Taipei พร้อมเวลาเปิดดูง่ายระหว่างทริป
+        <section class="hero">
+          <div class="hero-copy">
+            <p class="hero-kicker" data-i18n="hero.kicker">จากคืนทรานซิตที่ไทเป สู่โอซากะ เกียวโต มิโนะ อุจิ และโกเบ</p>
+            <h1 data-i18n="hero.title">Osaka, ในจังหวะที่นุ่มและนิ่งขึ้น</h1>
+            <p class="hero-summary" data-i18n="hero.summary">
+              คู่มือทริปส่วนตัวสำหรับการเดินทางแบบ slow life ที่ค่อย ๆ ไหลจากคืน
+              transit ในไต้หวันไปสู่โอซากะ เกียวโต มิโนะ อุจิ วันช็อปปิง โกเบ
+              และไฟลต์กลับบ้านอย่างนุ่มนวล
             </p>
-          </div>
-          <div class="flight-grid" id="flight-list"></div>
-        </section>
 
-        <section class="wide-shell" id="trip-overview">
-          <div class="section-header wide-header">
-            <div>
-              <p class="eyebrow">Trip Overview</p>
-              <h2>ภาพรวมทั้ง 9 วัน</h2>
+            <div class="hero-tones" aria-label="โทนของทริป">
+              <span data-i18n="hero.tones.kyoto">เช้าเกียวโต</span>
+              <span data-i18n="hero.tones.namba">บ่ายนัมบะ</span>
+              <span data-i18n="hero.tones.kobe">เย็นโกเบ</span>
             </div>
-            <p class="section-copy">แตะการ์ดเพื่อเลื่อนไปยังรายละเอียดของวันนั้น</p>
+
+            <div class="hero-meta">
+              <div>
+                <span data-i18n="hero.meta.dates.label">วันที่เดินทาง</span>
+                <strong>16–24 May 2026</strong>
+              </div>
+              <div>
+                <span data-i18n="hero.meta.travelers.label">ผู้เดินทาง</span>
+                <strong data-i18n="hero.meta.travelers.value">คู่รักวัย 40s</strong>
+              </div>
+              <div>
+                <span data-i18n="hero.meta.style.label">สไตล์ทริป</span>
+                <strong data-i18n="hero.meta.style.value">slow life, cafe, wine</strong>
+              </div>
+            </div>
           </div>
-          <div class="mini-days-strip" id="mini-days-strip"></div>
+
+          <div class="hero-gallery">
+            <figure class="hero-image hero-image-main">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/6/66/Pedestrian_road_with_pavements_and_paper_umbrellas%2C_Higashiyama-ku%2C_Kyoto%2C_Japan%2C_early_morning.jpg"
+                alt="Kyoto street"
+              />
+            </figure>
+            <figure class="hero-image hero-image-top">
+              <img
+                src="https://www.feel-kobe.jp/kobe-yakei/assets/media/DSC03874-1025x680.jpg"
+                alt="Kobe harbor"
+              />
+            </figure>
+            <figure class="hero-image hero-image-bottom">
+              <img
+                src="https://www.swissotel.com/assets/0/92/2119/4011/4029/4031/6442451752/d1920536-82ab-488d-aa3e-517262ff29fa.jpg"
+                alt="Swissotel Osaka"
+              />
+            </figure>
+          </div>
         </section>
 
-        <section class="section-header" id="summary">
-          <div>
-            <p class="eyebrow">Budget & Cards</p>
-            <h2>สรุปบัตรเดินทาง ค่าใช้จ่าย และของที่ต้องเตรียม</h2>
+        <section class="curated-strip">
+          <article>
+            <span class="strip-label" data-i18n="strip.mood.label">อารมณ์</span>
+            <strong data-i18n="strip.mood.title">Quiet Luxury</strong>
+            <p data-i18n="strip.mood.body">นุ่ม สงบ พรีเมียม แต่ยังโรแมนติกและเป็นส่วนตัว</p>
+          </article>
+          <article>
+            <span class="strip-label" data-i18n="strip.palette.label">สีหลัก</span>
+            <strong>Ivory, moss, navy, bronze</strong>
+            <p data-i18n="strip.palette.body">ลดสีสดลงและใช้ accent แบบผู้ใหญ่มากขึ้น</p>
+          </article>
+          <article>
+            <span class="strip-label" data-i18n="strip.experience.label">ประสบการณ์</span>
+            <strong data-i18n="strip.experience.title">ให้อารมณ์เหมือนไดอารีทริปส่วนตัว</strong>
+            <p data-i18n="strip.experience.body">ให้ความรู้สึกเหมือน itinerary ที่ curated โดย concierge ส่วนตัว</p>
+          </article>
+        </section>
+
+        <section class="section-block countdown-block" id="countdown">
+          <div class="section-heading">
+            <p data-i18n="countdown.heading.label">นับถอยหลัง</p>
+            <h2 id="countdown-title" data-i18n="countdown.heading.title">เหลือเวลาอีกนิดก่อนจะเข้าสู่จังหวะของโอซากะจริง ๆ</h2>
           </div>
-          <p class="section-copy">
-            อ่านหน้านี้รอบเดียวก่อนบินแล้วใช้เป็น reference ระหว่างทริปได้เลย
+
+          <div class="countdown-grid" id="countdown-grid" aria-label="Countdown"></div>
+          <p class="countdown-helper" id="countdown-helper" data-i18n="countdown.helper.before">
+            ตอนนี้ยังเป็นช่วงเตรียมตัวอยู่ เราจึงโชว์เวลาแบบ countdown ให้ก่อน
           </p>
         </section>
 
-        <section class="summary-grid">
-          <article class="panel">
-            <div class="section-intro">
-              <div>
-                <p class="eyebrow">Travel Cards</p>
-                <h2>บัตรและวิธีจ่ายที่ใช้จริง</h2>
-              </div>
-            </div>
-            <div class="fare-card-list" id="transport-card-list"></div>
-          </article>
-
-          <article class="panel">
-            <div class="section-intro">
-              <div>
-                <p class="eyebrow">Prep List</p>
-                <h2>สิ่งที่ต้องซื้อจริงก่อนเดินทาง</h2>
-              </div>
-            </div>
-            <div class="prep-list" id="prep-list"></div>
-            <div class="quote-card" id="summary-quote"></div>
-          </article>
-        </section>
-
-        <section class="budget-grid">
-          <article class="panel">
-            <div class="section-intro">
-              <div>
-                <p class="eyebrow">Japan Transit</p>
-                <h2>ค่าเดินทางในญี่ปุ่น</h2>
-              </div>
-            </div>
-            <div class="budget-table" id="transit-budget"></div>
-          </article>
-
-          <article class="panel">
-            <div class="section-intro">
-              <div>
-                <p class="eyebrow">Taxi & Extras</p>
-                <h2>ค่าเดินทางที่ไม่ใช้ ICOCA</h2>
-              </div>
-            </div>
-            <div class="budget-table" id="special-budget"></div>
-          </article>
-        </section>
-
-        <section class="budget-grid">
-          <article class="panel">
-            <div class="section-intro">
-              <div>
-                <p class="eyebrow">Food & Drinks</p>
-                <h2>งบอาหารและเครื่องดื่ม</h2>
-              </div>
-            </div>
-            <div class="budget-table" id="food-budget"></div>
-          </article>
-
-          <article class="panel total-panel">
-            <div class="section-intro">
-              <div>
-                <p class="eyebrow">Grand Total</p>
-                <h2>สรุปงบคร่าว ๆ สำหรับ 2 คน</h2>
-              </div>
-            </div>
-            <div class="total-list" id="total-list"></div>
-            <p class="total-note" id="total-note"></p>
-          </article>
-        </section>
-
-        <section class="section-header" id="emergency">
-          <div>
-            <p class="eyebrow">Emergency</p>
-            <h2>ข้อมูลติดต่อฉุกเฉิน</h2>
+        <section class="section-block" id="flights">
+          <div class="section-heading">
+            <p data-i18n="flights.heading.label">เที่ยวบิน</p>
+            <h2 data-i18n="flights.heading.title">สี่ช่วงการเดินทางที่ต่อกันอย่างนุ่มนวลตลอดทั้งทริป</h2>
           </div>
-          <p class="section-copy">
-            เบอร์ที่ควรมีไว้ระหว่างอยู่ญี่ปุ่นและวันเดินทางกลับ พร้อมโน้ตที่ช่วยให้หยิบใช้ได้เร็ว
-          </p>
-        </section>
 
-        <section class="summary-grid emergency-layout">
-          <article class="panel">
-            <div class="section-intro">
-              <div>
-                <p class="eyebrow">Useful Contacts</p>
-                <h2>เบอร์สำคัญระหว่างทริป</h2>
+          <div class="flight-grid">
+            <article class="flight-card">
+              <span class="flight-phase" data-i18n="flights.phase.outbound1">ขาไป 1/2</span>
+              <div class="flight-route">
+                <strong>BKK</strong>
+                <span>BR062</span>
+                <strong>TPE</strong>
               </div>
-            </div>
-            <div class="emergency-grid" id="emergency-contact-list"></div>
-          </article>
-
-          <article class="panel">
-            <div class="section-intro">
-              <div>
-                <p class="eyebrow">Quick Notes</p>
-                <h2>โน้ตที่ควรจำไว้</h2>
+              <div class="flight-meta">
+                <span>16 May 2026</span>
+                <strong>08:30 → 13:25</strong>
               </div>
-            </div>
-            <div class="info-note-list" id="emergency-note-list"></div>
-          </article>
-        </section>
+            </article>
 
-        <section class="section-header">
-          <div>
-            <p class="eyebrow">Daily Timeline</p>
-            <h2>แผนรายวันแบบเปิดดูง่ายบนมือถือ</h2>
+            <article class="flight-card">
+              <span class="flight-phase" data-i18n="flights.phase.outbound2">ขาไป 2/2</span>
+              <div class="flight-route">
+                <strong>TPE</strong>
+                <span>BR132</span>
+                <strong>KIX</strong>
+              </div>
+              <div class="flight-meta">
+                <span>17 May 2026</span>
+                <strong>08:20 → 12:10</strong>
+              </div>
+            </article>
+
+            <article class="flight-card">
+              <span class="flight-phase" data-i18n="flights.phase.return1">ขากลับ 1/2</span>
+              <div class="flight-route">
+                <strong>KIX</strong>
+                <span>BR131</span>
+                <strong>TPE</strong>
+              </div>
+              <div class="flight-meta">
+                <span>24 May 2026</span>
+                <strong>13:10 → 15:05</strong>
+              </div>
+            </article>
+
+            <article class="flight-card">
+              <span class="flight-phase" data-i18n="flights.phase.return2">ขากลับ 2/2</span>
+              <div class="flight-route">
+                <strong>TPE</strong>
+                <span>BR205</span>
+                <strong>BKK</strong>
+              </div>
+              <div class="flight-meta">
+                <span>24 May 2026</span>
+                <strong>20:45 → 23:30</strong>
+              </div>
+            </article>
           </div>
-          <p class="section-copy">
-            กดที่การ์ดแต่ละช่วงเวลาเพื่อดูโน้ตละเอียด พร้อมปุ่มแผนที่และเว็บไซต์ที่เกี่ยวข้อง
-          </p>
         </section>
 
-        <section class="day-list" id="days"></section>
+        <section class="section-block" id="overview">
+          <div class="section-heading">
+            <p data-i18n="overview.heading.label">ภาพรวมทั้ง 9 วัน</p>
+            <h2 data-i18n="overview.heading.title">ให้แต่ละวันเป็นหนึ่งบทของการเดินทาง ไม่ใช่แค่รายการเช็ก</h2>
+          </div>
+
+          <div class="overview-grid">
+            <article class="overview-card neutral">
+              <span data-i18n="overview.day0.label">วันที่ 0</span>
+              <strong data-i18n="overview.day0.title">คืนทรานซิตที่ไทเป</strong>
+              <p data-i18n="overview.day0.body">BKK → TPE → Gloria Outlets</p>
+            </article>
+            <article class="overview-card indigo">
+              <span data-i18n="overview.day1.label">วันที่ 1</span>
+              <strong data-i18n="overview.day1.title">เริ่มต้นโอซากะแบบค่อยเป็นค่อยไป</strong>
+              <p data-i18n="overview.day1.body">TPE → KIX → Namba</p>
+            </article>
+            <article class="overview-card rose">
+              <span data-i18n="overview.day2.label">วันที่ 2</span>
+              <strong data-i18n="overview.day2.title">แลนด์มาร์กหลักของโอซากะ</strong>
+              <p data-i18n="overview.day2.body">Castle Park → Shinsekai → Dotonbori</p>
+            </article>
+            <article class="overview-card teal">
+              <span data-i18n="overview.day3.label">วันที่ 3</span>
+              <strong data-i18n="overview.day3.title">เกียวโตสาย heritage</strong>
+              <p data-i18n="overview.day3.body">To-ji → Fushimi Inari → Gion</p>
+            </article>
+            <article class="overview-card moss">
+              <span data-i18n="overview.day4.label">วันที่ 4</span>
+              <strong data-i18n="overview.day4.title">Minoh & Katsuoji</strong>
+              <p data-i18n="overview.day4.body">ธรรมชาติ → วัดดารุมะ</p>
+            </article>
+            <article class="overview-card plum">
+              <span data-i18n="overview.day5.label">วันที่ 5</span>
+              <strong data-i18n="overview.day5.title">วันพักใจที่ Uji</strong>
+              <p data-i18n="overview.day5.body">ถนนชา → matcha → Osaka spa</p>
+            </article>
+            <article class="overview-card bronze">
+              <span data-i18n="overview.day6.label">วันที่ 6</span>
+              <strong data-i18n="overview.day6.title">วันช็อปหลังย้ายโรงแรม</strong>
+              <p data-i18n="overview.day6.body">Namba → Shinsaibashi → PARCO</p>
+            </article>
+            <article class="overview-card cobalt">
+              <span data-i18n="overview.day7.label">วันที่ 7</span>
+              <strong data-i18n="overview.day7.title">วันโกเบแบบผู้ใหญ่และไม่เร่งรีบ</strong>
+              <p data-i18n="overview.day7.body">Ikuta → Kitano → Harborland</p>
+            </article>
+            <article class="overview-card violet">
+              <span data-i18n="overview.day8.label">วันที่ 8</span>
+              <strong data-i18n="overview.day8.title">เดินทางกลับแบบไม่รีบ</strong>
+              <p data-i18n="overview.day8.body">Namba → KIX → TPE → BKK</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section-block trip-intel" id="trip-intel">
+          <div class="section-heading">
+            <p data-i18n="intel.heading.label">สรุปการเดินทาง</p>
+            <h2 data-i18n="intel.heading.title">บัตร ค่าใช้จ่าย และของที่ต้องเตรียม ควรดูเป็นชุดเดียวกันก่อนออกเดินทาง</h2>
+          </div>
+
+          <div class="intel-quote">
+            <span class="intel-quote-kicker" data-i18n="intel.quote.kicker">กฎง่ายที่สุดของทริปนี้</span>
+            <p data-i18n="intel.quote.body">มีแค่ ICOCA ใบเดียว แล้วใช้ได้ทั้งทริป ส่วนไต้หวันใช้ taxi กับบัตรเครดิตไปเลยให้ชีวิตง่ายที่สุด</p>
+          </div>
+
+          <div class="intel-grid">
+            <article class="intel-card">
+              <span class="intel-index">01</span>
+              <h3 data-i18n="intel.cards.transport.title">บัตรเดินทาง</h3>
+              <ul class="intel-list">
+                <li>
+                  <strong data-i18n="intel.transport.icoca.title">ICOCA IC Card 2 ใบ</strong>
+                  <p data-i18n="intel.transport.icoca.body">ซื้อที่ KIX และเติมเงิน ¥10,000 ต่อใบ ใช้กับ JR, Metro, Hankyu, Hanshin และรถบัสหลายสายได้ทั้งทริป</p>
+                </li>
+                <li>
+                  <strong data-i18n="intel.transport.pass.title">ไม่ต้องซื้อ Kansai Railway Pass</strong>
+                  <p data-i18n="intel.transport.pass.body">ค่าเดินทางรวมยังอยู่ในจุดที่ ICOCA ยืดหยุ่นและคุ้มกว่าการล็อกตัวเองกับ pass</p>
+                </li>
+                <li>
+                  <strong data-i18n="intel.transport.easycard.title">ไต้หวันไม่ต้องซื้อ EasyCard</strong>
+                  <p data-i18n="intel.transport.easycard.body">พักแค่ 1 คืน ใช้บัตรเครดิตหรือเงินสดสำหรับ taxi และค่าใช้จ่ายเล็ก ๆ ได้เลย</p>
+                </li>
+              </ul>
+            </article>
+
+            <article class="intel-card">
+              <span class="intel-index">02</span>
+              <h3 data-i18n="intel.cards.costs.title">ค่าเดินทางและค่าใช้จ่าย</h3>
+              <div class="intel-totals">
+                <div>
+                  <span data-i18n="intel.totals.transit.label">ค่าเดินทางญี่ปุ่น 2 คน</span>
+                  <strong>¥17,000–19,000</strong>
+                </div>
+                <div>
+                  <span data-i18n="intel.totals.taxi.label">Taxi และค่าเดินทางพิเศษ 2 คน</span>
+                  <strong>¥8,000–10,000</strong>
+                </div>
+                <div>
+                  <span data-i18n="intel.totals.food.label">ค่าอาหารและเครื่องดื่ม 2 คน</span>
+                  <strong>¥55,000–80,000</strong>
+                </div>
+                <div>
+                  <span data-i18n="intel.totals.total.label">รวมคร่าว ๆ ไม่รวมโรงแรมและตั๋วเครื่องบิน</span>
+                  <strong>¥80,000–110,000</strong>
+                </div>
+              </div>
+              <p class="intel-note" data-i18n="intel.totals.note">ภาพรวมคิดเป็นประมาณ 18,000–25,000 บาทสำหรับ 2 คน และไต้หวันอีกประมาณ NT$1,800–2,500 สำหรับ 2 คน</p>
+            </article>
+
+            <article class="intel-card">
+              <span class="intel-index">03</span>
+              <h3 data-i18n="intel.cards.extras.title">ค่าเดินทางจุดพิเศษที่ควรรู้</h3>
+              <ul class="intel-list compact">
+                <li>
+                  <strong>Kyoto Taxi</strong>
+                  <p data-i18n="intel.extras.kyoto">Fushimi Inari → Higashiyama ประมาณ ¥2,000–2,500 ต่อคัน</p>
+                </li>
+                <li>
+                  <strong>Minoh Taxi</strong>
+                  <p data-i18n="intel.extras.minoh">Minoh → Katsuoji → กลับสถานี ประมาณ ¥5,000–6,000 ต่อคัน</p>
+                </li>
+                <li>
+                  <strong>Taiwan Taxi</strong>
+                  <p data-i18n="intel.extras.taiwanAirport">Airport ↔ City Suites Gateway ประมาณ NT$200–250 ต่อเที่ยว</p>
+                </li>
+                <li>
+                  <strong>Taiwan Taxi</strong>
+                  <p data-i18n="intel.extras.taiwanOutlet">Hotel ↔ Gloria Outlets ประมาณ NT$150–200 ต่อเที่ยว</p>
+                </li>
+              </ul>
+            </article>
+
+            <article class="intel-card">
+              <span class="intel-index">04</span>
+              <h3 data-i18n="intel.cards.prep.title">ของที่ต้องเตรียมก่อนเดินทาง</h3>
+              <ul class="intel-list compact">
+                <li data-i18n="intel.prep.1">ซื้อ ICOCA 2 ใบที่ KIX แล้วเติมเงิน ¥10,000 ต่อใบ</li>
+                <li data-i18n="intel.prep.2">ไม่ต้องซื้อ pass เพิ่ม ทั้ง Kansai Railway Pass และ EasyCard ไต้หวันไม่จำเป็นแล้ว</li>
+                <li data-i18n="intel.prep.3">เตรียมบัตรเครดิตและ Apple Pay สำหรับ taxi ร้านอาหาร คาเฟ่ และค่าใช้จุกจิก</li>
+                <li data-i18n="intel.prep.4">พกเงินสดก้อนเล็กไว้สำรองสำหรับร้านเล็กหรือ taxi บางจุด</li>
+                <li data-i18n="intel.prep.5">เซฟชื่อโรงแรม ไฟลต์ และ booking สำคัญไว้ในมือถือกับ Maps ล่วงหน้า</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section class="section-block editorial-block" id="chapters">
+          <div class="section-heading">
+            <p data-i18n="chapters.heading.label">ฉากสำคัญของทริป</p>
+            <h2 data-i18n="chapters.heading.title">สามช่วงที่จะนิยามคาแรกเตอร์ของทริปนี้ได้ชัดที่สุด</h2>
+          </div>
+
+          <article class="editorial-card">
+            <figure>
+              <img
+                src="https://www.japan-guide.com/g18/3915_top.jpg"
+                alt="Kyoto"
+              />
+            </figure>
+            <div class="editorial-copy">
+              <p class="eyebrow" data-i18n="chapters.kyoto.eyebrow">Kyoto Heritage Day</p>
+              <h3 data-i18n="chapters.kyoto.title">ตรอกหิน โคมไฟกระดาษ และมื้อเย็นที่ควรให้ความรู้สึกนิ่งและลึก</h3>
+              <p data-i18n="chapters.kyoto.body">
+                วันเกียวโตจะค่อย ๆ พาเข้าโซนวัด ตรอกหิน และมื้อเย็นที่นิ่งลึก
+                เป็นวันที่เหมาะกับการเดินช้า ปล่อยให้บรรยากาศนำทางมากกว่าการรีบเก็บจุด
+              </p>
+            </div>
+          </article>
+
+          <article class="editorial-card reverse">
+            <figure>
+              <img
+                src="https://images.openai.com/static-rsc-4/UIvzyXfXHDvls0ZgDIDO-r-yDMiMQugxhDX4naGS5zoRARfSQpuxThCs2ol7tjCAXXr8V94eaE9IA9BFNQ7hzt1HiYQ6KLdzESZ4ljtRmmN0hJopcsCVHQNK4oKiapE9UrAO5ObhdPgBkqwAQLMHBFBQ02Kso3_2KUC9GwsT8LgwepPXmNadXjCtCEBLynta?purpose=fullsize"
+                alt="Shinsaibashi shopping"
+              />
+            </figure>
+            <div class="editorial-copy">
+              <p class="eyebrow" data-i18n="chapters.shopping.eyebrow">Shopping, Reframed</p>
+              <h3 data-i18n="chapters.shopping.title">ไม่ใช่วันเดินห้าง แต่เป็นบทหนึ่งของเมืองที่มีแฟชั่น ความงาม และจังหวะพัก</h3>
+              <p data-i18n="chapters.shopping.body">
+                วันนี้เป็นช่วงเติมของที่อยากได้แบบไม่เร่งรีบ เดินจาก Namba ไป
+                Shinsaibashi แวะห้าง คาเฟ่ และแบรนด์ที่ตั้งใจไว้โดยไม่ต้องกดดันตัวเอง
+              </p>
+            </div>
+          </article>
+
+          <article class="editorial-card">
+            <figure>
+              <img
+                src="https://www.feel-kobe.jp/kobe-yakei/assets/media/meriken-park-1-1025x680.jpg"
+                alt="Kobe sunset"
+              />
+            </figure>
+            <div class="editorial-copy">
+              <p class="eyebrow" data-i18n="chapters.kobe.eyebrow">Kobe at Dusk</p>
+              <h3 data-i18n="chapters.kobe.title">Harborland ควรให้ความรู้สึกเหมือนไวน์แก้วสุดท้าย ไม่ใช่แค่จุดแวะ</h3>
+              <p data-i18n="chapters.kobe.body">
+                ช่วงเย็นของโกเบเหมาะกับการปล่อยเวลาให้ไหลช้า ๆ ปิดวันด้วยวิวอ่าว
+                แสงเย็น และมื้อเบาหรือไวน์สักแก้วก่อนกลับโอซากะ
+              </p>
+            </div>
+          </article>
+        </section>
+
+        <section class="section-block day-focus" id="day-seven">
+          <div class="section-heading">
+            <p data-i18n="dayFocus.heading.label">Featured Day</p>
+            <h2 data-i18n="dayFocus.heading.title">Day 7 | Kobe Mature Slow Day</h2>
+          </div>
+
+          <div class="focus-grid">
+            <div class="focus-intro">
+              <span class="focus-day" data-i18n="dayFocus.dayLabel">วันที่ 7</span>
+              <h3 data-i18n="dayFocus.title">วันโกเบแบบผู้ใหญ่และไม่เร่งรีบ</h3>
+              <p data-i18n="dayFocus.body">
+                เช้าเริ่มด้วยความสงบของ Ikuta Shrine ก่อนขึ้นเนินไป Kitano,
+                พักคาเฟ่, ทาน Kobe Beef แบบพอดี แล้วปิดด้วยแสงเย็นริมอ่าว
+              </p>
+            </div>
+
+            <div class="focus-timeline">
+              <article>
+                <span>10:00</span>
+                <div>
+                  <strong data-i18n="dayFocus.timeline.ikuta.title">Ikuta Shrine</strong>
+                  <p data-i18n="dayFocus.timeline.ikuta.body">เริ่มวันอย่างสงบ คนยังไม่แน่น และให้ความรู้สึกเรียบหรูตั้งแต่ต้นวัน</p>
+                </div>
+              </article>
+              <article>
+                <span>10:45</span>
+                <div>
+                  <strong data-i18n="dayFocus.timeline.kitano.title">Kitano Ijinkan + pudding</strong>
+                  <p data-i18n="dayFocus.timeline.kitano.body">กลิ่นอายยุโรปบนเนินเขา เดินไม่หนัก และมีช่วงหวาน ๆ ให้วันดูพอดี</p>
+                </div>
+              </article>
+              <article>
+                <span>12:30</span>
+                <div>
+                  <strong data-i18n="dayFocus.timeline.mouriya.title">Mouriya Honten</strong>
+                  <p data-i18n="dayFocus.timeline.mouriya.body">มื้อนี้ควรมีน้ำหนักเหมือนหนึ่งฉากสำคัญ ไม่ใช่แค่บรรทัดในแผนเที่ยว</p>
+                </div>
+              </article>
+              <article>
+                <span>17:30</span>
+                <div>
+                  <strong data-i18n="dayFocus.timeline.harbor.title">Harborland + Port Tower</strong>
+                  <p data-i18n="dayFocus.timeline.harbor.body">ปิดวันด้วยลม น้ำ แสงสีบรอนซ์ และชั่วโมงสุดท้ายที่ไม่ต้องเร่งอะไรเลย</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="section-block detail-demo" id="day-details">
+          <div class="section-heading">
+            <p data-i18n="detailExplorer.heading.label">รายละเอียดรายวัน</p>
+            <h2 data-i18n="detailExplorer.heading.title">เลือกวัน แล้วดู timeline ของวันนั้นพร้อมแผนที่ เว็บไซต์ โน้ต และเวลาของช่วงที่กำลังเดินทาง</h2>
+          </div>
+
+          <div class="day-detail-picker" id="day-detail-picker" aria-label="Day detail picker"></div>
+
+          <div class="detail-layout">
+            <aside class="detail-summary-card" id="detail-summary-card"></aside>
+
+            <div class="detail-timeline" id="detail-timeline" aria-label="Daily timeline"></div>
+          </div>
+        </section>
+
+        <section class="section-block help-mode" id="help-mode">
+          <div class="section-heading">
+            <p data-i18n="help.heading.label">Help Mode</p>
+            <h2 data-i18n="help.heading.title">ประโยคช่วยเหลือแบบ offline ที่กดเปิดให้คนอื่นอ่านได้ทันที</h2>
+          </div>
+
+          <div class="help-grid">
+            <article class="help-card">
+              <span class="help-index">01</span>
+              <h3 data-i18n="help.cards.nut.title">เรื่องถั่วและการแพ้อาหาร</h3>
+              <p data-i18n="help.cards.nut.body">ใช้ตอนถามพนักงานร้านอาหารว่าจานนี้มีถั่วไหม และมีเมนูไหนที่ไม่มีถั่วบ้าง</p>
+              <button type="button" class="help-open-button" data-open-help data-help-id="nut" data-i18n="help.openPhrase">
+                เปิดข้อความช่วยเหลือ
+              </button>
+            </article>
+
+            <article class="help-card">
+              <span class="help-index">02</span>
+              <h3 data-i18n="help.cards.lamb.title">เราไม่ทานเนื้อแกะ</h3>
+              <p data-i18n="help.cards.lamb.body">ใช้ตอนสั่งอาหารหรือถามว่ามีเมนูอื่นที่ไม่ใช่เนื้อแกะแนะนำไหม</p>
+              <button type="button" class="help-open-button" data-open-help data-help-id="lamb" data-i18n="help.openPhrase">
+                เปิดข้อความช่วยเหลือ
+              </button>
+            </article>
+
+            <article class="help-card">
+              <span class="help-index">03</span>
+              <h3 data-i18n="help.cards.safeMenu.title">ช่วยแนะนำเมนูที่ปลอดภัยให้หน่อย</h3>
+              <p data-i18n="help.cards.safeMenu.body">ใช้ตอนอยากให้พนักงานช่วยเลือกเมนูที่ไม่มีถั่วและไม่มีเนื้อแกะให้เลยในครั้งเดียว</p>
+              <button type="button" class="help-open-button" data-open-help data-help-id="safeMenu" data-i18n="help.openPhrase">
+                เปิดข้อความช่วยเหลือ
+              </button>
+            </article>
+
+            <article class="help-card">
+              <span class="help-index">04</span>
+              <h3 data-i18n="help.cards.taxi.title">ช่วยเรียกแท็กซี่ให้หน่อย</h3>
+              <p data-i18n="help.cards.taxi.body">ใช้ที่โรงแรม ร้านอาหาร หรือห้าง เวลาต้องการให้ช่วยเรียกแท็กซี่ไปยังโรงแรม สถานี หรือสนามบิน</p>
+              <button type="button" class="help-open-button" data-open-help data-help-id="taxi" data-i18n="help.openPhrase">
+                เปิดข้อความช่วยเหลือ
+              </button>
+            </article>
+
+            <article class="help-card">
+              <span class="help-index">05</span>
+              <h3 data-i18n="help.cards.station.title">ช่วยบอกทางไปสถานีหรือชานชาลา</h3>
+              <p data-i18n="help.cards.station.body">ใช้เวลาหลงในสถานีใหญ่ หรือไม่แน่ใจว่าควรไปทางออกไหน ชานชาลาไหน หรือรถไฟสายไหน</p>
+              <button type="button" class="help-open-button" data-open-help data-help-id="station" data-i18n="help.openPhrase">
+                เปิดข้อความช่วยเหลือ
+              </button>
+            </article>
+
+            <article class="help-card">
+              <span class="help-index">06</span>
+              <h3 data-i18n="help.cards.booking.title">เรามี booking นี้ ช่วยดูให้หน่อย</h3>
+              <p data-i18n="help.cards.booking.body">ใช้ตอนโชว์ใบจองโรงแรม ร้านอาหาร หรือกิจกรรม แล้วอยากให้พนักงานช่วยเช็กว่าถูกต้องไหม</p>
+              <button type="button" class="help-open-button" data-open-help data-help-id="booking" data-i18n="help.openPhrase">
+                เปิดข้อความช่วยเหลือ
+              </button>
+            </article>
+
+            <article class="help-card">
+              <span class="help-index">07</span>
+              <h3 data-i18n="help.cards.clinic.title">ช่วยพาไป pharmacy หรือ clinic ที่ใกล้ที่สุด</h3>
+              <p data-i18n="help.cards.clinic.body">ใช้เวลาไม่สบาย ต้องการยา หรืออยากหาคลินิกและโรงพยาบาลที่ใกล้ที่สุดแบบรวดเร็ว</p>
+              <button type="button" class="help-open-button" data-open-help data-help-id="clinic" data-i18n="help.openPhrase">
+                เปิดข้อความช่วยเหลือ
+              </button>
+            </article>
+
+            <article class="help-card">
+              <span class="help-index">08</span>
+              <h3 data-i18n="help.cards.lost.title">เราทำของหาย ช่วยเราหน่อย</h3>
+              <p data-i18n="help.cards.lost.body">ใช้ตอนลืมของไว้ที่ร้าน สถานี รถไฟ หรือแท็กซี่ และอยากให้ช่วยติดต่อให้</p>
+              <button type="button" class="help-open-button" data-open-help data-help-id="lost" data-i18n="help.openPhrase">
+                เปิดข้อความช่วยเหลือ
+              </button>
+            </article>
+          </div>
+        </section>
+
+        <section class="section-block contacts-block" id="contacts">
+          <div class="section-heading">
+            <p data-i18n="contacts.heading.label">ข้อมูลติดต่อฉุกเฉิน</p>
+            <h2 data-i18n="contacts.heading.title">เบอร์และข้อมูลที่ควรหยิบใช้ได้ทันทีระหว่างทริป</h2>
+          </div>
+
+          <div class="contacts-grid">
+            <article>
+              <span data-i18n="contacts.police.label">ตำรวจ</span>
+              <strong>110</strong>
+              <p data-i18n="contacts.police.body">เหตุฉุกเฉินด้านความปลอดภัยหรืออุบัติเหตุ</p>
+            </article>
+            <article>
+              <span data-i18n="contacts.ambulance.label">รถพยาบาล</span>
+              <strong>119</strong>
+              <p data-i18n="contacts.ambulance.body">กรณีเจ็บป่วยฉุกเฉินและเหตุเร่งด่วนทางการแพทย์</p>
+            </article>
+            <article>
+              <span>JNTO Hotline</span>
+              <strong>+81-50-3816-2787</strong>
+              <p data-i18n="contacts.jnto.body">สายช่วยเหลือนักท่องเที่ยวที่ควรมีติดไว้ตลอดทริป</p>
+            </article>
+            <article>
+              <span>EVA Air Japan</span>
+              <strong>+81-3-4212-3806</strong>
+              <p data-i18n="contacts.eva.body">สำหรับปัญหาไฟลต์ขากลับหรือการ re-check ระหว่าง transit</p>
+            </article>
+          </div>
+        </section>
       </main>
     </div>
 
-    <dialog class="detail-sheet" id="detail-sheet">
-      <form method="dialog" class="detail-backdrop">
-        <article class="detail-card">
-          <button class="detail-close" value="cancel" aria-label="Close detail">
-            ×
-          </button>
-          <p class="detail-time" id="detail-time"></p>
-          <h3 id="detail-title"></h3>
-          <p class="detail-summary" id="detail-summary"></p>
-          <ul class="detail-list" id="detail-list"></ul>
-          <div class="detail-links" id="detail-links"></div>
-        </article>
-      </form>
-    </dialog>
+    <div class="note-modal" hidden>
+      <div class="note-backdrop" data-close-note></div>
+      <div class="note-panel" role="dialog" aria-modal="true" aria-labelledby="note-title">
+        <button type="button" class="note-close" aria-label="ปิด" data-close-note data-i18n="common.close">
+          ปิด
+        </button>
+        <p class="note-kicker" data-i18n="detail.note.kicker">Note</p>
+        <h3 id="note-title">รายละเอียด</h3>
+        <p class="note-body"></p>
+        <ul class="note-list"></ul>
+      </div>
+    </div>
+
+    <div class="help-modal" hidden>
+      <div class="note-backdrop" data-close-help></div>
+      <div class="help-panel" role="dialog" aria-modal="true" aria-labelledby="help-title">
+        <button type="button" class="note-close" aria-label="ปิด" data-close-help data-i18n="common.close">
+          ปิด
+        </button>
+        <p class="note-kicker" data-i18n="help.modal.kicker">Help Mode</p>
+        <h3 id="help-title"></h3>
+
+        <div class="help-language-switcher" role="group" aria-label="Help language switcher">
+          <button type="button" class="help-lang-pill is-active" data-help-lang="th">ไทย</button>
+          <button type="button" class="help-lang-pill" data-help-lang="en">English</button>
+          <button type="button" class="help-lang-pill" data-help-lang="ja">日本語</button>
+          <button type="button" class="help-lang-pill" data-help-lang="zh">中文</button>
+        </div>
+
+        <p class="help-modal-language-label" data-i18n="help.modal.languageLabel">ภาษาที่จะแสดงให้ผู้อื่นอ่าน</p>
+        <div class="help-phrase-box">
+          <p class="help-phrase"></p>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
