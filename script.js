@@ -120,6 +120,10 @@ const I18N = {
     "nav.dayDetails": "รายละเอียดรายวัน",
     "nav.help": "Help Mode",
     "nav.contacts": "ฉุกเฉิน",
+    "quickMenu.title": "เมนูด่วน",
+    "quickMenu.today": "วันนี้",
+    "quickMenu.sos": "SOS",
+    "quickMenu.note": "แตะเพื่อกระโดดไปยังวันนั้น หรือกด SOS เพื่อดูเบอร์ติดต่อฉุกเฉิน",
     "countdown.heading.label": "นับถอยหลัง",
     "countdown.heading.title": "เหลือเวลาอีกนิดก่อนจะเข้าสู่จังหวะของโอซากะจริง ๆ",
     "countdown.helper.before": "ตอนนี้ยังเป็นช่วงเตรียมตัวอยู่ เราจึงโชว์เวลาแบบ countdown ให้ก่อน",
@@ -338,6 +342,10 @@ const I18N = {
     "nav.dayDetails": "Day details",
     "nav.help": "Help Mode",
     "nav.contacts": "Contacts",
+    "quickMenu.title": "Quick menu",
+    "quickMenu.today": "Today",
+    "quickMenu.sos": "SOS",
+    "quickMenu.note": "Tap to jump to a day, or tap SOS for emergency contacts",
     "countdown.heading.label": "Countdown",
     "countdown.heading.title": "Only a little longer before the rhythm of Osaka begins for real.",
     "countdown.helper.before": "For now, we are still in preparation mode, so the page shows a countdown first.",
@@ -556,6 +564,10 @@ const I18N = {
     "nav.dayDetails": "日別詳細",
     "nav.help": "Help Mode",
     "nav.contacts": "緊急連絡",
+    "quickMenu.title": "クイックメニュー",
+    "quickMenu.today": "今日",
+    "quickMenu.sos": "SOS",
+    "quickMenu.note": "日を選んでジャンプ、SOSで緊急連絡先へ",
     "countdown.heading.label": "カウントダウン",
     "countdown.heading.title": "大阪のリズムが本当に始まるまで、あと少しです。",
     "countdown.helper.before": "まだ出発前の準備期間なので、まずはカウントダウンを表示しています。",
@@ -774,6 +786,10 @@ const I18N = {
     "nav.dayDetails": "每日详情",
     "nav.help": "Help Mode",
     "nav.contacts": "紧急联系",
+    "quickMenu.title": "快捷菜单",
+    "quickMenu.today": "今天",
+    "quickMenu.sos": "SOS",
+    "quickMenu.note": "点击跳转到当天，或点击 SOS 查看紧急联系方式",
     "countdown.heading.label": "倒数计时",
     "countdown.heading.title": "距离真正进入 Osaka 的节奏，只剩一点点时间了。",
     "countdown.helper.before": "现在还处于出发前准备阶段，所以这里先显示倒数计时。",
@@ -2003,6 +2019,28 @@ function getDayDisplayContent(day, lang = currentPageLang) {
   };
 }
 
+function containsThai(text = "") {
+  return /[\u0E00-\u0E7F]/.test(text);
+}
+
+function getLocalizedEventTitle(event, lang = currentPageLang) {
+  if (lang === "th") return event.title;
+  if (!containsThai(event.title || "")) return event.title;
+  const place = event.place || (lang === "ja" ? "予定" : lang === "zh" ? "行程" : "Activity");
+  if (lang === "ja") return `${place} の予定`;
+  if (lang === "zh") return `${place} 行程`;
+  return `${place} activity`;
+}
+
+function getLocalizedEventBlurb(event, lang = currentPageLang) {
+  if (lang === "th") return event.blurb;
+  if (!containsThai(event.blurb || "")) return event.blurb;
+  const title = getLocalizedEventTitle(event, lang);
+  if (lang === "ja") return `${title} の時間です。地図・公式サイト・ノートを使って、当日の流れに沿って進めてください。`;
+  if (lang === "zh") return `当前是 ${title} 时间。可使用地图、官网与备注，按当天节奏进行。`;
+  return `This is the time for ${title}. Use the map, website, and notes to follow the day's flow.`;
+}
+
 function getDaySummaryText(day, lang = currentPageLang) {
   if (lang === "th") return day.summary;
   const display = getDayDisplayContent(day, lang);
@@ -2052,6 +2090,43 @@ function renderDetailPicker() {
   document.querySelectorAll(".overview-card").forEach((card, index) => {
     card.classList.toggle("is-selected", PROTOTYPE_DAYS[index]?.id === currentDetailDayId);
   });
+}
+
+function renderMobileQuickMenu() {
+  const list = document.querySelector("#quick-menu-chip-list");
+  if (!list) return;
+  list.innerHTML = "";
+
+  const todayChip = document.createElement("button");
+  todayChip.type = "button";
+  todayChip.className = "quick-menu-chip quick-menu-chip-today";
+  todayChip.dataset.quickAction = "today";
+  todayChip.textContent = t("quickMenu.today");
+  list.appendChild(todayChip);
+
+  PROTOTYPE_DAYS.forEach((day, index) => {
+    const chip = document.createElement("button");
+    chip.type = "button";
+    chip.className = "quick-menu-chip";
+    if (day.id === currentDetailDayId) chip.classList.add("is-active");
+    chip.dataset.dayId = day.id;
+    chip.textContent =
+      currentPageLang === "th"
+        ? `วันที่ ${index}`
+        : currentPageLang === "ja"
+          ? `${index}日目`
+          : currentPageLang === "zh"
+            ? `第${index}天`
+            : `Day ${index}`;
+    list.appendChild(chip);
+  });
+
+  const sosChip = document.createElement("button");
+  sosChip.type = "button";
+  sosChip.className = "quick-menu-chip is-sos";
+  sosChip.dataset.quickAction = "sos";
+  sosChip.textContent = t("quickMenu.sos");
+  list.appendChild(sosChip);
 }
 
 function renderDetailSummary(day) {
@@ -2160,11 +2235,13 @@ function getEventDurationLabel(event) {
 
 function createDetailCard(event) {
   const article = document.createElement("article");
+  const localizedTitle = getLocalizedEventTitle(event, currentPageLang);
+  const localizedBlurb = getLocalizedEventBlurb(event, currentPageLang);
   article.className = "detail-card";
   article.dataset.cardId = event.id;
   article.dataset.start = event.start;
   article.dataset.end = event.end;
-  article.dataset.title = event.title;
+  article.dataset.title = localizedTitle;
   const duration = getEventDurationLabel(event);
   const icon = getEventIcon(event);
   article.innerHTML = `
@@ -2177,11 +2254,11 @@ function createDetailCard(event) {
       <div class="detail-card-top">
         <div>
           <p class="detail-eyebrow">${event.place}</p>
-          <h3>${event.title}</h3>
+          <h3>${localizedTitle}</h3>
         </div>
         <span class="detail-place">${event.place}</span>
       </div>
-      <p class="detail-copy">${event.blurb}</p>
+      <p class="detail-copy">${localizedBlurb}</p>
       <div class="detail-actions">
         <a href="${event.map}" target="_blank" rel="noreferrer" class="action-map">${t("actions.map")}</a>
         ${event.website ? `<a href="${event.website}" target="_blank" rel="noreferrer" class="action-site">${t("actions.website")}</a>` : ""}
@@ -2203,6 +2280,7 @@ function renderDetailTimeline(day) {
 
 function renderDetailExplorer() {
   const day = getCurrentDayData();
+  renderMobileQuickMenu();
   renderDetailPicker();
   renderDetailSummary(day);
   renderDetailTimeline(day);
@@ -2556,6 +2634,33 @@ function initDetailExplorer() {
   currentDetailDayId = getSavedDetailDay() || getDefaultDetailDay();
 
   document.addEventListener("click", (event) => {
+    const quickChip = event.target.closest(".quick-menu-chip");
+    if (quickChip) {
+      const action = quickChip.dataset.quickAction;
+      if (action === "sos") {
+        document.querySelector("#contacts")?.scrollIntoView({ behavior: "smooth", block: "start" });
+        return;
+      }
+      if (action === "today") {
+        const now = new Date();
+        const matchedToday = PROTOTYPE_DAYS.find((day) => getDateKey(now, day.timeZone) === day.dateIso);
+        if (matchedToday) {
+          currentDetailDayId = matchedToday.id;
+          localStorage.setItem(DETAIL_DAY_STORAGE_KEY, currentDetailDayId);
+          renderDetailExplorer();
+        }
+        document.querySelector("#day-details")?.scrollIntoView({ behavior: "smooth", block: "start" });
+        return;
+      }
+      if (quickChip.dataset.dayId) {
+        currentDetailDayId = quickChip.dataset.dayId;
+        localStorage.setItem(DETAIL_DAY_STORAGE_KEY, currentDetailDayId);
+        renderDetailExplorer();
+        document.querySelector("#day-details")?.scrollIntoView({ behavior: "smooth", block: "start" });
+        return;
+      }
+    }
+
     const pill = event.target.closest(".day-detail-pill[data-day-id]");
     if (pill) {
       currentDetailDayId = pill.dataset.dayId;
