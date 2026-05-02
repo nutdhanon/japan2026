@@ -1,5 +1,6 @@
 const PAGE_LANG_STORAGE_KEY = "osaka-trip-lang";
 const HELP_LANG_STORAGE_KEY = "osaka-trip-help-lang";
+const HELP_TOPIC_ORDER = ["nut", "lamb", "safeMenu", "taxi", "station", "booking", "clinic", "lost"];
 const DEFAULT_PAGE_LANG = "th";
 const DEFAULT_HELP_LANG = "ja";
 
@@ -299,14 +300,23 @@ const I18N = {
     "help.openPhrase": "เปิดข้อความช่วยเหลือ",
     "help.modal.kicker": "Help Mode",
     "help.modal.languageLabel": "ภาษาที่จะแสดงให้ผู้อื่นอ่าน",
+    "help.modal.prev": "ก่อนหน้า",
+    "help.modal.next": "ถัดไป",
+    "help.modal.copy": "คัดลอก",
+    "help.modal.copied": "คัดลอกแล้ว",
+    "help.modal.copyUnavailable": "คัดลอกไม่ได้",
     "contacts.heading.label": "ข้อมูลติดต่อฉุกเฉิน",
     "contacts.heading.title": "เบอร์และข้อมูลที่ควรหยิบใช้ได้ทันทีระหว่างทริป",
     "contacts.police.label": "ตำรวจ",
     "contacts.police.body": "เหตุฉุกเฉินด้านความปลอดภัยหรืออุบัติเหตุ",
+    "contacts.police.call": "โทร 110",
     "contacts.ambulance.label": "รถพยาบาล",
     "contacts.ambulance.body": "กรณีเจ็บป่วยฉุกเฉินและเหตุเร่งด่วนทางการแพทย์",
+    "contacts.ambulance.call": "โทร 119",
     "contacts.jnto.body": "สายช่วยเหลือนักท่องเที่ยวที่ควรมีติดไว้ตลอดทริป",
+    "contacts.jnto.call": "โทร JNTO",
     "contacts.eva.body": "สำหรับปัญหาไฟลต์ขากลับหรือการ re-check ระหว่าง transit",
+    "contacts.eva.call": "โทร EVA Air",
     "common.close": "ปิด",
     "detail.note.kicker": "Note",
     "detail.note.defaultTitle": "รายละเอียด",
@@ -508,14 +518,23 @@ const I18N = {
     "help.openPhrase": "Open support phrase",
     "help.modal.kicker": "Help Mode",
     "help.modal.languageLabel": "Language to show another person",
+    "help.modal.prev": "Previous",
+    "help.modal.next": "Next",
+    "help.modal.copy": "Copy",
+    "help.modal.copied": "Copied",
+    "help.modal.copyUnavailable": "Copy unavailable",
     "contacts.heading.label": "Emergency contacts",
     "contacts.heading.title": "The key numbers and notes you should be able to reach quickly during the trip",
     "contacts.police.label": "Police",
     "contacts.police.body": "For safety issues, theft, or accidents.",
+    "contacts.police.call": "Call 110",
     "contacts.ambulance.label": "Ambulance",
     "contacts.ambulance.body": "For medical emergencies or urgent health support.",
+    "contacts.ambulance.call": "Call 119",
     "contacts.jnto.body": "A tourist support line worth keeping handy throughout the trip.",
+    "contacts.jnto.call": "Call JNTO",
     "contacts.eva.body": "Useful for return-flight issues or re-check questions during transit.",
+    "contacts.eva.call": "Call EVA Air",
     "common.close": "Close",
     "detail.note.kicker": "Note",
     "detail.note.defaultTitle": "Details",
@@ -717,14 +736,23 @@ const I18N = {
     "help.openPhrase": "サポート文を開く",
     "help.modal.kicker": "Help Mode",
     "help.modal.languageLabel": "相手に見せる言語",
+    "help.modal.prev": "前へ",
+    "help.modal.next": "次へ",
+    "help.modal.copy": "コピー",
+    "help.modal.copied": "コピーしました",
+    "help.modal.copyUnavailable": "コピー不可",
     "contacts.heading.label": "緊急連絡先",
     "contacts.heading.title": "旅の途中で、すぐに開いて使える連絡先とメモをまとめています",
     "contacts.police.label": "警察",
     "contacts.police.body": "安全上の問題、盗難、事故など。",
+    "contacts.police.call": "110に電話",
     "contacts.ambulance.label": "救急",
     "contacts.ambulance.body": "急病や医療上の緊急対応が必要なとき。",
+    "contacts.ambulance.call": "119に電話",
     "contacts.jnto.body": "旅行中ずっと手元に置いておきたい観光サポート窓口です。",
+    "contacts.jnto.call": "JNTOに電話",
     "contacts.eva.body": "復路便の問題や transit 中の再確認に役立ちます。",
+    "contacts.eva.call": "EVA Airに電話",
     "common.close": "閉じる",
     "detail.note.kicker": "Note",
     "detail.note.defaultTitle": "詳細",
@@ -924,14 +952,23 @@ const I18N = {
     "help.openPhrase": "打开求助句子",
     "help.modal.kicker": "Help Mode",
     "help.modal.languageLabel": "给对方看的语言",
+    "help.modal.prev": "上一条",
+    "help.modal.next": "下一条",
+    "help.modal.copy": "复制",
+    "help.modal.copied": "已复制",
+    "help.modal.copyUnavailable": "无法复制",
     "contacts.heading.label": "紧急联系信息",
     "contacts.heading.title": "把旅途中需要立刻打开的号码和备注放在一起",
     "contacts.police.label": "警察",
     "contacts.police.body": "安全问题、失窃或事故。",
+    "contacts.police.call": "拨打 110",
     "contacts.ambulance.label": "救护车",
     "contacts.ambulance.body": "医疗紧急情况或急需医疗帮助时。",
+    "contacts.ambulance.call": "拨打 119",
     "contacts.jnto.body": "旅行期间值得一直保存的游客支援热线。",
+    "contacts.jnto.call": "拨打 JNTO",
     "contacts.eva.body": "适合处理返程航班问题或转机重新确认。",
+    "contacts.eva.call": "拨打 EVA Air",
     "common.close": "关闭",
     "detail.note.kicker": "Note",
     "detail.note.defaultTitle": "详情",
@@ -1744,6 +1781,7 @@ let currentPageLang = DEFAULT_PAGE_LANG;
 let currentHelpLang = DEFAULT_HELP_LANG;
 let currentNoteId = null;
 let currentHelpId = "nut";
+let helpCopyResetTimer = null;
 let currentDetailDayId = null;
 
 function t(key, lang = currentPageLang) {
@@ -2191,6 +2229,9 @@ function applyTranslations(lang) {
   document.querySelectorAll("[data-i18n]").forEach((element) => {
     setTextForKey(element, element.dataset.i18n, lang);
   });
+  document.querySelectorAll("[data-i18n-aria-label]").forEach((element) => {
+    element.setAttribute("aria-label", t(element.dataset.i18nAriaLabel, lang));
+  });
 
   updatePageLangButton(lang);
   renderCountdown();
@@ -2245,13 +2286,13 @@ function renderPrototypeMarker() {
   });
   const meta = document.createElement("span");
   meta.className = "detail-marker-meta";
-  if (nextEvent) {
+  if (liveEvent) {
+    meta.textContent = formatTemplate(t("marker.live"), { title: liveEvent.title });
+  } else if (nextEvent) {
     meta.textContent = formatTemplate(t("marker.nextIn"), {
       minutes: nextEvent.start - nowMinutes,
       title: nextEvent.title,
     });
-  } else if (liveEvent) {
-    meta.textContent = formatTemplate(t("marker.live"), { title: liveEvent.title });
   } else {
     meta.textContent = t("marker.done");
   }
@@ -2318,9 +2359,14 @@ function renderHelpModal() {
   if (!modal) return;
   const title = modal.querySelector("#help-title");
   const phrase = modal.querySelector(".help-phrase");
+  const counter = modal.querySelector(".help-topic-counter");
+  const copyButtonLabel = modal.querySelector("[data-copy-help] span");
   const helpText = HELP_PHRASES[currentHelpId]?.[currentHelpLang] ?? HELP_PHRASES[currentHelpId]?.th ?? "";
+  const currentIndex = Math.max(HELP_TOPIC_ORDER.indexOf(currentHelpId), 0);
   title.textContent = t(`help.cards.${currentHelpId}.title`, currentPageLang);
   phrase.textContent = helpText;
+  if (counter) counter.textContent = `${currentIndex + 1} / ${HELP_TOPIC_ORDER.length}`;
+  if (copyButtonLabel) copyButtonLabel.textContent = t("help.modal.copy", currentPageLang);
   setActiveButtonState(".help-lang-pill", currentHelpLang, "data-help-lang");
 }
 
@@ -2328,9 +2374,55 @@ function initHelpMode() {
   const modal = document.querySelector(".help-modal");
   if (!modal) return;
 
+  function setHelpTopicByOffset(offset) {
+    const currentIndex = Math.max(HELP_TOPIC_ORDER.indexOf(currentHelpId), 0);
+    const nextIndex = (currentIndex + offset + HELP_TOPIC_ORDER.length) % HELP_TOPIC_ORDER.length;
+    currentHelpId = HELP_TOPIC_ORDER[nextIndex];
+    renderHelpModal();
+  }
+
+  async function copyCurrentHelpPhrase() {
+    const text = HELP_PHRASES[currentHelpId]?.[currentHelpLang] ?? HELP_PHRASES[currentHelpId]?.th ?? "";
+    const copyButtonLabel = modal.querySelector("[data-copy-help] span");
+    let copied = false;
+    if (navigator.clipboard?.writeText) {
+      try {
+        await navigator.clipboard.writeText(text);
+        copied = true;
+      } catch {
+        copied = false;
+      }
+    }
+
+    if (!copied) {
+      try {
+        const textarea = document.createElement("textarea");
+        textarea.value = text;
+        textarea.setAttribute("readonly", "");
+        textarea.style.position = "absolute";
+        textarea.style.left = "-9999px";
+        document.body.appendChild(textarea);
+        textarea.select();
+        copied = document.execCommand("copy");
+        textarea.remove();
+      } catch {
+        copied = false;
+      }
+    }
+
+    if (!copyButtonLabel) return;
+    copyButtonLabel.textContent = t(copied ? "help.modal.copied" : "help.modal.copyUnavailable", currentPageLang);
+    clearTimeout(helpCopyResetTimer);
+    helpCopyResetTimer = window.setTimeout(() => {
+      const label = modal.querySelector("[data-copy-help] span");
+      if (label) label.textContent = t("help.modal.copy", currentPageLang);
+    }, 1400);
+  }
+
   function closeModal() {
     modal.hidden = true;
     document.body.classList.remove("is-note-open");
+    clearTimeout(helpCopyResetTimer);
   }
 
   document.querySelectorAll("[data-open-help]").forEach((button) => {
@@ -2354,8 +2446,23 @@ function initHelpMode() {
     element.addEventListener("click", closeModal);
   });
 
+  modal.querySelector('[data-help-nav="prev"]')?.addEventListener("click", () => {
+    setHelpTopicByOffset(-1);
+  });
+
+  modal.querySelector('[data-help-nav="next"]')?.addEventListener("click", () => {
+    setHelpTopicByOffset(1);
+  });
+
+  modal.querySelector("[data-copy-help]")?.addEventListener("click", () => {
+    copyCurrentHelpPhrase();
+  });
+
   document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape" && !modal.hidden) closeModal();
+    if (modal.hidden) return;
+    if (event.key === "Escape") closeModal();
+    if (event.key === "ArrowLeft") setHelpTopicByOffset(-1);
+    if (event.key === "ArrowRight") setHelpTopicByOffset(1);
   });
 }
 

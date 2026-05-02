@@ -2399,6 +2399,55 @@ body[data-theme="dark"] .page-lang-option.is-active {
   line-height: 1.62;
 }
 
+.help-carousel-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.help-nav-button,
+.help-copy-button {
+  min-height: 44px;
+  padding: 0 16px;
+  border: 1px solid rgba(179, 135, 79, 0.22);
+  border-radius: 999px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.94), rgba(246, 237, 225, 0.94));
+  color: var(--ink);
+  font: inherit;
+  font-family: var(--font-ui);
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    border-color 180ms ease;
+}
+
+.help-copy-button {
+  margin-left: auto;
+  background: linear-gradient(135deg, rgba(78, 111, 148, 0.14), rgba(255, 255, 255, 0.96));
+  color: #39587c;
+}
+
+.help-nav-button:hover,
+.help-copy-button:hover,
+.contact-call-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 22px rgba(40, 29, 18, 0.08);
+}
+
+.help-topic-counter {
+  margin: 0;
+  color: var(--stone);
+  font-family: var(--font-numeric);
+  font-size: 0.94rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum" 1;
+}
+
 .contacts-grid article span {
   display: block;
   margin-bottom: 8px;
@@ -2412,6 +2461,8 @@ body[data-theme="dark"] .page-lang-option.is-active {
 }
 
 .contacts-grid article {
+  display: flex;
+  flex-direction: column;
   transition:
     transform 220ms ease,
     box-shadow 220ms ease;
@@ -2442,6 +2493,77 @@ body[data-theme="dark"] .page-lang-option.is-active {
   letter-spacing: -0.02em;
   font-variant-numeric: tabular-nums;
   font-feature-settings: "tnum" 1;
+}
+
+.contact-actions {
+  margin-top: auto;
+  padding-top: 14px;
+}
+
+.contact-call-button {
+  display: inline-flex;
+  min-height: 46px;
+  align-items: center;
+  gap: 10px;
+  padding: 0 16px 0 12px;
+  border: 1px solid rgba(179, 135, 79, 0.2);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--ink);
+  text-decoration: none;
+  box-shadow: 0 10px 18px rgba(40, 29, 18, 0.06);
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    border-color 180ms ease;
+}
+
+.contact-call-icon {
+  display: inline-grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  background: rgba(185, 120, 126, 0.12);
+  color: #a14d5d;
+  font-size: 0.92rem;
+}
+
+.contact-call-label {
+  font-family: var(--font-ui);
+  font-weight: 600;
+}
+
+.contacts-grid article:nth-child(1) .contact-call-button,
+.contacts-grid article:nth-child(2) .contact-call-button {
+  border-color: rgba(185, 120, 126, 0.24);
+  background: linear-gradient(135deg, rgba(185, 120, 126, 0.12), rgba(255, 255, 255, 0.94));
+}
+
+.contacts-grid article:nth-child(1) .contact-call-icon,
+.contacts-grid article:nth-child(2) .contact-call-icon {
+  background: rgba(185, 120, 126, 0.16);
+  color: #9f4052;
+}
+
+.contacts-grid article:nth-child(3) .contact-call-button {
+  border-color: rgba(78, 111, 148, 0.2);
+  background: linear-gradient(135deg, rgba(78, 111, 148, 0.12), rgba(255, 255, 255, 0.94));
+}
+
+.contacts-grid article:nth-child(3) .contact-call-icon {
+  background: rgba(78, 111, 148, 0.16);
+  color: #38597e;
+}
+
+.contacts-grid article:nth-child(4) .contact-call-button {
+  border-color: rgba(179, 135, 79, 0.22);
+  background: linear-gradient(135deg, rgba(179, 135, 79, 0.14), rgba(255, 255, 255, 0.94));
+}
+
+.contacts-grid article:nth-child(4) .contact-call-icon {
+  background: rgba(179, 135, 79, 0.16);
+  color: #8d622e;
 }
 
 body[data-theme="dark"] {
@@ -2791,6 +2913,39 @@ body[data-theme="dark"] .help-phrase {
   color: var(--dark-text);
 }
 
+body[data-theme="dark"] .help-nav-button,
+body[data-theme="dark"] .help-copy-button,
+body[data-theme="dark"] .contact-call-button {
+  border-color: var(--dark-border-strong);
+  background: linear-gradient(180deg, rgba(29, 42, 58, 0.96), rgba(23, 34, 49, 0.98));
+  color: var(--dark-text);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.24);
+}
+
+body[data-theme="dark"] .help-copy-button {
+  background: linear-gradient(180deg, rgba(38, 52, 69, 0.96), rgba(23, 34, 49, 0.98));
+  color: var(--dark-lapis);
+}
+
+body[data-theme="dark"] .help-topic-counter {
+  color: var(--dark-muted);
+}
+
+body[data-theme="dark"] .contact-call-icon {
+  background: rgba(233, 164, 173, 0.14);
+  color: var(--dark-rose);
+}
+
+body[data-theme="dark"] .contacts-grid article:nth-child(3) .contact-call-icon {
+  background: rgba(169, 200, 236, 0.14);
+  color: var(--dark-lapis);
+}
+
+body[data-theme="dark"] .contacts-grid article:nth-child(4) .contact-call-icon {
+  background: rgba(229, 192, 131, 0.16);
+  color: var(--dark-bronze);
+}
+
 @media (max-width: 1100px) {
   .hero,
   .focus-grid,
@@ -2929,6 +3084,19 @@ body[data-theme="dark"] .help-phrase {
   .help-panel {
     top: 18px;
     width: calc(100% - 18px);
+  }
+
+  .help-carousel-controls {
+    gap: 10px;
+  }
+
+  .help-topic-counter {
+    width: 100%;
+    order: 3;
+  }
+
+  .help-copy-button {
+    margin-left: 0;
   }
 
   .hero-gallery {

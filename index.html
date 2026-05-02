@@ -593,21 +593,65 @@
               <span data-i18n="contacts.police.label">ตำรวจ</span>
               <strong>110</strong>
               <p data-i18n="contacts.police.body">เหตุฉุกเฉินด้านความปลอดภัยหรืออุบัติเหตุ</p>
+              <div class="contact-actions">
+                <a
+                  class="contact-call-button"
+                  href="tel:110"
+                  aria-label="Call police 110"
+                  data-i18n-aria-label="contacts.police.call"
+                >
+                  <span class="contact-call-icon" aria-hidden="true">✆</span>
+                  <span class="contact-call-label" data-i18n="contacts.police.call">โทร 110</span>
+                </a>
+              </div>
             </article>
             <article>
               <span data-i18n="contacts.ambulance.label">รถพยาบาล</span>
               <strong>119</strong>
               <p data-i18n="contacts.ambulance.body">กรณีเจ็บป่วยฉุกเฉินและเหตุเร่งด่วนทางการแพทย์</p>
+              <div class="contact-actions">
+                <a
+                  class="contact-call-button"
+                  href="tel:119"
+                  aria-label="Call ambulance 119"
+                  data-i18n-aria-label="contacts.ambulance.call"
+                >
+                  <span class="contact-call-icon" aria-hidden="true">✆</span>
+                  <span class="contact-call-label" data-i18n="contacts.ambulance.call">โทร 119</span>
+                </a>
+              </div>
             </article>
             <article>
               <span>JNTO Hotline</span>
               <strong>+81-50-3816-2787</strong>
               <p data-i18n="contacts.jnto.body">สายช่วยเหลือนักท่องเที่ยวที่ควรมีติดไว้ตลอดทริป</p>
+              <div class="contact-actions">
+                <a
+                  class="contact-call-button"
+                  href="tel:+815038162787"
+                  aria-label="Call JNTO"
+                  data-i18n-aria-label="contacts.jnto.call"
+                >
+                  <span class="contact-call-icon" aria-hidden="true">✆</span>
+                  <span class="contact-call-label" data-i18n="contacts.jnto.call">โทร JNTO</span>
+                </a>
+              </div>
             </article>
             <article>
               <span>EVA Air Japan</span>
               <strong>+81-3-4212-3806</strong>
               <p data-i18n="contacts.eva.body">สำหรับปัญหาไฟลต์ขากลับหรือการ re-check ระหว่าง transit</p>
+              <div class="contact-actions">
+                <a
+                  class="contact-call-button"
+                  href="tel:+81342123806"
+                  aria-label="Call EVA Air"
+                  data-i18n-aria-label="contacts.eva.call"
+                >
+                  <span class="contact-call-icon" aria-hidden="true">✆</span>
+                  <span class="contact-call-label" data-i18n="contacts.eva.call">โทร EVA Air</span>
+                </a>
+              </div>
             </article>
           </div>
         </section>
@@ -646,6 +690,18 @@
         <p class="help-modal-language-label" data-i18n="help.modal.languageLabel">ภาษาที่จะแสดงให้ผู้อื่นอ่าน</p>
         <div class="help-phrase-box">
           <p class="help-phrase"></p>
+        </div>
+        <div class="help-carousel-controls">
+          <button type="button" class="help-nav-button" data-help-nav="prev" aria-label="Previous help topic">
+            <span data-i18n="help.modal.prev">ก่อนหน้า</span>
+          </button>
+          <p class="help-topic-counter" aria-live="polite">1 / 8</p>
+          <button type="button" class="help-nav-button" data-help-nav="next" aria-label="Next help topic">
+            <span data-i18n="help.modal.next">ถัดไป</span>
+          </button>
+          <button type="button" class="help-copy-button" data-copy-help aria-label="Copy help phrase">
+            <span data-i18n="help.modal.copy">คัดลอก</span>
+          </button>
         </div>
       </div>
     </div>
