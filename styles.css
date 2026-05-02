@@ -2978,10 +2978,10 @@ body[data-theme="dark"] .help-phrase {
 body[data-theme="dark"] .help-nav-button,
 body[data-theme="dark"] .help-copy-button,
 body[data-theme="dark"] .contact-call-button {
-  border-color: var(--dark-border-strong);
-  background: linear-gradient(180deg, rgba(29, 42, 58, 0.96), rgba(23, 34, 49, 0.98));
-  color: var(--dark-text);
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.24);
+  border-color: rgba(232, 219, 198, 0.3);
+  background: linear-gradient(135deg, rgba(67, 78, 96, 0.95), rgba(43, 52, 66, 0.98));
+  color: #f7efe3;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.22);
 }
 
 body[data-theme="dark"] .help-copy-button {
@@ -2994,18 +2994,49 @@ body[data-theme="dark"] .help-topic-counter {
 }
 
 body[data-theme="dark"] .contact-call-icon {
-  background: rgba(233, 164, 173, 0.14);
-  color: var(--dark-rose);
+  background: rgba(255, 255, 255, 0.08);
+  color: #f7efe3;
+}
+
+body[data-theme="dark"] .contact-call-label {
+  color: #f7efe3;
+  opacity: 1;
+}
+
+body[data-theme="dark"] .contact-call-button:hover,
+body[data-theme="dark"] .contact-call-button:focus-visible {
+  border-color: rgba(245, 232, 214, 0.42);
+  box-shadow: 0 14px 26px rgba(0, 0, 0, 0.3);
+}
+
+body[data-theme="dark"] .contacts-grid article:nth-child(1) .contact-call-button,
+body[data-theme="dark"] .contacts-grid article:nth-child(2) .contact-call-button {
+  background: linear-gradient(135deg, rgba(116, 72, 82, 0.96), rgba(70, 47, 56, 0.98));
+  border-color: rgba(230, 168, 176, 0.35);
+  color: #fff3f4;
+}
+
+body[data-theme="dark"] .contacts-grid article:nth-child(1) .contact-call-icon,
+body[data-theme="dark"] .contacts-grid article:nth-child(2) .contact-call-icon {
+  background: rgba(255, 226, 231, 0.12);
+  color: #fff3f4;
 }
 
 body[data-theme="dark"] .contacts-grid article:nth-child(3) .contact-call-icon {
-  background: rgba(169, 200, 236, 0.14);
-  color: var(--dark-lapis);
+  background: rgba(226, 238, 255, 0.12);
+  color: #f7efe3;
 }
 
 body[data-theme="dark"] .contacts-grid article:nth-child(4) .contact-call-icon {
-  background: rgba(229, 192, 131, 0.16);
-  color: var(--dark-bronze);
+  background: rgba(246, 229, 196, 0.12);
+  color: #f7efe3;
+}
+
+body[data-theme="dark"] .contacts-grid article:nth-child(3) .contact-call-button,
+body[data-theme="dark"] .contacts-grid article:nth-child(4) .contact-call-button {
+  background: linear-gradient(135deg, rgba(72, 83, 100, 0.96), rgba(45, 53, 65, 0.98));
+  border-color: rgba(193, 205, 225, 0.32);
+  color: #f7efe3;
 }
 
 body[data-theme="dark"] .quick-menu-card {
