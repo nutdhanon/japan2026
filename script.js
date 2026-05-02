@@ -1921,7 +1921,15 @@ function getEffectiveDetailDate(day) {
   if (override) return override;
   const now = new Date();
   if (getDateKey(now, day.timeZone) === day.dateIso) return now;
-  return new Date(day.previewNow);
+  return null;
+}
+
+function getTimelineClock(day) {
+  const override = getPreviewOverride();
+  if (override) return { date: override, mode: "preview" };
+  const now = new Date();
+  if (getDateKey(now, day.timeZone) === day.dateIso) return { date: now, mode: "real" };
+  return { date: null, mode: "disabled" };
 }
 
 function applyTheme(theme) {
@@ -2007,11 +2015,17 @@ function getDaySummaryText(day, lang = currentPageLang) {
   return `${display.route}. Open the timeline below for maps, websites, notes, and the live rhythm of the day.`;
 }
 
-function getPreviewNoteText(day, lang = currentPageLang) {
+function getPreviewNoteText(day, lang = currentPageLang, mode = "preview") {
+  if (mode === "real") {
+    if (lang === "th") return "ด้านล่างจะแสดง marker ตามเวลาจริงของวันเดินทางนี้";
+    if (lang === "ja") return "下のタイムラインは、この日の現在時刻に合わせて表示されます。";
+    if (lang === "zh") return "下方时间轴会按照这一天的当前真实时间显示 marker。";
+    return "The timeline below uses the real current time for this trip day.";
+  }
   if (lang === "th") return day.previewNote;
-  if (lang === "ja") return "ここで表示している時刻を基準に、下のタイムラインに現在位置マーカーを表示します。";
+  if (lang === "ja") return "ここで表示しているプレビュー時刻を基準に、下のタイムラインに位置マーカーを表示します。";
   if (lang === "zh") return "这里会根据当前预览时间，在下方时间轴中显示当天所处的位置。";
-  return "The current preview time below is used to place the live marker inside the day's timeline.";
+  return "The preview time below is used to place the live marker inside the day's timeline.";
 }
 
 function renderDetailPicker() {
@@ -2043,7 +2057,7 @@ function renderDetailPicker() {
 function renderDetailSummary(day) {
   const summary = document.querySelector("#detail-summary-card");
   if (!summary) return;
-  const previewDate = getEffectiveDetailDate(day);
+  const timelineClock = getTimelineClock(day);
   const display = getDayDisplayContent(day);
 
   summary.className = `detail-summary-card ${display.toneClass}`;
@@ -2069,11 +2083,32 @@ function renderDetailSummary(day) {
         <strong>${display.route}</strong>
       </article>
     </div>
+    ${
+      timelineClock.mode === "disabled"
+        ? ""
+        : `
     <div class="detail-preview-time">
-      <span>${currentPageLang === "th" ? "เวลาที่กำลังดู" : currentPageLang === "ja" ? "いま見ている時刻" : currentPageLang === "zh" ? "当前查看时间" : "Current trip time"}</span>
-      <strong>${formatTimeLabel(previewDate, currentPageLang, day.timeZone)}</strong>
+      <span>${
+        timelineClock.mode === "preview"
+          ? currentPageLang === "th"
+            ? "เวลาจำลองสำหรับทดสอบ"
+            : currentPageLang === "ja"
+              ? "テスト用のプレビュー時刻"
+              : currentPageLang === "zh"
+                ? "测试预览时间"
+                : "Preview time"
+          : currentPageLang === "th"
+            ? "เวลาปัจจุบัน"
+            : currentPageLang === "ja"
+              ? "現在時刻"
+              : currentPageLang === "zh"
+                ? "当前时间"
+                : "Current time"
+      }</span>
+      <strong>${formatTimeLabel(timelineClock.date, currentPageLang, day.timeZone)}</strong>
     </div>
-    <p class="detail-preview-note">${getPreviewNoteText(day)}</p>
+    <p class="detail-preview-note">${getPreviewNoteText(day, currentPageLang, timelineClock.mode)}</p>`
+    }
     <div class="detail-tags">
       <span>${currentPageLang === "th" ? "เริ่มวัน" : currentPageLang === "ja" ? "始まり" : currentPageLang === "zh" ? "出发" : "Start"}</span>
       <span>${currentPageLang === "th" ? "เดินทาง" : currentPageLang === "ja" ? "移動" : currentPageLang === "zh" ? "动线" : "Route"}</span>
@@ -2250,12 +2285,13 @@ function renderPrototypeMarker() {
   const timeline = document.querySelector("#detail-timeline");
   if (!timeline) return;
 
-  const previewDate = getEffectiveDetailDate(day);
+  const timelineClock = getTimelineClock(day);
   const cards = Array.from(timeline.querySelectorAll(".detail-card"));
   cards.forEach((card) => card.classList.remove("is-live", "is-next-up", "is-complete"));
   timeline.querySelector(".detail-marker")?.remove();
+  if (timelineClock.mode === "disabled" || !timelineClock.date) return;
 
-  const nowMinutes = getMinutesInZone(previewDate, day.timeZone);
+  const nowMinutes = getMinutesInZone(timelineClock.date, day.timeZone);
   const events = cards
     .map((card) => {
       const start = parseTimeToMinutes(card.dataset.start || "");
@@ -2282,7 +2318,7 @@ function renderPrototypeMarker() {
   const badge = document.createElement("span");
   badge.className = "detail-marker-badge";
   badge.textContent = formatTemplate(t("marker.now"), {
-    time: formatTimeLabel(previewDate, currentPageLang, day.timeZone),
+    time: formatTimeLabel(timelineClock.date, currentPageLang, day.timeZone),
   });
   const meta = document.createElement("span");
   meta.className = "detail-marker-meta";
