@@ -108,7 +108,7 @@ const DAY_SHORT_TITLES = {
 
 const I18N = {
   th: {
-    "page.title": "Osaka Slow Life 2026 — Belmond x Aman Edition",
+    "page.title": "Osaka Slow Life 2026",
     "page.description": "คู่มือทริปส่วนตัวสำหรับ Osaka Slow Life 2026 พร้อมเที่ยวบิน แผนรายวัน งบ และ Help Mode ใช้งานระหว่างเที่ยว",
     "brand.label": "คู่มือทริปส่วนตัว",
     "help.shortcut": "Help Mode",
@@ -143,11 +143,12 @@ const I18N = {
     "hero.meta.travelers.value": "สองคนในจังหวะสบาย",
     "hero.meta.style.label": "สไตล์ทริป",
     "hero.meta.style.value": "slow life, cafe, wine",
-    "strip.mood.label": "อารมณ์",
-    "strip.mood.title": "Quiet Luxury",
-    "strip.mood.body": "นุ่ม สงบ พรีเมียม แต่ยังโรแมนติกและเป็นส่วนตัว",
-    "strip.palette.label": "สีหลัก",
-    "strip.palette.body": "ลดสีสดลงและใช้ accent แบบผู้ใหญ่มากขึ้น",
+    "strip.mood.label": "จังหวะของทริปนี้",
+    "strip.mood.title": "เดินช้า พักเป็น และเลือกเฉพาะสิ่งที่อยากจำ",
+    "strip.mood.body": "ไม่ต้องเก็บครบทุกจุด แค่ให้แต่ละวันมีจังหวะที่ดีพอ",
+    "strip.palette.label": "กฎง่าย ๆ ของทริปนี้",
+    "strip.palette.title": "เปิดดูแผนของวันนั้น แล้วตัดสินใจตามแรงจริง",
+    "strip.palette.body": "ถ้าวันไหนเหนื่อย ให้เหลือแค่จุดหลัก มื้อดี ๆ และทางกลับโรงแรมที่ง่ายที่สุด",
     "strip.experience.label": "ประสบการณ์",
     "strip.experience.title": "เปิดดูง่ายระหว่างเดินทาง",
     "strip.experience.body": "ทุก section ถูกจัดไว้ให้หยิบใช้ได้จริงทั้งตอนเช็กไฟลต์ หาเส้นทาง ดูงบ และเปิดให้คนอื่นช่วยอ่าน",
@@ -330,7 +331,7 @@ const I18N = {
     "marker.done": "วันนี้เดินทางครบแล้ว",
   },
   en: {
-    "page.title": "Osaka Slow Life 2026 — Belmond x Aman Edition",
+    "page.title": "Osaka Slow Life 2026",
     "page.description": "A personal travel companion for Osaka Slow Life 2026 with flights, daily plans, budget notes, and offline Help Mode.",
     "brand.label": "Personal Travel Companion",
     "help.shortcut": "Help Mode",
@@ -365,11 +366,12 @@ const I18N = {
     "hero.meta.travelers.value": "Two people, slow rhythm",
     "hero.meta.style.label": "Trip style",
     "hero.meta.style.value": "slow life, cafe, wine",
-    "strip.mood.label": "Mood",
-    "strip.mood.title": "Quiet Luxury",
-    "strip.mood.body": "Soft, calm, premium, yet still romantic and personal.",
-    "strip.palette.label": "Palette",
-    "strip.palette.body": "A more grown-up palette with less bright color and more refined accents.",
+    "strip.mood.label": "Trip rhythm",
+    "strip.mood.title": "Walk slow, rest well, and keep only what you want to remember",
+    "strip.mood.body": "You do not need to collect every stop, just give each day a good rhythm.",
+    "strip.palette.label": "Simple trip rule",
+    "strip.palette.title": "Open that day's plan, then decide by your real energy",
+    "strip.palette.body": "On tired days, keep only key stops, one good meal, and the easiest way back to the hotel.",
     "strip.experience.label": "Experience",
     "strip.experience.title": "Easy to use on the move",
     "strip.experience.body": "Each section is arranged to be practical during the trip, from checking flights and routes to opening notes for help.",
@@ -552,7 +554,7 @@ const I18N = {
     "marker.done": "The day is already complete",
   },
   ja: {
-    "page.title": "Osaka Slow Life 2026 — Belmond x Aman Edition",
+    "page.title": "Osaka Slow Life 2026",
     "page.description": "Osaka Slow Life 2026 のための、フライト・日別プラン・予算メモ・Help Mode をまとめた個人用トラベルガイドです。",
     "brand.label": "旅のパーソナルガイド",
     "help.shortcut": "Help Mode",
@@ -587,11 +589,12 @@ const I18N = {
     "hero.meta.travelers.value": "ふたりで、ゆったりと",
     "hero.meta.style.label": "旅のスタイル",
     "hero.meta.style.value": "slow life, cafe, wine",
-    "strip.mood.label": "ムード",
-    "strip.mood.title": "Quiet Luxury",
-    "strip.mood.body": "やわらかく、静かで、上質。それでいてロマンチックで私的な空気感。",
-    "strip.palette.label": "カラーパレット",
-    "strip.palette.body": "鮮やかさを抑え、大人っぽいアクセントを加えます。",
+    "strip.mood.label": "この旅のリズム",
+    "strip.mood.title": "ゆっくり歩いて、しっかり休んで、残したい記憶だけを選ぶ",
+    "strip.mood.body": "全部を回る必要はなく、各日の流れが心地よければ十分です。",
+    "strip.palette.label": "この旅のシンプルなルール",
+    "strip.palette.title": "その日の予定を開いて、その日の体力で決める",
+    "strip.palette.body": "疲れた日は、主要スポットと良い食事、ホテルまでの帰りやすさだけで十分です。",
     "strip.experience.label": "体験",
     "strip.experience.title": "移動中にも見やすい構成",
     "strip.experience.body": "フライト確認、移動、予算メモ、そして人に見せる Help Mode まで、旅の途中で使いやすいようにまとめています。",
@@ -774,7 +777,7 @@ const I18N = {
     "marker.done": "この日の行程は完了しています",
   },
   zh: {
-    "page.title": "Osaka Slow Life 2026 — Belmond x Aman Edition",
+    "page.title": "Osaka Slow Life 2026",
     "page.description": "为 Osaka Slow Life 2026 准备的个人旅行指南，包含航班、每日行程、预算备注和离线 Help Mode。",
     "brand.label": "个人旅行指南",
     "help.shortcut": "Help Mode",
@@ -809,11 +812,12 @@ const I18N = {
     "hero.meta.travelers.value": "两个人，慢节奏",
     "hero.meta.style.label": "旅行风格",
     "hero.meta.style.value": "slow life, cafe, wine",
-    "strip.mood.label": "气质",
-    "strip.mood.title": "Quiet Luxury",
-    "strip.mood.body": "柔和、安静、高级，同时也保留浪漫与私密感。",
-    "strip.palette.label": "配色",
-    "strip.palette.body": "降低鲜艳度，改用更成熟、更克制的色彩点缀。",
+    "strip.mood.label": "这趟旅程的节奏",
+    "strip.mood.title": "慢慢走、好好休息，只留下真正想记住的片段",
+    "strip.mood.body": "不用把每个点都打卡，只要每天的节奏舒服就够了。",
+    "strip.palette.label": "这趟旅程的简单规则",
+    "strip.palette.title": "先看当天计划，再按真实体力决定",
+    "strip.palette.body": "如果当天累了，就保留关键点、一顿好饭，以及最轻松回酒店的路线。",
     "strip.experience.label": "体验",
     "strip.experience.title": "在路上也能轻松查看",
     "strip.experience.body": "从查看航班、路线、预算，到打开 Help Mode 给别人看，所有信息都整理成旅途中真正好用的样子。",
@@ -2685,6 +2689,13 @@ function initDetailExplorer() {
   renderDetailExplorer();
 }
 
+function initServiceWorker() {
+  if (!("serviceWorker" in navigator) || location.protocol === "file:") return;
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("./service-worker.js").catch(() => {});
+  });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   currentHelpLang = getSavedHelpLanguage();
   initLanguageSwitcher();
@@ -2692,6 +2703,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initPrototypeNotes();
   initHelpMode();
   initDetailExplorer();
+  initServiceWorker();
   applyTranslations(getSavedLanguage());
   renderCountdown();
   setInterval(() => {
