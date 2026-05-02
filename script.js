@@ -1225,7 +1225,7 @@ const PROTOTYPE_DAYS = [
     hotel: "City Suites Gateway",
     summary: "คืน transit ที่ตั้งใจให้ง่ายที่สุด เช็กอินเร็ว เดิน outlet เบา ๆ แล้วจบด้วยมื้อเย็นก่อนนอนเร็ว",
     previewNow: "2026-05-16T19:40:00+08:00",
-    previewNote: "ตั้งเวลาไว้ช่วงก่อน Din Tai Fung เพื่อให้เห็น marker ตอนเย็นของวัน transit",
+    previewNote: "ตั้งเวลาไว้ช่วงมื้อเย็นของวัน transit เพื่อให้เห็น marker ตอนเย็นก่อนกลับโรงแรม",
     events: [
       {
         id: "d0-arrival",
@@ -1267,11 +1267,59 @@ const PROTOTYPE_DAYS = [
         time: "19:30–21:20",
         start: "19:30",
         end: "21:20",
-        title: "Dinner ที่ Din Tai Fung + optional Blu Bar",
+        title: "มื้อเย็นที่ Gloria Outlets / Food Court",
+        titleI18n: {
+          en: "Dinner at Gloria Outlets / Food Court",
+          ja: "Gloria Outlets / フードコートで夕食",
+          zh: "Gloria Outlets / 美食区晚餐",
+        },
         place: "Evening",
-        blurb: "จบวันด้วยมื้อเย็นที่ Gloria Outlets และถ้ายังมีแรงค่อยแวะ drink สั้น ๆ ก่อนกลับโรงแรม",
-        map: "https://maps.google.com/?q=Din+Tai+Fung+Gloria+Outlets",
-        note: { th: { title: "ปิดวันแบบนุ่ม ๆ", body: "จังหวะคืนนี้ควรให้ความรู้สึกสบาย ไม่ยาวจนกระทบไฟลต์เช้า", list: ["ถ้าแวะ Blu Bar ให้สั้นพอ", "ตั้งใจเข้านอนประมาณ 22:30"] } },
+        blurb: "จบวัน transit ด้วยมื้อเย็นง่าย ๆ ใน Gloria Outlets เลือกร้านหรือ food court หน้างานตามคิวและความหิว แล้วค่อยกลับโรงแรมพัก",
+        blurbI18n: {
+          en: "End the transit day with an easy dinner inside Gloria Outlets. Choose a restaurant or the food court on the spot depending on queues, appetite, and energy, then return to the hotel.",
+          ja: "乗り継ぎ日の夜は、Gloria Outlets内で無理なく夕食。混雑、空腹感、体力に合わせてレストランかフードコートを当日選び、ホテルへ戻る。",
+          zh: "转机日晚上在 Gloria Outlets 简单用餐。根据排队情况、食欲和体力，现场选择餐厅或美食区，然后回酒店休息。",
+        },
+        map: "https://maps.google.com/?q=Gloria+Outlets+Taoyuan",
+        website: "https://www.gloriaoutlets.com/eng/",
+        note: {
+          th: {
+            title: "มื้อเย็นแบบไม่ล็อกร้าน",
+            body: "คืนนี้ไม่ต้องจองหรือฝืนหาร้านเฉพาะ เลือกจากร้านใน Gloria Outlets หรือ food court หน้างานจะยืดหยุ่นที่สุด",
+            list: [
+              "ถ้าคิวร้านดังยาว ให้เลือก food court หรือร้านที่นั่งได้เร็ว",
+              "โฟกัสคือกินให้อิ่ม พักให้ไว และไม่กระทบไฟลต์เช้าวันถัดไป",
+              "ถ้ายังมีแรง ค่อยแวะดื่มสั้น ๆ ใกล้โรงแรมหรือในพื้นที่ outlet",
+            ],
+          },
+          en: {
+            title: "Flexible dinner, no fixed restaurant",
+            body: "No need to lock in a specific restaurant tonight. Picking from Gloria Outlets or the food court on the spot is the most flexible choice.",
+            list: [
+              "If popular restaurants have long queues, choose the food court or a faster table-service option",
+              "The goal is to eat well, rest early, and protect tomorrow morning's flight",
+              "If there is still energy, keep any drink stop short and easy",
+            ],
+          },
+          ja: {
+            title: "店を固定しない夕食",
+            body: "今夜は特定の店にこだわらず、Gloria Outlets内のレストランやフードコートから当日の状況で選ぶのがいちばん楽。",
+            list: [
+              "人気店の待ち時間が長ければ、フードコートか入りやすい店を選ぶ",
+              "目的はしっかり食べて早めに休み、翌朝のフライトに響かせないこと",
+              "まだ余裕があれば、軽く一杯だけにして長居しない",
+            ],
+          },
+          zh: {
+            title: "不固定餐厅的晚餐",
+            body: "今晚不需要锁定某一家餐厅。到现场从 Gloria Outlets 的餐厅或美食区中选择，会是最灵活的安排。",
+            list: [
+              "如果热门餐厅排队太久，就选择美食区或入座更快的餐厅",
+              "重点是吃饱、早点休息，不影响隔天早班飞机",
+              "如果还有精神，可以短暂喝一杯，但不要拖太晚",
+            ],
+          },
+        },
       },
     ],
   },
@@ -2028,6 +2076,7 @@ function containsThai(text = "") {
 }
 
 function getLocalizedEventTitle(event, lang = currentPageLang) {
+  if (event.titleI18n?.[lang]) return event.titleI18n[lang];
   if (lang === "th") return event.title;
   if (!containsThai(event.title || "")) return event.title;
   const place = event.place || (lang === "ja" ? "予定" : lang === "zh" ? "行程" : "Activity");
@@ -2037,6 +2086,7 @@ function getLocalizedEventTitle(event, lang = currentPageLang) {
 }
 
 function getLocalizedEventBlurb(event, lang = currentPageLang) {
+  if (event.blurbI18n?.[lang]) return event.blurbI18n[lang];
   if (lang === "th") return event.blurb;
   if (!containsThai(event.blurb || "")) return event.blurb;
   const title = getLocalizedEventTitle(event, lang);
