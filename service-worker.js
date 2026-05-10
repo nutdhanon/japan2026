@@ -1,4 +1,4 @@
-const CACHE_NAME = "osaka-slow-life-2026-v1";
+const CACHE_NAME = "osaka-slow-life-2026-v5";
 
 const CORE_ASSETS = [
   "./",
@@ -6,6 +6,8 @@ const CORE_ASSETS = [
   "./styles.css",
   "./script.js",
   "./manifest.webmanifest",
+  "./assets/images/day5-expocity.jpg",
+  "./assets/images/day5-tower-of-sun.jpg",
   "./assets/icons/favicon-16.png",
   "./assets/icons/favicon-32.png",
   "./assets/icons/apple-touch-icon.png",

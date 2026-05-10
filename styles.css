@@ -927,8 +927,10 @@ a {
 
 .overview-card.plum {
   background-image:
-    linear-gradient(135deg, rgba(133, 97, 151, 0.6), rgba(93, 68, 110, 0.42)),
-    url("https://www.japan-guide.com/g17/3923_01.jpg");
+    linear-gradient(180deg, rgba(18, 24, 31, 0.08) 0%, rgba(18, 24, 31, 0.22) 52%, rgba(18, 24, 31, 0.5) 100%),
+    linear-gradient(135deg, rgba(102, 132, 175, 0.48), rgba(159, 96, 136, 0.34)),
+    url("./assets/images/day5-tower-of-sun.jpg");
+  background-position: center top;
 }
 
 .overview-card.bronze {
@@ -1118,6 +1120,7 @@ a {
 
 .intel-note {
   margin: 0;
+  white-space: pre-line;
 }
 
 .neutral {
@@ -1558,15 +1561,57 @@ a {
 }
 
 .detail-summary-figure {
+  position: relative;
   margin: 0;
   height: 248px;
   overflow: hidden;
+  background:
+    radial-gradient(circle at 76% 24%, rgba(255, 221, 173, 0.5) 0 9%, transparent 10%),
+    radial-gradient(circle at 20% 82%, rgba(236, 145, 161, 0.32) 0 18%, transparent 19%),
+    linear-gradient(145deg, rgba(76, 117, 158, 0.92), rgba(132, 88, 149, 0.84) 48%, rgba(199, 128, 67, 0.78));
 }
 
 .detail-summary-figure img {
+  position: relative;
+  z-index: 1;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center center;
+}
+
+.day-image-fallback {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-content: center;
+  gap: 10px;
+  padding: 28px;
+  text-align: center;
+  color: #fff8ed;
+  background:
+    linear-gradient(180deg, rgba(18, 28, 40, 0.08), rgba(18, 28, 40, 0.38)),
+    radial-gradient(circle at 72% 22%, rgba(255, 233, 192, 0.28), transparent 24%),
+    linear-gradient(135deg, rgba(63, 103, 160, 0.76), rgba(132, 88, 149, 0.7) 52%, rgba(199, 137, 67, 0.68));
+}
+
+.day-image-fallback span {
+  font-size: clamp(2.4rem, 8vw, 4.2rem);
+  line-height: 1;
+  filter: drop-shadow(0 10px 22px rgba(0, 0, 0, 0.22));
+}
+
+.day-image-fallback strong {
+  font-family: var(--font-display);
+  font-size: clamp(1.35rem, 4vw, 2rem);
+  font-weight: 700;
+  line-height: 1.18;
+  letter-spacing: -0.02em;
+  text-shadow: 0 12px 26px rgba(0, 0, 0, 0.25);
+}
+
+.detail-summary-figure:not(.is-image-missing) .day-image-fallback {
+  display: none;
 }
 
 .detail-summary-copy {

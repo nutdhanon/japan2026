@@ -1,6 +1,5 @@
-const PAGE_LANG_STORAGE_KEY = "osaka-trip-lang";
-const HELP_LANG_STORAGE_KEY = "osaka-trip-help-lang";
-const HELP_TOPIC_ORDER = ["nut", "lamb", "safeMenu", "taxi", "station", "booking", "clinic", "lost"];
+const PAGE_LANG_STORAGE_KEY = "osaka-prototype-lang";
+const HELP_LANG_STORAGE_KEY = "osaka-prototype-help-lang";
 const DEFAULT_PAGE_LANG = "th";
 const DEFAULT_HELP_LANG = "ja";
 
@@ -11,106 +10,11 @@ const LOCALE_MAP = {
   zh: "zh-CN",
 };
 
-const PAGE_LANGUAGE_META = {
-  th: { code: "TH", flag: "🇹🇭", label: "ไทย" },
-  en: { code: "EN", flag: "🇬🇧", label: "English" },
-  ja: { code: "JA", flag: "🇯🇵", label: "日本語" },
-  zh: { code: "ZH", flag: "🇨🇳", label: "中文" },
-};
-
-const DAY_TONE_CLASSES = ["neutral", "indigo", "rose", "teal", "moss", "plum", "bronze", "cobalt", "violet"];
-
-const DAY_VISUALS = {
-  "day-0": {
-    icon: "✈",
-    image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/f0/be/f5/caption.jpg?h=500&s=1&w=900",
-  },
-  "day-1": {
-    icon: "✈",
-    image: "https://travel.rakuten.com/contents/sites/contents/files/styles/max_1300x1300/public/2024-04/night-activities-osaka_2.jpg?itok=PagSUVtG",
-  },
-  "day-2": {
-    icon: "⛩",
-    image: "https://cdn.gaijinpot.com/app/uploads/sites/6/2016/09/iStock-900771306.jpg",
-  },
-  "day-3": {
-    icon: "⛩",
-    image: "https://upload.wikimedia.org/wikipedia/commons/6/66/Pedestrian_road_with_pavements_and_paper_umbrellas%2C_Higashiyama-ku%2C_Kyoto%2C_Japan%2C_early_morning.jpg",
-  },
-  "day-4": {
-    icon: "♨",
-    image: "https://www.japan-guide.com/g18/4019_02.jpg",
-  },
-  "day-5": {
-    icon: "⚽",
-    image: "./assets/images/day5-expocity.jpg",
-  },
-  "day-6": {
-    icon: "👜",
-    image: "https://res.cloudinary.com/dbm1qiew0/image/upload/blog-images/2024/09/fujiko11621122600011421_TP_V4.jpg",
-  },
-  "day-7": {
-    icon: "⚓",
-    image: "https://www.feel-kobe.jp/kobe-yakei/assets/media/DSC03874-1025x680.jpg",
-  },
-  "day-8": {
-    icon: "☁",
-    image: "https://images.squarespace-cdn.com/content/v1/52ccee75e4b00bc0dba03f46/1590891440489-5S8I6Z6OMMOT4Y8ZPKZ4/image-asset.jpeg",
-  },
-};
-
-const DAY_SHORT_TITLES = {
-  th: {
-    "day-0": "คืนทรานซิตที่ไทเป",
-    "day-1": "เริ่มต้นโอซากะ",
-    "day-2": "แลนด์มาร์กโอซากะ",
-    "day-3": "เกียวโตสาย heritage",
-    "day-4": "Minoh & Katsuoji",
-    "day-5": "Gamba + ExpoCity",
-    "day-6": "วันช็อปหลังย้าย",
-    "day-7": "Kobe & Ikuta",
-    "day-8": "เดินทางกลับ",
-  },
-  en: {
-    "day-0": "Taipei Transit",
-    "day-1": "Ease into Osaka",
-    "day-2": "Osaka Highlights",
-    "day-3": "Kyoto Heritage",
-    "day-4": "Minoh & Katsuoji",
-    "day-5": "Gamba + ExpoCity",
-    "day-6": "Shopping Day",
-    "day-7": "Kobe & Ikuta",
-    "day-8": "Fly Home",
-  },
-  ja: {
-    "day-0": "台北トランジット",
-    "day-1": "大阪の始まり",
-    "day-2": "大阪ハイライト",
-    "day-3": "京都ヘリテージ",
-    "day-4": "箕面と勝尾寺",
-    "day-5": "ガンバ大阪 + ExpoCity",
-    "day-6": "ショッピング日",
-    "day-7": "神戸と生田神社",
-    "day-8": "帰国日",
-  },
-  zh: {
-    "day-0": "台北转机夜",
-    "day-1": "慢慢进入大阪",
-    "day-2": "大阪重点日",
-    "day-3": "京都文化日",
-    "day-4": "箕面与胜尾寺",
-    "day-5": "Gamba + ExpoCity",
-    "day-6": "购物日",
-    "day-7": "神户与生田",
-    "day-8": "返程日",
-  },
-};
-
 const I18N = {
   th: {
-    "page.title": "Osaka Slow Life 2026",
-    "page.description": "คู่มือทริปส่วนตัวสำหรับ Osaka Slow Life 2026 พร้อมเที่ยวบิน แผนรายวัน งบ และ Help Mode ใช้งานระหว่างเที่ยว",
-    "brand.label": "คู่มือทริปส่วนตัว",
+    "page.title": "Osaka Slow Life 2026 — ต้นแบบ Belmond x Aman",
+    "page.description": "ต้นแบบ Belmond x Aman สำหรับเว็บไซต์ Osaka Slow Life 2026",
+    "brand.label": "ทิศทางต้นแบบ",
     "help.shortcut": "Help Mode",
     "nav.flights": "เที่ยวบิน",
     "nav.overview": "ภาพรวม",
@@ -120,38 +24,33 @@ const I18N = {
     "nav.dayDetails": "รายละเอียดรายวัน",
     "nav.help": "Help Mode",
     "nav.contacts": "ฉุกเฉิน",
-    "quickMenu.title": "เมนูด่วน",
-    "quickMenu.today": "วันนี้",
-    "quickMenu.sos": "SOS",
-    "quickMenu.note": "แตะเพื่อกระโดดไปยังวันนั้น หรือกด SOS เพื่อดูเบอร์ติดต่อฉุกเฉิน",
     "countdown.heading.label": "นับถอยหลัง",
     "countdown.heading.title": "เหลือเวลาอีกนิดก่อนจะเข้าสู่จังหวะของโอซากะจริง ๆ",
     "countdown.helper.before": "ตอนนี้ยังเป็นช่วงเตรียมตัวอยู่ เราจึงโชว์เวลาแบบ countdown ให้ก่อน",
     "countdown.helper.during": "ตอนนี้ทริปกำลังเกิดขึ้นจริง ตัวเลขด้านล่างจะเปลี่ยนเป็นเวลาที่เหลือก่อนทริปจบ",
     "countdown.helper.after": "ทริปนี้เดินทางครบแล้ว แต่ยังเปิดกลับมาดูบันทึกและรายละเอียดรายวันได้เสมอ",
-    "detailExplorer.heading.label": "เลือกวัน",
-    "detailExplorer.heading.title": "เลือกวัน แล้วดูแผนของวันนั้น",
-    "hero.kicker": "จากคืนทรานซิตที่ไทเป สู่โอซากะ เกียวโต มิโนะ Suita และโกเบ",
+    "detailExplorer.heading.label": "รายละเอียดรายวัน",
+    "detailExplorer.heading.title": "เลือกวันไหนก็ได้ แล้วดู timeline แบบใช้งานจริงพร้อมปุ่ม แผนที่ เว็บไซต์ โน้ต และ marker เวลา",
+    "hero.kicker": "ต้นแบบที่ได้แรงบันดาลใจจาก Belmond x Aman",
     "hero.title": "Osaka, ในจังหวะที่นุ่มและนิ่งขึ้น",
     "hero.summary":
-      "คู่มือทริปส่วนตัวสำหรับการเดินทางแบบ slow life ที่ค่อย ๆ ไหลจากคืน transit ในไต้หวันไปสู่โอซากะ เกียวโต มิโนะ วันฟุตบอลและ ExpoCity วันช็อปปิง โกเบ และไฟลต์กลับบ้านอย่างนุ่มนวล",
-    "hero.tones.kyoto": "Osaka days and nights",
-    "hero.tones.namba": "Kyoto heritage",
-    "hero.tones.kobe": "Kobe slow day",
+      "ทิศทางนี้จะเปลี่ยนเว็บ itinerary ให้ดูเป็น travel editorial มากขึ้น ด้วยโทน quiet luxury, spacing ที่นิ่งกว่าเดิม, card ที่ลดความหวาน และภาพที่เล่าเรื่องเหมือนหนังสือท่องเที่ยวหรูมากกว่าเว็บ utility ปกติ",
+    "hero.tones.kyoto": "เช้าเกียวโต",
+    "hero.tones.namba": "บ่ายนัมบะ",
+    "hero.tones.kobe": "เย็นโกเบ",
     "hero.meta.dates.label": "วันที่เดินทาง",
     "hero.meta.travelers.label": "ผู้เดินทาง",
-    "hero.meta.travelers.value": "สองคนในจังหวะสบาย",
+    "hero.meta.travelers.value": "คู่รักวัย 40s",
     "hero.meta.style.label": "สไตล์ทริป",
     "hero.meta.style.value": "slow life, cafe, wine",
-    "strip.mood.label": "จังหวะของทริปนี้",
-    "strip.mood.title": "เดินช้า พักเป็น และเลือกเฉพาะสิ่งที่อยากจำ",
-    "strip.mood.body": "ไม่ต้องเก็บครบทุกจุด แค่ให้แต่ละวันมีจังหวะที่ดีพอ",
-    "strip.palette.label": "กฎง่าย ๆ ของทริปนี้",
-    "strip.palette.title": "เปิดดูแผนของวันนั้น แล้วตัดสินใจตามแรงจริง",
-    "strip.palette.body": "ถ้าวันไหนเหนื่อย ให้เหลือแค่จุดหลัก มื้อดี ๆ และทางกลับโรงแรมที่ง่ายที่สุด",
+    "strip.mood.label": "อารมณ์",
+    "strip.mood.title": "Quiet Luxury",
+    "strip.mood.body": "นุ่ม สงบ พรีเมียม แต่ยังโรแมนติกและเป็นส่วนตัว",
+    "strip.palette.label": "สีหลัก",
+    "strip.palette.body": "ลดสีสดลงและใช้ accent แบบผู้ใหญ่มากขึ้น",
     "strip.experience.label": "ประสบการณ์",
-    "strip.experience.title": "เปิดดูง่ายระหว่างเดินทาง",
-    "strip.experience.body": "ทุก section ถูกจัดไว้ให้หยิบใช้ได้จริงทั้งตอนเช็กไฟลต์ หาเส้นทาง ดูงบ และเปิดให้คนอื่นช่วยอ่าน",
+    "strip.experience.title": "ให้อารมณ์เหมือนไดอารีทริปส่วนตัว",
+    "strip.experience.body": "ให้ความรู้สึกเหมือน itinerary ที่ curated โดย concierge ส่วนตัว",
     "flights.heading.label": "เที่ยวบิน",
     "flights.heading.title": "สี่ช่วงการเดินทางที่ต่อกันอย่างนุ่มนวลตลอดทั้งทริป",
     "flights.phase.outbound1": "ขาไป 1/2",
@@ -176,8 +75,8 @@ const I18N = {
     "overview.day4.title": "Minoh & Katsuoji",
     "overview.day4.body": "ธรรมชาติ → วัดดารุมะ",
     "overview.day5.label": "วันที่ 5",
-    "overview.day5.title": "Gamba + ExpoCity",
-    "overview.day5.body": "สนามฟุตบอล → Rose Festa → shopping",
+    "overview.day5.title": "วันพักใจที่ Uji",
+    "overview.day5.body": "ถนนชา → matcha → Osaka spa",
     "overview.day6.label": "วันที่ 6",
     "overview.day6.title": "วันช็อปหลังย้ายโรงแรม",
     "overview.day6.body": "Namba → Shinsaibashi → PARCO",
@@ -187,50 +86,50 @@ const I18N = {
     "overview.day8.label": "วันที่ 8",
     "overview.day8.title": "เดินทางกลับแบบไม่รีบ",
     "overview.day8.body": "Namba → KIX → TPE → BKK",
-    "intel.heading.label": "FINAL EXPENSE SUMMARY",
-    "intel.heading.title": "FINAL EXPENSE SUMMARY — JAPAN TRIP 2026 สำหรับ 2 คน ไม่รวมตั๋วเครื่องบิน + โรงแรม",
-    "intel.quote.kicker": "Reality check",
-    "intel.quote.body": "เวอร์ชัน realistic ตามสไตล์ทริปจริงของคุณ ไม่อวย ไม่กดต่ำเกินจริง และยังไม่รวม shopping",
+    "intel.heading.label": "สรุปการเดินทาง",
+    "intel.heading.title": "บัตร ค่าใช้จ่าย และของที่ต้องเตรียม ควรดูเป็นชุดเดียวกันก่อนออกเดินทาง",
+    "intel.quote.kicker": "กฎง่ายที่สุดของทริปนี้",
+    "intel.quote.body": "มีแค่ ICOCA ใบเดียว แล้วใช้ได้ทั้งทริป ส่วนไต้หวันใช้ taxi กับบัตรเครดิตไปเลยให้ชีวิตง่ายที่สุด",
     "intel.cards.transport.title": "บัตรเดินทาง",
-    "intel.cards.costs.title": "สรุปงบหลัก ไม่รวม flight / hotel / shopping",
-    "intel.cards.extras.title": "Breakdown สำคัญ",
-    "intel.cards.prep.title": "Cash vs Card",
+    "intel.cards.costs.title": "ค่าเดินทางและค่าใช้จ่าย",
+    "intel.cards.extras.title": "ค่าเดินทางจุดพิเศษที่ควรรู้",
+    "intel.cards.prep.title": "ของที่ต้องเตรียมก่อนเดินทาง",
     "intel.transport.icoca.title": "ICOCA IC Card 2 ใบ",
     "intel.transport.icoca.body": "ซื้อที่ KIX และเติมเงิน ¥10,000 ต่อใบ ใช้กับ JR, Metro, Hankyu, Hanshin และรถบัสหลายสายได้ทั้งทริป",
     "intel.transport.pass.title": "ไม่ต้องซื้อ Kansai Railway Pass",
     "intel.transport.pass.body": "ค่าเดินทางรวมยังอยู่ในจุดที่ ICOCA ยืดหยุ่นและคุ้มกว่าการล็อกตัวเองกับ pass",
     "intel.transport.easycard.title": "ไต้หวันไม่ต้องซื้อ EasyCard",
     "intel.transport.easycard.body": "พักแค่ 1 คืน ใช้บัตรเครดิตหรือเงินสดสำหรับ taxi และค่าใช้จ่ายเล็ก ๆ ได้เลย",
-    "intel.totals.transit.label": "FINAL TOTAL สำหรับ 2 คน",
-    "intel.totals.taxi.label": "Reality check ตาม mood จริง",
-    "intel.totals.food.label": "ค่าอาหาร + ดื่ม",
-    "intel.totals.total.label": "เงินสดที่แนะนำให้พก",
-    "intel.totals.note": "งบหลักของทริปนี้ครอบคลุมการเดินทาง อาหาร คาเฟ่ และมื้อพิเศษที่ตั้งใจเลือกไว้\n\nใช้บัตรเป็นหลัก แยก shopping ออกจากงบเที่ยว และพกเงินสด ¥50,000 สำหรับ 2 คนไว้รองรับค่าใช้จ่ายที่ต้องจ่ายหน้างาน\n\nภาพรวมคือเที่ยวได้สบาย กินดีพอประมาณ และยังคุมงบได้โดยไม่ต้องตึงเกินไป",
-    "intel.extras.kyoto": "🚆 ค่าเดินทาง: ¥21,000–24,000 รวม KIX ↔ Namba, Osaka local, Kyoto, Minoh, Gamba + ExpoCity และ Kobe",
-    "intel.extras.minoh": "🎟️ ค่าเข้า / กิจกรรม: ¥2,000–3,000 รวม Kiyomizu-dera, Katsuoji Temple และ Rose Festa / Expo Park",
-    "intel.extras.taiwanAirport": "☕ Miscellaneous / Snacks / Convenience Store: ¥5,000–8,000 สำหรับน้ำ, Lawson, snack และ vending",
-    "intel.extras.taiwanOutlet": "👜 Shopping ยังไม่รวมใน core budget เพราะ Dior, Flower Mountain, local fashion, cosmetics และ sneakers ขึ้นกับงบ shopping ล้วน ๆ",
-    "intel.prep.1": "Cash ใช้จริง: ¥25,000–35,000",
-    "intel.prep.2": "Card: ที่เหลือทั้งหมด ใช้กับร้านอาหาร ห้าง คาเฟ่ และค่าใช้จ่ายส่วนใหญ่",
-    "intel.prep.3": "Final recommendation: พกเงินสด ¥50,000 และบัตรเครดิต 2 ใบ",
-    "intel.prep.4": "ทริปจะ smooth มาก ไม่ต้องกังวลเรื่องเงิน",
-    "intel.prep.5": "สรุปนี้ไม่รวมตั๋วเครื่องบิน โรงแรม และ shopping",
+    "intel.totals.transit.label": "ค่าเดินทางญี่ปุ่น 2 คน",
+    "intel.totals.taxi.label": "Taxi และค่าเดินทางพิเศษ 2 คน",
+    "intel.totals.food.label": "ค่าอาหารและเครื่องดื่ม 2 คน",
+    "intel.totals.total.label": "รวมคร่าว ๆ ไม่รวมโรงแรมและตั๋วเครื่องบิน",
+    "intel.totals.note": "ภาพรวมคิดเป็นประมาณ 18,000–25,000 บาทสำหรับ 2 คน และไต้หวันอีกประมาณ NT$1,800–2,500 สำหรับ 2 คน",
+    "intel.extras.kyoto": "Fushimi Inari → Higashiyama ประมาณ ¥2,000–2,500 ต่อคัน",
+    "intel.extras.minoh": "Minoh → Katsuoji → กลับสถานี ประมาณ ¥5,000–6,000 ต่อคัน",
+    "intel.extras.taiwanAirport": "Airport ↔ City Suites Gateway ประมาณ NT$200–250 ต่อเที่ยว",
+    "intel.extras.taiwanOutlet": "Hotel ↔ Gloria Outlets ประมาณ NT$150–200 ต่อเที่ยว",
+    "intel.prep.1": "ซื้อ ICOCA 2 ใบที่ KIX แล้วเติมเงิน ¥10,000 ต่อใบ",
+    "intel.prep.2": "ไม่ต้องซื้อ pass เพิ่ม ทั้ง Kansai Railway Pass และ EasyCard ไต้หวันไม่จำเป็นแล้ว",
+    "intel.prep.3": "เตรียมบัตรเครดิตและ Apple Pay สำหรับ taxi ร้านอาหาร คาเฟ่ และค่าใช้จุกจิก",
+    "intel.prep.4": "พกเงินสดก้อนเล็กไว้สำรองสำหรับร้านเล็กหรือ taxi บางจุด",
+    "intel.prep.5": "เซฟชื่อโรงแรม ไฟลต์ และ booking สำคัญไว้ในมือถือกับ Maps ล่วงหน้า",
     "chapters.heading.label": "ฉากสำคัญของทริป",
     "chapters.heading.title": "สามช่วงที่จะนิยามคาแรกเตอร์ของทริปนี้ได้ชัดที่สุด",
     "chapters.kyoto.eyebrow": "Kyoto Heritage Day",
     "chapters.kyoto.title": "ตรอกหิน โคมไฟกระดาษ และมื้อเย็นที่ควรให้ความรู้สึกนิ่งและลึก",
     "chapters.kyoto.body":
-      "วันเกียวโตจะค่อย ๆ พาเข้าโซนวัด ตรอกหิน และมื้อเย็นที่นิ่งลึก เป็นวันที่เหมาะกับการเดินช้าและปล่อยให้บรรยากาศนำทาง",
+      "นี่คือวันที่ visual language ของทริปชัดที่สุด ถ้าจะยืม mood แบบ Aman มาใช้ ควรให้ section นี้หายใจเยอะ ใช้ภาพใหญ่ และคุม copy ให้น้อยลงอีก",
     "chapters.shopping.eyebrow": "Shopping, Reframed",
     "chapters.shopping.title": "ไม่ใช่วันเดินห้าง แต่เป็นบทหนึ่งของเมืองที่มีแฟชั่น ความงาม และจังหวะพัก",
     "chapters.shopping.body":
-      "วันนี้เป็นช่วงเติมของที่อยากได้แบบไม่เร่งรีบ เดินจาก Namba ไป Shinsaibashi แวะห้าง คาเฟ่ และแบรนด์ที่ตั้งใจไว้โดยไม่ต้องกดดันตัวเอง",
+      "ถ้าดีไซน์ใหม่ เราจะทำวันช็อปให้ดู editorial และ refined มากขึ้น แทนการเป็น list ของห้างกับแบรนด์อย่างเดียว",
     "chapters.kobe.eyebrow": "Kobe at Dusk",
     "chapters.kobe.title": "Harborland ควรให้ความรู้สึกเหมือนไวน์แก้วสุดท้าย ไม่ใช่แค่จุดแวะ",
     "chapters.kobe.body":
-      "ช่วงเย็นของโกเบเหมาะกับการปล่อยเวลาให้ไหลช้า ๆ ปิดวันด้วยวิวอ่าว แสงเย็น และมื้อเบาหรือไวน์สักแก้วก่อนกลับโอซากะ",
-    "dayFocus.heading.label": "Featured Day",
-    "dayFocus.heading.title": "Day 7 | Kobe Mature Slow Day",
+      "Belmond influence จะช่วยให้ช่วงเย็นของ Kobe ดูเหมือนบทจบที่ตั้งใจ มากกว่าวันเที่ยวเมืองทั่วไป",
+    "dayFocus.heading.label": "ตัวอย่างการเล่าเรื่องรายวัน",
+    "dayFocus.heading.title": "ลองเล่า Day 7 ใหม่ให้เป็นหน้าทริปหรูแบบ editorial",
     "dayFocus.dayLabel": "วันที่ 7",
     "dayFocus.title": "วันโกเบแบบผู้ใหญ่และไม่เร่งรีบ",
     "dayFocus.body":
@@ -243,16 +142,16 @@ const I18N = {
     "dayFocus.timeline.mouriya.body": "มื้อนี้ควรมีน้ำหนักเหมือนหนึ่งฉากสำคัญ ไม่ใช่แค่บรรทัดในแผนเที่ยว",
     "dayFocus.timeline.harbor.title": "Harborland + Port Tower",
     "dayFocus.timeline.harbor.body": "ปิดวันด้วยลม น้ำ แสงสีบรอนซ์ และชั่วโมงสุดท้ายที่ไม่ต้องเร่งอะไรเลย",
-    "detailDemo.heading.label": "Daily Itinerary",
-    "detailDemo.heading.title": "เมื่อเปิดเข้ามาในวันนั้น ทุกอย่างควรอยู่ใน timeline เดียวที่ใช้งานได้จริง",
+    "detailDemo.heading.label": "ตัวอย่างฟังก์ชันจริง",
+    "detailDemo.heading.title": "เมื่อกดเข้ามาในวันนั้น ฟังก์ชันหลักควรอยู่ใน timeline แบบนี้",
     "detailDemo.summary.kicker": "Day 7 Detail",
-    "detailDemo.summary.title": "ทุกอย่างของวันนี้รวมไว้ในหน้าเดียว",
+    "detailDemo.summary.title": "ตำแหน่งของปุ่มและ marker ในภาษาดีไซน์ใหม่",
     "detailDemo.summary.body":
-      "ด้านนี้สรุป mood และจังหวะของวัน ส่วน timeline ด้านขวาเอาไว้ใช้จริงระหว่างเดินทาง ทั้งแผนที่ เว็บไซต์ โน้ต และตัวบอกเวลา",
-    "detailDemo.summary.previewLabel": "เวลาที่กำลังดู",
+      "ด้านนี้คือ summary ของวัน ส่วนด้านขวาคือ timeline card ที่ใช้งานจริง พร้อมปุ่มแผนที่ เว็บไซต์ โน้ต และ marker เวลา",
+    "detailDemo.summary.previewLabel": "Preview เวลา",
     "detailDemo.summary.note":
-      "ตั้งเวลาไว้ช่วงบ่ายแก่ ๆ ของวันโกเบ เพื่อจำลองจังหวะจริงระหว่างคาเฟ่กับทางลงริมอ่าว",
-    "detailDemo.summary.markerTag": "เวลาระหว่างวัน",
+      "ตั้งเวลาไว้ระหว่าง Blue Bottle และ Motomachi เพื่อให้เห็นว่า marker จะคั่นอยู่ “ระหว่างกิจกรรม” แบบไหน",
+    "detailDemo.summary.markerTag": "marker เวลา",
     "actions.map": "แผนที่",
     "actions.website": "เว็บไซต์",
     "actions.notes": "ดูโน้ต",
@@ -305,23 +204,14 @@ const I18N = {
     "help.openPhrase": "เปิดข้อความช่วยเหลือ",
     "help.modal.kicker": "Help Mode",
     "help.modal.languageLabel": "ภาษาที่จะแสดงให้ผู้อื่นอ่าน",
-    "help.modal.prev": "ก่อนหน้า",
-    "help.modal.next": "ถัดไป",
-    "help.modal.copy": "คัดลอก",
-    "help.modal.copied": "คัดลอกแล้ว",
-    "help.modal.copyUnavailable": "คัดลอกไม่ได้",
     "contacts.heading.label": "ข้อมูลติดต่อฉุกเฉิน",
-    "contacts.heading.title": "เบอร์และข้อมูลที่ควรหยิบใช้ได้ทันทีระหว่างทริป",
+    "contacts.heading.title": "จัดวางให้เหมือนโต๊ะ concierge ส่วนตัว แต่หยิบใช้ได้จริงเวลาเร่งด่วน",
     "contacts.police.label": "ตำรวจ",
     "contacts.police.body": "เหตุฉุกเฉินด้านความปลอดภัยหรืออุบัติเหตุ",
-    "contacts.police.call": "โทร 110",
     "contacts.ambulance.label": "รถพยาบาล",
     "contacts.ambulance.body": "กรณีเจ็บป่วยฉุกเฉินและเหตุเร่งด่วนทางการแพทย์",
-    "contacts.ambulance.call": "โทร 119",
     "contacts.jnto.body": "สายช่วยเหลือนักท่องเที่ยวที่ควรมีติดไว้ตลอดทริป",
-    "contacts.jnto.call": "โทร JNTO",
     "contacts.eva.body": "สำหรับปัญหาไฟลต์ขากลับหรือการ re-check ระหว่าง transit",
-    "contacts.eva.call": "โทร EVA Air",
     "common.close": "ปิด",
     "detail.note.kicker": "Note",
     "detail.note.defaultTitle": "รายละเอียด",
@@ -331,9 +221,9 @@ const I18N = {
     "marker.done": "วันนี้เดินทางครบแล้ว",
   },
   en: {
-    "page.title": "Osaka Slow Life 2026",
-    "page.description": "A personal travel companion for Osaka Slow Life 2026 with flights, daily plans, budget notes, and offline Help Mode.",
-    "brand.label": "Personal Travel Companion",
+    "page.title": "Osaka Slow Life 2026 — Belmond x Aman Prototype",
+    "page.description": "Belmond x Aman inspired prototype for Osaka Slow Life 2026.",
+    "brand.label": "Prototype direction",
     "help.shortcut": "Help Mode",
     "nav.flights": "Flights",
     "nav.overview": "Overview",
@@ -343,38 +233,33 @@ const I18N = {
     "nav.dayDetails": "Day details",
     "nav.help": "Help Mode",
     "nav.contacts": "Contacts",
-    "quickMenu.title": "Quick menu",
-    "quickMenu.today": "Today",
-    "quickMenu.sos": "SOS",
-    "quickMenu.note": "Tap to jump to a day, or tap SOS for emergency contacts",
     "countdown.heading.label": "Countdown",
     "countdown.heading.title": "Only a little longer before the rhythm of Osaka begins for real.",
     "countdown.helper.before": "For now, we are still in preparation mode, so the page shows a countdown first.",
     "countdown.helper.during": "The trip is now live, so this section shifts to the remaining time before the journey ends.",
     "countdown.helper.after": "The trip is complete, but you can still return to this page for the notes and daily details.",
-    "detailExplorer.heading.label": "Choose a Day",
-    "detailExplorer.heading.title": "Choose a day and open that day's plan",
-    "hero.kicker": "From one quiet night in Taipei to Osaka, Kyoto, Minoh, Suita, Kobe, and the journey home",
+    "detailExplorer.heading.label": "Daily details",
+    "detailExplorer.heading.title": "Choose any day and view a working timeline with map, website, notes, and the live time marker.",
+    "hero.kicker": "A prototype inspired by Belmond x Aman",
     "hero.title": "Osaka, composed in a softer rhythm.",
     "hero.summary":
-      "A calm personal travel companion for a slow-life journey that moves gently from the Taiwan transit night into Osaka, Kyoto, Minoh, a football and ExpoCity day, the shopping day, Kobe, and the flight home.",
-    "hero.tones.kyoto": "Osaka days and nights",
-    "hero.tones.namba": "Kyoto heritage",
-    "hero.tones.kobe": "Kobe slow day",
+      "This direction reshapes the itinerary into a travel editorial experience, with a quiet-luxury palette, calmer spacing, less sugary cards, and imagery that feels closer to a luxury travel journal than a utility site.",
+    "hero.tones.kyoto": "Kyoto morning",
+    "hero.tones.namba": "Namba afternoon",
+    "hero.tones.kobe": "Kobe evening",
     "hero.meta.dates.label": "Travel dates",
     "hero.meta.travelers.label": "Travelers",
-    "hero.meta.travelers.value": "Two people, slow rhythm",
+    "hero.meta.travelers.value": "Couple in their 40s",
     "hero.meta.style.label": "Trip style",
     "hero.meta.style.value": "slow life, cafe, wine",
-    "strip.mood.label": "Trip rhythm",
-    "strip.mood.title": "Walk slow, rest well, and keep only what you want to remember",
-    "strip.mood.body": "You do not need to collect every stop, just give each day a good rhythm.",
-    "strip.palette.label": "Simple trip rule",
-    "strip.palette.title": "Open that day's plan, then decide by your real energy",
-    "strip.palette.body": "On tired days, keep only key stops, one good meal, and the easiest way back to the hotel.",
+    "strip.mood.label": "Mood",
+    "strip.mood.title": "Quiet Luxury",
+    "strip.mood.body": "Soft, calm, premium, yet still romantic and personal.",
+    "strip.palette.label": "Palette",
+    "strip.palette.body": "A more grown-up palette with less bright color and more refined accents.",
     "strip.experience.label": "Experience",
-    "strip.experience.title": "Easy to use on the move",
-    "strip.experience.body": "Each section is arranged to be practical during the trip, from checking flights and routes to opening notes for help.",
+    "strip.experience.title": "Feels like a private travel journal",
+    "strip.experience.body": "It should feel like an itinerary curated by a personal concierge.",
     "flights.heading.label": "Flights",
     "flights.heading.title": "Four gentle transitions that carry the whole trip seamlessly.",
     "flights.phase.outbound1": "Outbound 1/2",
@@ -399,8 +284,8 @@ const I18N = {
     "overview.day4.title": "Minoh & Katsuoji",
     "overview.day4.body": "Nature → daruma temple",
     "overview.day5.label": "Day 5",
-    "overview.day5.title": "Gamba + ExpoCity",
-    "overview.day5.body": "Football stadium → Rose Festa → shopping",
+    "overview.day5.title": "Reset day in Uji",
+    "overview.day5.body": "Tea streets → matcha → Osaka spa",
     "overview.day6.label": "Day 6",
     "overview.day6.title": "Shopping after the hotel move",
     "overview.day6.body": "Namba → Shinsaibashi → PARCO",
@@ -410,50 +295,50 @@ const I18N = {
     "overview.day8.label": "Day 8",
     "overview.day8.title": "Fly home softly",
     "overview.day8.body": "Namba → KIX → TPE → BKK",
-    "intel.heading.label": "FINAL EXPENSE SUMMARY",
-    "intel.heading.title": "FINAL EXPENSE SUMMARY — JAPAN TRIP 2026 for 2 people, excluding flights and hotels.",
-    "intel.quote.kicker": "Reality check",
-    "intel.quote.body": "A realistic estimate for the actual travel style — not overly optimistic, not artificially low, and shopping remains separate.",
+    "intel.heading.label": "Travel essentials",
+    "intel.heading.title": "Transport cards, costs, and pre-trip essentials should live together in one practical section.",
+    "intel.quote.kicker": "The simplest rule for this trip",
+    "intel.quote.body": "One ICOCA card is enough for the whole Japan portion, while Taiwan works best with taxis and a credit card.",
     "intel.cards.transport.title": "Transport cards",
-    "intel.cards.costs.title": "Core budget, excluding flights / hotels / shopping",
-    "intel.cards.extras.title": "Key breakdown",
-    "intel.cards.prep.title": "Cash vs card",
+    "intel.cards.costs.title": "Travel costs and budget",
+    "intel.cards.extras.title": "Special transport costs worth knowing",
+    "intel.cards.prep.title": "What to prepare before departure",
     "intel.transport.icoca.title": "Two ICOCA IC cards",
     "intel.transport.icoca.body": "Buy them at KIX and load ¥10,000 on each card. They will cover JR, Metro, Hankyu, Hanshin, and many bus rides throughout the trip.",
     "intel.transport.pass.title": "No Kansai Railway Pass needed",
     "intel.transport.pass.body": "The overall transport cost stays within a range where ICOCA remains more flexible and better value than locking into a pass.",
     "intel.transport.easycard.title": "No EasyCard needed in Taiwan",
     "intel.transport.easycard.body": "Since the Taiwan stay is only one night, a credit card or cash is enough for taxis and small expenses.",
-    "intel.totals.transit.label": "FINAL TOTAL for 2 people",
-    "intel.totals.taxi.label": "Reality check",
-    "intel.totals.food.label": "Food & drinks",
-    "intel.totals.total.label": "Recommended cash carry",
-    "intel.totals.note": "The core budget covers transport, meals, cafes, and a few special dinners chosen intentionally for the trip.\n\nUse cards as the main payment method, keep shopping separate from the travel budget, and carry ¥50,000 cash for two people for on-site expenses.\n\nOverall, the trip stays comfortable, allows good meals, and keeps the budget under control without feeling too tight.",
-    "intel.extras.kyoto": "🚆 Transport: ¥21,000–24,000 including airport transfer, Osaka local, Kyoto, Minoh, Gamba + ExpoCity, and Kobe",
-    "intel.extras.minoh": "🎟️ Activities: ¥2,000–3,000 including Kiyomizu-dera, Katsuoji Temple, and Rose Festa / Expo Park",
-    "intel.extras.taiwanAirport": "☕ Miscellaneous / snacks / convenience store: ¥5,000–8,000",
-    "intel.extras.taiwanOutlet": "👜 Shopping is not included. Dior, Flower Mountain, local fashion, cosmetics, and sneakers are separate optional budget.",
-    "intel.prep.1": "Expected cash use: ¥25,000–35,000",
-    "intel.prep.2": "Card: most remaining expenses",
-    "intel.prep.3": "Recommendation: carry ¥50,000 cash and 2 credit cards",
-    "intel.prep.4": "This keeps the trip smooth without worrying about money",
-    "intel.prep.5": "This summary excludes flights, hotels, and shopping",
+    "intel.totals.transit.label": "Japan transport for 2 people",
+    "intel.totals.taxi.label": "Taxis and special transport for 2 people",
+    "intel.totals.food.label": "Food and drinks for 2 people",
+    "intel.totals.total.label": "Estimated total excluding hotels and flights",
+    "intel.totals.note": "This works out to roughly THB 18,000–25,000 for two people, plus around NT$1,800–2,500 for Taiwan food and drinks.",
+    "intel.extras.kyoto": "Fushimi Inari → Higashiyama around ¥2,000–2,500 per taxi",
+    "intel.extras.minoh": "Minoh → Katsuoji → back to the station around ¥5,000–6,000 per taxi",
+    "intel.extras.taiwanAirport": "Airport ↔ City Suites Gateway around NT$200–250 per ride",
+    "intel.extras.taiwanOutlet": "Hotel ↔ Gloria Outlets around NT$150–200 per ride",
+    "intel.prep.1": "Buy 2 ICOCA cards at KIX and load ¥10,000 onto each one",
+    "intel.prep.2": "No extra pass is needed; both the Kansai Railway Pass and Taiwan EasyCard can be skipped",
+    "intel.prep.3": "Prepare a credit card and Apple Pay for taxis, restaurants, cafes, and small purchases",
+    "intel.prep.4": "Carry a small amount of cash for tiny shops or occasional taxi situations",
+    "intel.prep.5": "Save hotel names, flight details, and key bookings in your phone and Maps in advance",
     "chapters.heading.label": "Signature chapters",
     "chapters.heading.title": "Three scenes that define the identity of this trip.",
     "chapters.kyoto.eyebrow": "Kyoto Heritage Day",
     "chapters.kyoto.title": "Stone lanes, paper lanterns, and a dinner that should feel hushed and deep.",
     "chapters.kyoto.body":
-      "Kyoto is the most atmospheric day of the trip, moving through temple grounds, stone lanes, and a dinner that should feel quiet and unhurried.",
+      "This is the day where the trip's visual language feels the clearest. If we borrow an Aman-like mood, this section should breathe more, lean on large photography, and use less copy.",
     "chapters.shopping.eyebrow": "Shopping, Reframed",
     "chapters.shopping.title": "Not a mall day, but a city chapter shaped by fashion, beauty, and pause.",
     "chapters.shopping.body":
-      "This is the day to move slowly between Namba and Shinsaibashi, mixing department stores, cafes, and the specific brands you already want to see.",
+      "In a redesigned version, the shopping day would feel more editorial and refined rather than reading like a list of department stores and brands.",
     "chapters.kobe.eyebrow": "Kobe at Dusk",
     "chapters.kobe.title": "Harborland should feel like the final glass of wine, not merely another stop.",
     "chapters.kobe.body":
-      "Kobe is best enjoyed by letting the afternoon and early evening stretch gently toward the harbor, with enough room for coffee, sunset, and one last glass before returning.",
-    "dayFocus.heading.label": "Featured Day",
-    "dayFocus.heading.title": "Day 7 | Kobe Mature Slow Day",
+      "The Belmond influence can turn Kobe's evening into an intentional closing chapter rather than a standard city day.",
+    "dayFocus.heading.label": "Sample day storytelling",
+    "dayFocus.heading.title": "Retelling Day 7 as a luxury editorial itinerary page",
     "dayFocus.dayLabel": "Day 7",
     "dayFocus.title": "A mature and unhurried day in Kobe",
     "dayFocus.body":
@@ -466,16 +351,16 @@ const I18N = {
     "dayFocus.timeline.mouriya.body": "A lunch that should carry the weight of a scene, not just a booking line.",
     "dayFocus.timeline.harbor.title": "Harborland + Port Tower",
     "dayFocus.timeline.harbor.body": "End with wind, water, bronze light, and one final hour with no need to rush.",
-    "detailDemo.heading.label": "Daily Itinerary",
-    "detailDemo.heading.title": "Once you open a day, the full plan should live in one practical timeline",
+    "detailDemo.heading.label": "Interactive detail example",
+    "detailDemo.heading.title": "When entering a day, the core functions should live inside the timeline like this",
     "detailDemo.summary.kicker": "Day 7 Detail",
-    "detailDemo.summary.title": "Everything for the day, gathered in one place",
+    "detailDemo.summary.title": "Where the buttons and time marker belong in the new design language",
     "detailDemo.summary.body":
-      "This side holds the tone and rhythm of the day, while the timeline keeps the practical details close at hand: maps, websites, notes, and the live time guide.",
-    "detailDemo.summary.previewLabel": "Current trip time",
+      "This side holds the day summary, while the right side shows the working timeline cards with map, website, notes, and the time marker.",
+    "detailDemo.summary.previewLabel": "Preview time",
     "detailDemo.summary.note":
-      "The time is set in the late afternoon of the Kobe day so the flow between the cafe stop and the harbor feels easy to follow.",
-    "detailDemo.summary.markerTag": "live time",
+      "The preview time is placed between Blue Bottle and Motomachi so you can see how the marker sits between activities.",
+    "detailDemo.summary.markerTag": "time marker",
     "actions.map": "Map",
     "actions.website": "Website",
     "actions.notes": "Notes",
@@ -528,23 +413,14 @@ const I18N = {
     "help.openPhrase": "Open support phrase",
     "help.modal.kicker": "Help Mode",
     "help.modal.languageLabel": "Language to show another person",
-    "help.modal.prev": "Previous",
-    "help.modal.next": "Next",
-    "help.modal.copy": "Copy",
-    "help.modal.copied": "Copied",
-    "help.modal.copyUnavailable": "Copy unavailable",
     "contacts.heading.label": "Emergency contacts",
-    "contacts.heading.title": "The key numbers and notes you should be able to reach quickly during the trip",
+    "contacts.heading.title": "Presented like a private concierge desk, but practical in urgent moments",
     "contacts.police.label": "Police",
     "contacts.police.body": "For safety issues, theft, or accidents.",
-    "contacts.police.call": "Call 110",
     "contacts.ambulance.label": "Ambulance",
     "contacts.ambulance.body": "For medical emergencies or urgent health support.",
-    "contacts.ambulance.call": "Call 119",
     "contacts.jnto.body": "A tourist support line worth keeping handy throughout the trip.",
-    "contacts.jnto.call": "Call JNTO",
     "contacts.eva.body": "Useful for return-flight issues or re-check questions during transit.",
-    "contacts.eva.call": "Call EVA Air",
     "common.close": "Close",
     "detail.note.kicker": "Note",
     "detail.note.defaultTitle": "Details",
@@ -554,9 +430,9 @@ const I18N = {
     "marker.done": "The day is already complete",
   },
   ja: {
-    "page.title": "Osaka Slow Life 2026",
-    "page.description": "Osaka Slow Life 2026 のための、フライト・日別プラン・予算メモ・Help Mode をまとめた個人用トラベルガイドです。",
-    "brand.label": "旅のパーソナルガイド",
+    "page.title": "Osaka Slow Life 2026 — Belmond x Aman プロトタイプ",
+    "page.description": "Osaka Slow Life 2026 のための Belmond x Aman 風プロトタイプです。",
+    "brand.label": "プロトタイプの方向性",
     "help.shortcut": "Help Mode",
     "nav.flights": "フライト",
     "nav.overview": "全体像",
@@ -566,38 +442,33 @@ const I18N = {
     "nav.dayDetails": "日別詳細",
     "nav.help": "Help Mode",
     "nav.contacts": "緊急連絡",
-    "quickMenu.title": "クイックメニュー",
-    "quickMenu.today": "今日",
-    "quickMenu.sos": "SOS",
-    "quickMenu.note": "日を選んでジャンプ、SOSで緊急連絡先へ",
     "countdown.heading.label": "カウントダウン",
     "countdown.heading.title": "大阪のリズムが本当に始まるまで、あと少しです。",
     "countdown.helper.before": "まだ出発前の準備期間なので、まずはカウントダウンを表示しています。",
     "countdown.helper.during": "いま旅の最中なので、この欄は旅の終わりまでの残り時間を表示します。",
     "countdown.helper.after": "旅は終わりましたが、このページには記録や日別の詳細をいつでも見返しに来られます。",
-    "detailExplorer.heading.label": "日を選ぶ",
-    "detailExplorer.heading.title": "日を選んで、その日の流れを見る",
-    "hero.kicker": "台北の静かなトランジットの夜から、大阪・京都・箕面・吹田・神戸、そして帰路まで",
+    "detailExplorer.heading.label": "日別の詳細",
+    "detailExplorer.heading.title": "どの日でも選んで、地図・ウェブサイト・ノート・時間マーカー付きの実用的なタイムラインを確認できます。",
+    "hero.kicker": "Belmond x Aman から着想を得たプロトタイプ",
     "hero.title": "Osakaを、よりやわらかく静かなリズムで。",
     "hero.summary":
-      "台北での一泊トランジットから始まり、大阪、京都、箕面、サッカーとExpoCityの日、ショッピングの日、神戸、そして帰りのフライトまでを静かにつないでいく、slow life のための個人用トラベルガイドです。",
-    "hero.tones.kyoto": "大阪の昼と夜",
-    "hero.tones.namba": "京都ヘリテージ",
-    "hero.tones.kobe": "神戸スローデイ",
+      "この方向性では、旅程サイトをよりトラベルエディトリアルらしく再構成します。quiet luxury の色調、落ち着いた余白、甘さを抑えたカード、そして実用サイトよりも上質な旅のジャーナルに近い写真表現が中心です。",
+    "hero.tones.kyoto": "京都の朝",
+    "hero.tones.namba": "難波の午後",
+    "hero.tones.kobe": "神戸の夕方",
     "hero.meta.dates.label": "旅行日程",
-    "hero.meta.travelers.label": "旅のスタイル",
-    "hero.meta.travelers.value": "ふたりで、ゆったりと",
+    "hero.meta.travelers.label": "旅行者",
+    "hero.meta.travelers.value": "40代の夫婦",
     "hero.meta.style.label": "旅のスタイル",
     "hero.meta.style.value": "slow life, cafe, wine",
-    "strip.mood.label": "この旅のリズム",
-    "strip.mood.title": "ゆっくり歩いて、しっかり休んで、残したい記憶だけを選ぶ",
-    "strip.mood.body": "全部を回る必要はなく、各日の流れが心地よければ十分です。",
-    "strip.palette.label": "この旅のシンプルなルール",
-    "strip.palette.title": "その日の予定を開いて、その日の体力で決める",
-    "strip.palette.body": "疲れた日は、主要スポットと良い食事、ホテルまでの帰りやすさだけで十分です。",
+    "strip.mood.label": "ムード",
+    "strip.mood.title": "Quiet Luxury",
+    "strip.mood.body": "やわらかく、静かで、上質。それでいてロマンチックで私的な空気感。",
+    "strip.palette.label": "カラーパレット",
+    "strip.palette.body": "鮮やかさを抑え、大人っぽいアクセントを加えます。",
     "strip.experience.label": "体験",
-    "strip.experience.title": "移動中にも見やすい構成",
-    "strip.experience.body": "フライト確認、移動、予算メモ、そして人に見せる Help Mode まで、旅の途中で使いやすいようにまとめています。",
+    "strip.experience.title": "私的な旅日記のような印象",
+    "strip.experience.body": "専属コンシェルジュが整えた旅程のように感じられる構成です。",
     "flights.heading.label": "フライト",
     "flights.heading.title": "四つの移動を、ひとつながりの穏やかな旅として見せます。",
     "flights.phase.outbound1": "往路 1/2",
@@ -621,9 +492,9 @@ const I18N = {
     "overview.day4.label": "Day 4",
     "overview.day4.title": "Minoh & Katsuoji",
     "overview.day4.body": "自然 → だるま寺",
-    "overview.day5.label": "5日目",
-    "overview.day5.title": "ガンバ大阪 + ExpoCity",
-    "overview.day5.body": "スタジアム → ローズフェスタ → ショッピング",
+    "overview.day5.label": "Day 5",
+    "overview.day5.title": "宇治で心を整える日",
+    "overview.day5.body": "茶の町 → matcha → Osaka spa",
     "overview.day6.label": "Day 6",
     "overview.day6.title": "ホテル移動後のショッピング",
     "overview.day6.body": "Namba → Shinsaibashi → PARCO",
@@ -633,50 +504,50 @@ const I18N = {
     "overview.day8.label": "Day 8",
     "overview.day8.title": "静かに帰路へ",
     "overview.day8.body": "Namba → KIX → TPE → BKK",
-    "intel.heading.label": "最終費用サマリー",
-    "intel.heading.title": "最終費用サマリー — Japan Trip 2026 2人分、航空券・ホテル代を除く",
-    "intel.quote.kicker": "Reality check",
-    "intel.quote.body": "実際の旅のスタイルに合わせた現実的な見積もり。楽観しすぎず、低く見積もりすぎず、ショッピングは別予算です。",
+    "intel.heading.label": "旅の準備情報",
+    "intel.heading.title": "交通カード、費用、出発前の準備は、ひとつの実用的な章としてまとめておくべきです。",
+    "intel.quote.kicker": "この旅のいちばん簡単なルール",
+    "intel.quote.body": "日本では ICOCA 一枚で十分。台湾はタクシーとクレジットカードを使うのが一番シンプルです。",
     "intel.cards.transport.title": "交通カード",
-    "intel.cards.costs.title": "基本予算（航空券・ホテル・買い物を除く）",
-    "intel.cards.extras.title": "主な内訳",
-    "intel.cards.prep.title": "現金とカード",
+    "intel.cards.costs.title": "移動費と予算",
+    "intel.cards.extras.title": "知っておきたい特別な移動費",
+    "intel.cards.prep.title": "出発前に準備すること",
     "intel.transport.icoca.title": "ICOCA ICカード 2枚",
     "intel.transport.icoca.body": "KIX で購入し、各カードに ¥10,000 をチャージします。JR、Metro、Hankyu、Hanshin、そして多くのバスで使えます。",
     "intel.transport.pass.title": "Kansai Railway Pass は不要",
     "intel.transport.pass.body": "全体の移動費は ICOCA のほうが柔軟で、パスよりも自然に使いやすい範囲に収まっています。",
     "intel.transport.easycard.title": "台湾では EasyCard 不要",
     "intel.transport.easycard.body": "1泊だけなので、タクシーや小さな支払いはクレジットカードか現金で十分です。",
-    "intel.totals.transit.label": "最終合計（2人）",
-    "intel.totals.taxi.label": "実際の目安",
-    "intel.totals.food.label": "食事と飲み物",
-    "intel.totals.total.label": "持っていく現金の目安",
-    "intel.totals.note": "この旅の基本予算は、移動、食事、カフェ、そしてあらかじめ選んだ特別なディナーを中心に組んでいます。\n\n支払いはカードを基本にし、ショッピングは旅の予算とは別に管理。現地で必要な支払いに備えて、2人で現金 ¥50,000 を持っておくと安心です。\n\n全体として、無理なく快適に過ごせて、食事も楽しみながら、予算を締めすぎずに管理できるバランスです。",
-    "intel.extras.kyoto": "🚆 交通費: ¥21,000–24,000。空港移動、大阪市内、京都、箕面、Gamba + ExpoCity、神戸を含む",
-    "intel.extras.minoh": "🎟️ 入場料・アクティビティ: ¥2,000–3,000。Kiyomizu-dera、Katsuoji Temple、Rose Festa / Expo Park を含む",
-    "intel.extras.taiwanAirport": "☕ Misc / snacks / convenience store: ¥5,000–8,000",
-    "intel.extras.taiwanOutlet": "👜 ショッピングは含みません。Dior、Flower Mountain、local fashion、cosmetics、sneakers は別予算です。",
-    "intel.prep.1": "現金利用目安: ¥25,000–35,000",
-    "intel.prep.2": "残りはカード中心",
-    "intel.prep.3": "Recommendation: 現金 ¥50,000 とクレジットカード2枚が安心",
-    "intel.prep.4": "この組み合わせなら、お金の心配をせずスムーズに動けます",
-    "intel.prep.5": "このサマリーは航空券、ホテル、ショッピングを除きます",
+    "intel.totals.transit.label": "日本の移動費（2人）",
+    "intel.totals.taxi.label": "タクシーと特別移動費（2人）",
+    "intel.totals.food.label": "食事と飲み物（2人）",
+    "intel.totals.total.label": "ホテルと航空券を除いた概算合計",
+    "intel.totals.note": "全体では2人でおよそ 18,000〜25,000 バーツ相当、台湾の飲食代は別で NT$1,800〜2,500 ほどです。",
+    "intel.extras.kyoto": "Fushimi Inari → Higashiyama はタクシーで約 ¥2,000〜2,500 / 台",
+    "intel.extras.minoh": "Minoh → Katsuoji → 駅に戻るタクシーで約 ¥5,000〜6,000 / 台",
+    "intel.extras.taiwanAirport": "Airport ↔ City Suites Gateway は約 NT$200〜250 / 回",
+    "intel.extras.taiwanOutlet": "Hotel ↔ Gloria Outlets は約 NT$150〜200 / 回",
+    "intel.prep.1": "KIX で ICOCA を2枚購入し、それぞれ ¥10,000 をチャージする",
+    "intel.prep.2": "追加のパスは不要。Kansai Railway Pass も Taiwan EasyCard も今回は必要ありません",
+    "intel.prep.3": "タクシー、レストラン、カフェ、小さな支払い用にクレジットカードと Apple Pay を準備する",
+    "intel.prep.4": "小さなお店や一部のタクシー用に少額の現金も持っておく",
+    "intel.prep.5": "ホテル名、フライト情報、重要な予約を事前にスマホと Maps に保存しておく",
     "chapters.heading.label": "旅の象徴的な章",
     "chapters.heading.title": "この旅の個性を決める三つのシーン",
     "chapters.kyoto.eyebrow": "Kyoto Heritage Day",
     "chapters.kyoto.title": "石畳、和紙の灯り、そして静かに深まる夕食。",
     "chapters.kyoto.body":
-      "京都の日は、寺院の空気、石畳の坂道、そして静かな夕食へとゆっくり流れていく、この旅の中でも特に雰囲気の深い一日です。",
+      "この日は旅のビジュアル言語が最も明確に表れる日です。Aman のようなムードを借りるなら、もっと余白を取り、大きな写真を使い、コピーはさらに抑えるべきです。",
     "chapters.shopping.eyebrow": "Shopping, Reframed",
     "chapters.shopping.title": "ただの買い物の日ではなく、ファッションと美容と余白で構成された都市の一章。",
     "chapters.shopping.body":
-      "この日は、難波から心斎橋へとゆっくり歩きながら、百貨店、カフェ、そして見ておきたいブランドを無理なく回るための一日です。",
+      "再設計するなら、百貨店やブランドの一覧ではなく、よりエディトリアルで洗練された一日に見せたいです。",
     "chapters.kobe.eyebrow": "Kobe at Dusk",
     "chapters.kobe.title": "Harborland は、最後のワイン一杯のように感じられるべきです。",
     "chapters.kobe.body":
-      "神戸の夕方は、港に向かうまでの時間を少しゆるめにとり、カフェ、夕景、そして最後の一杯を自然につなげるのが心地よい流れです。",
-    "dayFocus.heading.label": "Featured Day",
-    "dayFocus.heading.title": "Day 7 | Kobe Mature Slow Day",
+      "Belmond 的な影響を入れることで、神戸の夕方が単なる街歩きではなく、意図された締めくくりの章になります。",
+    "dayFocus.heading.label": "日別ストーリーテリング例",
+    "dayFocus.heading.title": "7日目をラグジュアリーなエディトリアル旅程として再構成",
     "dayFocus.dayLabel": "7日目",
     "dayFocus.title": "大人のための、ゆっくりした神戸の日",
     "dayFocus.body":
@@ -689,16 +560,16 @@ const I18N = {
     "dayFocus.timeline.mouriya.body": "ただの予約枠ではなく、一つの場面として重みを持つランチです。",
     "dayFocus.timeline.harbor.title": "Harborland + Port Tower",
     "dayFocus.timeline.harbor.body": "風、水、ブロンズ色の光とともに、急がない最後の一時間を。",
-    "detailDemo.heading.label": "Daily Itinerary",
-    "detailDemo.heading.title": "その日のページを開くと、流れ全体をひとつのタイムラインで確認できます",
+    "detailDemo.heading.label": "実際の機能例",
+    "detailDemo.heading.title": "その日に入ったとき、主要機能はこのようにタイムライン内に置くのが自然です",
     "detailDemo.summary.kicker": "Day 7 Detail",
-    "detailDemo.summary.title": "その日に必要なものを一ページにまとめて",
+    "detailDemo.summary.title": "新しいデザイン言語の中で、ボタンと時間マーカーが置かれる位置",
     "detailDemo.summary.body":
-      "左側ではその日の空気と流れをつかみ、右側のタイムラインでは地図、サイト、ノート、現在時刻を見ながら実際に動けます。",
-    "detailDemo.summary.previewLabel": "いま見ている時刻",
+      "左側は一日の要約、右側は実際に使うタイムラインカードです。地図、サイト、ノート、時間マーカーをここに集約します。",
+    "detailDemo.summary.previewLabel": "プレビュー時刻",
     "detailDemo.summary.note":
-      "神戸の日の午後後半に時間を置き、カフェから港へ向かう流れを見やすくしています。",
-    "detailDemo.summary.markerTag": "現在時刻",
+      "Blue Bottle と Motomachi の間に時間を設定し、マーカーが「活動の間」に入る見え方を示しています。",
+    "detailDemo.summary.markerTag": "時間マーカー",
     "actions.map": "地図",
     "actions.website": "ウェブサイト",
     "actions.notes": "ノート",
@@ -751,23 +622,14 @@ const I18N = {
     "help.openPhrase": "サポート文を開く",
     "help.modal.kicker": "Help Mode",
     "help.modal.languageLabel": "相手に見せる言語",
-    "help.modal.prev": "前へ",
-    "help.modal.next": "次へ",
-    "help.modal.copy": "コピー",
-    "help.modal.copied": "コピーしました",
-    "help.modal.copyUnavailable": "コピー不可",
     "contacts.heading.label": "緊急連絡先",
-    "contacts.heading.title": "旅の途中で、すぐに開いて使える連絡先とメモをまとめています",
+    "contacts.heading.title": "私的なコンシェルジュデスクのように見せつつ、緊急時に実用的に使える形",
     "contacts.police.label": "警察",
     "contacts.police.body": "安全上の問題、盗難、事故など。",
-    "contacts.police.call": "110に電話",
     "contacts.ambulance.label": "救急",
     "contacts.ambulance.body": "急病や医療上の緊急対応が必要なとき。",
-    "contacts.ambulance.call": "119に電話",
     "contacts.jnto.body": "旅行中ずっと手元に置いておきたい観光サポート窓口です。",
-    "contacts.jnto.call": "JNTOに電話",
     "contacts.eva.body": "復路便の問題や transit 中の再確認に役立ちます。",
-    "contacts.eva.call": "EVA Airに電話",
     "common.close": "閉じる",
     "detail.note.kicker": "Note",
     "detail.note.defaultTitle": "詳細",
@@ -777,9 +639,9 @@ const I18N = {
     "marker.done": "この日の行程は完了しています",
   },
   zh: {
-    "page.title": "Osaka Slow Life 2026",
-    "page.description": "为 Osaka Slow Life 2026 准备的个人旅行指南，包含航班、每日行程、预算备注和离线 Help Mode。",
-    "brand.label": "个人旅行指南",
+    "page.title": "Osaka Slow Life 2026 — Belmond x Aman 原型",
+    "page.description": "为 Osaka Slow Life 2026 准备的 Belmond x Aman 风格原型。",
+    "brand.label": "原型方向",
     "help.shortcut": "Help Mode",
     "nav.flights": "航班",
     "nav.overview": "总览",
@@ -789,38 +651,33 @@ const I18N = {
     "nav.dayDetails": "每日详情",
     "nav.help": "Help Mode",
     "nav.contacts": "紧急联系",
-    "quickMenu.title": "快捷菜单",
-    "quickMenu.today": "今天",
-    "quickMenu.sos": "SOS",
-    "quickMenu.note": "点击跳转到当天，或点击 SOS 查看紧急联系方式",
     "countdown.heading.label": "倒数计时",
     "countdown.heading.title": "距离真正进入 Osaka 的节奏，只剩一点点时间了。",
     "countdown.helper.before": "现在还处于出发前准备阶段，所以这里先显示倒数计时。",
     "countdown.helper.during": "现在旅程正在进行中，这里会显示距离整趟旅程结束还剩多少时间。",
     "countdown.helper.after": "旅程已经结束，不过你仍然可以随时回来查看记录和每日详情。",
-    "detailExplorer.heading.label": "选择日期",
-    "detailExplorer.heading.title": "选择一天，查看当天行程",
-    "hero.kicker": "从台北安静的转机之夜，一路走到大阪、京都、箕面、吹田、神户和回程",
+    "detailExplorer.heading.label": "每日详情",
+    "detailExplorer.heading.title": "任选一天，查看带有地图、网站、备注和时间 marker 的真实时间轴。",
+    "hero.kicker": "受 Belmond x Aman 启发的原型",
     "hero.title": "让 Osaka 以更柔和、更安静的节奏展开。",
     "hero.summary":
-      "这是为 slow life 旅程准备的个人旅行指南，让台北转机之夜、大阪、京都、箕面、足球与 ExpoCity 日、购物日、神户和回家这一路都能安静而顺畅地连在一起。",
-    "hero.tones.kyoto": "大阪的日与夜",
-    "hero.tones.namba": "京都文化遗产",
-    "hero.tones.kobe": "神户慢旅日",
+      "这个方向会把 itinerary 网站调整成更像旅行编辑内容的体验，用 quiet luxury 的色调、更安静的留白、更克制的卡片，以及更像高端旅行杂志而不是工具网站的图像叙事。",
+    "hero.tones.kyoto": "京都清晨",
+    "hero.tones.namba": "难波午后",
+    "hero.tones.kobe": "神户傍晚",
     "hero.meta.dates.label": "出行日期",
-    "hero.meta.travelers.label": "旅行方式",
-    "hero.meta.travelers.value": "两个人，慢节奏",
+    "hero.meta.travelers.label": "旅伴",
+    "hero.meta.travelers.value": "40 多岁的夫妻",
     "hero.meta.style.label": "旅行风格",
     "hero.meta.style.value": "slow life, cafe, wine",
-    "strip.mood.label": "这趟旅程的节奏",
-    "strip.mood.title": "慢慢走、好好休息，只留下真正想记住的片段",
-    "strip.mood.body": "不用把每个点都打卡，只要每天的节奏舒服就够了。",
-    "strip.palette.label": "这趟旅程的简单规则",
-    "strip.palette.title": "先看当天计划，再按真实体力决定",
-    "strip.palette.body": "如果当天累了，就保留关键点、一顿好饭，以及最轻松回酒店的路线。",
+    "strip.mood.label": "气质",
+    "strip.mood.title": "Quiet Luxury",
+    "strip.mood.body": "柔和、安静、高级，同时也保留浪漫与私密感。",
+    "strip.palette.label": "配色",
+    "strip.palette.body": "降低鲜艳度，改用更成熟、更克制的色彩点缀。",
     "strip.experience.label": "体验",
-    "strip.experience.title": "在路上也能轻松查看",
-    "strip.experience.body": "从查看航班、路线、预算，到打开 Help Mode 给别人看，所有信息都整理成旅途中真正好用的样子。",
+    "strip.experience.title": "像一本私人的旅行日记",
+    "strip.experience.body": "让整体感觉像由私人礼宾为你整理好的 itinerary。",
     "flights.heading.label": "航班",
     "flights.heading.title": "四段衔接自然的移动，串起整趟旅程。",
     "flights.phase.outbound1": "去程 1/2",
@@ -844,9 +701,9 @@ const I18N = {
     "overview.day4.label": "第 4 天",
     "overview.day4.title": "Minoh & Katsuoji",
     "overview.day4.body": "自然 → 达摩寺",
-    "overview.day5.label": "第5天",
-    "overview.day5.title": "Gamba + ExpoCity",
-    "overview.day5.body": "足球场 → 玫瑰节 → 购物",
+    "overview.day5.label": "第 5 天",
+    "overview.day5.title": "Uji 放松日",
+    "overview.day5.body": "茶街 → matcha → Osaka spa",
     "overview.day6.label": "第 6 天",
     "overview.day6.title": "换酒店后的购物日",
     "overview.day6.body": "Namba → Shinsaibashi → PARCO",
@@ -856,49 +713,49 @@ const I18N = {
     "overview.day8.label": "第 8 天",
     "overview.day8.title": "从容返程",
     "overview.day8.body": "Namba → KIX → TPE → BKK",
-    "intel.heading.label": "最终费用总结",
-    "intel.heading.title": "最终费用总结 — Japan Trip 2026 2人份，不含机票和酒店",
-    "intel.quote.kicker": "Reality check",
-    "intel.quote.body": "按照实际旅行风格做出的现实估算，不刻意乐观，也不压低预算，购物另计。",
+    "intel.heading.label": "出行准备摘要",
+    "intel.heading.title": "交通卡、费用和出发前准备，最好放在同一个实用章节里一起看。",
+    "intel.quote.kicker": "这趟旅程最简单的规则",
+    "intel.quote.body": "在日本只要一张 ICOCA 就够了，台湾则直接用出租车和信用卡最省心。",
     "intel.cards.transport.title": "交通卡",
-    "intel.cards.costs.title": "核心预算，不含机票 / 酒店 / 购物",
-    "intel.cards.extras.title": "主要明细",
-    "intel.cards.prep.title": "现金与信用卡",
+    "intel.cards.costs.title": "交通费用与预算",
+    "intel.cards.extras.title": "需要提前知道的特殊交通费用",
+    "intel.cards.prep.title": "出发前要准备的东西",
     "intel.transport.icoca.title": "两张 ICOCA IC 卡",
     "intel.transport.icoca.body": "在 KIX 购买，每张先充值 ¥10,000。全程可用于 JR、Metro、Hankyu、Hanshin 和多条巴士线路。",
     "intel.transport.pass.title": "不需要 Kansai Railway Pass",
     "intel.transport.pass.body": "整体交通费仍处于 ICOCA 更灵活也更划算的区间，没有必要被 pass 绑定。",
     "intel.transport.easycard.title": "台湾不需要 EasyCard",
     "intel.transport.easycard.body": "因为只停留一晚，用信用卡或现金应付出租车和小额花费就足够了。",
-    "intel.totals.transit.label": "最终总计（2人）",
-    "intel.totals.taxi.label": "实际旅行节奏预估",
-    "intel.totals.food.label": "餐饮费用",
-    "intel.totals.total.label": "建议携带现金",
-    "intel.totals.note": "这趟旅行的核心预算涵盖交通、餐饮、咖啡，以及几顿特别安排的晚餐。\n\n主要以信用卡支付，购物预算与旅行预算分开管理，并为两个人准备 ¥50,000 现金，用来应对现场需要现金支付的情况。\n\n整体来说，可以舒服地旅行、吃得不错，同时也能控制预算，不需要把花费压得太紧。",
-    "intel.extras.kyoto": "🚆 交通: ¥21,000–24,000，包含机场往返、大阪市内、京都、箕面、Gamba + ExpoCity 和神户",
-    "intel.extras.minoh": "🎟️ 门票 / 活动: ¥2,000–3,000，包含 Kiyomizu-dera、Katsuoji Temple 和 Rose Festa / Expo Park",
-    "intel.extras.taiwanAirport": "☕ Misc / snacks / convenience store: ¥5,000–8,000",
-    "intel.extras.taiwanOutlet": "👜 不含购物。Dior、Flower Mountain、local fashion、cosmetics 和 sneakers 另算 optional budget。",
-    "intel.prep.1": "预计现金使用: ¥25,000–35,000",
-    "intel.prep.2": "其余以信用卡为主",
-    "intel.prep.3": "Recommendation: 携带 ¥50,000 现金和 2 张信用卡",
-    "intel.prep.4": "这样整趟旅行会更顺，不需要担心现金不够",
-    "intel.prep.5": "此总结不含机票、酒店和购物",
+    "intel.totals.transit.label": "日本交通费（2人）",
+    "intel.totals.taxi.label": "出租车与特殊交通费（2人）",
+    "intel.totals.food.label": "餐饮费用（2人）",
+    "intel.totals.total.label": "粗略总计，不含酒店与机票",
+    "intel.totals.note": "整体约合 18,000–25,000 泰铢 / 2 人，台湾餐饮另外约 NT$1,800–2,500 / 2 人。",
+    "intel.extras.kyoto": "Fushimi Inari → Higashiyama 出租车约 ¥2,000–2,500 / 车",
+    "intel.extras.minoh": "Minoh → Katsuoji → 返回车站 出租车约 ¥5,000–6,000 / 车",
+    "intel.extras.taiwanAirport": "Airport ↔ City Suites Gateway 约 NT$200–250 / 趟",
+    "intel.extras.taiwanOutlet": "Hotel ↔ Gloria Outlets 约 NT$150–200 / 趟",
+    "intel.prep.1": "在 KIX 购买 2 张 ICOCA，并各自充值 ¥10,000",
+    "intel.prep.2": "不需要再买其他 pass，Kansai Railway Pass 和台湾 EasyCard 都可以省略",
+    "intel.prep.3": "准备信用卡和 Apple Pay，用于出租车、餐厅、咖啡店和小额消费",
+    "intel.prep.4": "另外带少量现金，以备小店或部分出租车场景使用",
+    "intel.prep.5": "提前把酒店名称、航班信息和重要 booking 存进手机和 Maps",
     "chapters.heading.label": "旅程亮点章节",
     "chapters.heading.title": "最能定义这趟旅程气质的三个场景",
     "chapters.kyoto.eyebrow": "Kyoto Heritage Day",
     "chapters.kyoto.title": "石板路、纸灯笼，以及一顿应当安静而深沉的晚餐。",
     "chapters.kyoto.body":
-      "京都这一天会慢慢带你进入寺院、石板路和安静晚餐的节奏，是整趟旅程里最有氛围的一天之一。",
+      "这一天最能体现整趟旅程的视觉语言。如果借用 Aman 的气质，这一段应该有更多留白、更大的图片，以及更少的文字。",
     "chapters.shopping.eyebrow": "Shopping, Reframed",
     "chapters.shopping.title": "这不是逛商场的一天，而是由时装、美妆和停顿组成的城市章节。",
     "chapters.shopping.body":
-      "这一天适合从 Namba 走到 Shinsaibashi，慢慢逛百货、咖啡店和想看的品牌，不需要把每个点都赶完。",
+      "如果重新设计，我们会把购物日做得更像编辑内容，而不是单纯的百货和品牌清单。",
     "chapters.kobe.eyebrow": "Kobe at Dusk",
     "chapters.kobe.title": "Harborland 应该像最后一杯酒，而不只是一个停靠点。",
-    "chapters.kobe.body": "神户的傍晚最适合把节奏放慢一些，让咖啡、夕阳、海边和最后一杯酒自然接在一起。",
-    "dayFocus.heading.label": "Featured Day",
-    "dayFocus.heading.title": "Day 7 | Kobe Mature Slow Day",
+    "chapters.kobe.body": "Belmond 的影响会让神户的傍晚更像一个有意设计的收尾章节，而不是普通的城市行程。",
+    "dayFocus.heading.label": "单日叙事示例",
+    "dayFocus.heading.title": "把第 7 天重新讲成一页高端 editorial itinerary",
     "dayFocus.dayLabel": "第 7 天",
     "dayFocus.title": "成熟而从容的神户一天",
     "dayFocus.body":
@@ -911,15 +768,15 @@ const I18N = {
     "dayFocus.timeline.mouriya.body": "这顿午餐应该像一个场景，而不只是预约表上的一行文字。",
     "dayFocus.timeline.harbor.title": "Harborland + Port Tower",
     "dayFocus.timeline.harbor.body": "用风、水、铜色光线和一个不需要赶路的最后小时收尾。",
-    "detailDemo.heading.label": "Daily Itinerary",
-    "detailDemo.heading.title": "打开某一天后，当天的安排应该集中在一条真正好用的时间轴里",
+    "detailDemo.heading.label": "真实功能示例",
+    "detailDemo.heading.title": "进入某一天后，核心功能最适合像这样放进时间轴里",
     "detailDemo.summary.kicker": "Day 7 Detail",
-    "detailDemo.summary.title": "把当天需要的一切放在同一页里",
+    "detailDemo.summary.title": "按钮与时间 marker 在新设计语言中的位置",
     "detailDemo.summary.body":
-      "左侧先把当天的气氛和节奏整理好，右侧的时间轴则负责地图、网站、备注和当前行程时间，方便真正拿着用。",
-    "detailDemo.summary.previewLabel": "当前查看时间",
-    "detailDemo.summary.note": "这里把时间放在神户日下午后段，好让咖啡之后到海边之前的节奏更容易跟上。",
-    "detailDemo.summary.markerTag": "当前行程时间",
+      "左侧是当天摘要，右侧是实际可用的时间轴卡片，包含地图、网站、备注和时间 marker。",
+    "detailDemo.summary.previewLabel": "预览时间",
+    "detailDemo.summary.note": "我把时间设在 Blue Bottle 和 Motomachi 之间，让你看清 marker 落在“活动之间”时的样子。",
+    "detailDemo.summary.markerTag": "时间 marker",
     "actions.map": "地图",
     "actions.website": "网站",
     "actions.notes": "备注",
@@ -972,23 +829,14 @@ const I18N = {
     "help.openPhrase": "打开求助句子",
     "help.modal.kicker": "Help Mode",
     "help.modal.languageLabel": "给对方看的语言",
-    "help.modal.prev": "上一条",
-    "help.modal.next": "下一条",
-    "help.modal.copy": "复制",
-    "help.modal.copied": "已复制",
-    "help.modal.copyUnavailable": "无法复制",
     "contacts.heading.label": "紧急联系信息",
-    "contacts.heading.title": "把旅途中需要立刻打开的号码和备注放在一起",
+    "contacts.heading.title": "像私人 concierge 一样呈现，但在紧急时刻也能直接使用",
     "contacts.police.label": "警察",
     "contacts.police.body": "安全问题、失窃或事故。",
-    "contacts.police.call": "拨打 110",
     "contacts.ambulance.label": "救护车",
     "contacts.ambulance.body": "医疗紧急情况或急需医疗帮助时。",
-    "contacts.ambulance.call": "拨打 119",
     "contacts.jnto.body": "旅行期间值得一直保存的游客支援热线。",
-    "contacts.jnto.call": "拨打 JNTO",
     "contacts.eva.body": "适合处理返程航班问题或转机重新确认。",
-    "contacts.eva.call": "拨打 EVA Air",
     "common.close": "关闭",
     "detail.note.kicker": "Note",
     "detail.note.defaultTitle": "详情",
@@ -1091,22 +939,22 @@ const NOTE_COPY = {
   bluebottle: {
     th: {
       title: "Blue Bottle Coffee",
-      body: "จุดนี้เหมาะกับการพักจริง เช็กแผนต่อช่วงเย็น และตัดสินใจแบบสบาย ๆ ว่าจะเดินต่อเร็วหรือพักให้นานขึ้นอีกนิด",
+      body: "ถ้าเอาฟังก์ชันมาใส่ใน CI ใหม่ จุดนี้จะเหมาะกับการเปิด note มาก เพราะมักมี decision เล็ก ๆ ระหว่างพัก",
       list: ["ถ้าเมื่อยมากอาจยืดเวลาคาเฟ่อีกนิด", "เหมาะกับการเช็กแผนช่วงเย็น", "เป็น stop ที่ช่วยรีเซ็ต mood"],
     },
     en: {
       title: "Blue Bottle Coffee",
-      body: "This is a genuine pause in the day, a good place to review the evening flow and decide whether to move on or linger a little longer.",
+      body: "In the new design language, this is a perfect place for notes because small decisions often happen during the pause.",
       list: ["Stay a little longer if you feel tired", "A good moment to review the evening plan", "A stop that resets the mood nicely"],
     },
     ja: {
       title: "Blue Bottle Coffee",
-      body: "ここは一日の中でしっかり休める時間です。夕方の流れを確認しながら、もう少し休むか次へ進むかを落ち着いて決められます。",
+      body: "新しいデザイン言語で機能を置くなら、ここはノートを見るのに最適です。休憩中に小さな判断が生まれやすいからです。",
       list: ["疲れていれば少し長めに休んでもよい", "夕方の流れを確認するのに向いています", "ムードを整え直す stop になります"],
     },
     zh: {
       title: "Blue Bottle Coffee",
-      body: "这里是真正适合停下来休息的地方，也很适合顺便看看晚上的安排，决定是继续走还是再多坐一会儿。",
+      body: "如果把功能放进新的设计语言里，这里很适合打开备注，因为很多小决定都会发生在休息的时候。",
       list: ["如果累了可以把咖啡时间拉长一点", "适合顺便确认晚上的安排", "是一个能重置心情的 stop"],
     },
   },
@@ -1207,9 +1055,9 @@ const HELP_PHRASES = {
   },
 };
 
-const THEME_STORAGE_KEY = "osaka-trip-theme";
-const DETAIL_DAY_STORAGE_KEY = "osaka-trip-detail-day";
-const PREVIEW_STORAGE_KEY = "osaka-trip-preview-now";
+const THEME_STORAGE_KEY = "osaka-prototype-theme";
+const DETAIL_DAY_STORAGE_KEY = "osaka-prototype-detail-day";
+const PREVIEW_STORAGE_KEY = "osaka-prototype-preview-now";
 const TRIP_START = "2026-05-16T00:00:00+07:00";
 const TRIP_END = "2026-05-24T23:59:59+09:00";
 
@@ -1225,7 +1073,7 @@ const PROTOTYPE_DAYS = [
     hotel: "City Suites Gateway",
     summary: "คืน transit ที่ตั้งใจให้ง่ายที่สุด เช็กอินเร็ว เดิน outlet เบา ๆ แล้วจบด้วยมื้อเย็นก่อนนอนเร็ว",
     previewNow: "2026-05-16T19:40:00+08:00",
-    previewNote: "ตั้งเวลาไว้ช่วงมื้อเย็นของวัน transit เพื่อให้เห็น marker ตอนเย็นก่อนกลับโรงแรม",
+    previewNote: "ตั้งเวลาไว้ช่วงก่อน Din Tai Fung เพื่อให้เห็น marker ตอนเย็นของวัน transit",
     events: [
       {
         id: "d0-arrival",
@@ -1267,59 +1115,11 @@ const PROTOTYPE_DAYS = [
         time: "19:30–21:20",
         start: "19:30",
         end: "21:20",
-        title: "มื้อเย็นที่ Gloria Outlets / Food Court",
-        titleI18n: {
-          en: "Dinner at Gloria Outlets / Food Court",
-          ja: "Gloria Outlets / フードコートで夕食",
-          zh: "Gloria Outlets / 美食区晚餐",
-        },
+        title: "Dinner ที่ Din Tai Fung + optional Blu Bar",
         place: "Evening",
-        blurb: "จบวัน transit ด้วยมื้อเย็นง่าย ๆ ใน Gloria Outlets เลือกร้านหรือ food court หน้างานตามคิวและความหิว แล้วค่อยกลับโรงแรมพัก",
-        blurbI18n: {
-          en: "End the transit day with an easy dinner inside Gloria Outlets. Choose a restaurant or the food court on the spot depending on queues, appetite, and energy, then return to the hotel.",
-          ja: "乗り継ぎ日の夜は、Gloria Outlets内で無理なく夕食。混雑、空腹感、体力に合わせてレストランかフードコートを当日選び、ホテルへ戻る。",
-          zh: "转机日晚上在 Gloria Outlets 简单用餐。根据排队情况、食欲和体力，现场选择餐厅或美食区，然后回酒店休息。",
-        },
-        map: "https://maps.google.com/?q=Gloria+Outlets+Taoyuan",
-        website: "https://www.gloriaoutlets.com/eng/",
-        note: {
-          th: {
-            title: "มื้อเย็นแบบไม่ล็อกร้าน",
-            body: "คืนนี้ไม่ต้องจองหรือฝืนหาร้านเฉพาะ เลือกจากร้านใน Gloria Outlets หรือ food court หน้างานจะยืดหยุ่นที่สุด",
-            list: [
-              "ถ้าคิวร้านดังยาว ให้เลือก food court หรือร้านที่นั่งได้เร็ว",
-              "โฟกัสคือกินให้อิ่ม พักให้ไว และไม่กระทบไฟลต์เช้าวันถัดไป",
-              "ถ้ายังมีแรง ค่อยแวะดื่มสั้น ๆ ใกล้โรงแรมหรือในพื้นที่ outlet",
-            ],
-          },
-          en: {
-            title: "Flexible dinner, no fixed restaurant",
-            body: "No need to lock in a specific restaurant tonight. Picking from Gloria Outlets or the food court on the spot is the most flexible choice.",
-            list: [
-              "If popular restaurants have long queues, choose the food court or a faster table-service option",
-              "The goal is to eat well, rest early, and protect tomorrow morning's flight",
-              "If there is still energy, keep any drink stop short and easy",
-            ],
-          },
-          ja: {
-            title: "店を固定しない夕食",
-            body: "今夜は特定の店にこだわらず、Gloria Outlets内のレストランやフードコートから当日の状況で選ぶのがいちばん楽。",
-            list: [
-              "人気店の待ち時間が長ければ、フードコートか入りやすい店を選ぶ",
-              "目的はしっかり食べて早めに休み、翌朝のフライトに響かせないこと",
-              "まだ余裕があれば、軽く一杯だけにして長居しない",
-            ],
-          },
-          zh: {
-            title: "不固定餐厅的晚餐",
-            body: "今晚不需要锁定某一家餐厅。到现场从 Gloria Outlets 的餐厅或美食区中选择，会是最灵活的安排。",
-            list: [
-              "如果热门餐厅排队太久，就选择美食区或入座更快的餐厅",
-              "重点是吃饱、早点休息，不影响隔天早班飞机",
-              "如果还有精神，可以短暂喝一杯，但不要拖太晚",
-            ],
-          },
-        },
+        blurb: "จบวันด้วยมื้อเย็นที่ Gloria Outlets และถ้ายังมีแรงค่อยแวะ drink สั้น ๆ ก่อนกลับโรงแรม",
+        map: "https://maps.google.com/?q=Din+Tai+Fung+Gloria+Outlets",
+        note: { th: { title: "ปิดวันแบบนุ่ม ๆ", body: "จังหวะคืนนี้ควรให้ความรู้สึกสบาย ไม่ยาวจนกระทบไฟลต์เช้า", list: ["ถ้าแวะ Blu Bar ให้สั้นพอ", "ตั้งใจเข้านอนประมาณ 22:30"] } },
       },
     ],
   },
@@ -1568,270 +1368,56 @@ const PROTOTYPE_DAYS = [
     dateIso: "2026-05-21",
     timeZone: "Asia/Tokyo",
     date: "พฤหัส 21 พฤษภาคม 2026",
-    title: "Gamba Osaka + ExpoCity + Rose Festa Day",
-    route: "VIA INN → Panasonic Stadium Suita → Expo ’70 Park → ExpoCity → Osaka",
+    title: "Uji Half Day + Osaka Reset",
+    route: "Osaka → Uji → Osaka spa",
     hotel: "VIA INN PRIME Shinsaibashi Yotsubashi",
-    summary: "ฟุตบอลญี่ปุ่น สวนกุหลาบ และ ExpoCity ในจังหวะสบาย ๆ เป็นวัน suburban Osaka ที่ช่วยบาลานซ์ทั้งทริปหลัง Kyoto และ Minoh",
-    summaryI18n: {
-      th: "ฟุตบอลญี่ปุ่น สวนกุหลาบ และ ExpoCity ในจังหวะสบาย ๆ เป็นวัน suburban Osaka ที่ช่วยบาลานซ์ทั้งทริปหลัง Kyoto และ Minoh",
-      en: "A relaxed suburban Osaka day with Japanese football culture, roses, ExpoCity shopping, cafes, and an easier rhythm after Kyoto and Minoh.",
-      ja: "京都と箕面のあとにちょうどいい、サッカー文化、バラ園、ExpoCity、カフェをゆったり楽しむ大阪郊外の日。",
-      zh: "在京都和箕面之后，用足球文化、玫瑰园、ExpoCity 购物和咖啡，安排一个轻松的大阪近郊日。",
-    },
-    titleI18n: {
-      th: "Gamba Osaka + ExpoCity + Rose Festa Day",
-      en: "Gamba Osaka + ExpoCity + Rose Festa Day",
-      ja: "ガンバ大阪 + ExpoCity + ローズフェスタの日",
-      zh: "Gamba Osaka + ExpoCity + 玫瑰节日",
-    },
-    routeI18n: {
-      th: "VIA INN → Panasonic Stadium Suita → Expo ’70 Park → ExpoCity → Osaka",
-      en: "VIA INN → Panasonic Stadium Suita → Expo ’70 Park → ExpoCity → Osaka",
-      ja: "VIA INN → パナソニックスタジアム吹田 → 万博記念公園 → ExpoCity → 大阪市内",
-      zh: "VIA INN → Panasonic Stadium Suita → 万博纪念公园 → ExpoCity → 大阪市区",
-    },
-    previewNow: "2026-05-21T15:45:00+09:00",
-    previewNote: "ตั้งเวลาไว้ช่วงเดิน ExpoCity เพื่อให้เห็น marker ในวัน suburban Osaka แบบสบาย ๆ",
+    summary: "ครึ่งวันสบายที่ Uji แล้วกลับมารีเซ็ตตัวเองที่โอซากะ เป็นวันเบาที่ตั้งใจให้หายใจจริง",
+    previewNow: "2026-05-21T13:25:00+09:00",
+    previewNote: "ตั้งเวลาไว้ช่วงของหวาน matcha เพื่อให้เห็น marker ในวันที่ flow นุ่มที่สุดวันหนึ่งของทริป",
     events: [
       {
-        id: "d5-coffee",
-        time: "10:00–10:30",
-        start: "10:00",
-        end: "10:30",
-        title: "กาแฟ / ขนมเบา ๆ แถวโรงแรม",
-        titleI18n: {
-          en: "Easy coffee near the hotel",
-          ja: "ホテル周辺で軽くコーヒー",
-          zh: "酒店附近简单咖啡",
-        },
-        place: "Shinsaibashi / Yotsubashi",
-        blurb: "เริ่มวันแบบไม่รีบ หาอะไรเบา ๆ ใกล้ VIA INN ก่อนออกไปฝั่ง Suita",
-        blurbI18n: {
-          en: "Start slow with a light coffee or snack near VIA INN before heading toward Suita.",
-          ja: "VIA INN周辺で軽くコーヒーやおやつを済ませて、吹田方面へ。",
-          zh: "在 VIA INN 附近喝杯咖啡或吃点轻食，再出发前往吹田方向。",
-        },
-        map: "https://maps.google.com/?q=VIA+INN+PRIME+Shinsaibashi+Yotsubashi",
-      },
-      {
-        id: "d5-stadium-transfer",
+        id: "d5-uji-travel",
         time: "10:30–11:30",
         start: "10:30",
         end: "11:30",
-        title: "เดินทางไป Panasonic Stadium Suita",
-        titleI18n: {
-          en: "Travel to Panasonic Stadium Suita",
-          ja: "パナソニックスタジアム吹田へ移動",
-          zh: "前往 Panasonic Stadium Suita",
-        },
-        place: "Transit",
-        blurb: "นั่ง Osaka Metro ต่อ Osaka Monorail ไปยังโซนสนามและ ExpoCity ใช้ ICOCA ได้ทั้งหมด",
-        blurbI18n: {
-          en: "Take Osaka Metro and transfer to Osaka Monorail toward the stadium / ExpoCity area. ICOCA works for the route.",
-          ja: "Osaka Metroから大阪モノレールに乗り継ぎ、スタジアムとExpoCityエリアへ。ICOCA利用可。",
-          zh: "搭乘 Osaka Metro 转 Osaka Monorail 前往球场与 ExpoCity 区域，可使用 ICOCA。",
-        },
-        map: "https://maps.google.com/?q=Panasonic+Stadium+Suita",
+        title: "Osaka → Uji โดย JR",
+        place: "Transfer",
+        blurb: "ออกสายขึ้นนิดหนึ่งแล้วค่อยไป Uji แบบไม่ต้องรีบ ใช้ ICOCA แตะได้ง่าย",
+        map: "https://maps.google.com/?q=Uji+Station+Kyoto",
+        note: { th: { title: "วันเบาที่ตั้งใจไว้", body: "นี่คือวันที่ใช้จังหวะ slow life ชัดที่สุดวันหนึ่ง", list: ["ออกจากโรงแรมแบบสบาย ๆ ได้", "ICOCA ใบเดียวพอจริงสำหรับวันนี้"] } },
       },
       {
-        id: "d5-gamba",
-        time: "11:30–12:30",
+        id: "d5-byodoin",
+        time: "11:30–12:15",
         start: "11:30",
-        end: "12:30",
-        title: "เดินเล่นรอบสนาม Gamba Osaka",
-        titleI18n: {
-          en: "Walk around Gamba Osaka stadium",
-          ja: "ガンバ大阪スタジアム周辺を散歩",
-          zh: "Gamba Osaka 球场周边散步",
-        },
-        place: "Panasonic Stadium Suita",
-        blurb: "ถ่ายรูปบรรยากาศสนาม แวะแฟนช็อป และสัมผัส football culture ของญี่ปุ่นแบบเบา ๆ",
-        blurbI18n: {
-          en: "Take photos around the stadium, check the fan shop, and enjoy a light taste of Japanese football culture.",
-          ja: "スタジアム周辺で写真を撮り、ファンショップを見て、日本のサッカー文化を軽く楽しむ。",
-          zh: "在球场周边拍照、逛球迷商店，轻松感受日本足球文化。",
-        },
-        map: "https://maps.google.com/?q=Panasonic+Stadium+Suita",
-        website: "https://www.gamba-osaka.net/english/",
-        note: {
-          th: {
-            title: "สนามฟุตบอลแบบชิล ๆ",
-            body: "วันนี้ไม่จำเป็นต้องมีทัวร์สนาม ถ้ามี stadium tour ค่อยตัดสินใจหน้างานหรือเช็กอีกครั้งใกล้วันเดินทาง",
-            list: [
-              "ถ่ายรูปด้านนอกสนามก็พอคุ้มสำหรับสายฟุตบอล",
-              "ถ้ามีแฟนช็อปเปิด แวะดูของที่ระลึกได้",
-              "อย่าใช้เวลานานเกินไป เพราะยังมี Rose Festa และ ExpoCity",
-            ],
-          },
-          en: {
-            title: "A relaxed football stop",
-            body: "The stadium tour is optional. If a tour is available, decide on the spot or recheck closer to the travel date.",
-            list: [
-              "Photos around the stadium are already worthwhile for a football fan",
-              "Stop by the fan shop if open",
-              "Keep the pace light because Rose Festa and ExpoCity are still ahead",
-            ],
-          },
-          ja: {
-            title: "気軽なサッカーストップ",
-            body: "スタジアムツアーは必須ではありません。開催されていれば、当日または出発前に確認して決めれば十分です。",
-            list: [
-              "サッカー好きなら外観の写真だけでも十分楽しめます",
-              "ファンショップが開いていればお土産を見られます",
-              "Rose Festa と ExpoCity もあるので長居しすぎない",
-            ],
-          },
-          zh: {
-            title: "轻松的足球停留",
-            body: "球场 tour 不是必须。如果当天有开放，可以现场决定，或在出发前再确认。",
-            list: [
-              "对足球迷来说，在球场外拍照已经很值得",
-              "如果球迷商店开放，可以看看纪念品",
-              "不要停留太久，因为后面还有 Rose Festa 和 ExpoCity",
-            ],
-          },
-        },
+        end: "12:15",
+        title: "Byodo-in",
+        place: "Uji",
+        blurb: "เริ่มที่วัดหลักของเมืองชา ก่อนจะค่อย ๆ ไหลไปสู่ราเม็งและของหวาน matcha",
+        map: "https://maps.google.com/?q=Byodo-in+Temple",
+        note: { th: { title: "เริ่มด้วยภาพนิ่ง", body: "Byodo-in ทำหน้าที่เปิดวันแบบสงบมากกว่าตื่นเต้น", list: ["ใช้เวลาไม่นานก็กำลังดี", "เหมาะกับวันครึ่งวันที่ไม่ต้องแน่น"] } },
       },
       {
-        id: "d5-rose-festa",
-        time: "12:30–14:00",
-        start: "12:30",
-        end: "14:00",
-        title: "Rose Festa 2026 ที่ Expo ’70 Park",
-        titleI18n: {
-          en: "Rose Festa 2026 at Expo ’70 Park",
-          ja: "万博記念公園 Rose Festa 2026",
-          zh: "Expo ’70 Park Rose Festa 2026",
-        },
-        place: "Expo ’70 Commemorative Park",
-        blurb: "เดินสวนกุหลาบ ถ่ายรูป และพักจังหวะกลางวันในบรรยากาศ seasonal Japan",
-        blurbI18n: {
-          en: "Walk through the rose garden, take photos, and enjoy a gentle seasonal Japan moment.",
-          ja: "バラ園を散歩して写真を撮り、季節感のある日本らしい時間をゆったり楽しむ。",
-          zh: "在玫瑰园散步拍照，享受带有季节感的日本午后。",
-        },
-        map: "https://maps.google.com/?q=Expo+70+Commemorative+Park+Rose+Garden",
-        website: "https://osaka-info.jp/th/event/rose-festa2026/",
+        id: "d5-food",
+        time: "12:20–15:00",
+        start: "12:20",
+        end: "15:00",
+        title: "Ramen Tanaka Kyu Shoten + Tsujirihei Honten",
+        place: "Lunch / Dessert",
+        blurb: "กิน matcha salt ramen แล้วปิดด้วยขนมและชาระดับ Uji แบบเต็ม ๆ",
+        map: "https://maps.google.com/?q=Tsujirihei+Honten+Uji",
+        note: { th: { title: "Uji แบบที่ควรเป็น", body: "วันเมืองชาไม่ต้องเร่งเก็บหลายที่ แค่กินและเดินให้ดีพอ", list: ["ลอง Matcha Salt Ramen", "ของหวานคือหัวใจของช่วงบ่าย"] } },
       },
       {
-        id: "d5-lunch",
-        time: "14:00–15:30",
-        start: "14:00",
-        end: "15:30",
-        title: "Late Lunch ที่ ExpoCity",
-        titleI18n: {
-          en: "Late lunch at ExpoCity",
-          ja: "ExpoCityで遅めのランチ",
-          zh: "ExpoCity 晚一点午餐",
-        },
-        place: "ExpoCity",
-        blurb: "เลือกร้านหน้างานตามคิวและความหิว เป็นมื้อกลางวันสาย ๆ แบบสบายที่สุด",
-        blurbI18n: {
-          en: "Choose a restaurant on the spot depending on queues and appetite. Keep it easy and flexible.",
-          ja: "混雑と空腹具合を見ながら、その場で店を選ぶ。無理せず柔軟に。",
-          zh: "根据排队情况和食欲现场选餐厅，保持轻松弹性。",
-        },
-        map: "https://maps.google.com/?q=EXPOCITY+Osaka",
-        website: "https://www.expocity-mf.com/expo/",
-        note: {
-          th: {
-            title: "เลือกร้านหน้างาน",
-            body: "วันนี้ไม่ต้องล็อกร้านอาหาร เพราะ ExpoCity มีตัวเลือกเยอะและเหมาะกับการตัดสินใจตามแรงจริง",
-            list: [
-              "ถ้าหิวมาก เลือกร้านที่นั่งได้เร็ว",
-              "ถ้าอยากพักนาน เลือกคาเฟ่หรือร้านที่นั่งสบาย",
-              "เผื่อเวลาเดิน shopping ต่อหลังอาหาร",
-            ],
-          },
-          en: {
-            title: "Choose on the spot",
-            body: "No fixed restaurant is needed today. ExpoCity has enough options to decide by real energy and queue length.",
-            list: [
-              "If very hungry, choose the fastest seated option",
-              "If you want to rest longer, choose a comfortable cafe or restaurant",
-              "Leave time for shopping after lunch",
-            ],
-          },
-          ja: {
-            title: "当日の状況で店を選ぶ",
-            body: "今日は店を固定しなくて大丈夫です。ExpoCity は選択肢が多く、体力と混雑に合わせて決めやすい場所です。",
-            list: [
-              "かなり空腹なら入りやすい店を選ぶ",
-              "長めに休みたいなら座りやすいカフェや店を選ぶ",
-              "食後のショッピング時間を残しておく",
-            ],
-          },
-          zh: {
-            title: "现场选餐厅",
-            body: "今天不需要固定餐厅。ExpoCity 选择很多，适合按照体力和排队情况现场决定。",
-            list: [
-              "如果很饿，就选入座最快的店",
-              "如果想多休息，就选座位舒服的咖啡或餐厅",
-              "午餐后预留购物时间",
-            ],
-          },
-        },
-      },
-      {
-        id: "d5-expocity",
-        time: "15:30–18:00",
-        start: "15:30",
-        end: "18:00",
-        title: "เดิน ExpoCity + shopping + cafe",
-        titleI18n: {
-          en: "ExpoCity shopping + cafe",
-          ja: "ExpoCityでショッピングとカフェ",
-          zh: "ExpoCity 购物 + 咖啡",
-        },
-        place: "ExpoCity",
-        blurb: "เดินเล่นใน mall ดู lifestyle stores, sneakers, Pokémon, Gundam, Loft หรือแวะคาเฟ่ตาม mood",
-        blurbI18n: {
-          en: "Browse lifestyle stores, sneakers, Pokémon, Gundam, Loft, or pause for a cafe break depending on mood.",
-          ja: "ライフスタイルショップ、スニーカー、ポケモン、ガンダム、Loftなどを見て、気分でカフェ休憩。",
-          zh: "逛 lifestyle stores、球鞋、Pokémon、Gundam、Loft，或按心情找咖啡休息。",
-        },
-        map: "https://maps.google.com/?q=EXPOCITY+Osaka",
-        website: "https://www.expocity-mf.com/expo/",
-      },
-      {
-        id: "d5-return",
-        time: "18:00–19:00",
-        start: "18:00",
-        end: "19:00",
-        title: "กลับ Osaka",
-        titleI18n: {
-          en: "Return to Osaka",
-          ja: "大阪市内へ戻る",
-          zh: "返回大阪市区",
-        },
-        place: "Transit",
-        blurb: "กลับเข้าเมืองแบบไม่รีบ ถ้าเหนื่อยให้ตรงกลับโรงแรมก่อน แล้วค่อยตัดสินใจเรื่องมื้อเย็น",
-        blurbI18n: {
-          en: "Head back to the city without rushing. If tired, return to the hotel first and decide dinner later.",
-          ja: "急がず市内へ戻る。疲れていればまずホテルに戻り、夕食はそのあと決める。",
-          zh: "不赶时间地回到市区。如果累了，先回酒店再决定晚餐。",
-        },
+        id: "d5-reset",
+        time: "15:00–21:00",
+        start: "15:00",
+        end: "21:00",
+        title: "กลับ Osaka → Spa / นวด / Dinner + Wine",
+        place: "Reset",
+        blurb: "กลับมารีเซ็ตตัวเองช่วงบ่ายแก่ ๆ ก่อนมื้อค่ำเบา ๆ ที่ Shinsaibashi",
         map: "https://maps.google.com/?q=Shinsaibashi+Osaka",
-      },
-      {
-        id: "d5-dinner",
-        time: "19:30–22:00",
-        start: "19:30",
-        end: "22:00",
-        title: "Dinner / wine / bar แถว Namba หรือ Shinsaibashi",
-        titleI18n: {
-          en: "Dinner / wine / bar around Namba or Shinsaibashi",
-          ja: "難波・心斎橋周辺で夕食 / ワイン / バー",
-          zh: "Namba / Shinsaibashi 晚餐 / 葡萄酒 / 小酒吧",
-        },
-        place: "Namba / Shinsaibashi",
-        blurb: "จบวันด้วยมื้อเย็นหรือ wine bar เบา ๆ แถว Namba / Shinsaibashi ถ้าเหนื่อยมากให้กลับพักเลย",
-        blurbI18n: {
-          en: "End the day with an easy dinner or light wine bar around Namba / Shinsaibashi. If tired, simply rest.",
-          ja: "難波や心斎橋周辺で軽く夕食やワインバー。疲れていればそのまま休む。",
-          zh: "在 Namba 或 Shinsaibashi 简单晚餐或小酌。如果累了，就直接休息。",
-        },
-        map: "https://maps.google.com/?q=Namba+Shinsaibashi+Osaka",
+        note: { th: { title: "รีเซ็ตครึ่งหลังของทริป", body: "ถ้าวันนี้นุ่มจริง พลังของสองวันท้ายจะดีขึ้นชัดเจน", list: ["ช่วง spa หรือ massage มีค่ากับทริปนี้มาก", "อย่าเปลี่ยนวันเบาให้กลายเป็นวันยาว"] } },
       },
     ],
   },
@@ -2063,7 +1649,6 @@ let currentPageLang = DEFAULT_PAGE_LANG;
 let currentHelpLang = DEFAULT_HELP_LANG;
 let currentNoteId = null;
 let currentHelpId = "nut";
-let helpCopyResetTimer = null;
 let currentDetailDayId = null;
 
 function t(key, lang = currentPageLang) {
@@ -2141,17 +1726,6 @@ function formatTimeLabel(date, lang = currentPageLang, timeZone = "Asia/Tokyo") 
   });
 }
 
-function formatDayDateLabel(day, lang = currentPageLang) {
-  const date = new Date(`${day.dateIso}T12:00:00+09:00`);
-  return new Intl.DateTimeFormat(LOCALE_MAP[lang], {
-    weekday: "short",
-    day: "numeric",
-    month: "long",
-    year: "numeric",
-    timeZone: day.timeZone,
-  }).format(date);
-}
-
 function setActiveButtonState(selector, value, attributeName) {
   document.querySelectorAll(selector).forEach((button) => {
     button.classList.toggle("is-active", button.getAttribute(attributeName) === value);
@@ -2203,15 +1777,7 @@ function getEffectiveDetailDate(day) {
   if (override) return override;
   const now = new Date();
   if (getDateKey(now, day.timeZone) === day.dateIso) return now;
-  return null;
-}
-
-function getTimelineClock(day) {
-  const override = getPreviewOverride();
-  if (override) return { date: override, mode: "preview" };
-  const now = new Date();
-  if (getDateKey(now, day.timeZone) === day.dateIso) return { date: now, mode: "real" };
-  return { date: null, mode: "disabled" };
+  return new Date(day.previewNow);
 }
 
 function applyTheme(theme) {
@@ -2267,91 +1833,20 @@ function renderCountdown() {
   setTextForKey(helper, helperKey, currentPageLang);
 }
 
-function getDayIndex(day) {
-  return PROTOTYPE_DAYS.findIndex((entry) => entry.id === day.id);
-}
-
-function getDayDisplayContent(day, lang = currentPageLang) {
-  const index = getDayIndex(day);
-  const fallbackNumber = index >= 0 ? index : 0;
-  return {
-    label: t(`overview.day${fallbackNumber}.label`, lang),
-    title: day.titleI18n?.[lang] ?? t(`overview.day${fallbackNumber}.title`, lang),
-    shortTitle: DAY_SHORT_TITLES[lang]?.[day.id] ?? DAY_SHORT_TITLES.th[day.id] ?? t(`overview.day${fallbackNumber}.title`, lang),
-    route: day.routeI18n?.[lang] ?? (lang === "th" ? day.route : t(`overview.day${fallbackNumber}.body`, lang)),
-    toneClass: DAY_TONE_CLASSES[fallbackNumber] ?? DAY_TONE_CLASSES[0],
-    icon: DAY_VISUALS[day.id]?.icon ?? "✦",
-    image: DAY_VISUALS[day.id]?.image ?? "",
-  };
-}
-
-function containsThai(text = "") {
-  return /[\u0E00-\u0E7F]/.test(text);
-}
-
-function getLocalizedEventTitle(event, lang = currentPageLang) {
-  if (event.titleI18n?.[lang]) return event.titleI18n[lang];
-  if (lang === "th") return event.title;
-  if (!containsThai(event.title || "")) return event.title;
-  const place = event.place || (lang === "ja" ? "予定" : lang === "zh" ? "行程" : "Activity");
-  if (lang === "ja") return `${place} の予定`;
-  if (lang === "zh") return `${place} 行程`;
-  return `${place} activity`;
-}
-
-function getLocalizedEventBlurb(event, lang = currentPageLang) {
-  if (event.blurbI18n?.[lang]) return event.blurbI18n[lang];
-  if (lang === "th") return event.blurb;
-  if (!containsThai(event.blurb || "")) return event.blurb;
-  const title = getLocalizedEventTitle(event, lang);
-  if (lang === "ja") return `${title} の時間です。地図・公式サイト・ノートを使って、当日の流れに沿って進めてください。`;
-  if (lang === "zh") return `当前是 ${title} 时间。可使用地图、官网与备注，按当天节奏进行。`;
-  return `This is the time for ${title}. Use the map, website, and notes to follow the day's flow.`;
-}
-
-function getDaySummaryText(day, lang = currentPageLang) {
-  if (day.summaryI18n?.[lang]) return day.summaryI18n[lang];
-  if (lang === "th") return day.summary;
-  const display = getDayDisplayContent(day, lang);
-  if (lang === "ja") {
-    return `${display.route}。下のタイムラインで地図・ウェブサイト・ノート・現在の進行をまとめて確認できます。`;
-  }
-  if (lang === "zh") {
-    return `${display.route}。下方时间轴会集中显示地图、网站、备注与当天进行中的节奏。`;
-  }
-  return `${display.route}. Open the timeline below for maps, websites, notes, and the live rhythm of the day.`;
-}
-
-function getPreviewNoteText(day, lang = currentPageLang, mode = "preview") {
-  if (mode === "real") {
-    if (lang === "th") return "ด้านล่างจะแสดง marker ตามเวลาจริงของวันเดินทางนี้";
-    if (lang === "ja") return "下のタイムラインは、この日の現在時刻に合わせて表示されます。";
-    if (lang === "zh") return "下方时间轴会按照这一天的当前真实时间显示 marker。";
-    return "The timeline below uses the real current time for this trip day.";
-  }
-  if (lang === "th") return day.previewNote;
-  if (lang === "ja") return "ここで表示しているプレビュー時刻を基準に、下のタイムラインに位置マーカーを表示します。";
-  if (lang === "zh") return "这里会根据当前预览时间，在下方时间轴中显示当天所处的位置。";
-  return "The preview time below is used to place the live marker inside the day's timeline.";
-}
-
 function renderDetailPicker() {
   const picker = document.querySelector("#day-detail-picker");
   if (!picker) return;
   picker.innerHTML = "";
   PROTOTYPE_DAYS.forEach((day) => {
-    const display = getDayDisplayContent(day);
     const button = document.createElement("button");
     button.type = "button";
-    button.className = `day-detail-pill ${display.toneClass}`;
+    button.className = "day-detail-pill";
     if (day.id === currentDetailDayId) button.classList.add("is-active");
     button.dataset.dayId = day.id;
     button.innerHTML = `
-      <div class="day-detail-pill-top">
-        <span>${display.label}</span>
-        <em aria-hidden="true">${display.icon}</em>
-      </div>
-      <strong>${display.shortTitle}</strong>
+      <span>${day.label}</span>
+      <strong>${day.title}</strong>
+      <small>${day.route}</small>
     `;
     picker.appendChild(button);
   });
@@ -2361,66 +1856,19 @@ function renderDetailPicker() {
   });
 }
 
-function renderMobileQuickMenu() {
-  const list = document.querySelector("#quick-menu-chip-list");
-  if (!list) return;
-  list.innerHTML = "";
-
-  const todayChip = document.createElement("button");
-  todayChip.type = "button";
-  todayChip.className = "quick-menu-chip quick-menu-chip-today";
-  todayChip.dataset.quickAction = "today";
-  todayChip.textContent = t("quickMenu.today");
-  list.appendChild(todayChip);
-
-  PROTOTYPE_DAYS.forEach((day, index) => {
-    const chip = document.createElement("button");
-    chip.type = "button";
-    chip.className = "quick-menu-chip";
-    if (day.id === currentDetailDayId) chip.classList.add("is-active");
-    chip.dataset.dayId = day.id;
-    chip.textContent =
-      currentPageLang === "th"
-        ? `วันที่ ${index}`
-        : currentPageLang === "ja"
-          ? `${index}日目`
-          : currentPageLang === "zh"
-            ? `第${index}天`
-            : `Day ${index}`;
-    list.appendChild(chip);
-  });
-
-  const sosChip = document.createElement("button");
-  sosChip.type = "button";
-  sosChip.className = "quick-menu-chip is-sos";
-  sosChip.dataset.quickAction = "sos";
-  sosChip.textContent = t("quickMenu.sos");
-  list.appendChild(sosChip);
-}
-
 function renderDetailSummary(day) {
   const summary = document.querySelector("#detail-summary-card");
   if (!summary) return;
-  const timelineClock = getTimelineClock(day);
-  const display = getDayDisplayContent(day);
+  const previewDate = getEffectiveDetailDate(day);
 
-  summary.className = `detail-summary-card ${display.toneClass}`;
   summary.innerHTML = `
-    <figure class="detail-summary-figure${display.image ? "" : " is-image-missing"}">
-      ${display.image ? `<img src="${display.image}" alt="${display.title}" />` : ""}
-      <div class="day-image-fallback" aria-hidden="true">
-        <span>${display.icon}</span>
-        <strong>${display.shortTitle}</strong>
-      </div>
-    </figure>
-    <div class="detail-summary-copy">
-    <span class="detail-kicker">${display.label}</span>
-    <h3>${display.title}</h3>
-    <p>${getDaySummaryText(day)}</p>
+    <span class="detail-kicker">${day.label}</span>
+    <h3>${day.title}</h3>
+    <p>${day.summary}</p>
     <div class="detail-summary-meta">
       <article>
         <span>${currentPageLang === "th" ? "วันที่" : currentPageLang === "ja" ? "日付" : currentPageLang === "zh" ? "日期" : "Date"}</span>
-        <strong>${formatDayDateLabel(day)}</strong>
+        <strong>${day.date}</strong>
       </article>
       <article>
         <span>${currentPageLang === "th" ? "ที่พัก" : currentPageLang === "ja" ? "ホテル" : currentPageLang === "zh" ? "酒店" : "Hotel"}</span>
@@ -2428,118 +1876,41 @@ function renderDetailSummary(day) {
       </article>
       <article>
         <span>${currentPageLang === "th" ? "เส้นทางของวัน" : currentPageLang === "ja" ? "本日の流れ" : currentPageLang === "zh" ? "当天动线" : "Route"}</span>
-        <strong>${display.route}</strong>
+        <strong>${day.route}</strong>
       </article>
     </div>
-    ${
-      timelineClock.mode === "disabled"
-        ? ""
-        : `
     <div class="detail-preview-time">
-      <span>${
-        timelineClock.mode === "preview"
-          ? currentPageLang === "th"
-            ? "เวลาจำลองสำหรับทดสอบ"
-            : currentPageLang === "ja"
-              ? "テスト用のプレビュー時刻"
-              : currentPageLang === "zh"
-                ? "测试预览时间"
-                : "Preview time"
-          : currentPageLang === "th"
-            ? "เวลาปัจจุบัน"
-            : currentPageLang === "ja"
-              ? "現在時刻"
-              : currentPageLang === "zh"
-                ? "当前时间"
-                : "Current time"
-      }</span>
-      <strong>${formatTimeLabel(timelineClock.date, currentPageLang, day.timeZone)}</strong>
+      <span>${currentPageLang === "th" ? "เวลาอ้างอิงของ marker" : currentPageLang === "ja" ? "マーカーの基準時刻" : currentPageLang === "zh" ? "Marker 参考时间" : "Marker preview time"}</span>
+      <strong>${formatTimeLabel(previewDate, currentPageLang, day.timeZone)}</strong>
     </div>
-    <p class="detail-preview-note">${getPreviewNoteText(day, currentPageLang, timelineClock.mode)}</p>`
-    }
+    <p class="detail-preview-note">${day.previewNote}</p>
     <div class="detail-tags">
-      <span>${currentPageLang === "th" ? "เริ่มวัน" : currentPageLang === "ja" ? "始まり" : currentPageLang === "zh" ? "出发" : "Start"}</span>
-      <span>${currentPageLang === "th" ? "เดินทาง" : currentPageLang === "ja" ? "移動" : currentPageLang === "zh" ? "动线" : "Route"}</span>
-      <span>${currentPageLang === "th" ? "พักผ่อน" : currentPageLang === "ja" ? "休憩" : currentPageLang === "zh" ? "休息" : "Reset"}</span>
-      <span>${currentPageLang === "th" ? "timeline สด" : currentPageLang === "ja" ? "ライブタイムライン" : currentPageLang === "zh" ? "实时节奏" : "Live timeline"}</span>
-    </div>
+      <span>${t("actions.map")}</span>
+      <span>${t("actions.website")}</span>
+      <span>${t("actions.notes")}</span>
+      <span>${currentPageLang === "th" ? "marker เวลา" : currentPageLang === "ja" ? "時間マーカー" : currentPageLang === "zh" ? "时间 marker" : "time marker"}</span>
     </div>
   `;
-
-  const image = summary.querySelector(".detail-summary-figure img");
-  if (image) {
-    image.addEventListener("error", () => {
-      image.hidden = true;
-      image.closest(".detail-summary-figure")?.classList.add("is-image-missing");
-    });
-  }
-}
-
-function getEventIcon(event) {
-  const source = `${event.place} ${event.title}`.toLowerCase();
-  if (source.includes("flight") || source.includes("ไฟลต์") || source.includes("br")) return "✈";
-  if (source.includes("dinner") || source.includes("lunch") || source.includes("ราเม็ง") || source.includes("dessert") || source.includes("coffee") || source.includes("wine")) return "✦";
-  if (source.includes("hotel") || source.includes("check-in") || source.includes("check-out")) return "⌂";
-  if (source.includes("train") || source.includes("rail") || source.includes("jr") || source.includes("nankai") || source.includes("hanshin") || source.includes("transfer")) return "⇄";
-  if (source.includes("temple") || source.includes("shrine") || source.includes("gion") || source.includes("yasaka")) return "⛩";
-  if (source.includes("harbor") || source.includes("waterfront") || source.includes("port")) return "⚓";
-  if (source.includes("walk") || source.includes("park") || source.includes("nature") || source.includes("minoh")) return "◦";
-  return "•";
-}
-
-function getEventDurationLabel(event) {
-  const start = parseTimeToMinutes(event.start || "");
-  const end = parseTimeToMinutes(event.end || "");
-  if (start === null || end === null || end <= start) return "";
-  const total = end - start;
-  const hours = Math.floor(total / 60);
-  const minutes = total % 60;
-  if (currentPageLang === "th") {
-    if (hours && minutes) return `${hours} ชม. ${minutes} นาที`;
-    if (hours) return `${hours} ชม.`;
-    return `${minutes} นาที`;
-  }
-  if (currentPageLang === "ja") {
-    if (hours && minutes) return `${hours}時間 ${minutes}分`;
-    if (hours) return `${hours}時間`;
-    return `${minutes}分`;
-  }
-  if (currentPageLang === "zh") {
-    if (hours && minutes) return `${hours}小时 ${minutes}分钟`;
-    if (hours) return `${hours}小时`;
-    return `${minutes}分钟`;
-  }
-  if (hours && minutes) return `${hours}h ${minutes}m`;
-  if (hours) return `${hours}h`;
-  return `${minutes}m`;
 }
 
 function createDetailCard(event) {
   const article = document.createElement("article");
-  const localizedTitle = getLocalizedEventTitle(event, currentPageLang);
-  const localizedBlurb = getLocalizedEventBlurb(event, currentPageLang);
   article.className = "detail-card";
   article.dataset.cardId = event.id;
   article.dataset.start = event.start;
   article.dataset.end = event.end;
-  article.dataset.title = localizedTitle;
-  const duration = getEventDurationLabel(event);
-  const icon = getEventIcon(event);
+  article.dataset.title = event.title;
   article.innerHTML = `
-    <div class="detail-time">
-      <strong>${event.time}</strong>
-      ${duration ? `<span>${duration}</span>` : ""}
-    </div>
-    <div class="detail-icon" aria-hidden="true">${icon}</div>
+    <div class="detail-time">${event.time}</div>
     <div class="detail-card-body">
       <div class="detail-card-top">
         <div>
           <p class="detail-eyebrow">${event.place}</p>
-          <h3>${localizedTitle}</h3>
+          <h3>${event.title}</h3>
         </div>
         <span class="detail-place">${event.place}</span>
       </div>
-      <p class="detail-copy">${localizedBlurb}</p>
+      <p class="detail-copy">${event.blurb}</p>
       <div class="detail-actions">
         <a href="${event.map}" target="_blank" rel="noreferrer" class="action-map">${t("actions.map")}</a>
         ${event.website ? `<a href="${event.website}" target="_blank" rel="noreferrer" class="action-site">${t("actions.website")}</a>` : ""}
@@ -2561,54 +1932,10 @@ function renderDetailTimeline(day) {
 
 function renderDetailExplorer() {
   const day = getCurrentDayData();
-  renderMobileQuickMenu();
   renderDetailPicker();
   renderDetailSummary(day);
   renderDetailTimeline(day);
   renderPrototypeMarker();
-}
-
-function updatePageLangButton(lang) {
-  const menu = document.querySelector("#page-lang-menu");
-  const toggle = document.querySelector("#page-lang-toggle");
-  const flag = menu?.querySelector(".page-lang-current .page-lang-flag");
-  const code = menu?.querySelector(".page-lang-current .page-lang-code");
-  const meta = PAGE_LANGUAGE_META[lang] ?? PAGE_LANGUAGE_META[DEFAULT_PAGE_LANG];
-  if (!menu || !toggle || !flag || !code) return;
-
-  flag.textContent = meta.flag;
-  code.textContent = meta.code;
-  toggle.setAttribute("aria-label", `Language: ${meta.label}`);
-  setActiveButtonState(".page-lang-option", lang, "data-lang");
-}
-
-function closePageLangMenu() {
-  const menu = document.querySelector("#page-lang-menu");
-  const toggle = document.querySelector("#page-lang-toggle");
-  const options = document.querySelector("#page-lang-options");
-  if (!menu || !toggle || !options) return;
-  menu.classList.remove("is-open");
-  toggle.setAttribute("aria-expanded", "false");
-  options.hidden = true;
-}
-
-function openPageLangMenu() {
-  const menu = document.querySelector("#page-lang-menu");
-  const toggle = document.querySelector("#page-lang-toggle");
-  const options = document.querySelector("#page-lang-options");
-  if (!menu || !toggle || !options) return;
-  menu.classList.add("is-open");
-  toggle.setAttribute("aria-expanded", "true");
-  options.hidden = false;
-}
-
-function togglePageLangMenu() {
-  const toggle = document.querySelector("#page-lang-toggle");
-  const options = document.querySelector("#page-lang-options");
-  const isExpanded = toggle?.getAttribute("aria-expanded") === "true";
-  const isHidden = options?.hidden !== false;
-  if (isExpanded || !isHidden) closePageLangMenu();
-  else openPageLangMenu();
 }
 
 function applyTranslations(lang) {
@@ -2623,11 +1950,8 @@ function applyTranslations(lang) {
   document.querySelectorAll("[data-i18n]").forEach((element) => {
     setTextForKey(element, element.dataset.i18n, lang);
   });
-  document.querySelectorAll("[data-i18n-aria-label]").forEach((element) => {
-    element.setAttribute("aria-label", t(element.dataset.i18nAriaLabel, lang));
-  });
 
-  updatePageLangButton(lang);
+  setActiveButtonState(".lang-pill", lang, "data-lang");
   renderCountdown();
   renderDetailExplorer();
 
@@ -2644,13 +1968,12 @@ function renderPrototypeMarker() {
   const timeline = document.querySelector("#detail-timeline");
   if (!timeline) return;
 
-  const timelineClock = getTimelineClock(day);
+  const previewDate = getEffectiveDetailDate(day);
   const cards = Array.from(timeline.querySelectorAll(".detail-card"));
   cards.forEach((card) => card.classList.remove("is-live", "is-next-up", "is-complete"));
   timeline.querySelector(".detail-marker")?.remove();
-  if (timelineClock.mode === "disabled" || !timelineClock.date) return;
 
-  const nowMinutes = getMinutesInZone(timelineClock.date, day.timeZone);
+  const nowMinutes = getMinutesInZone(previewDate, day.timeZone);
   const events = cards
     .map((card) => {
       const start = parseTimeToMinutes(card.dataset.start || "");
@@ -2677,17 +2000,17 @@ function renderPrototypeMarker() {
   const badge = document.createElement("span");
   badge.className = "detail-marker-badge";
   badge.textContent = formatTemplate(t("marker.now"), {
-    time: formatTimeLabel(timelineClock.date, currentPageLang, day.timeZone),
+    time: formatTimeLabel(previewDate, currentPageLang, day.timeZone),
   });
   const meta = document.createElement("span");
   meta.className = "detail-marker-meta";
-  if (liveEvent) {
-    meta.textContent = formatTemplate(t("marker.live"), { title: liveEvent.title });
-  } else if (nextEvent) {
+  if (nextEvent) {
     meta.textContent = formatTemplate(t("marker.nextIn"), {
       minutes: nextEvent.start - nowMinutes,
       title: nextEvent.title,
     });
+  } else if (liveEvent) {
+    meta.textContent = formatTemplate(t("marker.live"), { title: liveEvent.title });
   } else {
     meta.textContent = t("marker.done");
   }
@@ -2754,14 +2077,9 @@ function renderHelpModal() {
   if (!modal) return;
   const title = modal.querySelector("#help-title");
   const phrase = modal.querySelector(".help-phrase");
-  const counter = modal.querySelector(".help-topic-counter");
-  const copyButtonLabel = modal.querySelector("[data-copy-help] span");
   const helpText = HELP_PHRASES[currentHelpId]?.[currentHelpLang] ?? HELP_PHRASES[currentHelpId]?.th ?? "";
-  const currentIndex = Math.max(HELP_TOPIC_ORDER.indexOf(currentHelpId), 0);
   title.textContent = t(`help.cards.${currentHelpId}.title`, currentPageLang);
   phrase.textContent = helpText;
-  if (counter) counter.textContent = `${currentIndex + 1} / ${HELP_TOPIC_ORDER.length}`;
-  if (copyButtonLabel) copyButtonLabel.textContent = t("help.modal.copy", currentPageLang);
   setActiveButtonState(".help-lang-pill", currentHelpLang, "data-help-lang");
 }
 
@@ -2769,55 +2087,9 @@ function initHelpMode() {
   const modal = document.querySelector(".help-modal");
   if (!modal) return;
 
-  function setHelpTopicByOffset(offset) {
-    const currentIndex = Math.max(HELP_TOPIC_ORDER.indexOf(currentHelpId), 0);
-    const nextIndex = (currentIndex + offset + HELP_TOPIC_ORDER.length) % HELP_TOPIC_ORDER.length;
-    currentHelpId = HELP_TOPIC_ORDER[nextIndex];
-    renderHelpModal();
-  }
-
-  async function copyCurrentHelpPhrase() {
-    const text = HELP_PHRASES[currentHelpId]?.[currentHelpLang] ?? HELP_PHRASES[currentHelpId]?.th ?? "";
-    const copyButtonLabel = modal.querySelector("[data-copy-help] span");
-    let copied = false;
-    if (navigator.clipboard?.writeText) {
-      try {
-        await navigator.clipboard.writeText(text);
-        copied = true;
-      } catch {
-        copied = false;
-      }
-    }
-
-    if (!copied) {
-      try {
-        const textarea = document.createElement("textarea");
-        textarea.value = text;
-        textarea.setAttribute("readonly", "");
-        textarea.style.position = "absolute";
-        textarea.style.left = "-9999px";
-        document.body.appendChild(textarea);
-        textarea.select();
-        copied = document.execCommand("copy");
-        textarea.remove();
-      } catch {
-        copied = false;
-      }
-    }
-
-    if (!copyButtonLabel) return;
-    copyButtonLabel.textContent = t(copied ? "help.modal.copied" : "help.modal.copyUnavailable", currentPageLang);
-    clearTimeout(helpCopyResetTimer);
-    helpCopyResetTimer = window.setTimeout(() => {
-      const label = modal.querySelector("[data-copy-help] span");
-      if (label) label.textContent = t("help.modal.copy", currentPageLang);
-    }, 1400);
-  }
-
   function closeModal() {
     modal.hidden = true;
     document.body.classList.remove("is-note-open");
-    clearTimeout(helpCopyResetTimer);
   }
 
   document.querySelectorAll("[data-open-help]").forEach((button) => {
@@ -2841,62 +2113,15 @@ function initHelpMode() {
     element.addEventListener("click", closeModal);
   });
 
-  modal.querySelector('[data-help-nav="prev"]')?.addEventListener("click", () => {
-    setHelpTopicByOffset(-1);
-  });
-
-  modal.querySelector('[data-help-nav="next"]')?.addEventListener("click", () => {
-    setHelpTopicByOffset(1);
-  });
-
-  modal.querySelector("[data-copy-help]")?.addEventListener("click", () => {
-    copyCurrentHelpPhrase();
-  });
-
   document.addEventListener("keydown", (event) => {
-    if (modal.hidden) return;
-    if (event.key === "Escape") closeModal();
-    if (event.key === "ArrowLeft") setHelpTopicByOffset(-1);
-    if (event.key === "ArrowRight") setHelpTopicByOffset(1);
+    if (event.key === "Escape" && !modal.hidden) closeModal();
   });
 }
 
 function initLanguageSwitcher() {
-  const menu = document.querySelector("#page-lang-menu");
-  const toggle = document.querySelector("#page-lang-toggle");
-  const options = document.querySelector("#page-lang-options");
-  if (!menu || !toggle || !options) return;
-
-  toggle.addEventListener("click", (event) => {
-    event.preventDefault();
-    event.stopPropagation();
-    togglePageLangMenu();
+  document.querySelectorAll(".lang-pill").forEach((button) => {
+    button.addEventListener("click", () => applyTranslations(button.dataset.lang || DEFAULT_PAGE_LANG));
   });
-
-  options.addEventListener("click", (event) => {
-    event.stopPropagation();
-  });
-
-  options.querySelectorAll(".page-lang-option").forEach((button) => {
-    button.addEventListener("click", (event) => {
-      event.preventDefault();
-      event.stopPropagation();
-      const lang = button.dataset.lang || DEFAULT_PAGE_LANG;
-      applyTranslations(lang);
-      closePageLangMenu();
-    });
-  });
-
-  document.addEventListener("click", (event) => {
-    if (!menu.contains(event.target)) closePageLangMenu();
-  });
-
-  document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape") closePageLangMenu();
-  });
-
-  updatePageLangButton(getSavedLanguage());
-  closePageLangMenu();
 }
 
 function initThemeToggle() {
@@ -2915,33 +2140,6 @@ function initDetailExplorer() {
   currentDetailDayId = getSavedDetailDay() || getDefaultDetailDay();
 
   document.addEventListener("click", (event) => {
-    const quickChip = event.target.closest(".quick-menu-chip");
-    if (quickChip) {
-      const action = quickChip.dataset.quickAction;
-      if (action === "sos") {
-        document.querySelector("#contacts")?.scrollIntoView({ behavior: "smooth", block: "start" });
-        return;
-      }
-      if (action === "today") {
-        const now = new Date();
-        const matchedToday = PROTOTYPE_DAYS.find((day) => getDateKey(now, day.timeZone) === day.dateIso);
-        if (matchedToday) {
-          currentDetailDayId = matchedToday.id;
-          localStorage.setItem(DETAIL_DAY_STORAGE_KEY, currentDetailDayId);
-          renderDetailExplorer();
-        }
-        document.querySelector("#day-details")?.scrollIntoView({ behavior: "smooth", block: "start" });
-        return;
-      }
-      if (quickChip.dataset.dayId) {
-        currentDetailDayId = quickChip.dataset.dayId;
-        localStorage.setItem(DETAIL_DAY_STORAGE_KEY, currentDetailDayId);
-        renderDetailExplorer();
-        document.querySelector("#day-details")?.scrollIntoView({ behavior: "smooth", block: "start" });
-        return;
-      }
-    }
-
     const pill = event.target.closest(".day-detail-pill[data-day-id]");
     if (pill) {
       currentDetailDayId = pill.dataset.dayId;
@@ -2966,13 +2164,6 @@ function initDetailExplorer() {
   renderDetailExplorer();
 }
 
-function initServiceWorker() {
-  if (!("serviceWorker" in navigator) || location.protocol === "file:") return;
-  window.addEventListener("load", () => {
-    navigator.serviceWorker.register("./service-worker.js").catch(() => {});
-  });
-}
-
 document.addEventListener("DOMContentLoaded", () => {
   currentHelpLang = getSavedHelpLanguage();
   initLanguageSwitcher();
@@ -2980,7 +2171,6 @@ document.addEventListener("DOMContentLoaded", () => {
   initPrototypeNotes();
   initHelpMode();
   initDetailExplorer();
-  initServiceWorker();
   applyTranslations(getSavedLanguage());
   renderCountdown();
   setInterval(() => {
