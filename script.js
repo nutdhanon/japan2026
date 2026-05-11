@@ -66,7 +66,7 @@ const DAY_SHORT_TITLES = {
     "day-2": "แลนด์มาร์กโอซากะ",
     "day-3": "เกียวโตสาย heritage",
     "day-4": "Minoh & Katsuoji",
-    "day-5": "Gamba + ExpoCity",
+    "day-5": "Flexible Day",
     "day-6": "วันช็อปหลังย้าย",
     "day-7": "Kobe & Ikuta",
     "day-8": "เดินทางกลับ",
@@ -77,7 +77,7 @@ const DAY_SHORT_TITLES = {
     "day-2": "Osaka Highlights",
     "day-3": "Kyoto Heritage",
     "day-4": "Minoh & Katsuoji",
-    "day-5": "Gamba + ExpoCity",
+    "day-5": "Flexible Day",
     "day-6": "Shopping Day",
     "day-7": "Kobe & Ikuta",
     "day-8": "Fly Home",
@@ -88,7 +88,7 @@ const DAY_SHORT_TITLES = {
     "day-2": "大阪ハイライト",
     "day-3": "京都ヘリテージ",
     "day-4": "箕面と勝尾寺",
-    "day-5": "ガンバ大阪 + ExpoCity",
+    "day-5": "選べる1日",
     "day-6": "ショッピング日",
     "day-7": "神戸と生田神社",
     "day-8": "帰国日",
@@ -99,7 +99,7 @@ const DAY_SHORT_TITLES = {
     "day-2": "大阪重点日",
     "day-3": "京都文化日",
     "day-4": "箕面与胜尾寺",
-    "day-5": "Gamba + ExpoCity",
+    "day-5": "Flexible Day",
     "day-6": "购物日",
     "day-7": "神户与生田",
     "day-8": "返程日",
@@ -176,8 +176,17 @@ const I18N = {
     "overview.day4.title": "Minoh & Katsuoji",
     "overview.day4.body": "ธรรมชาติ → วัดดารุมะ",
     "overview.day5.label": "วันที่ 5",
-    "overview.day5.title": "Gamba + ExpoCity",
-    "overview.day5.body": "สนามฟุตบอล → Rose Festa → shopping",
+    "overview.day5.title": "เลือกจังหวะของวันนี้",
+    "overview.day5.body": "Gamba / Uji → Osaka evening",
+    "day5.switcher.label": "เลือกจังหวะของวันนี้",
+    "day5.switcher.planA": "Plan A",
+    "day5.switcher.planB": "Plan B",
+    "day5.switcher.planA.title": "Gamba + ExpoCity",
+    "day5.switcher.planB.title": "Uji + Matcha",
+    "day5.switcher.planA.mood": "ฟุตบอล + Rose Festa + shopping",
+    "day5.switcher.planB.mood": "ชาเขียว + Byodo-in + Uji River",
+    "day5.switcher.planA.cost": "ประมาณ ¥8,500–11,000",
+    "day5.switcher.planB.cost": "ประมาณ ¥9,000–12,000",
     "overview.day6.label": "วันที่ 6",
     "overview.day6.title": "วันช็อปหลังย้ายโรงแรม",
     "overview.day6.body": "Namba → Shinsaibashi → PARCO",
@@ -205,7 +214,7 @@ const I18N = {
     "intel.totals.taxi.label": "Reality check ตาม mood จริง",
     "intel.totals.food.label": "ค่าอาหาร + ดื่ม",
     "intel.totals.total.label": "เงินสดที่แนะนำให้พก",
-    "intel.totals.note": "งบหลักของทริปนี้ครอบคลุมการเดินทาง อาหาร คาเฟ่ และมื้อพิเศษที่ตั้งใจเลือกไว้\n\nใช้บัตรเป็นหลัก แยก shopping ออกจากงบเที่ยว และพกเงินสด ¥50,000 สำหรับ 2 คนไว้รองรับค่าใช้จ่ายที่ต้องจ่ายหน้างาน\n\nภาพรวมคือเที่ยวได้สบาย กินดีพอประมาณ และยังคุมงบได้โดยไม่ต้องตึงเกินไป",
+    "intel.totals.note": "งบหลักของทริปนี้ครอบคลุมการเดินทาง อาหาร คาเฟ่ และมื้อพิเศษที่ตั้งใจเลือกไว้\n\nใช้บัตรเป็นหลัก แยก shopping ออกจากงบเที่ยว และพกเงินสด ¥50,000 สำหรับ 2 คนไว้รองรับค่าใช้จ่ายที่ต้องจ่ายหน้างาน\n\nภาพรวมคือเที่ยวได้สบาย กินดีพอประมาณ และยังคุมงบได้โดยไม่ต้องตึงเกินไป\n\nDay 5 มีให้เลือก 2 แผน โดยทั้งสองแบบยังอยู่ในกรอบงบจริงใกล้เคียงกัน เลือกตาม mood และพลังงานของวันนั้นได้เลย",
     "intel.extras.kyoto": "🚆 ค่าเดินทาง: ¥21,000–24,000 รวม KIX ↔ Namba, Osaka local, Kyoto, Minoh, Gamba + ExpoCity และ Kobe",
     "intel.extras.minoh": "🎟️ ค่าเข้า / กิจกรรม: ¥2,000–3,000 รวม Kiyomizu-dera, Katsuoji Temple และ Rose Festa / Expo Park",
     "intel.extras.taiwanAirport": "☕ Miscellaneous / Snacks / Convenience Store: ¥5,000–8,000 สำหรับน้ำ, Lawson, snack และ vending",
@@ -399,8 +408,17 @@ const I18N = {
     "overview.day4.title": "Minoh & Katsuoji",
     "overview.day4.body": "Nature → daruma temple",
     "overview.day5.label": "Day 5",
-    "overview.day5.title": "Gamba + ExpoCity",
-    "overview.day5.body": "Football stadium → Rose Festa → shopping",
+    "overview.day5.title": "Choose today's rhythm",
+    "overview.day5.body": "Gamba / Uji → Osaka evening",
+    "day5.switcher.label": "Choose today’s rhythm",
+    "day5.switcher.planA": "Plan A",
+    "day5.switcher.planB": "Plan B",
+    "day5.switcher.planA.title": "Gamba + ExpoCity",
+    "day5.switcher.planB.title": "Uji + Matcha",
+    "day5.switcher.planA.mood": "Football + Rose Festa + shopping",
+    "day5.switcher.planB.mood": "Matcha + Byodo-in + Uji River",
+    "day5.switcher.planA.cost": "Approx. ¥8,500–11,000",
+    "day5.switcher.planB.cost": "Approx. ¥9,000–12,000",
     "overview.day6.label": "Day 6",
     "overview.day6.title": "Shopping after the hotel move",
     "overview.day6.body": "Namba → Shinsaibashi → PARCO",
@@ -428,7 +446,7 @@ const I18N = {
     "intel.totals.taxi.label": "Reality check",
     "intel.totals.food.label": "Food & drinks",
     "intel.totals.total.label": "Recommended cash carry",
-    "intel.totals.note": "The core budget covers transport, meals, cafes, and a few special dinners chosen intentionally for the trip.\n\nUse cards as the main payment method, keep shopping separate from the travel budget, and carry ¥50,000 cash for two people for on-site expenses.\n\nOverall, the trip stays comfortable, allows good meals, and keeps the budget under control without feeling too tight.",
+    "intel.totals.note": "The core budget covers transport, meals, cafes, and a few special dinners chosen intentionally for the trip.\n\nUse cards as the main payment method, keep shopping separate from the travel budget, and carry ¥50,000 cash for two people for on-site expenses.\n\nOverall, the trip stays comfortable, allows good meals, and keeps the budget under control without feeling too tight.\n\nDay 5 now has two selectable plans, and both still sit within the same realistic budget range. Choose by mood and energy on the day.",
     "intel.extras.kyoto": "🚆 Transport: ¥21,000–24,000 including airport transfer, Osaka local, Kyoto, Minoh, Gamba + ExpoCity, and Kobe",
     "intel.extras.minoh": "🎟️ Activities: ¥2,000–3,000 including Kiyomizu-dera, Katsuoji Temple, and Rose Festa / Expo Park",
     "intel.extras.taiwanAirport": "☕ Miscellaneous / snacks / convenience store: ¥5,000–8,000",
@@ -622,8 +640,17 @@ const I18N = {
     "overview.day4.title": "Minoh & Katsuoji",
     "overview.day4.body": "自然 → だるま寺",
     "overview.day5.label": "5日目",
-    "overview.day5.title": "ガンバ大阪 + ExpoCity",
-    "overview.day5.body": "スタジアム → ローズフェスタ → ショッピング",
+    "overview.day5.title": "今日の過ごし方を選ぶ",
+    "overview.day5.body": "Gamba / 宇治 → 大阪の夜",
+    "day5.switcher.label": "今日の過ごし方を選ぶ",
+    "day5.switcher.planA": "Plan A",
+    "day5.switcher.planB": "Plan B",
+    "day5.switcher.planA.title": "ガンバ大阪 + ExpoCity",
+    "day5.switcher.planB.title": "宇治 + 抹茶",
+    "day5.switcher.planA.mood": "サッカー + Rose Festa + ショッピング",
+    "day5.switcher.planB.mood": "抹茶 + 平等院 + 宇治川",
+    "day5.switcher.planA.cost": "約 ¥8,500–11,000",
+    "day5.switcher.planB.cost": "約 ¥9,000–12,000",
     "overview.day6.label": "Day 6",
     "overview.day6.title": "ホテル移動後のショッピング",
     "overview.day6.body": "Namba → Shinsaibashi → PARCO",
@@ -651,7 +678,7 @@ const I18N = {
     "intel.totals.taxi.label": "実際の目安",
     "intel.totals.food.label": "食事と飲み物",
     "intel.totals.total.label": "持っていく現金の目安",
-    "intel.totals.note": "この旅の基本予算は、移動、食事、カフェ、そしてあらかじめ選んだ特別なディナーを中心に組んでいます。\n\n支払いはカードを基本にし、ショッピングは旅の予算とは別に管理。現地で必要な支払いに備えて、2人で現金 ¥50,000 を持っておくと安心です。\n\n全体として、無理なく快適に過ごせて、食事も楽しみながら、予算を締めすぎずに管理できるバランスです。",
+    "intel.totals.note": "この旅の基本予算は、移動、食事、カフェ、そしてあらかじめ選んだ特別なディナーを中心に組んでいます。\n\n支払いはカードを基本にし、ショッピングは旅の予算とは別に管理。現地で必要な支払いに備えて、2人で現金 ¥50,000 を持っておくと安心です。\n\n全体として、無理なく快適に過ごせて、食事も楽しみながら、予算を締めすぎずに管理できるバランスです。\n\nDay 5 は2つのプランから選べますが、どちらも現実的な予算レンジの中に収まります。当日の気分と体力で決めれば大丈夫です。",
     "intel.extras.kyoto": "🚆 交通費: ¥21,000–24,000。空港移動、大阪市内、京都、箕面、Gamba + ExpoCity、神戸を含む",
     "intel.extras.minoh": "🎟️ 入場料・アクティビティ: ¥2,000–3,000。Kiyomizu-dera、Katsuoji Temple、Rose Festa / Expo Park を含む",
     "intel.extras.taiwanAirport": "☕ Misc / snacks / convenience store: ¥5,000–8,000",
@@ -845,8 +872,17 @@ const I18N = {
     "overview.day4.title": "Minoh & Katsuoji",
     "overview.day4.body": "自然 → 达摩寺",
     "overview.day5.label": "第5天",
-    "overview.day5.title": "Gamba + ExpoCity",
-    "overview.day5.body": "足球场 → 玫瑰节 → 购物",
+    "overview.day5.title": "选择今天的节奏",
+    "overview.day5.body": "Gamba / 宇治 → 大阪夜晚",
+    "day5.switcher.label": "选择今天的节奏",
+    "day5.switcher.planA": "Plan A",
+    "day5.switcher.planB": "Plan B",
+    "day5.switcher.planA.title": "Gamba + ExpoCity",
+    "day5.switcher.planB.title": "Uji + Matcha",
+    "day5.switcher.planA.mood": "足球 + Rose Festa + 购物",
+    "day5.switcher.planB.mood": "抹茶 + 平等院 + 宇治川",
+    "day5.switcher.planA.cost": "约 ¥8,500–11,000",
+    "day5.switcher.planB.cost": "约 ¥9,000–12,000",
     "overview.day6.label": "第 6 天",
     "overview.day6.title": "换酒店后的购物日",
     "overview.day6.body": "Namba → Shinsaibashi → PARCO",
@@ -874,7 +910,7 @@ const I18N = {
     "intel.totals.taxi.label": "实际旅行节奏预估",
     "intel.totals.food.label": "餐饮费用",
     "intel.totals.total.label": "建议携带现金",
-    "intel.totals.note": "这趟旅行的核心预算涵盖交通、餐饮、咖啡，以及几顿特别安排的晚餐。\n\n主要以信用卡支付，购物预算与旅行预算分开管理，并为两个人准备 ¥50,000 现金，用来应对现场需要现金支付的情况。\n\n整体来说，可以舒服地旅行、吃得不错，同时也能控制预算，不需要把花费压得太紧。",
+    "intel.totals.note": "这趟旅行的核心预算涵盖交通、餐饮、咖啡，以及几顿特别安排的晚餐。\n\n主要以信用卡支付，购物预算与旅行预算分开管理，并为两个人准备 ¥50,000 现金，用来应对现场需要现金支付的情况。\n\n整体来说，可以舒服地旅行、吃得不错，同时也能控制预算，不需要把花费压得太紧。\n\nDay 5 现在有两种可选方案，但两者都在相近且现实的预算范围内，到当天再按心情和体力决定即可。",
     "intel.extras.kyoto": "🚆 交通: ¥21,000–24,000，包含机场往返、大阪市内、京都、箕面、Gamba + ExpoCity 和神户",
     "intel.extras.minoh": "🎟️ 门票 / 活动: ¥2,000–3,000，包含 Kiyomizu-dera、Katsuoji Temple 和 Rose Festa / Expo Park",
     "intel.extras.taiwanAirport": "☕ Misc / snacks / convenience store: ¥5,000–8,000",
@@ -1209,6 +1245,7 @@ const HELP_PHRASES = {
 
 const THEME_STORAGE_KEY = "osaka-trip-theme";
 const DETAIL_DAY_STORAGE_KEY = "osaka-trip-detail-day";
+const DAY5_PLAN_STORAGE_KEY = "osakaSlowLife.day5Plan";
 const PREVIEW_STORAGE_KEY = "osaka-trip-preview-now";
 const TRIP_START = "2026-05-16T00:00:00+07:00";
 const TRIP_END = "2026-05-24T23:59:59+09:00";
@@ -1568,272 +1605,390 @@ const PROTOTYPE_DAYS = [
     dateIso: "2026-05-21",
     timeZone: "Asia/Tokyo",
     date: "พฤหัส 21 พฤษภาคม 2026",
-    title: "Gamba Osaka + ExpoCity + Rose Festa Day",
-    route: "VIA INN → Panasonic Stadium Suita → Expo ’70 Park → ExpoCity → Osaka",
+    title: "Flexible Day",
+    route: "Gamba / Uji → Osaka evening",
     hotel: "VIA INN PRIME Shinsaibashi Yotsubashi",
-    summary: "ฟุตบอลญี่ปุ่น สวนกุหลาบ และ ExpoCity ในจังหวะสบาย ๆ เป็นวัน suburban Osaka ที่ช่วยบาลานซ์ทั้งทริปหลัง Kyoto และ Minoh",
+    summary: "เลือกได้ 2 ทางระหว่าง suburban Osaka day หรือ Uji slow matcha half day แล้วกลับมา Osaka ช่วงเย็นเหมือนกัน",
     summaryI18n: {
-      th: "ฟุตบอลญี่ปุ่น สวนกุหลาบ และ ExpoCity ในจังหวะสบาย ๆ เป็นวัน suburban Osaka ที่ช่วยบาลานซ์ทั้งทริปหลัง Kyoto และ Minoh",
-      en: "A relaxed suburban Osaka day with Japanese football culture, roses, ExpoCity shopping, cafes, and an easier rhythm after Kyoto and Minoh.",
-      ja: "京都と箕面のあとにちょうどいい、サッカー文化、バラ園、ExpoCity、カフェをゆったり楽しむ大阪郊外の日。",
-      zh: "在京都和箕面之后，用足球文化、玫瑰园、ExpoCity 购物和咖啡，安排一个轻松的大阪近郊日。",
+      th: "เลือกได้ 2 ทางระหว่าง suburban Osaka day หรือ Uji slow matcha half day แล้วกลับมา Osaka ช่วงเย็นเหมือนกัน",
+      en: "A flexible day with two rhythms: suburban Osaka with Gamba and ExpoCity, or a slow Uji matcha half day before returning to Osaka in the evening.",
+      ja: "ガンバ大阪とExpoCityで過ごす大阪郊外の日、または宇治での静かな抹茶半日。どちらを選んでも夕方には大阪へ戻る柔軟な1日です。",
+      zh: "这一天可以在 Gamba + ExpoCity 的大阪近郊节奏，或宇治抹茶慢半日之间选择；无论哪种，傍晚都会回到大阪。",
     },
     titleI18n: {
-      th: "Gamba Osaka + ExpoCity + Rose Festa Day",
-      en: "Gamba Osaka + ExpoCity + Rose Festa Day",
-      ja: "ガンバ大阪 + ExpoCity + ローズフェスタの日",
-      zh: "Gamba Osaka + ExpoCity + 玫瑰节日",
+      th: "Flexible Day",
+      en: "Flexible Day",
+      ja: "選べる1日",
+      zh: "灵活选择日",
     },
     routeI18n: {
-      th: "VIA INN → Panasonic Stadium Suita → Expo ’70 Park → ExpoCity → Osaka",
-      en: "VIA INN → Panasonic Stadium Suita → Expo ’70 Park → ExpoCity → Osaka",
-      ja: "VIA INN → パナソニックスタジアム吹田 → 万博記念公園 → ExpoCity → 大阪市内",
-      zh: "VIA INN → Panasonic Stadium Suita → 万博纪念公园 → ExpoCity → 大阪市区",
+      th: "Gamba / Uji → Osaka evening",
+      en: "Gamba / Uji → Osaka evening",
+      ja: "Gamba / 宇治 → 大阪の夜",
+      zh: "Gamba / 宇治 → 大阪夜晚",
     },
     previewNow: "2026-05-21T15:45:00+09:00",
-    previewNote: "ตั้งเวลาไว้ช่วงเดิน ExpoCity เพื่อให้เห็น marker ในวัน suburban Osaka แบบสบาย ๆ",
-    events: [
-      {
-        id: "d5-coffee",
-        time: "10:00–10:30",
-        start: "10:00",
-        end: "10:30",
-        title: "กาแฟ / ขนมเบา ๆ แถวโรงแรม",
+    previewNote: "ตั้งเวลาไว้ช่วงบ่ายของ Day 5 เพื่อให้ marker วางตามแผนที่เลือกในวันนั้น",
+    planSwitcherLabelI18n: {
+      th: "เลือกจังหวะของวันนี้",
+      en: "Choose today’s rhythm",
+      ja: "今日の過ごし方を選ぶ",
+      zh: "选择今天的节奏",
+    },
+    plans: {
+      gamba: {
+        id: "gamba",
+        image: "./assets/images/day5-expocity.jpg",
+        labelI18n: { th: "Plan A", en: "Plan A", ja: "Plan A", zh: "Plan A" },
         titleI18n: {
-          en: "Easy coffee near the hotel",
-          ja: "ホテル周辺で軽くコーヒー",
-          zh: "酒店附近简单咖啡",
+          th: "Gamba Osaka + ExpoCity + Rose Festa Day",
+          en: "Gamba Osaka + ExpoCity + Rose Festa Day",
+          ja: "ガンバ大阪 + ExpoCity + ローズフェスタの日",
+          zh: "Gamba Osaka + ExpoCity + 玫瑰节日",
         },
-        place: "Shinsaibashi / Yotsubashi",
-        blurb: "เริ่มวันแบบไม่รีบ หาอะไรเบา ๆ ใกล้ VIA INN ก่อนออกไปฝั่ง Suita",
-        blurbI18n: {
-          en: "Start slow with a light coffee or snack near VIA INN before heading toward Suita.",
-          ja: "VIA INN周辺で軽くコーヒーやおやつを済ませて、吹田方面へ。",
-          zh: "在 VIA INN 附近喝杯咖啡或吃点轻食，再出发前往吹田方向。",
+        moodI18n: {
+          th: "ฟุตบอล + Rose Festa + shopping",
+          en: "Football + Rose Festa + shopping",
+          ja: "サッカー + Rose Festa + ショッピング",
+          zh: "足球 + Rose Festa + 购物",
         },
-        map: "https://maps.google.com/?q=VIA+INN+PRIME+Shinsaibashi+Yotsubashi",
+        costI18n: {
+          th: "ประมาณ ¥8,500–11,000",
+          en: "Approx. ¥8,500–11,000",
+          ja: "約 ¥8,500–11,000",
+          zh: "约 ¥8,500–11,000",
+        },
+        routeI18n: {
+          th: "VIA INN → Panasonic Stadium Suita → Expo ’70 Park → ExpoCity → Osaka",
+          en: "VIA INN → Panasonic Stadium Suita → Expo ’70 Park → ExpoCity → Osaka",
+          ja: "VIA INN → パナソニックスタジアム吹田 → 万博記念公園 → ExpoCity → 大阪市内",
+          zh: "VIA INN → Panasonic Stadium Suita → 万博纪念公园 → ExpoCity → 大阪市区",
+        },
+        summaryI18n: {
+          th: "ฟุตบอลญี่ปุ่น สวนกุหลาบ และ ExpoCity ในจังหวะสบาย ๆ เป็นวัน suburban Osaka ที่ช่วยเติมความ modern, shopping และ local life ให้ทริป",
+          en: "A relaxed suburban Osaka day with Japanese football culture, roses, ExpoCity shopping, cafes, and modern local life.",
+          ja: "日本のサッカー文化、バラ園、ExpoCity、カフェをゆったり楽しむ大阪郊外の日。",
+          zh: "轻松的大阪近郊日，结合日本足球文化、玫瑰园、ExpoCity 购物、咖啡和在地生活感。",
+        },
+        previewNow: "2026-05-21T15:45:00+09:00",
+        previewNote: "ตั้งเวลาไว้ช่วงเดิน ExpoCity เพื่อให้เห็น marker ใน Plan A",
+        events: [
+          {
+            id: "d5a-coffee",
+            time: "10:00–10:30",
+            start: "10:00",
+            end: "10:30",
+            title: "กาแฟ / ขนมเบา ๆ แถวโรงแรม",
+            titleI18n: { en: "Easy coffee near the hotel", ja: "ホテル周辺で軽くコーヒー", zh: "酒店附近简单咖啡" },
+            place: "Shinsaibashi / Yotsubashi",
+            blurb: "เริ่มวันแบบไม่รีบ หาอะไรเบา ๆ ใกล้ VIA INN ก่อนออกไปฝั่ง Suita",
+            blurbI18n: {
+              en: "Start slowly with a light coffee or snack near VIA INN before heading toward Suita.",
+              ja: "VIA INN周辺で軽くコーヒーやおやつを済ませて、吹田方面へ。",
+              zh: "在 VIA INN 附近喝杯咖啡或吃点轻食，再出发前往吹田方向。",
+            },
+            map: "https://maps.google.com/?q=VIA+INN+PRIME+Shinsaibashi+Yotsubashi",
+          },
+          {
+            id: "d5a-transfer",
+            time: "10:30–11:30",
+            start: "10:30",
+            end: "11:30",
+            title: "เดินทางไป Panasonic Stadium Suita",
+            titleI18n: { en: "Travel to Panasonic Stadium Suita", ja: "パナソニックスタジアム吹田へ移動", zh: "前往 Panasonic Stadium Suita" },
+            place: "Transit",
+            blurb: "นั่ง Osaka Metro ต่อ Osaka Monorail ไปยังโซนสนามและ ExpoCity ใช้ ICOCA ได้ทั้งหมด",
+            blurbI18n: {
+              en: "Take Osaka Metro and transfer to Osaka Monorail toward the stadium and ExpoCity area. ICOCA works for the route.",
+              ja: "Osaka Metroから大阪モノレールに乗り継ぎ、スタジアムとExpoCityエリアへ。ICOCA利用可。",
+              zh: "搭乘 Osaka Metro 转 Osaka Monorail 前往球场与 ExpoCity 区域，可使用 ICOCA。",
+            },
+            map: "https://maps.google.com/?q=Panasonic+Stadium+Suita",
+          },
+          {
+            id: "d5a-gamba",
+            time: "11:30–12:30",
+            start: "11:30",
+            end: "12:30",
+            title: "เดินเล่นรอบสนาม Gamba Osaka",
+            titleI18n: { en: "Walk around Gamba Osaka stadium", ja: "ガンバ大阪スタジアム周辺を散歩", zh: "Gamba Osaka 球场周边散步" },
+            place: "Panasonic Stadium Suita",
+            blurb: "ถ่ายรูปบรรยากาศสนาม แวะแฟนช็อป และสัมผัส football culture ของญี่ปุ่นแบบเบา ๆ",
+            blurbI18n: {
+              en: "Take photos around the stadium, check the fan shop, and enjoy a light taste of Japanese football culture.",
+              ja: "スタジアム周辺で写真を撮り、ファンショップを見て、日本のサッカー文化を軽く楽しむ。",
+              zh: "在球场周边拍照、逛球迷商店，轻松感受日本足球文化。",
+            },
+            map: "https://maps.google.com/?q=Panasonic+Stadium+Suita",
+            website: "https://www.gamba-osaka.net/english/",
+            note: {
+              th: { title: "สนามฟุตบอลแบบชิล ๆ", body: "วันนี้ไม่จำเป็นต้องมีทัวร์สนาม ถ้ามี stadium tour ค่อยตัดสินใจหน้างานหรือเช็กอีกครั้งใกล้วันเดินทาง", list: ["ถ่ายรูปด้านนอกสนามก็พอคุ้มสำหรับสายฟุตบอล", "ถ้ามีแฟนช็อปเปิด แวะดูของที่ระลึกได้", "อย่าใช้เวลานานเกินไป เพราะยังมี Rose Festa และ ExpoCity"] },
+              en: { title: "A relaxed football stop", body: "The stadium tour is optional. If a tour is available, decide on the spot or recheck closer to the travel date.", list: ["Photos around the stadium are already worthwhile for a football fan", "Stop by the fan shop if open", "Keep the pace light because Rose Festa and ExpoCity are still ahead"] },
+              ja: { title: "気軽なサッカーストップ", body: "スタジアムツアーは必須ではありません。開催されていれば、当日または出発前に確認して決めれば十分です。", list: ["サッカー好きなら外観の写真だけでも十分楽しめます", "ファンショップが開いていればお土産を見られます", "Rose Festa と ExpoCity もあるので長居しすぎない"] },
+              zh: { title: "轻松的足球停留", body: "球场 tour 不是必须。如果当天有开放，可以现场决定，或在出发前再确认。", list: ["对足球迷来说，在球场外拍照已经很值得", "如果球迷商店开放，可以看看纪念品", "不要停留太久，因为后面还有 Rose Festa 和 ExpoCity"] },
+            },
+          },
+          {
+            id: "d5a-rose",
+            time: "12:30–14:00",
+            start: "12:30",
+            end: "14:00",
+            title: "Rose Festa 2026 ที่ Expo ’70 Park",
+            titleI18n: { en: "Rose Festa 2026 at Expo ’70 Park", ja: "万博記念公園 Rose Festa 2026", zh: "Expo ’70 Park Rose Festa 2026" },
+            place: "Expo ’70 Commemorative Park",
+            blurb: "เดินสวนกุหลาบ ถ่ายรูป และพักจังหวะกลางวันในบรรยากาศ seasonal Japan",
+            blurbI18n: {
+              en: "Walk through the rose garden, take photos, and enjoy a gentle seasonal Japan moment.",
+              ja: "バラ園を散歩して写真を撮り、季節感のある日本らしい時間をゆったり楽しむ。",
+              zh: "在玫瑰园散步拍照，享受带有季节感的日本午后。",
+            },
+            map: "https://maps.google.com/?q=Expo+70+Commemorative+Park+Rose+Garden",
+            website: "https://osaka-info.jp/th/event/rose-festa2026/",
+          },
+          {
+            id: "d5a-lunch",
+            time: "14:00–15:30",
+            start: "14:00",
+            end: "15:30",
+            title: "Late Lunch ที่ ExpoCity",
+            titleI18n: { en: "Late lunch at ExpoCity", ja: "ExpoCityで遅めのランチ", zh: "ExpoCity 晚一点午餐" },
+            place: "ExpoCity",
+            blurb: "เลือกร้านหน้างานตามคิวและความหิว เป็นมื้อกลางวันสาย ๆ แบบสบายที่สุด",
+            blurbI18n: {
+              en: "Choose a restaurant on the spot depending on queues and appetite. Keep it easy and flexible.",
+              ja: "混雑と空腹具合を見ながら、その場で店を選ぶ。無理せず柔軟に。",
+              zh: "根据排队情况和食欲现场选餐厅，保持轻松弹性。",
+            },
+            map: "https://maps.google.com/?q=EXPOCITY+Osaka",
+            website: "https://www.expocity-mf.com/expo/",
+            note: {
+              th: { title: "เลือกร้านหน้างาน", body: "วันนี้ไม่ต้องล็อกร้านอาหาร เพราะ ExpoCity มีตัวเลือกเยอะและเหมาะกับการตัดสินใจตามแรงจริง", list: ["ถ้าหิวมาก เลือกร้านที่นั่งได้เร็ว", "ถ้าอยากพักนาน เลือกคาเฟ่หรือร้านที่นั่งสบาย", "เผื่อเวลาเดิน shopping ต่อหลังอาหาร"] },
+              en: { title: "Choose on the spot", body: "No fixed restaurant is needed today. ExpoCity has enough options to decide by real energy and queue length.", list: ["If very hungry, choose the fastest seated option", "If you want to rest longer, choose a comfortable cafe or restaurant", "Leave time for shopping after lunch"] },
+              ja: { title: "当日の状況で店を選ぶ", body: "今日は店を固定しなくて大丈夫です。ExpoCity は選択肢が多く、体力と混雑に合わせて決めやすい場所です。", list: ["かなり空腹なら入りやすい店を選ぶ", "長めに休みたいなら座りやすいカフェや店を選ぶ", "食後のショッピング時間を残しておく"] },
+              zh: { title: "现场选餐厅", body: "今天不需要固定餐厅。ExpoCity 选择很多，适合按照体力和排队情况现场决定。", list: ["如果很饿，就选入座最快的店", "如果想多休息，就选座位舒服的咖啡或餐厅", "午餐后预留购物时间"] },
+            },
+          },
+          {
+            id: "d5a-expocity",
+            time: "15:30–18:00",
+            start: "15:30",
+            end: "18:00",
+            title: "เดิน ExpoCity + shopping + cafe",
+            titleI18n: { en: "ExpoCity shopping + cafe", ja: "ExpoCityでショッピングとカフェ", zh: "ExpoCity 购物 + 咖啡" },
+            place: "ExpoCity",
+            blurb: "เดินเล่นใน mall ดู lifestyle stores, sneakers, Pokémon, Gundam, Loft หรือแวะคาเฟ่ตาม mood",
+            blurbI18n: {
+              en: "Browse lifestyle stores, sneakers, Pokemon, Gundam, Loft, or pause for a cafe break depending on mood.",
+              ja: "ライフスタイルショップ、スニーカー、ポケモン、ガンダム、Loftなどを見て、気分でカフェ休憩。",
+              zh: "逛 lifestyle stores、球鞋、Pokemon、Gundam、Loft，或按心情找咖啡休息。",
+            },
+            map: "https://maps.google.com/?q=EXPOCITY+Osaka",
+            website: "https://www.expocity-mf.com/expo/",
+          },
+          {
+            id: "d5a-return",
+            time: "18:00–19:00",
+            start: "18:00",
+            end: "19:00",
+            title: "กลับ Osaka",
+            titleI18n: { en: "Return to Osaka", ja: "大阪市内へ戻る", zh: "返回大阪市区" },
+            place: "Transit",
+            blurb: "กลับเข้าเมืองแบบไม่รีบ ถ้าเหนื่อยให้ตรงกลับโรงแรมก่อน แล้วค่อยตัดสินใจเรื่องมื้อเย็น",
+            blurbI18n: {
+              en: "Head back to the city without rushing. If tired, return to the hotel first and decide dinner later.",
+              ja: "急がず市内へ戻る。疲れていればまずホテルに戻り、夕食はそのあと決める。",
+              zh: "不赶时间地回到市区。如果累了，先回酒店再决定晚餐。",
+            },
+            map: "https://maps.google.com/?q=Shinsaibashi+Osaka",
+          },
+          {
+            id: "d5a-dinner",
+            time: "19:30–22:00",
+            start: "19:30",
+            end: "22:00",
+            title: "Dinner / wine / bar แถว Namba หรือ Shinsaibashi",
+            titleI18n: { en: "Dinner / wine / bar around Namba or Shinsaibashi", ja: "難波・心斎橋周辺で夕食 / ワイン / バー", zh: "Namba / Shinsaibashi 晚餐 / 葡萄酒 / 小酒吧" },
+            place: "Namba / Shinsaibashi",
+            blurb: "จบวันด้วยมื้อเย็นหรือ wine bar เบา ๆ แถว Namba / Shinsaibashi ถ้าเหนื่อยมากให้กลับพักเลย",
+            blurbI18n: {
+              en: "End the day with an easy dinner or light wine bar around Namba / Shinsaibashi. If tired, simply rest.",
+              ja: "難波や心斎橋周辺で軽く夕食やワインバー。疲れていればそのまま休む。",
+              zh: "在 Namba 或 Shinsaibashi 简单晚餐或小酌。如果累了，就直接休息。",
+            },
+            map: "https://maps.google.com/?q=Namba+Shinsaibashi+Osaka",
+          },
+        ],
       },
-      {
-        id: "d5-stadium-transfer",
-        time: "10:30–11:30",
-        start: "10:30",
-        end: "11:30",
-        title: "เดินทางไป Panasonic Stadium Suita",
+      uji: {
+        id: "uji",
+        image: "https://www.japan-guide.com/g17/3923_01.jpg",
+        labelI18n: { th: "Plan B", en: "Plan B", ja: "Plan B", zh: "Plan B" },
         titleI18n: {
-          en: "Travel to Panasonic Stadium Suita",
-          ja: "パナソニックスタジアム吹田へ移動",
-          zh: "前往 Panasonic Stadium Suita",
+          th: "Uji Slow Matcha Half Day",
+          en: "Uji Slow Matcha Half Day",
+          ja: "宇治スローマッチャ半日",
+          zh: "Uji Slow Matcha Half Day",
         },
-        place: "Transit",
-        blurb: "นั่ง Osaka Metro ต่อ Osaka Monorail ไปยังโซนสนามและ ExpoCity ใช้ ICOCA ได้ทั้งหมด",
-        blurbI18n: {
-          en: "Take Osaka Metro and transfer to Osaka Monorail toward the stadium / ExpoCity area. ICOCA works for the route.",
-          ja: "Osaka Metroから大阪モノレールに乗り継ぎ、スタジアムとExpoCityエリアへ。ICOCA利用可。",
-          zh: "搭乘 Osaka Metro 转 Osaka Monorail 前往球场与 ExpoCity 区域，可使用 ICOCA。",
+        moodI18n: {
+          th: "ชาเขียว + Byodo-in + Uji River",
+          en: "Matcha + Byodo-in + Uji River",
+          ja: "抹茶 + 平等院 + 宇治川",
+          zh: "抹茶 + 平等院 + 宇治川",
         },
-        map: "https://maps.google.com/?q=Panasonic+Stadium+Suita",
+        costI18n: {
+          th: "ประมาณ ¥9,000–12,000",
+          en: "Approx. ¥9,000–12,000",
+          ja: "約 ¥9,000–12,000",
+          zh: "约 ¥9,000–12,000",
+        },
+        routeI18n: {
+          th: "VIA INN → Uji → Byodo-in → Matcha lunch → Tsujirihei Honten → Uji River → Osaka",
+          en: "VIA INN → Uji → Byodo-in → Matcha lunch → Tsujirihei Honten → Uji River → Osaka",
+          ja: "VIA INN → 宇治 → 平等院 → 抹茶ランチ → 辻利兵衛本店 → 宇治川 → 大阪",
+          zh: "VIA INN → 宇治 → 平等院 → 抹茶午餐 → 辻利兵卫本店 → 宇治川 → 大阪",
+        },
+        summaryI18n: {
+          th: "วันชาเขียวแบบสงบ เดิน Byodo-in, กิน matcha ramen, แวะร้านชาเก่าแก่ และเดินริมแม่น้ำ Uji ก่อนกลับ Osaka ช่วงเย็น",
+          en: "A calm tea-culture half day in Uji: Byodo-in, matcha ramen, an old tea shop, riverside walking, then back to Osaka in the evening.",
+          ja: "宇治で過ごす静かな茶文化の半日。平等院、抹茶ラーメン、老舗茶店、宇治川沿いの散歩を楽しみ、大阪へ戻る。",
+          zh: "在宇治度过安静的茶文化半日：平等院、抹茶拉面、老茶铺、宇治川散步，然后傍晚回大阪。",
+        },
+        previewNow: "2026-05-21T14:20:00+09:00",
+        previewNote: "ตั้งเวลาไว้ช่วงร้านชากับเดินริมแม่น้ำ เพื่อให้เห็น marker ใน Plan B",
+        events: [
+          {
+            id: "d5b-coffee",
+            time: "09:30–10:00",
+            start: "09:30",
+            end: "10:00",
+            title: "กาแฟเบา ๆ แถวโรงแรม",
+            titleI18n: { en: "Easy coffee near the hotel", ja: "ホテル周辺で軽くコーヒー", zh: "酒店附近简单咖啡" },
+            place: "VIA INN / Shinsaibashi",
+            blurb: "ตื่นสายแบบไม่รีบ หาอะไรเบา ๆ ใกล้ VIA INN ก่อนออกไป Uji",
+            blurbI18n: {
+              en: "Start slowly with a light coffee or snack near VIA INN before heading to Uji.",
+              ja: "VIA INN周辺で軽くコーヒーやおやつを済ませて、宇治へ向かう。",
+              zh: "在 VIA INN 附近喝杯咖啡或吃点轻食，再前往宇治。",
+            },
+            map: "https://maps.google.com/?q=VIA+INN+PRIME+Shinsaibashi+Yotsubashi",
+          },
+          {
+            id: "d5b-transfer",
+            time: "10:00–11:00",
+            start: "10:00",
+            end: "11:00",
+            title: "เดินทาง Osaka → Uji",
+            titleI18n: { en: "Travel from Osaka to Uji", ja: "大阪から宇治へ移動", zh: "从大阪前往宇治" },
+            place: "Transit",
+            blurb: "นั่ง Osaka Metro ต่อ JR Kyoto Line และ JR Nara Line ไป Uji ใช้ ICOCA ได้ทั้งหมด ใช้เวลาประมาณ 60–75 นาที",
+            blurbI18n: {
+              en: "Take Osaka Metro, JR Kyoto Line, and JR Nara Line to Uji. ICOCA works for the route. Expect around 60–75 minutes.",
+              ja: "Osaka Metro、JR京都線、JR奈良線を乗り継いで宇治へ。ICOCA利用可。所要約60〜75分。",
+              zh: "搭乘 Osaka Metro、JR Kyoto Line 与 JR Nara Line 前往宇治，可使用 ICOCA，约 60–75 分钟。",
+            },
+            map: "https://maps.google.com/?q=Uji+Station+Kyoto",
+          },
+          {
+            id: "d5b-byodoin",
+            time: "11:15–12:15",
+            start: "11:15",
+            end: "12:15",
+            title: "Byodo-in Temple",
+            titleI18n: { en: "Byodo-in Temple", ja: "平等院", zh: "平等院" },
+            place: "Byodo-in Temple",
+            blurb: "วัด iconic ของญี่ปุ่นที่อยู่บนเหรียญ ¥10 บรรยากาศสงบ elegant และไม่วุ่นวายแบบ Kyoto city",
+            blurbI18n: {
+              en: "An iconic Japanese temple featured on the ¥10 coin, with a calm, elegant mood away from Kyoto city crowds.",
+              ja: "10円玉にも描かれている日本を代表する寺院。京都市内より落ち着いた、静かで上品な雰囲気。",
+              zh: "日本代表性寺院之一，也出现在 ¥10 硬币上。氛围安静优雅，比京都市区更从容。",
+            },
+            map: "https://maps.google.com/?q=Byodo-in+Temple+Uji",
+            website: "https://www.byodoin.or.jp/en/",
+          },
+          {
+            id: "d5b-ramen",
+            time: "12:30–13:30",
+            start: "12:30",
+            end: "13:30",
+            title: "Matcha Ramen Lunch",
+            titleI18n: { en: "Matcha ramen lunch", ja: "抹茶ラーメンランチ", zh: "抹茶拉面午餐" },
+            place: "Ramen Tanaka Kyu Shoten",
+            blurb: "ลอง ramen ที่มีมัจฉะเป็นส่วนผสม เป็นมื้อที่ unique และหาแบบนี้ยากนอก Uji",
+            blurbI18n: {
+              en: "Try ramen with matcha elements — a unique Uji-style lunch that is hard to find elsewhere.",
+              ja: "抹茶を取り入れた宇治らしいラーメン。ほかではなかなか出会えないユニークな昼食。",
+              zh: "尝试带有抹茶元素的宇治风格拉面，是其他地方较少见的特别午餐。",
+            },
+            map: "https://maps.google.com/?q=Ramen+Tanaka+Kyu+Shoten+Uji",
+          },
+          {
+            id: "d5b-tsujirihei",
+            time: "13:45–15:00",
+            start: "13:45",
+            end: "15:00",
+            title: "Tsujirihei Honten — Kyoto Uji Main Shop",
+            titleI18n: { en: "Tsujirihei Honten — Kyoto Uji Main Shop", ja: "辻利兵衛本店 京都宇治本店", zh: "辻利兵卫本店 京都宇治本店" },
+            place: "Tsujirihei Honten",
+            blurb: "ร้านชาเขียวเก่าแก่ บรรยากาศดีมาก เหมาะกับ parfait หรือ matcha dessert เป็น highlight ของ Uji",
+            blurbI18n: {
+              en: "A long-established tea shop with a beautiful atmosphere. Parfait or matcha dessert is the real highlight here.",
+              ja: "雰囲気のよい老舗茶店。パフェや抹茶スイーツが宇治らしいハイライト。",
+              zh: "氛围很好的老字号茶铺，抹茶 parfait 或甜点是宇治行程的亮点。",
+            },
+            map: "https://maps.google.com/?q=Tsujirihei+Honten+Uji",
+            website: "https://www.tsujirihei.co.jp/",
+          },
+          {
+            id: "d5b-river",
+            time: "15:00–16:00",
+            start: "15:00",
+            end: "16:00",
+            title: "เดินเล่นริมแม่น้ำ Uji",
+            titleI18n: { en: "Walk along the Uji River", ja: "宇治川沿いを散歩", zh: "宇治川散步" },
+            place: "Uji River",
+            blurb: "เดินสะพาน ถนนเล็ก ๆ ร้านชา และ souvenir แบบ quiet Japan energy ก่อนกลับ Osaka",
+            blurbI18n: {
+              en: "A quiet riverside walk with bridges, small streets, tea shops, and souvenirs before returning to Osaka.",
+              ja: "橋、小さな通り、茶店、お土産を見ながら、静かな日本らしい空気を楽しむ。",
+              zh: "沿着河边走走，经过桥、小街、茶铺和伴手礼店，感受安静的日本氛围。",
+            },
+            map: "https://maps.google.com/?q=Uji+River+Kyoto",
+          },
+          {
+            id: "d5b-return",
+            time: "16:00–17:00",
+            start: "16:00",
+            end: "17:00",
+            title: "กลับ Osaka",
+            titleI18n: { en: "Return to Osaka", ja: "大阪へ戻る", zh: "返回大阪" },
+            place: "Transit",
+            blurb: "กลับเข้าเมือง ถ้าเหนื่อยให้ตรงกลับโรงแรมก่อน แล้วค่อยเลือก evening option ตามแรงจริง",
+            blurbI18n: {
+              en: "Head back to the city. If tired, return to the hotel first and choose the evening plan based on energy.",
+              ja: "大阪市内へ戻る。疲れていればまずホテルへ戻り、夜の予定は体力に合わせて決める。",
+              zh: "回到大阪市区。如果累了，先回酒店，再根据体力决定晚上安排。",
+            },
+            map: "https://maps.google.com/?q=Shinsaibashi+Osaka",
+          },
+          {
+            id: "d5b-evening",
+            time: "18:30–22:00",
+            start: "18:30",
+            end: "22:00",
+            title: "Evening Options — พักหรือ Namba Chill",
+            titleI18n: { en: "Evening options — rest or Namba chill", ja: "夜の選択肢 — 休むか難波で軽く過ごす", zh: "晚上选择 — 休息或 Namba 轻松散步" },
+            place: "Namba / Shinsaibashi",
+            blurb: "เลือกได้สองทาง: กลับพักแบบ slow evening หรือเดิน Namba เบา ๆ พร้อม cocktail / wine / izakaya ตาม mood",
+            blurbI18n: {
+              en: "Choose between a slow evening rest or an easy Namba walk with cocktail, wine, or a light izakaya stop.",
+              ja: "ホテルでゆっくり休むか、難波で軽く散歩してカクテル、ワイン、居酒屋を楽しむかを選ぶ。",
+              zh: "可以选择回酒店慢慢休息，或到 Namba 简单散步、小酌、轻食。",
+            },
+            map: "https://maps.google.com/?q=Namba+Shinsaibashi+Osaka",
+          },
+        ],
       },
-      {
-        id: "d5-gamba",
-        time: "11:30–12:30",
-        start: "11:30",
-        end: "12:30",
-        title: "เดินเล่นรอบสนาม Gamba Osaka",
-        titleI18n: {
-          en: "Walk around Gamba Osaka stadium",
-          ja: "ガンバ大阪スタジアム周辺を散歩",
-          zh: "Gamba Osaka 球场周边散步",
-        },
-        place: "Panasonic Stadium Suita",
-        blurb: "ถ่ายรูปบรรยากาศสนาม แวะแฟนช็อป และสัมผัส football culture ของญี่ปุ่นแบบเบา ๆ",
-        blurbI18n: {
-          en: "Take photos around the stadium, check the fan shop, and enjoy a light taste of Japanese football culture.",
-          ja: "スタジアム周辺で写真を撮り、ファンショップを見て、日本のサッカー文化を軽く楽しむ。",
-          zh: "在球场周边拍照、逛球迷商店，轻松感受日本足球文化。",
-        },
-        map: "https://maps.google.com/?q=Panasonic+Stadium+Suita",
-        website: "https://www.gamba-osaka.net/english/",
-        note: {
-          th: {
-            title: "สนามฟุตบอลแบบชิล ๆ",
-            body: "วันนี้ไม่จำเป็นต้องมีทัวร์สนาม ถ้ามี stadium tour ค่อยตัดสินใจหน้างานหรือเช็กอีกครั้งใกล้วันเดินทาง",
-            list: [
-              "ถ่ายรูปด้านนอกสนามก็พอคุ้มสำหรับสายฟุตบอล",
-              "ถ้ามีแฟนช็อปเปิด แวะดูของที่ระลึกได้",
-              "อย่าใช้เวลานานเกินไป เพราะยังมี Rose Festa และ ExpoCity",
-            ],
-          },
-          en: {
-            title: "A relaxed football stop",
-            body: "The stadium tour is optional. If a tour is available, decide on the spot or recheck closer to the travel date.",
-            list: [
-              "Photos around the stadium are already worthwhile for a football fan",
-              "Stop by the fan shop if open",
-              "Keep the pace light because Rose Festa and ExpoCity are still ahead",
-            ],
-          },
-          ja: {
-            title: "気軽なサッカーストップ",
-            body: "スタジアムツアーは必須ではありません。開催されていれば、当日または出発前に確認して決めれば十分です。",
-            list: [
-              "サッカー好きなら外観の写真だけでも十分楽しめます",
-              "ファンショップが開いていればお土産を見られます",
-              "Rose Festa と ExpoCity もあるので長居しすぎない",
-            ],
-          },
-          zh: {
-            title: "轻松的足球停留",
-            body: "球场 tour 不是必须。如果当天有开放，可以现场决定，或在出发前再确认。",
-            list: [
-              "对足球迷来说，在球场外拍照已经很值得",
-              "如果球迷商店开放，可以看看纪念品",
-              "不要停留太久，因为后面还有 Rose Festa 和 ExpoCity",
-            ],
-          },
-        },
-      },
-      {
-        id: "d5-rose-festa",
-        time: "12:30–14:00",
-        start: "12:30",
-        end: "14:00",
-        title: "Rose Festa 2026 ที่ Expo ’70 Park",
-        titleI18n: {
-          en: "Rose Festa 2026 at Expo ’70 Park",
-          ja: "万博記念公園 Rose Festa 2026",
-          zh: "Expo ’70 Park Rose Festa 2026",
-        },
-        place: "Expo ’70 Commemorative Park",
-        blurb: "เดินสวนกุหลาบ ถ่ายรูป และพักจังหวะกลางวันในบรรยากาศ seasonal Japan",
-        blurbI18n: {
-          en: "Walk through the rose garden, take photos, and enjoy a gentle seasonal Japan moment.",
-          ja: "バラ園を散歩して写真を撮り、季節感のある日本らしい時間をゆったり楽しむ。",
-          zh: "在玫瑰园散步拍照，享受带有季节感的日本午后。",
-        },
-        map: "https://maps.google.com/?q=Expo+70+Commemorative+Park+Rose+Garden",
-        website: "https://osaka-info.jp/th/event/rose-festa2026/",
-      },
-      {
-        id: "d5-lunch",
-        time: "14:00–15:30",
-        start: "14:00",
-        end: "15:30",
-        title: "Late Lunch ที่ ExpoCity",
-        titleI18n: {
-          en: "Late lunch at ExpoCity",
-          ja: "ExpoCityで遅めのランチ",
-          zh: "ExpoCity 晚一点午餐",
-        },
-        place: "ExpoCity",
-        blurb: "เลือกร้านหน้างานตามคิวและความหิว เป็นมื้อกลางวันสาย ๆ แบบสบายที่สุด",
-        blurbI18n: {
-          en: "Choose a restaurant on the spot depending on queues and appetite. Keep it easy and flexible.",
-          ja: "混雑と空腹具合を見ながら、その場で店を選ぶ。無理せず柔軟に。",
-          zh: "根据排队情况和食欲现场选餐厅，保持轻松弹性。",
-        },
-        map: "https://maps.google.com/?q=EXPOCITY+Osaka",
-        website: "https://www.expocity-mf.com/expo/",
-        note: {
-          th: {
-            title: "เลือกร้านหน้างาน",
-            body: "วันนี้ไม่ต้องล็อกร้านอาหาร เพราะ ExpoCity มีตัวเลือกเยอะและเหมาะกับการตัดสินใจตามแรงจริง",
-            list: [
-              "ถ้าหิวมาก เลือกร้านที่นั่งได้เร็ว",
-              "ถ้าอยากพักนาน เลือกคาเฟ่หรือร้านที่นั่งสบาย",
-              "เผื่อเวลาเดิน shopping ต่อหลังอาหาร",
-            ],
-          },
-          en: {
-            title: "Choose on the spot",
-            body: "No fixed restaurant is needed today. ExpoCity has enough options to decide by real energy and queue length.",
-            list: [
-              "If very hungry, choose the fastest seated option",
-              "If you want to rest longer, choose a comfortable cafe or restaurant",
-              "Leave time for shopping after lunch",
-            ],
-          },
-          ja: {
-            title: "当日の状況で店を選ぶ",
-            body: "今日は店を固定しなくて大丈夫です。ExpoCity は選択肢が多く、体力と混雑に合わせて決めやすい場所です。",
-            list: [
-              "かなり空腹なら入りやすい店を選ぶ",
-              "長めに休みたいなら座りやすいカフェや店を選ぶ",
-              "食後のショッピング時間を残しておく",
-            ],
-          },
-          zh: {
-            title: "现场选餐厅",
-            body: "今天不需要固定餐厅。ExpoCity 选择很多，适合按照体力和排队情况现场决定。",
-            list: [
-              "如果很饿，就选入座最快的店",
-              "如果想多休息，就选座位舒服的咖啡或餐厅",
-              "午餐后预留购物时间",
-            ],
-          },
-        },
-      },
-      {
-        id: "d5-expocity",
-        time: "15:30–18:00",
-        start: "15:30",
-        end: "18:00",
-        title: "เดิน ExpoCity + shopping + cafe",
-        titleI18n: {
-          en: "ExpoCity shopping + cafe",
-          ja: "ExpoCityでショッピングとカフェ",
-          zh: "ExpoCity 购物 + 咖啡",
-        },
-        place: "ExpoCity",
-        blurb: "เดินเล่นใน mall ดู lifestyle stores, sneakers, Pokémon, Gundam, Loft หรือแวะคาเฟ่ตาม mood",
-        blurbI18n: {
-          en: "Browse lifestyle stores, sneakers, Pokémon, Gundam, Loft, or pause for a cafe break depending on mood.",
-          ja: "ライフスタイルショップ、スニーカー、ポケモン、ガンダム、Loftなどを見て、気分でカフェ休憩。",
-          zh: "逛 lifestyle stores、球鞋、Pokémon、Gundam、Loft，或按心情找咖啡休息。",
-        },
-        map: "https://maps.google.com/?q=EXPOCITY+Osaka",
-        website: "https://www.expocity-mf.com/expo/",
-      },
-      {
-        id: "d5-return",
-        time: "18:00–19:00",
-        start: "18:00",
-        end: "19:00",
-        title: "กลับ Osaka",
-        titleI18n: {
-          en: "Return to Osaka",
-          ja: "大阪市内へ戻る",
-          zh: "返回大阪市区",
-        },
-        place: "Transit",
-        blurb: "กลับเข้าเมืองแบบไม่รีบ ถ้าเหนื่อยให้ตรงกลับโรงแรมก่อน แล้วค่อยตัดสินใจเรื่องมื้อเย็น",
-        blurbI18n: {
-          en: "Head back to the city without rushing. If tired, return to the hotel first and decide dinner later.",
-          ja: "急がず市内へ戻る。疲れていればまずホテルに戻り、夕食はそのあと決める。",
-          zh: "不赶时间地回到市区。如果累了，先回酒店再决定晚餐。",
-        },
-        map: "https://maps.google.com/?q=Shinsaibashi+Osaka",
-      },
-      {
-        id: "d5-dinner",
-        time: "19:30–22:00",
-        start: "19:30",
-        end: "22:00",
-        title: "Dinner / wine / bar แถว Namba หรือ Shinsaibashi",
-        titleI18n: {
-          en: "Dinner / wine / bar around Namba or Shinsaibashi",
-          ja: "難波・心斎橋周辺で夕食 / ワイン / バー",
-          zh: "Namba / Shinsaibashi 晚餐 / 葡萄酒 / 小酒吧",
-        },
-        place: "Namba / Shinsaibashi",
-        blurb: "จบวันด้วยมื้อเย็นหรือ wine bar เบา ๆ แถว Namba / Shinsaibashi ถ้าเหนื่อยมากให้กลับพักเลย",
-        blurbI18n: {
-          en: "End the day with an easy dinner or light wine bar around Namba / Shinsaibashi. If tired, simply rest.",
-          ja: "難波や心斎橋周辺で軽く夕食やワインバー。疲れていればそのまま休む。",
-          zh: "在 Namba 或 Shinsaibashi 简单晚餐或小酌。如果累了，就直接休息。",
-        },
-        map: "https://maps.google.com/?q=Namba+Shinsaibashi+Osaka",
-      },
-    ],
+    },
   },
   {
     id: "day-6",
@@ -2093,6 +2248,39 @@ function getSavedDetailDay() {
   return null;
 }
 
+function getSavedDay5Plan() {
+  const saved = localStorage.getItem(DAY5_PLAN_STORAGE_KEY);
+  return saved === "uji" || saved === "gamba" ? saved : "gamba";
+}
+
+function getSelectedDay5Plan(day = PROTOTYPE_DAYS.find((entry) => entry.id === "day-5")) {
+  const planId = getSavedDay5Plan();
+  return day?.plans?.[planId] ?? day?.plans?.gamba ?? null;
+}
+
+function getEffectiveDayData(day) {
+  if (!day || day.id !== "day-5" || !day.plans) return day;
+  const selectedPlanId = getSavedDay5Plan();
+  const selectedPlan = day.plans[selectedPlanId] ?? day.plans.gamba;
+  if (!selectedPlan) return day;
+  return {
+    ...day,
+    selectedPlanId,
+    title: selectedPlan.titleI18n?.th ?? day.title,
+    route: selectedPlan.routeI18n?.th ?? day.route,
+    summary: selectedPlan.summaryI18n?.th ?? day.summary,
+    titleI18n: selectedPlan.titleI18n ?? day.titleI18n,
+    routeI18n: selectedPlan.routeI18n ?? day.routeI18n,
+    summaryI18n: selectedPlan.summaryI18n ?? day.summaryI18n,
+    previewNow: selectedPlan.previewNow ?? day.previewNow,
+    previewNote: selectedPlan.previewNote ?? day.previewNote,
+    events: selectedPlan.events ?? day.events,
+    image: selectedPlan.image ?? "",
+    planSwitcherLabelI18n: day.planSwitcherLabelI18n,
+    plans: day.plans,
+  };
+}
+
 function setTextForKey(element, key, lang) {
   if (element) element.textContent = t(key, lang);
 }
@@ -2195,7 +2383,8 @@ function getDefaultDetailDay() {
 }
 
 function getCurrentDayData() {
-  return PROTOTYPE_DAYS.find((day) => day.id === currentDetailDayId) ?? PROTOTYPE_DAYS[1];
+  const day = PROTOTYPE_DAYS.find((entry) => entry.id === currentDetailDayId) ?? PROTOTYPE_DAYS[1];
+  return getEffectiveDayData(day);
 }
 
 function getEffectiveDetailDate(day) {
@@ -2274,14 +2463,16 @@ function getDayIndex(day) {
 function getDayDisplayContent(day, lang = currentPageLang) {
   const index = getDayIndex(day);
   const fallbackNumber = index >= 0 ? index : 0;
+  const effectiveDay = getEffectiveDayData(day);
+  const dayVisual = effectiveDay.image ? { ...DAY_VISUALS[day.id], image: effectiveDay.image } : DAY_VISUALS[day.id];
   return {
     label: t(`overview.day${fallbackNumber}.label`, lang),
-    title: day.titleI18n?.[lang] ?? t(`overview.day${fallbackNumber}.title`, lang),
+    title: effectiveDay.titleI18n?.[lang] ?? t(`overview.day${fallbackNumber}.title`, lang),
     shortTitle: DAY_SHORT_TITLES[lang]?.[day.id] ?? DAY_SHORT_TITLES.th[day.id] ?? t(`overview.day${fallbackNumber}.title`, lang),
-    route: day.routeI18n?.[lang] ?? (lang === "th" ? day.route : t(`overview.day${fallbackNumber}.body`, lang)),
+    route: effectiveDay.routeI18n?.[lang] ?? (lang === "th" ? effectiveDay.route : t(`overview.day${fallbackNumber}.body`, lang)),
     toneClass: DAY_TONE_CLASSES[fallbackNumber] ?? DAY_TONE_CLASSES[0],
-    icon: DAY_VISUALS[day.id]?.icon ?? "✦",
-    image: DAY_VISUALS[day.id]?.image ?? "",
+    icon: dayVisual?.icon ?? "✦",
+    image: dayVisual?.image ?? "",
   };
 }
 
@@ -2403,6 +2594,31 @@ function renderDetailSummary(day) {
   if (!summary) return;
   const timelineClock = getTimelineClock(day);
   const display = getDayDisplayContent(day);
+  const isDay5 = day.id === "day-5" && day.plans;
+  const selectedPlanId = isDay5 ? day.selectedPlanId ?? getSavedDay5Plan() : null;
+  const planSwitcher = isDay5
+    ? `
+      <div class="day5-plan-switcher">
+        <p class="day5-plan-switcher-label">${day.planSwitcherLabelI18n?.[currentPageLang] ?? t("day5.switcher.label")}</p>
+        <div class="day5-plan-grid">
+          ${Object.values(day.plans)
+            .map(
+              (plan) => `
+              <button
+                type="button"
+                class="day5-plan-pill${plan.id === selectedPlanId ? " is-active" : ""}"
+                data-day5-plan="${plan.id}"
+              >
+                <span>${t(`day5.switcher.${plan.id === "gamba" ? "planA" : "planB"}`)}</span>
+                <strong>${t(`day5.switcher.${plan.id === "gamba" ? "planA.title" : "planB.title"}`)}</strong>
+                <small>${plan.moodI18n?.[currentPageLang] ?? ""}</small>
+                <em>${plan.costI18n?.[currentPageLang] ?? ""}</em>
+              </button>`,
+            )
+            .join("")}
+        </div>
+      </div>`
+    : "";
 
   summary.className = `detail-summary-card ${display.toneClass}`;
   summary.innerHTML = `
@@ -2415,6 +2631,7 @@ function renderDetailSummary(day) {
     </figure>
     <div class="detail-summary-copy">
     <span class="detail-kicker">${display.label}</span>
+    ${planSwitcher}
     <h3>${display.title}</h3>
     <p>${getDaySummaryText(day)}</p>
     <div class="detail-summary-meta">
@@ -2699,7 +2916,8 @@ function renderPrototypeMarker() {
 
 function getEventNote(noteId) {
   for (const day of PROTOTYPE_DAYS) {
-    const event = day.events.find((item) => item.id === noteId);
+    const effectiveDay = getEffectiveDayData(day);
+    const event = effectiveDay.events.find((item) => item.id === noteId);
     if (event?.note) return event.note[currentPageLang] ?? event.note.th;
   }
   return NOTE_COPY[noteId]?.[currentPageLang] ?? NOTE_COPY[noteId]?.th ?? null;
@@ -2915,6 +3133,16 @@ function initDetailExplorer() {
   currentDetailDayId = getSavedDetailDay() || getDefaultDetailDay();
 
   document.addEventListener("click", (event) => {
+    const day5PlanButton = event.target.closest("[data-day5-plan]");
+    if (day5PlanButton) {
+      const nextPlan = day5PlanButton.dataset.day5Plan;
+      if (nextPlan === "gamba" || nextPlan === "uji") {
+        localStorage.setItem(DAY5_PLAN_STORAGE_KEY, nextPlan);
+        renderDetailExplorer();
+      }
+      return;
+    }
+
     const quickChip = event.target.closest(".quick-menu-chip");
     if (quickChip) {
       const action = quickChip.dataset.quickAction;

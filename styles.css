@@ -1618,6 +1618,96 @@ a {
   padding: 24px;
 }
 
+.day5-plan-switcher {
+  margin: 10px 0 18px;
+}
+
+.day5-plan-switcher-label {
+  margin: 0 0 10px;
+  color: var(--ink);
+  font-size: 0.92rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.day5-plan-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.day5-plan-pill {
+  display: grid;
+  gap: 5px;
+  padding: 14px;
+  border: 1px solid rgba(207, 188, 166, 0.72);
+  border-radius: 18px;
+  background: linear-gradient(180deg, rgba(255, 252, 247, 0.96), rgba(247, 240, 231, 0.92));
+  color: var(--ink);
+  text-align: left;
+  font: inherit;
+  cursor: pointer;
+  box-shadow: 0 12px 24px rgba(52, 36, 22, 0.08);
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    border-color 180ms ease;
+}
+
+.day5-plan-pill:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 16px 28px rgba(52, 36, 22, 0.11);
+}
+
+.day5-plan-pill.is-active {
+  border-color: rgba(137, 93, 153, 0.5);
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.55),
+    0 18px 32px rgba(52, 36, 22, 0.14);
+  background:
+    linear-gradient(180deg, rgba(255, 251, 246, 0.98), rgba(245, 236, 229, 0.94)),
+    linear-gradient(135deg, rgba(102, 132, 175, 0.18), rgba(159, 96, 136, 0.12));
+}
+
+.day5-plan-pill span,
+.day5-plan-pill strong,
+.day5-plan-pill small,
+.day5-plan-pill em {
+  display: block;
+}
+
+.day5-plan-pill span {
+  color: var(--stone);
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.day5-plan-pill strong {
+  font-size: 0.98rem;
+  line-height: 1.28;
+}
+
+.day5-plan-pill small {
+  color: var(--stone);
+  font-size: 0.82rem;
+  line-height: 1.45;
+}
+
+.day5-plan-pill em {
+  color: var(--plum);
+  font-size: 0.82rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+@media (max-width: 720px) {
+  .day5-plan-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 .detail-summary-meta {
   display: grid;
   gap: 12px;
@@ -1985,6 +2075,7 @@ body[data-theme="dark"] .detail-copy,
 body[data-theme="dark"] .detail-summary-card p,
 body[data-theme="dark"] .help-card p,
 body[data-theme="dark"] .help-modal-language-label,
+body[data-theme="dark"] .day5-plan-switcher-label,
 body[data-theme="dark"] .day-detail-pill span,
 body[data-theme="dark"] .day-detail-pill small {
   color: var(--dark-muted);
@@ -2077,6 +2168,29 @@ body[data-theme="dark"] .theme-toggle {
 
 body[data-theme="dark"] .intel-quote {
   background: linear-gradient(135deg, rgba(39, 52, 67, 0.96), rgba(87, 59, 73, 0.86));
+}
+
+body[data-theme="dark"] .day5-plan-pill {
+  border-color: var(--dark-border);
+  background: linear-gradient(180deg, rgba(29, 42, 58, 0.96), rgba(20, 30, 42, 0.94));
+  color: var(--dark-text);
+  box-shadow: 0 18px 30px rgba(0, 0, 0, 0.2);
+}
+
+body[data-theme="dark"] .day5-plan-pill.is-active {
+  border-color: rgba(169, 200, 236, 0.42);
+  background:
+    linear-gradient(180deg, rgba(34, 50, 70, 0.98), rgba(22, 33, 47, 0.96)),
+    linear-gradient(135deg, rgba(102, 132, 175, 0.14), rgba(159, 96, 136, 0.1));
+}
+
+body[data-theme="dark"] .day5-plan-pill span,
+body[data-theme="dark"] .day5-plan-pill small {
+  color: var(--dark-muted);
+}
+
+body[data-theme="dark"] .day5-plan-pill em {
+  color: var(--dark-bronze);
 }
 
 body[data-theme="dark"] .overview-card.is-selected {
