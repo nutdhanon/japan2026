@@ -1,4 +1,4 @@
-const CACHE_NAME = "osaka-slow-life-2026-v14";
+const CACHE_NAME = "osaka-slow-life-2026-v15";
 
 const CORE_ASSETS = [
   "./",
