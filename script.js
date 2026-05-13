@@ -1543,9 +1543,9 @@ const PROTOTYPE_DAYS = [
       },
       {
         id: "d2-lunch",
-        time: "12:30–14:00",
+        time: "12:30–13:30",
         start: "12:30",
-        end: "14:00",
+        end: "13:30",
         title: "Local Lunch @ Morinomiya",
         titleI18n: {
           en: "Local lunch at Morinomiya",
@@ -1570,9 +1570,9 @@ const PROTOTYPE_DAYS = [
       },
       {
         id: "d2-transfer-shinsekai",
-        time: "14:00–15:00",
-        start: "14:00",
-        end: "15:00",
+        time: "13:30–14:00",
+        start: "13:30",
+        end: "14:00",
         title: "เดินทางไป Namba Yasaka Jinja",
         titleI18n: {
           en: "Move to Namba Yasaka Jinja",
@@ -1590,9 +1590,9 @@ const PROTOTYPE_DAYS = [
       },
       {
         id: "d2-yasaka",
-        time: "15:00–15:45",
-        start: "15:00",
-        end: "15:45",
+        time: "14:00–14:45",
+        start: "14:00",
+        end: "14:45",
         title: "Namba Yasaka Jinja",
         titleI18n: {
           en: "Namba Yasaka Jinja",
@@ -1617,9 +1617,9 @@ const PROTOTYPE_DAYS = [
       },
       {
         id: "d2-shinsekai",
-        time: "16:00–17:30",
-        start: "16:00",
-        end: "17:30",
+        time: "15:00–17:00",
+        start: "15:00",
+        end: "17:00",
         title: "Shinsekai / Tsutenkaku",
         place: "Shinsekai / Tsutenkaku",
         blurb: "จาก Namba ไป Dobutsuen-mae / Ebisucho แล้วเดิน Shinsekai, Tsutenkaku, retro streets, snack เบา ๆ และถ่ายรูปช่วงไฟเริ่มเปิด",
@@ -1639,8 +1639,8 @@ const PROTOTYPE_DAYS = [
       },
       {
         id: "d2-night",
-        time: "18:00 onward",
-        start: "18:00",
+        time: "17:00 onward",
+        start: "17:00",
         end: "22:00",
         title: "Dotonbori / Hozenji / Namba Night",
         titleI18n: {
@@ -2478,11 +2478,11 @@ function applyApprovedDayDetails() {
       makeStep("d2-slow-morning", "09:00–10:00", "09:00", "10:00", "Slow Morning", "VIA INN PRIME Shinsaibashi Yotsubashi", "กาแฟ / เตรียมตัวที่โรงแรม ออกสายแบบไม่รีบ", "https://maps.google.com/?q=VIA+INN+PRIME+Shinsaibashi+Yotsubashi", "Osaka city day แบบสบาย", "วันนี้เป็น Osaka city day เดินเรื่อย ๆ ไม่ต้องเริ่มเช้ามาก", [], { titleI18n: { en: "Slow Morning", ja: "ゆっくりした朝", zh: "慢慢开始的早晨" }, blurbI18n: { en: "Coffee and light preparation at the hotel. Start the day slowly.", ja: "ホテルでコーヒーと準備。急がずゆっくり出発。", zh: "在酒店喝咖啡、轻松准备，不赶时间出发。" }, note: { th: { title: "Osaka city day แบบสบาย", body: "วันนี้เป็น Osaka city day เดินเรื่อย ๆ ไม่ต้องเริ่มเช้ามาก", list: [] }, en: { title: "Easy Osaka city start", body: "Today is an Osaka city day, so there is no need to start too early.", list: [] }, ja: { title: "ゆっくり始める日", body: "今日は大阪市内の日なので、あまり早く出る必要はありません。", list: [] }, zh: { title: "轻松开始", body: "今天是大阪市区日，不需要太早出发。", list: [] } } }),
       makeStep("d2-move-castle", "10:00–10:30", "10:00", "10:30", "Move to Osaka Castle", "Morinomiya Station", "ใช้ Osaka Metro ไปลง Morinomiya เพื่อเข้าฝั่งที่เดินน้อยสุดของ Osaka Castle Park", "https://maps.google.com/?q=Morinomiya+Station+Osaka", "เข้า park แบบเดินน้อย", "ทางนี้เดินน้อยสุดสำหรับ Osaka Castle Park", [], { titleI18n: { en: "Move to Osaka Castle", ja: "大阪城へ移動", zh: "前往大阪城" }, blurbI18n: { en: "Take Osaka Metro to Morinomiya for the easiest walking entrance to Osaka Castle Park.", ja: "大阪メトロで森ノ宮へ。大阪城公園に入りやすく、歩きやすい入口です。", zh: "搭乘大阪地铁到 Morinomiya，从这里进入大阪城公园步行较轻松。" }, note: { th: { title: "เข้า park แบบเดินน้อย", body: "ทางนี้เดินน้อยสุดสำหรับ Osaka Castle Park", list: [] }, en: { title: "Least walking entrance", body: "Morinomiya gives the easiest walking approach into Osaka Castle Park.", list: [] }, ja: { title: "歩きやすい入口", body: "森ノ宮側から入ると大阪城公園を歩きやすく回れます。", list: [] }, zh: { title: "步行较轻松的入口", body: "从 Morinomiya 一侧进入大阪城公园会比较轻松。", list: [] } } }),
       makeStep("d2-castle-park", "10:30–12:30", "10:30", "12:30", "Osaka Castle Park", "Osaka Castle Park", "เดินสวนรอบปราสาท ถ่ายรูป Osaka Castle / Gokurakubashi และไม่จำเป็นต้อง speedrun ทุก zone", "https://maps.google.com/?q=Osaka+Castle+Park", "calm daytime Osaka", "ช่วงนี้คือ calm daytime Osaka เปิดวันแบบไม่เหนื่อย", [], { titleI18n: { en: "Osaka Castle Park", ja: "大阪城公園", zh: "大阪城公园" }, blurbI18n: { en: "Walk around the castle park, take photos of Osaka Castle / Gokurakubashi, and do not try to cover every zone.", ja: "大阪城公園を散歩し、大阪城や極楽橋を撮影。すべてのエリアを急いで回る必要はありません。", zh: "在大阪城公园散步，拍大阪城 / 极乐桥，不需要赶着走完整个区域。" }, note: { th: { title: "calm daytime Osaka", body: "ช่วงนี้คือ calm daytime Osaka เปิดวันแบบไม่เหนื่อย", list: [] }, en: { title: "Calm daytime Osaka", body: "This is the calm daytime Osaka opening of the day.", list: [] }, ja: { title: "昼の落ち着いた大阪", body: "この時間帯は、穏やかな昼の大阪を感じながら始められます。", list: [] }, zh: { title: "白天平静的大阪", body: "这一段是整天最平静的大阪开场。", list: [] } } }),
-      makeStep("d2-morinomiya-lunch", "12:30–14:00", "12:30", "14:00", "Lunch at Morinomiya", "Friendship / Morinomiya", "Lunch แถว Morinomiya เช่น Friendship / local yoshoku / cafe break", "https://maps.google.com/?q=Friendship+Morinomiya+Osaka", "ยืดหยุ่นตามคิว", "ถ้าคิวเยอะ ไม่ต้องล็อคร้านตายตัว แถวนี้มีร้านให้เลือกหลายแบบ", [], { titleI18n: { en: "Lunch at Morinomiya", ja: "森ノ宮ランチ", zh: "森之宫午餐" }, blurbI18n: { en: "Lunch around Morinomiya, such as Friendship, local yoshoku, or a cafe break.", ja: "森ノ宮周辺でランチ。Friendship、洋食、カフェなど。", zh: "在森之宫附近吃午餐，例如 Friendship、本地洋食或咖啡休息。" }, note: { th: { title: "ยืดหยุ่นตามคิว", body: "ถ้าคิวเยอะ ไม่ต้องล็อคร้านตายตัว แถวนี้มีร้านให้เลือกหลายแบบ", list: [] }, en: { title: "Keep lunch flexible", body: "If there is a queue, keep it flexible. The area has several local options.", list: [] }, ja: { title: "柔軟に選ぶランチ", body: "並んでいたら店を固定せず、この周辺の選択肢から気分で選べます。", list: [] }, zh: { title: "午餐保持弹性", body: "如果排队，就不用锁定一家，这一带有不少本地选择。", list: [] } } }),
-      makeStep("d2-move-yasaka", "14:00–15:00", "14:00", "15:00", "Move to Namba Yasaka Jinja", "Namba Yasaka Jinja", "จาก Morinomiya ใช้ Osaka Metro ไป Namba area แล้วเดินต่อไป Namba Yasaka Jinja", "https://maps.google.com/?q=Namba+Yasaka+Jinja", "ไปก่อนเลี่ยงเวลาปิด", "ไปก่อนเพื่อเลี่ยงความเสี่ยงศาลเจ้าปิดประมาณ 17:00", [], { titleI18n: { en: "Move to Namba Yasaka Jinja", ja: "難波八阪神社へ移動", zh: "前往难波八阪神社" }, blurbI18n: { en: "From Morinomiya, take Osaka Metro to the Namba area, then walk to Namba Yasaka Jinja.", ja: "森ノ宮から大阪メトロでなんば方面へ移動し、難波八阪神社まで歩きます。", zh: "从森之宫搭乘大阪地铁到难波区域，再步行前往难波八阪神社。" }, note: { th: { title: "ไปก่อนเลี่ยงเวลาปิด", body: "ไปก่อนเพื่อเลี่ยงความเสี่ยงศาลเจ้าปิดประมาณ 17:00", list: [] }, en: { title: "Go before closing", body: "Visit earlier to avoid the risk of the shrine closing around 17:00.", list: [] }, ja: { title: "閉門前に向かう", body: "17:00頃の閉門リスクを避けるため、先に向かいます。", list: [] }, zh: { title: "先去避免关门风险", body: "先去可以避开神社大约 17:00 关闭的风险。", list: [] } } }),
-      makeStep("d2-yasaka", "15:00–15:45", "15:00", "15:45", "Namba Yasaka Jinja", "Namba Yasaka Jinja", "ถ่ายรูปหัวสิงโต เดินศาลเจ้า และพักขาสั้น ๆ", "https://maps.google.com/?q=Namba+Yasaka+Jinja", "บ่ายยังแสงสวย", "ช่วงบ่ายแสงยังสวยและไม่เสี่ยงเรื่องเวลาปิด", [], { titleI18n: { en: "Namba Yasaka Jinja", ja: "難波八阪神社", zh: "难波八阪神社" }, blurbI18n: { en: "Take photos of the lion head stage, walk around the shrine, and take a short rest.", ja: "獅子殿を撮影し、境内を少し歩いて休憩。", zh: "拍摄狮子头舞台，逛神社并短暂休息。" }, note: { th: { title: "บ่ายยังแสงสวย", body: "ช่วงบ่ายแสงยังสวยและไม่เสี่ยงเรื่องเวลาปิด", list: [] }, en: { title: "Good light, less risk", body: "Afternoon light still works well, and this timing avoids closing-time risk.", list: [] }, ja: { title: "まだ光がきれい", body: "午後の光もまだきれいで、閉門時間の不安も減らせます。", list: [] }, zh: { title: "下午光线仍然好", body: "这个时间段光线仍然不错，也能避开关门风险。", list: [] } } }),
-      makeStep("d2-shinsekai", "16:00–17:30", "16:00", "17:30", "Shinsekai / Tsutenkaku", "Shinsekai / Tsutenkaku", "จาก Namba ไป Dobutsuen-mae / Ebisucho แล้วเดิน Shinsekai, Tsutenkaku, retro streets, snack เบา ๆ และถ่ายรูปช่วงไฟเริ่มเปิด", "https://maps.google.com/?q=Shinsekai+Tsutenkaku+Osaka", "retro Osaka ช่วงไฟเริ่มเปิด", "Shinsekai ช่วงเย็น vibe ดีกว่าตอนบ่าย เพราะไฟเริ่มเปิดและ retro Osaka ชัดขึ้น", [], { titleI18n: { en: "Shinsekai / Tsutenkaku", ja: "新世界 / 通天閣", zh: "新世界 / 通天阁" }, blurbI18n: { en: "From Namba, move toward Dobutsuen-mae / Ebisucho, then walk Shinsekai, Tsutenkaku, retro streets, light snacks, and early evening neon photos.", ja: "なんばから動物園前 / 恵美須町方面へ移動し、新世界、通天閣、レトロな通り、軽いスナック、夕方のネオンを楽しみます。", zh: "从难波前往 Dobutsuen-mae / Ebisucho，逛新世界、通天阁、复古街道，吃点小食并拍傍晚霓虹。" }, note: { th: { title: "retro Osaka ช่วงไฟเริ่มเปิด", body: "Shinsekai ช่วงเย็น vibe ดีกว่าตอนบ่าย เพราะไฟเริ่มเปิดและ retro Osaka ชัดขึ้น", list: [] }, en: { title: "Better in early evening", body: "Shinsekai feels better in the early evening than the afternoon because the lights start turning on and the retro Osaka mood becomes stronger.", list: [] }, ja: { title: "夕方の方が雰囲気が出る", body: "新世界は午後より夕方の方が、明かりがつき始めてレトロな大阪の雰囲気が強まります。", list: [] }, zh: { title: "傍晚更有味道", body: "新世界在傍晚比下午更有感觉，因为灯光开始亮起，复古大阪的氛围更强。", list: [] } } }),
-      makeStep("d2-dotonbori", "18:00 onward", "18:00", "22:30", "Dotonbori / Hozenji / Namba Night", "Dotonbori", "เดิน Glico, Hozenji Yokocho, dinner, bar หรือ cafe ตาม mood หน้างาน", "https://maps.google.com/?q=Dotonbori+Osaka", "ปิดวันด้วย neon Osaka", "ปิดวันด้วย Osaka neon night แบบไม่ต้องเร่ง", [], { titleI18n: { en: "Dotonbori / Hozenji / Namba Night", ja: "道頓堀 / 法善寺 / なんばナイト", zh: "道顿堀 / 法善寺 / 难波夜晚" }, blurbI18n: { en: "Walk around Glico, Hozenji Yokocho, dinner, and optional bar or cafe depending on the mood.", ja: "グリコ、法善寺横丁、夕食、気分に合わせてバーやカフェへ。", zh: "逛 Glico、法善寺横丁，晚餐后可按心情去酒吧或咖啡店。" }, note: { th: { title: "ปิดวันด้วย neon Osaka", body: "ปิดวันด้วย Osaka neon night แบบไม่ต้องเร่ง", list: [] }, en: { title: "End with Osaka neon", body: "End the day with Osaka neon night without rushing.", list: [] }, ja: { title: "ネオンの大阪で締める", body: "急がずに、大阪らしいネオンの夜で1日を締めます。", list: [] }, zh: { title: "用大阪霓虹夜收尾", body: "不赶时间地用大阪霓虹夜晚为这一天收尾。", list: [] } } }),
+      makeStep("d2-morinomiya-lunch", "12:30–13:30", "12:30", "13:30", "Lunch at Morinomiya", "Friendship / Morinomiya", "Lunch แถว Morinomiya เช่น Friendship / local yoshoku / cafe break", "https://maps.google.com/?q=Friendship+Morinomiya+Osaka", "ยืดหยุ่นตามคิว", "ถ้าคิวเยอะ ไม่ต้องล็อคร้านตายตัว แถวนี้มีร้านให้เลือกหลายแบบ", [], { titleI18n: { en: "Lunch at Morinomiya", ja: "森ノ宮ランチ", zh: "森之宫午餐" }, blurbI18n: { en: "Lunch around Morinomiya, such as Friendship, local yoshoku, or a cafe break.", ja: "森ノ宮周辺でランチ。Friendship、洋食、カフェなど。", zh: "在森之宫附近吃午餐，例如 Friendship、本地洋食或咖啡休息。" }, note: { th: { title: "ยืดหยุ่นตามคิว", body: "ถ้าคิวเยอะ ไม่ต้องล็อคร้านตายตัว แถวนี้มีร้านให้เลือกหลายแบบ", list: [] }, en: { title: "Keep lunch flexible", body: "If there is a queue, keep it flexible. The area has several local options.", list: [] }, ja: { title: "柔軟に選ぶランチ", body: "並んでいたら店を固定せず、この周辺の選択肢から気分で選べます。", list: [] }, zh: { title: "午餐保持弹性", body: "如果排队，就不用锁定一家，这一带有不少本地选择。", list: [] } } }),
+      makeStep("d2-move-yasaka", "13:30–14:00", "13:30", "14:00", "Move to Namba Yasaka Jinja", "Namba Yasaka Jinja", "จาก Morinomiya ใช้ Osaka Metro ไป Namba area แล้วเดินต่อไป Namba Yasaka Jinja", "https://maps.google.com/?q=Namba+Yasaka+Jinja", "ไปก่อนเลี่ยงเวลาปิด", "ไปก่อนเพื่อเลี่ยงความเสี่ยงศาลเจ้าปิดประมาณ 17:00", [], { titleI18n: { en: "Move to Namba Yasaka Jinja", ja: "難波八阪神社へ移動", zh: "前往难波八阪神社" }, blurbI18n: { en: "From Morinomiya, take Osaka Metro to the Namba area, then walk to Namba Yasaka Jinja.", ja: "森ノ宮から大阪メトロでなんば方面へ移動し、難波八阪神社まで歩きます。", zh: "从森之宫搭乘大阪地铁到难波区域，再步行前往难波八阪神社。" }, note: { th: { title: "ไปก่อนเลี่ยงเวลาปิด", body: "ไปก่อนเพื่อเลี่ยงความเสี่ยงศาลเจ้าปิดประมาณ 17:00", list: [] }, en: { title: "Go before closing", body: "Visit earlier to avoid the risk of the shrine closing around 17:00.", list: [] }, ja: { title: "閉門前に向かう", body: "17:00頃の閉門リスクを避けるため、先に向かいます。", list: [] }, zh: { title: "先去避免关门风险", body: "先去可以避开神社大约 17:00 关闭的风险。", list: [] } } }),
+      makeStep("d2-yasaka", "14:00–14:45", "14:00", "14:45", "Namba Yasaka Jinja", "Namba Yasaka Jinja", "ถ่ายรูปหัวสิงโต เดินศาลเจ้า และพักขาสั้น ๆ", "https://maps.google.com/?q=Namba+Yasaka+Jinja", "บ่ายยังแสงสวย", "ช่วงบ่ายแสงยังสวยและไม่เสี่ยงเรื่องเวลาปิด", [], { titleI18n: { en: "Namba Yasaka Jinja", ja: "難波八阪神社", zh: "难波八阪神社" }, blurbI18n: { en: "Take photos of the lion head stage, walk around the shrine, and take a short rest.", ja: "獅子殿を撮影し、境内を少し歩いて休憩。", zh: "拍摄狮子头舞台，逛神社并短暂休息。" }, note: { th: { title: "บ่ายยังแสงสวย", body: "ช่วงบ่ายแสงยังสวยและไม่เสี่ยงเรื่องเวลาปิด", list: [] }, en: { title: "Good light, less risk", body: "Afternoon light still works well, and this timing avoids closing-time risk.", list: [] }, ja: { title: "まだ光がきれい", body: "午後の光もまだきれいで、閉門時間の不安も減らせます。", list: [] }, zh: { title: "下午光线仍然好", body: "这个时间段光线仍然不错，也能避开关门风险。", list: [] } } }),
+      makeStep("d2-shinsekai", "15:00–17:00", "15:00", "17:00", "Shinsekai / Tsutenkaku", "Shinsekai / Tsutenkaku", "จาก Namba ไป Dobutsuen-mae / Ebisucho แล้วเดิน Shinsekai, Tsutenkaku, retro streets, snack เบา ๆ และถ่ายรูปช่วงไฟเริ่มเปิด", "https://maps.google.com/?q=Shinsekai+Tsutenkaku+Osaka", "retro Osaka ช่วงไฟเริ่มเปิด", "Shinsekai ช่วงเย็น vibe ดีกว่าตอนบ่าย เพราะไฟเริ่มเปิดและ retro Osaka ชัดขึ้น", [], { titleI18n: { en: "Shinsekai / Tsutenkaku", ja: "新世界 / 通天閣", zh: "新世界 / 通天阁" }, blurbI18n: { en: "From Namba, move toward Dobutsuen-mae / Ebisucho, then walk Shinsekai, Tsutenkaku, retro streets, light snacks, and early evening neon photos.", ja: "なんばから動物園前 / 恵美須町方面へ移動し、新世界、通天閣、レトロな通り、軽いスナック、夕方のネオンを楽しみます。", zh: "从难波前往 Dobutsuen-mae / Ebisucho，逛新世界、通天阁、复古街道，吃点小食并拍傍晚霓虹。" }, note: { th: { title: "retro Osaka ช่วงไฟเริ่มเปิด", body: "Shinsekai ช่วงเย็น vibe ดีกว่าตอนบ่าย เพราะไฟเริ่มเปิดและ retro Osaka ชัดขึ้น", list: [] }, en: { title: "Better in early evening", body: "Shinsekai feels better in the early evening than the afternoon because the lights start turning on and the retro Osaka mood becomes stronger.", list: [] }, ja: { title: "夕方の方が雰囲気が出る", body: "新世界は午後より夕方の方が、明かりがつき始めてレトロな大阪の雰囲気が強まります。", list: [] }, zh: { title: "傍晚更有味道", body: "新世界在傍晚比下午更有感觉，因为灯光开始亮起，复古大阪的氛围更强。", list: [] } } }),
+      makeStep("d2-dotonbori", "17:00 onward", "17:00", "22:30", "Dotonbori / Hozenji / Namba Night", "Dotonbori", "เดิน Glico, Hozenji Yokocho, dinner, bar หรือ cafe ตาม mood หน้างาน", "https://maps.google.com/?q=Dotonbori+Osaka", "ปิดวันด้วย neon Osaka", "ปิดวันด้วย Osaka neon night แบบไม่ต้องเร่ง", [], { titleI18n: { en: "Dotonbori / Hozenji / Namba Night", ja: "道頓堀 / 法善寺 / なんばナイト", zh: "道顿堀 / 法善寺 / 难波夜晚" }, blurbI18n: { en: "Walk around Glico, Hozenji Yokocho, dinner, and optional bar or cafe depending on the mood.", ja: "グリコ、法善寺横丁、夕食、気分に合わせてバーやカフェへ。", zh: "逛 Glico、法善寺横丁，晚餐后可按心情去酒吧或咖啡店。" }, note: { th: { title: "ปิดวันด้วย neon Osaka", body: "ปิดวันด้วย Osaka neon night แบบไม่ต้องเร่ง", list: [] }, en: { title: "End with Osaka neon", body: "End the day with Osaka neon night without rushing.", list: [] }, ja: { title: "ネオンの大阪で締める", body: "急がずに、大阪らしいネオンの夜で1日を締めます。", list: [] }, zh: { title: "用大阪霓虹夜收尾", body: "不赶时间地用大阪霓虹夜晚为这一天收尾。", list: [] } } }),
     ],
   });
 
@@ -2928,6 +2928,7 @@ function parseTimeToMinutes(value) {
 }
 
 function getDateKey(date, timeZone) {
+  if (date?.__previewDateKey) return date.__previewDateKey;
   return new Intl.DateTimeFormat("en-CA", {
     year: "numeric",
     month: "2-digit",
@@ -2937,6 +2938,7 @@ function getDateKey(date, timeZone) {
 }
 
 function getMinutesInZone(date, timeZone) {
+  if (typeof date?.__previewMinutes === "number") return date.__previewMinutes;
   const parts = new Intl.DateTimeFormat("en-GB", {
     hour: "2-digit",
     minute: "2-digit",
@@ -2950,6 +2952,7 @@ function getMinutesInZone(date, timeZone) {
 }
 
 function formatTimeLabel(date, lang = currentPageLang, timeZone = "Asia/Tokyo") {
+  if (date?.__previewTimeLabel) return date.__previewTimeLabel;
   return date.toLocaleTimeString(LOCALE_MAP[lang], {
     hour: "2-digit",
     minute: "2-digit",
@@ -2969,6 +2972,36 @@ function formatDayDateLabel(day, lang = currentPageLang) {
   }).format(date);
 }
 
+function parsePreviewDate(rawValue) {
+  if (!rawValue) return null;
+
+  const hasExplicitOffset = /(?:[zZ]|[+-]\d{2}:\d{2})$/.test(rawValue);
+  if (hasExplicitOffset) {
+    const explicit = new Date(rawValue);
+    return Number.isNaN(explicit.getTime()) ? null : explicit;
+  }
+
+  const naiveMatch = rawValue.match(
+    /^(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2})(?::(\d{2}))?$/,
+  );
+  if (!naiveMatch) return null;
+
+  const [, year, month, day, hour, minute, second = "00"] = naiveMatch;
+  const parsed = new Date(
+    Number(year),
+    Number(month) - 1,
+    Number(day),
+    Number(hour),
+    Number(minute),
+    Number(second),
+  );
+  parsed.__previewDateKey = `${year}-${month}-${day}`;
+  parsed.__previewMinutes = Number(hour) * 60 + Number(minute);
+  parsed.__previewTimeLabel = `${hour}:${minute}`;
+  parsed.__previewNaive = true;
+  return parsed;
+}
+
 function setActiveButtonState(selector, value, attributeName) {
   document.querySelectorAll(selector).forEach((button) => {
     button.classList.toggle("is-active", button.getAttribute(attributeName) === value);
@@ -2978,8 +3011,8 @@ function setActiveButtonState(selector, value, attributeName) {
 function normalizePreviewValue(rawValue) {
   if (!rawValue) return null;
   const normalized = rawValue.replace(" ", "+");
-  const parsed = new Date(normalized);
-  return Number.isNaN(parsed.getTime()) ? null : normalized;
+  const parsed = parsePreviewDate(normalized);
+  return !parsed || Number.isNaN(parsed.getTime()) ? null : normalized;
 }
 
 function getPreviewOverride() {
@@ -2992,10 +3025,10 @@ function getPreviewOverride() {
   const fromQuery = normalizePreviewValue(queryValue);
   if (fromQuery) {
     localStorage.setItem(PREVIEW_STORAGE_KEY, fromQuery);
-    return new Date(fromQuery);
+    return parsePreviewDate(fromQuery);
   }
   const stored = normalizePreviewValue(localStorage.getItem(PREVIEW_STORAGE_KEY));
-  return stored ? new Date(stored) : null;
+  return stored ? parsePreviewDate(stored) : null;
 }
 
 function getDefaultDetailDay() {
