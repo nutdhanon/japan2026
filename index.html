@@ -104,6 +104,32 @@
             <strong data-i18n="quickMenu.title">เมนูด่วน</strong>
           </div>
           <div class="quick-menu-chip-list" id="quick-menu-chip-list"></div>
+          <div class="quick-sections-panel" id="quick-sections-panel" hidden>
+            <div class="quick-sections-handle" aria-hidden="true"></div>
+            <div class="quick-sections-heading">
+              <strong data-i18n="quickSections.title">เมนูลัดด่วน</strong>
+              <p data-i18n="quickSections.subtitle">เลือกหมวดที่ต้องการ</p>
+            </div>
+            <div class="quick-sections-list" id="quick-sections-list"></div>
+          </div>
+          <div class="floating-lang-options" id="floating-lang-options" hidden>
+            <button type="button" class="floating-lang-option is-active" data-lang="th">
+              <span class="page-lang-flag" aria-hidden="true">🇹🇭</span>
+              <span>ไทย</span>
+            </button>
+            <button type="button" class="floating-lang-option" data-lang="en">
+              <span class="page-lang-flag" aria-hidden="true">🇬🇧</span>
+              <span>English</span>
+            </button>
+            <button type="button" class="floating-lang-option" data-lang="ja">
+              <span class="page-lang-flag" aria-hidden="true">🇯🇵</span>
+              <span>日本語</span>
+            </button>
+            <button type="button" class="floating-lang-option" data-lang="zh">
+              <span class="page-lang-flag" aria-hidden="true">🇨🇳</span>
+              <span>中文</span>
+            </button>
+          </div>
           <p class="quick-menu-note" data-i18n="quickMenu.note">
             แตะเพื่อกระโดดไปยังวันนั้น หรือกด SOS เพื่อดูเบอร์ติดต่อฉุกเฉิน
           </p>
@@ -325,7 +351,7 @@
           </div>
 
           <div class="intel-grid">
-            <article class="intel-card">
+            <article class="intel-card" id="intel-transport">
               <span class="intel-index">01</span>
               <h3 data-i18n="intel.cards.transport.title">บัตรเดินทาง</h3>
               <ul class="intel-list">
@@ -344,7 +370,7 @@
               </ul>
             </article>
 
-            <article class="intel-card">
+            <article class="intel-card" id="intel-cash-card">
               <span class="intel-index">02</span>
               <h3 data-i18n="intel.cards.costs.title">สรุปงบหลัก ไม่รวม flight / hotel / shopping</h3>
               <div class="intel-totals">

@@ -64,11 +64,11 @@ const DAY_SHORT_TITLES = {
     "day-0": "คืนทรานซิตที่ไทเป",
     "day-1": "เริ่มต้นโอซากะ",
     "day-2": "Classic Local Osaka",
-    "day-3": "เกียวโตสาย heritage",
-    "day-4": "Minoh & Katsuoji",
+    "day-3": "Kyoto Heritage",
+    "day-4": "Katsuoji + Minoh Falls",
     "day-5": "Flexible Day",
     "day-6": "วันช็อปหลังย้าย",
-    "day-7": "Kobe & Ikuta",
+    "day-7": "Kobe Slow Port City",
     "day-8": "เดินทางกลับ",
   },
   en: {
@@ -76,10 +76,10 @@ const DAY_SHORT_TITLES = {
     "day-1": "Ease into Osaka",
     "day-2": "Classic Local Osaka",
     "day-3": "Kyoto Heritage",
-    "day-4": "Minoh & Katsuoji",
+    "day-4": "Katsuoji + Minoh Falls",
     "day-5": "Flexible Day",
     "day-6": "Shopping Day",
-    "day-7": "Kobe & Ikuta",
+    "day-7": "Kobe Slow Port City",
     "day-8": "Fly Home",
   },
   ja: {
@@ -87,10 +87,10 @@ const DAY_SHORT_TITLES = {
     "day-1": "大阪の始まり",
     "day-2": "大阪ローカル日",
     "day-3": "京都ヘリテージ",
-    "day-4": "箕面と勝尾寺",
+    "day-4": "勝尾寺 + 箕面大滝",
     "day-5": "選べる1日",
     "day-6": "ショッピング日",
-    "day-7": "神戸と生田神社",
+    "day-7": "神戸スローポートシティ",
     "day-8": "帰国日",
   },
   zh: {
@@ -98,10 +98,10 @@ const DAY_SHORT_TITLES = {
     "day-1": "慢慢进入大阪",
     "day-2": "大阪在地日",
     "day-3": "京都文化日",
-    "day-4": "箕面与胜尾寺",
+    "day-4": "胜尾寺 + 箕面瀑布",
     "day-5": "Flexible Day",
     "day-6": "购物日",
-    "day-7": "神户与生田",
+    "day-7": "神户慢步港口城市",
     "day-8": "返程日",
   },
 };
@@ -121,9 +121,20 @@ const I18N = {
     "nav.help": "Help Mode",
     "nav.contacts": "ฉุกเฉิน",
     "quickMenu.title": "เมนูด่วน",
+    "quickMenu.menu": "☰ เมนู",
     "quickMenu.today": "วันนี้",
     "quickMenu.sos": "SOS",
     "quickMenu.note": "แตะเพื่อกระโดดไปยังวันนั้น หรือกด SOS เพื่อดูเบอร์ติดต่อฉุกเฉิน",
+    "quickSections.title": "เมนูลัดด่วน",
+    "quickSections.subtitle": "เลือกหมวดที่ต้องการ",
+    "quickSections.flights": "เที่ยวบิน",
+    "quickSections.overview": "ภาพรวมทั้งทริป",
+    "quickSections.intel": "เตรียมตัว",
+    "quickSections.highlights": "ไฮไลต์",
+    "quickSections.dayDetails": "รายละเอียดรายวัน",
+    "quickSections.transport": "ตารางเดินทางแบบเข้าใจง่าย",
+    "quickSections.cash": "เงินสด / บัตร",
+    "quickSections.emergency": "ฉุกเฉิน / SOS",
     "countdown.heading.label": "นับถอยหลัง",
     "countdown.heading.title": "เหลือเวลาอีกนิดก่อนจะเข้าสู่จังหวะของโอซากะจริง ๆ",
     "countdown.helper.before": "ตอนนี้ยังเป็นช่วงเตรียมตัวอยู่ เราจึงโชว์เวลาแบบ countdown ให้ก่อน",
@@ -170,29 +181,29 @@ const I18N = {
     "overview.day2.title": "แลนด์มาร์กหลักของโอซากะ",
     "overview.day2.body": "Castle Park → Morinomiya lunch → Shinsekai → Dotonbori",
     "overview.day3.label": "วันที่ 3",
-    "overview.day3.title": "เกียวโตสาย heritage",
-    "overview.day3.body": "To-ji → Fushimi Inari → Gion",
+    "overview.day3.title": "Kyoto Heritage",
+    "overview.day3.body": "Toji → Ajikun → Fushimi Inari → Kiyomizu → Gion",
     "overview.day4.label": "วันที่ 4",
-    "overview.day4.title": "Minoh & Katsuoji",
-    "overview.day4.body": "ธรรมชาติ → วัดดารุมะ",
+    "overview.day4.title": "Katsuoji + Minoh Falls",
+    "overview.day4.body": "วัดดารุมะ → scenic downhill → น้ำตก → กลับ Osaka",
     "overview.day5.label": "วันที่ 5",
     "overview.day5.title": "เลือกจังหวะของวันนี้",
     "overview.day5.body": "Gamba / Uji → Osaka evening",
     "day5.switcher.label": "เลือกจังหวะของวันนี้",
     "day5.switcher.planA": "Plan A",
     "day5.switcher.planB": "Plan B",
-    "day5.switcher.planA.title": "Gamba + ExpoCity",
-    "day5.switcher.planB.title": "Uji + Matcha",
-    "day5.switcher.planA.mood": "ฟุตบอล + Rose Festa + shopping",
-    "day5.switcher.planB.mood": "ชาเขียว + Byodo-in + Uji River",
-    "day5.switcher.planA.cost": "ประมาณ ¥8,500–11,000",
-    "day5.switcher.planB.cost": "ประมาณ ¥9,000–12,000",
+    "day5.switcher.planA.title": "Uji Slow Tea Day",
+    "day5.switcher.planB.title": "Gamba + Rose Festa + ExpoCity",
+    "day5.switcher.planA.mood": "ชาเขียว + Byodo-in + Uji River",
+    "day5.switcher.planB.mood": "ฟุตบอล + Rose Festa + shopping",
+    "day5.switcher.planA.cost": "ประมาณ ¥9,000–12,000",
+    "day5.switcher.planB.cost": "ประมาณ ¥8,500–11,000",
     "overview.day6.label": "วันที่ 6",
     "overview.day6.title": "วันช็อปหลังย้ายโรงแรม",
     "overview.day6.body": "Namba → Shinsaibashi → PARCO",
     "overview.day7.label": "วันที่ 7",
-    "overview.day7.title": "วันโกเบแบบผู้ใหญ่และไม่เร่งรีบ",
-    "overview.day7.body": "Ikuta → Kitano → Harborland",
+    "overview.day7.title": "Kobe Slow Port City",
+    "overview.day7.body": "Ikuta → Kitano → Kobe Beef → Harborland",
     "overview.day8.label": "วันที่ 8",
     "overview.day8.title": "เดินทางกลับแบบไม่รีบ",
     "overview.day8.body": "Namba → KIX → TPE → BKK",
@@ -353,9 +364,20 @@ const I18N = {
     "nav.help": "Help Mode",
     "nav.contacts": "Contacts",
     "quickMenu.title": "Quick menu",
+    "quickMenu.menu": "☰ Menu",
     "quickMenu.today": "Today",
     "quickMenu.sos": "SOS",
     "quickMenu.note": "Tap to jump to a day, or tap SOS for emergency contacts",
+    "quickSections.title": "Quick Sections",
+    "quickSections.subtitle": "Choose a section",
+    "quickSections.flights": "Flights",
+    "quickSections.overview": "Trip overview",
+    "quickSections.intel": "Trip intel",
+    "quickSections.highlights": "Highlights",
+    "quickSections.dayDetails": "Day details",
+    "quickSections.transport": "Transportation Cheat Sheet",
+    "quickSections.cash": "Cash / Card Guide",
+    "quickSections.emergency": "Emergency / SOS",
     "countdown.heading.label": "Countdown",
     "countdown.heading.title": "Only a little longer before the rhythm of Osaka begins for real.",
     "countdown.helper.before": "For now, we are still in preparation mode, so the page shows a countdown first.",
@@ -402,29 +424,29 @@ const I18N = {
     "overview.day2.title": "Osaka Landmarks + Local Yoshoku",
     "overview.day2.body": "Castle Park → Morinomiya lunch → Shinsekai → Dotonbori",
     "overview.day3.label": "Day 3",
-    "overview.day3.title": "Kyoto heritage",
-    "overview.day3.body": "To-ji → Fushimi Inari → Gion",
+    "overview.day3.title": "Kyoto Heritage",
+    "overview.day3.body": "Toji → Ajikun → Fushimi Inari → Kiyomizu → Gion",
     "overview.day4.label": "Day 4",
-    "overview.day4.title": "Minoh & Katsuoji",
-    "overview.day4.body": "Nature → daruma temple",
+    "overview.day4.title": "Katsuoji + Minoh Falls",
+    "overview.day4.body": "Daruma temple → scenic downhill → waterfall → Osaka",
     "overview.day5.label": "Day 5",
     "overview.day5.title": "Choose today's rhythm",
     "overview.day5.body": "Gamba / Uji → Osaka evening",
     "day5.switcher.label": "Choose today’s rhythm",
     "day5.switcher.planA": "Plan A",
     "day5.switcher.planB": "Plan B",
-    "day5.switcher.planA.title": "Gamba + ExpoCity",
-    "day5.switcher.planB.title": "Uji + Matcha",
-    "day5.switcher.planA.mood": "Football + Rose Festa + shopping",
-    "day5.switcher.planB.mood": "Matcha + Byodo-in + Uji River",
-    "day5.switcher.planA.cost": "Approx. ¥8,500–11,000",
-    "day5.switcher.planB.cost": "Approx. ¥9,000–12,000",
+    "day5.switcher.planA.title": "Uji Slow Tea Day",
+    "day5.switcher.planB.title": "Gamba + Rose Festa + ExpoCity",
+    "day5.switcher.planA.mood": "Matcha + Byodo-in + Uji River",
+    "day5.switcher.planB.mood": "Football + Rose Festa + shopping",
+    "day5.switcher.planA.cost": "Approx. ¥9,000–12,000",
+    "day5.switcher.planB.cost": "Approx. ¥8,500–11,000",
     "overview.day6.label": "Day 6",
     "overview.day6.title": "Shopping after the hotel move",
     "overview.day6.body": "Namba → Shinsaibashi → PARCO",
     "overview.day7.label": "Day 7",
-    "overview.day7.title": "A mature, unhurried day in Kobe",
-    "overview.day7.body": "Ikuta → Kitano → Harborland",
+    "overview.day7.title": "Kobe Slow Port City",
+    "overview.day7.body": "Ikuta → Kitano → Kobe Beef → Harborland",
     "overview.day8.label": "Day 8",
     "overview.day8.title": "Fly home softly",
     "overview.day8.body": "Namba → KIX → TPE → BKK",
@@ -585,9 +607,20 @@ const I18N = {
     "nav.help": "Help Mode",
     "nav.contacts": "緊急連絡",
     "quickMenu.title": "クイックメニュー",
+    "quickMenu.menu": "☰ メニュー",
     "quickMenu.today": "今日",
     "quickMenu.sos": "SOS",
     "quickMenu.note": "日を選んでジャンプ、SOSで緊急連絡先へ",
+    "quickSections.title": "クイックセクション",
+    "quickSections.subtitle": "見たい項目を選ぶ",
+    "quickSections.flights": "フライト",
+    "quickSections.overview": "旅の全体像",
+    "quickSections.intel": "準備情報",
+    "quickSections.highlights": "ハイライト",
+    "quickSections.dayDetails": "日別詳細",
+    "quickSections.transport": "交通早見表",
+    "quickSections.cash": "現金 / カード",
+    "quickSections.emergency": "緊急 / SOS",
     "countdown.heading.label": "カウントダウン",
     "countdown.heading.title": "大阪のリズムが本当に始まるまで、あと少しです。",
     "countdown.helper.before": "まだ出発前の準備期間なので、まずはカウントダウンを表示しています。",
@@ -633,30 +666,30 @@ const I18N = {
     "overview.day2.label": "2日目",
     "overview.day2.title": "大阪ランドマーク + 洋食ランチ",
     "overview.day2.body": "大阪城公園 → 森ノ宮ランチ → 新世界 → 道頓堀",
-    "overview.day3.label": "Day 3",
+    "overview.day3.label": "3日目",
     "overview.day3.title": "京都ヘリテージ",
-    "overview.day3.body": "To-ji → Fushimi Inari → Gion",
+    "overview.day3.body": "東寺 → 味君 → 伏見稲荷 → 清水寺 → 祇園",
     "overview.day4.label": "Day 4",
-    "overview.day4.title": "Minoh & Katsuoji",
-    "overview.day4.body": "自然 → だるま寺",
+    "overview.day4.title": "勝尾寺 + 箕面大滝",
+    "overview.day4.body": "だるま寺 → 下りの絶景道 → 滝 → 大阪へ",
     "overview.day5.label": "5日目",
     "overview.day5.title": "今日の過ごし方を選ぶ",
     "overview.day5.body": "Gamba / 宇治 → 大阪の夜",
     "day5.switcher.label": "今日の過ごし方を選ぶ",
     "day5.switcher.planA": "Plan A",
     "day5.switcher.planB": "Plan B",
-    "day5.switcher.planA.title": "ガンバ大阪 + ExpoCity",
-    "day5.switcher.planB.title": "宇治 + 抹茶",
-    "day5.switcher.planA.mood": "サッカー + Rose Festa + ショッピング",
-    "day5.switcher.planB.mood": "抹茶 + 平等院 + 宇治川",
-    "day5.switcher.planA.cost": "約 ¥8,500–11,000",
-    "day5.switcher.planB.cost": "約 ¥9,000–12,000",
+    "day5.switcher.planA.title": "宇治スローティーデイ",
+    "day5.switcher.planB.title": "ガンバ大阪 + Rose Festa + ExpoCity",
+    "day5.switcher.planA.mood": "抹茶 + 平等院 + 宇治川",
+    "day5.switcher.planB.mood": "サッカー + Rose Festa + ショッピング",
+    "day5.switcher.planA.cost": "約 ¥9,000–12,000",
+    "day5.switcher.planB.cost": "約 ¥8,500–11,000",
     "overview.day6.label": "Day 6",
     "overview.day6.title": "ホテル移動後のショッピング",
     "overview.day6.body": "Namba → Shinsaibashi → PARCO",
     "overview.day7.label": "Day 7",
-    "overview.day7.title": "大人のための、ゆっくりした神戸の日",
-    "overview.day7.body": "Ikuta → Kitano → Harborland",
+    "overview.day7.title": "神戸スローポートシティ",
+    "overview.day7.body": "生田神社 → 北野 → 神戸ビーフ → ハーバーランド",
     "overview.day8.label": "Day 8",
     "overview.day8.title": "静かに帰路へ",
     "overview.day8.body": "Namba → KIX → TPE → BKK",
@@ -817,9 +850,20 @@ const I18N = {
     "nav.help": "Help Mode",
     "nav.contacts": "紧急联系",
     "quickMenu.title": "快捷菜单",
+    "quickMenu.menu": "☰ 菜单",
     "quickMenu.today": "今天",
     "quickMenu.sos": "SOS",
     "quickMenu.note": "点击跳转到当天，或点击 SOS 查看紧急联系方式",
+    "quickSections.title": "快捷分区",
+    "quickSections.subtitle": "选择要查看的内容",
+    "quickSections.flights": "航班",
+    "quickSections.overview": "整趟总览",
+    "quickSections.intel": "出发准备",
+    "quickSections.highlights": "亮点",
+    "quickSections.dayDetails": "每日详情",
+    "quickSections.transport": "交通速查表",
+    "quickSections.cash": "现金 / 信用卡",
+    "quickSections.emergency": "紧急 / SOS",
     "countdown.heading.label": "倒数计时",
     "countdown.heading.title": "距离真正进入 Osaka 的节奏，只剩一点点时间了。",
     "countdown.helper.before": "现在还处于出发前准备阶段，所以这里先显示倒数计时。",
@@ -865,30 +909,30 @@ const I18N = {
     "overview.day2.label": "第2天",
     "overview.day2.title": "大阪地标 + 日式洋食午餐",
     "overview.day2.body": "大阪城公园 → 森之宫午餐 → 新世界 → 道顿堀",
-    "overview.day3.label": "第 3 天",
-    "overview.day3.title": "京都 heritage 日",
-    "overview.day3.body": "To-ji → Fushimi Inari → Gion",
+    "overview.day3.label": "第3天",
+    "overview.day3.title": "京都文化日",
+    "overview.day3.body": "东寺 → Ajikun → 伏见稻荷 → 清水寺 → 祇园",
     "overview.day4.label": "第 4 天",
-    "overview.day4.title": "Minoh & Katsuoji",
-    "overview.day4.body": "自然 → 达摩寺",
+    "overview.day4.title": "胜尾寺 + 箕面瀑布",
+    "overview.day4.body": "达摩寺 → 下坡风景步道 → 瀑布 → 返回大阪",
     "overview.day5.label": "第5天",
     "overview.day5.title": "选择今天的节奏",
     "overview.day5.body": "Gamba / 宇治 → 大阪夜晚",
     "day5.switcher.label": "选择今天的节奏",
     "day5.switcher.planA": "Plan A",
     "day5.switcher.planB": "Plan B",
-    "day5.switcher.planA.title": "Gamba + ExpoCity",
-    "day5.switcher.planB.title": "Uji + Matcha",
-    "day5.switcher.planA.mood": "足球 + Rose Festa + 购物",
-    "day5.switcher.planB.mood": "抹茶 + 平等院 + 宇治川",
-    "day5.switcher.planA.cost": "约 ¥8,500–11,000",
-    "day5.switcher.planB.cost": "约 ¥9,000–12,000",
+    "day5.switcher.planA.title": "Uji Slow Tea Day",
+    "day5.switcher.planB.title": "Gamba + Rose Festa + ExpoCity",
+    "day5.switcher.planA.mood": "抹茶 + 平等院 + 宇治川",
+    "day5.switcher.planB.mood": "足球 + Rose Festa + 购物",
+    "day5.switcher.planA.cost": "约 ¥9,000–12,000",
+    "day5.switcher.planB.cost": "约 ¥8,500–11,000",
     "overview.day6.label": "第 6 天",
     "overview.day6.title": "换酒店后的购物日",
     "overview.day6.body": "Namba → Shinsaibashi → PARCO",
     "overview.day7.label": "第 7 天",
-    "overview.day7.title": "成熟而从容的神户一天",
-    "overview.day7.body": "Ikuta → Kitano → Harborland",
+    "overview.day7.title": "神户慢步港口城市",
+    "overview.day7.body": "生田神社 → 北野 → 神户牛 → Harborland",
     "overview.day8.label": "第 8 天",
     "overview.day8.title": "从容返程",
     "overview.day8.body": "Namba → KIX → TPE → BKK",
@@ -1632,57 +1676,56 @@ const PROTOTYPE_DAYS = [
     dateIso: "2026-05-19",
     timeZone: "Asia/Tokyo",
     date: "อังคาร 19 พฤษภาคม 2026",
-    title: "Kyoto Slow Heritage Day",
-    route: "To-ji → Fushimi Inari → Kiyomizu → Gion",
+    title: "Kyoto Heritage Evening",
+    route: "Osaka → Kyoto Station → Toji → Ajikun → Fushimi Inari → Kiyomizu → Gion",
     hotel: "VIA INN PRIME Shinsaibashi Yotsubashi",
-    summary: "วัน heritage ที่ตั้งใจให้ค่อย ๆ ละเอียดมากกว่าวิ่งเก็บ เริ่มด้วยวัด กาแฟ ขึ้นเขา แล้วปิดด้วย Gion",
-    previewNow: "2026-05-19T14:20:00+09:00",
-    previewNote: "ตั้งเวลาไว้ก่อนเริ่ม Ninenzaka เพื่อให้เห็น marker ช่วงที่กำลังเข้าบทสวยที่สุดของเกียวโต",
+    summary: "Kyoto iconic classics with optimized walking flow and atmospheric evening pacing.",
+    previewNow: "2026-05-19T16:30:00+09:00",
+    previewNote: "ตั้งเวลาไว้ช่วง Higashiyama evening flow เพื่อให้เห็น marker ในช่วงบ่ายแก่ของเกียวโต",
     events: [
       {
         id: "d3-morning",
-        time: "08:45–11:30",
-        start: "08:45",
-        end: "11:30",
-        title: "Osaka → To-ji → Kurasu Kyoto",
+        time: "09:00–12:00",
+        start: "09:00",
+        end: "12:00",
+        title: "Osaka → Kyoto Station → Toji → Ajikun",
         place: "Kyoto Morning",
-        blurb: "ออกจากโอซากะ ขึ้นมาที่ To-ji แล้วคั่นด้วยกาแฟที่ Kurasu เพื่อให้วันเปิดอย่างสงบและมีน้ำหนักภาพ",
-        map: "https://maps.google.com/?q=Toji+Temple+Kyoto",
-        website: "https://kurasu.kyoto/",
-        note: { th: { title: "เช้าของเกียวโต", body: "วัดและกาแฟทำหน้าที่ตั้ง mood ให้ทั้งวันได้ดีมาก", list: ["ไม่ควรรีบเกินไป", "เช้านี้คือบทเปิดของวัน heritage"] } },
+        blurb: "เริ่มด้วย JR Special Rapid ไป Kyoto Station ต่อ Toji แล้วกิน Ajikun brunch ก่อนช่วงเดินหลัก",
+        map: "https://maps.google.com/?q=Kyoto+Station",
+        note: { th: { title: "morning flow", body: "Toji ก่อน Ajikun ทำให้เช้าเกียวโตเดินง่ายและไม่เร่งเกินไป", list: ["ICOCA ใช้ได้", "Ajikun เตรียมเงินสด"] } },
       },
       {
         id: "d3-inari",
-        time: "12:00–13:45",
-        start: "12:00",
-        end: "13:45",
-        title: "Fushimi Inari + Taxi ไป Higashiyama",
+        time: "12:15–15:00",
+        start: "12:15",
+        end: "15:00",
+        title: "Fushimi Inari + Taxi to Kiyomizu",
         place: "Inari",
-        blurb: "เดินเฉพาะช่วงต้นของเสาโทริอิ แล้วใช้ taxi ช่วยย้ายแรงไปย่านถัดไปอย่างนุ่มขึ้น",
-        map: "https://maps.google.com/?q=Fushimi+Inari+Taisha",
-        note: { th: { title: "เลือกใช้แรงอย่างฉลาด", body: "วันนี้ไม่ต้องพิสูจน์ตัวเองด้วยการเดินทุกช่วง การใช้ taxi ทำให้คุณภาพวันดีขึ้น", list: ["อยู่ Inari แค่ช่วงต้นก็พอ", "เก็บแรงไว้ให้ Higashiyama และ Gion"] } },
+        blurb: "เดิน Tower Gate → Senbon Torii → Yotsutsuji แล้วกลับลงมา จากนั้นใช้ taxi ไป Kiyomizu area",
+        map: "https://maps.google.com/?q=Fushimi+Inari+Shrine+Tower+Gate",
+        note: { th: { title: "ใช้แรงให้คุ้ม", body: "Yotsutsuji คือจุดกลับตัวที่เหมาะ และ taxi ไป Kiyomizu ช่วยตัด uphill fatigue", list: ["ไม่ต้อง summit", "เก็บแรงไว้ Higashiyama / Gion"] } },
       },
       {
         id: "d3-higashiyama",
-        time: "14:00–16:30",
-        start: "14:00",
-        end: "16:30",
-        title: "% Arabica + Ninenzaka + Sannenzaka + Kiyomizu-dera",
+        time: "15:00–17:45",
+        start: "15:00",
+        end: "17:45",
+        title: "Kiyomizu-dera + Higashiyama Evening Flow",
         place: "Higashiyama",
-        blurb: "นี่คือช่วง visual highlight ของเกียวโต เดินช้า ๆ และให้ภาพทำงานมากกว่าจำนวนสถานที่",
+        blurb: "Kiyomizu-dera แล้วเดินลงผ่าน Sannenzaka, Ninenzaka, Yasaka Pagoda และ % Arabica",
         map: "https://maps.google.com/?q=Kiyomizu-dera+Kyoto",
-        note: { th: { title: "ช่วงสวยที่สุดของวัน", body: "Ninenzaka และ Kiyomizu ควรเป็นช่วงที่ไม่เร่ง ไม่ยัดร้านเพิ่มเกินจำเป็น", list: ["ถ่ายภาพและเดินจริงมากกว่าทำ checklist", "ให้ % Arabica เป็นจังหวะพักก่อนเข้าสตรอก"] } },
+        note: { th: { title: "golden hour Kyoto", body: "ช่วงนี้คือแกน atmospheric ของวัน เดินลงเขาแบบไม่เร่งและพักกาแฟได้", list: ["Kyo Yasaka Pudding เป็น optional", "ไม่ต้องเก็บทุกมุม"] } },
       },
       {
         id: "d3-evening",
-        time: "16:45–20:30",
-        start: "16:45",
-        end: "20:30",
-        title: "Gion + Dinner ที่ Gion Duck Rice + กลับ Osaka",
+        time: "17:45–21:15",
+        start: "17:45",
+        end: "21:15",
+        title: "Gion + Gion Duck Rice + Kamogawa + Return Osaka",
         place: "Gion",
-        blurb: "เดิน Gion ต่อให้วันจบด้วยแสงเย็นริม Kamogawa แล้วทานมื้อเย็นก่อนกลับโอซากะ",
+        blurb: "เดิน Hanamikoji, dinner ที่ Gion Duck Rice, ผ่าน Kamogawa แล้วกลับ Osaka จาก Kyoto-kawaramachi",
         map: "https://maps.google.com/?q=Gion+Duck+Rice+Kyoto",
-        note: { th: { title: "บทจบของ Kyoto", body: "มื้อนี้ควรให้ความรู้สึกนิ่ง ลึก และเป็นการปิดวัน heritage อย่างแท้จริง", list: ["เดินริมแม่น้ำต่อได้ถ้ายังมีแรง", "ไม่ต้องเร่งกลับจนเกินไป"] } },
+        note: { th: { title: "evening pacing", body: "ให้ Kamogawa เป็น moment ระหว่างทางก่อนขึ้น Hankyu กลับ Osaka", list: ["เดินสุภาพใน Gion", "กลับจาก Kyoto-kawaramachi สะดวกที่สุด"] } },
       },
     ],
   },
@@ -1692,12 +1735,12 @@ const PROTOTYPE_DAYS = [
     dateIso: "2026-05-20",
     timeZone: "Asia/Tokyo",
     date: "พุธ 20 พฤษภาคม 2026",
-    title: "Minoh + Katsuoji",
-    route: "Namba → Minoh → Katsuoji → Osaka",
+    title: "Katsuoji + Minoh Falls",
+    route: "VIA INN → Shinsaibashi Station → Minoh-kayano → Katsuoji → Dainichi Parking Lot → Minoh Falls → Hankyu Minoh Station → Osaka",
     hotel: "VIA INN PRIME Shinsaibashi Yotsubashi",
-    summary: "ธรรมชาติและดารุมะในวันเดียว เป็นวันที่เปลี่ยนโทนภาพของทริปจากเมืองไปสู่สีเขียวและแดง",
-    previewNow: "2026-05-20T14:20:00+09:00",
-    previewNote: "ตั้งเวลาไว้ช่วงกำลังย้ายจากน้ำตกไป Katsuoji ซึ่งเป็นจุดที่ taxi มีค่ามากที่สุดของวัน",
+    summary: "วันนี้ไม่ใช่ hiking mission แต่เป็น scenic nature escape ที่ใช้แรงอย่างฉลาด เริ่มจาก Katsuoji แล้วใช้ taxi ตัดช่วง uphill ก่อนเดิน downhill ผ่านจุดที่สวยที่สุดของ Minoh",
+    previewNow: "2026-05-20T12:50:00+09:00",
+    previewNote: "ตั้งเวลาไว้ช่วง scenic downhill จาก Dainichi Parking Lot ลงสู่น้ำตก เพื่อให้เห็น marker ในจุดที่สวยที่สุดของวัน",
     events: [
       {
         id: "d4-travel",
@@ -2202,12 +2245,12 @@ const PROTOTYPE_DAYS = [
     dateIso: "2026-05-23",
     timeZone: "Asia/Tokyo",
     date: "เสาร์ 23 พฤษภาคม 2026",
-    title: "Kobe Mature Slow Day",
-    route: "Ikuta → Kitano → Chinatown → Harborland",
+    title: "Kobe Slow Port City Day",
+    route: "Swissôtel → Osaka-Namba → Kobe-Sannomiya → Ikuta Shrine → Kitano → Kobe Beef → Nankinmachi → Harborland / Port Tower → Osaka",
     hotel: "Swissôtel Nankai Osaka",
-    summary: "ทริปวันนี้จะเป็นฟีลเมืองท่าผู้ใหญ่ เดินสบาย ไม่รีบ เน้นบรรยากาศ ย่านยุโรป คาเฟ่ และจบที่ริมอ่าว",
-    previewNow: "2026-05-23T16:05:00+09:00",
-    previewNote: "ตั้งเวลาไว้ระหว่าง Blue Bottle และ Motomachi เพื่อให้เห็น marker คั่นอยู่ระหว่างกิจกรรมแบบพอดีที่สุด",
+    summary: "วันนี้คือ Kobe แบบ slow port city — เดินง่ายจาก Sannomiya ไปศาลเจ้า Kitano, Kobe beef, Chinatown และจบด้วย harbor atmosphere ช่วงเย็น เป็น luxury slow day ที่ไม่ต้องเร่ง",
+    previewNow: "2026-05-23T16:20:00+09:00",
+    previewNote: "ตั้งเวลาไว้ช่วงเดิน Harborland เพื่อให้เห็น marker ของ Kobe ในช่วงบรรยากาศท่าเรือที่ดีที่สุด",
     events: [
       {
         id: "ikuta",
@@ -2360,12 +2403,436 @@ const PROTOTYPE_DAYS = [
   },
 ];
 
+function makeStep(id, time, start, end, title, place, blurb, map, noteTitle, noteBody, noteList = [], extra = {}) {
+  return {
+    id,
+    time,
+    start,
+    end,
+    title,
+    place,
+    blurb,
+    map,
+    note: {
+      th: {
+        title: noteTitle,
+        body: noteBody,
+        list: noteList,
+      },
+    },
+    ...extra,
+  };
+}
+
+function applyApprovedDayDetails() {
+  const byId = Object.fromEntries(PROTOTYPE_DAYS.map((day) => [day.id, day]));
+
+  Object.assign(byId["day-0"], {
+    title: "Taiwan Transit Night",
+    route: "TPE Airport → City Suites Gateway → Gloria Outlets → Hotel",
+    summary: "คืนทรานซิตที่ตั้งใจให้เบาและลื่นที่สุด ลงเครื่อง พักโรงแรม เดิน Gloria Outlets แล้วนอนเร็วเพื่อไฟลต์เช้า",
+    events: [
+      makeStep("d0-arrive-tpe", "13:25–14:30", "13:25", "14:30", "Arrive TPE", "Taiwan Taoyuan International Airport", "ลงเครื่อง BR062 → ผ่าน ตม. → รับกระเป๋า", "https://maps.google.com/?q=Taiwan+Taoyuan+International+Airport", "Transit night แบบเบา ๆ", "ไม่ต้องรีบ วันนี้เป็น transit night แบบเบา ๆ"),
+      makeStep("d0-taxi-hotel", "14:30–14:45", "14:30", "14:45", "Taxi to Hotel", "City Suites Gateway", "Taxi ไปโรงแรม", "https://maps.google.com/?q=City+Suites+Gateway", "Taxi ไปโรงแรม", "ใช้เวลาประมาณ 5–10 นาที / ค่า taxi ประมาณ NT$200–250"),
+      makeStep("d0-rest-hotel", "14:45–16:15", "14:45", "16:15", "Rest at Hotel", "City Suites Gateway", "Check-in / อาบน้ำ / เปลี่ยนเสื้อผ้า", "https://maps.google.com/?q=City+Suites+Gateway", "พักก่อนออกเย็น", "วันนี้ควรพักให้พอ เพราะวันรุ่งขึ้นตื่นเช้ามาก"),
+      makeStep("d0-gloria", "16:30–19:15", "16:30", "19:15", "Gloria Outlets", "Gloria Outlets", "เดิน outlet / ดู Xpark ด้านนอก / shopping เบา ๆ", "https://maps.google.com/?q=Gloria+Outlets", "เดินเบา ๆ พอ", "กินข้าวที่ food court ได้เลย สบายและไม่เสียเวลา"),
+      makeStep("d0-dinner-drink", "19:30–21:20", "19:30", "21:20", "Dinner + Drink", "Gloria Outlets Food Court / Blu Bar", "Dinner ง่าย ๆ ที่ food court → ถ้ายังไหวค่อยดื่มต่อที่ Blu Bar", "https://maps.google.com/?q=Gloria+Outlets+Food+Court+Taoyuan", "ไม่ต้องหาร้านไกล", "ไม่ต้องออกไปหาร้านไกล คืนนี้เน้นนอนเร็ว"),
+      makeStep("d0-back-hotel", "21:20–22:30", "21:20", "22:30", "Back to Hotel", "City Suites Gateway", "Taxi กลับโรงแรม / เตรียมของ / นอน", "https://maps.google.com/?q=City+Suites+Gateway", "ก่อนนอน", "ตั้งปลุก 05:45"),
+    ],
+  });
+
+  Object.assign(byId["day-1"], {
+    title: "Fly to Osaka + Wagyu Night",
+    route: "TPE → KIX → VIA INN → Shinsaibashi → Wagyu → Craft Beer",
+    summary: "วันบินเข้าโอซากะที่คุมจังหวะให้เบา แล้วจบด้วย wagyu และ craft beer แบบไม่หักโหม",
+    events: [
+      makeStep("d1-hotel-tpe", "05:45–06:20", "05:45", "06:20", "Hotel to TPE", "Taiwan Taoyuan International Airport", "ตื่น / check-out / taxi ไปสนามบิน", "https://maps.google.com/?q=Taiwan+Taoyuan+International+Airport", "เช้าตรู่ที่ต้องลื่น", "ใช้ Priority ของ Royal Laurel ได้"),
+      makeStep("d1-lounge-flight", "06:45–08:20", "06:45", "08:20", "Lounge + Flight", "EVA Air The Star Lounge", "อาหารเช้า / กาแฟ / shower ถ้ามีเวลา → ขึ้น BR132", "https://maps.google.com/?q=EVA+Air+The+Star+Lounge+Taoyuan", "ก่อนขึ้นเครื่อง", "เดินไป gate ประมาณ 07:50"),
+      makeStep("d1-arrive-kix", "11:55–13:30", "11:55", "13:30", "Arrive KIX", "Kansai International Airport", "ผ่าน ตม. / รับกระเป๋า / ซื้อ ICOCA / เติมเงิน", "https://maps.google.com/?q=Kansai+International+Airport", "ตั้งต้นทริปญี่ปุ่น", "เติม ICOCA คนละ ¥10,000"),
+      makeStep("d1-kix-hotel", "13:30–14:30", "13:30", "14:30", "KIX to Hotel", "VIA INN PRIME Shinsaibashi Yotsubashi", "Airport Limousine หรือ Nankai → ไปโรงแรม", "https://maps.google.com/?q=VIA+INN+PRIME+Shinsaibashi+Yotsubashi", "ไม่ต้องแน่นเกิน", "วันนี้ไม่ควรวางแผนแน่น"),
+      makeStep("d1-shinsaibashi-walk", "16:00–17:30", "16:00", "17:30", "Shinsaibashi Walk", "Shinsaibashi-suji Shopping Street / Amerikamura", "เดินเล่นเบา ๆ / กาแฟ / ปรับตัว", "https://maps.google.com/?q=Shinsaibashi-suji+Shopping+Street+Amerikamura+Osaka", "เบา ๆ พอ", "ถ้าเหนื่อย ให้ลดเหลือแค่เดินใกล้โรงแรม"),
+      makeStep("d1-wagyu", "18:30–20:00", "18:30", "20:00", "Wagyu Dinner", "Gyutoroya Fukushima", "Dinner วากิว", "https://maps.google.com/?q=Gyutoroya+Fukushima", "มื้อสำคัญคืนแรก", "ใช้ ICOCA เดินทาง / จองล่วงหน้าถ้าทำได้", [], { website: "https://www.gyutoroya.com/" }),
+      makeStep("d1-craft-beer", "21:00–22:30", "21:00", "22:30", "Craft Beer", "Craft Beer Works Kamikaze", "เบียร์เบา ๆ ปิดคืนแรก", "https://maps.google.com/?q=Craft+Beer+Works+Kamikaze+Osaka", "ตัดได้ถ้าเพลีย", "ถ้าเหนื่อยจากไฟลต์ ตัดได้ทันที"),
+    ],
+  });
+
+  Object.assign(byId["day-2"], {
+    title: "Osaka Castle + Local Lunch + Namba Night",
+    route: "VIA INN → Morinomiya → Osaka Castle Park → Shinsekai → Namba Yasaka → Dotonbori",
+    summary: "วันโอซากะแบบ classic local เริ่มจากปราสาทและจบด้วย Namba night โดยมีมื้อกลางวันแถว Morinomiya เป็นแกนกลางของวัน",
+    events: [
+      makeStep("d2-to-castle", "10:00–10:30", "10:00", "10:30", "To Osaka Castle", "Morinomiya Station", "จาก VIA INN ไปลง Morinomiya", "https://maps.google.com/?q=Morinomiya+Station", "เดินน้อยสุด", "ทางนี้เดินน้อยสุดสำหรับ Osaka Castle"),
+      makeStep("d2-castle-park", "10:30–12:30", "10:30", "12:30", "Osaka Castle Park", "Osaka Castle Park", "เดินสวน / ถ่ายรูปปราสาท / ไม่จำเป็นต้องเข้าพิพิธภัณฑ์", "https://maps.google.com/?q=Osaka+Castle+Park", "เน้นชมวิว", "เน้นชมวิว ไม่ต้องฝืนเดินรอบใหญ่"),
+      makeStep("d2-morinomiya-lunch", "12:30–14:00", "12:30", "14:00", "Local Lunch at Morinomiya", "Friendship / 洋食とビール フレンドシップ", "Lunch แนว yoshoku เช่น hamburg steak + ebi fry + beer", "https://maps.google.com/?q=Friendship+1+Chome-16-14+Morinomiyachuo+Chuo+Ward+Osaka", "เลือกตามคิวได้", "ร้านอยู่ใกล้มาก ถ้าคิวเยอะ แถวนั้นมีร้านติด ๆ กันให้เลือก"),
+      makeStep("d2-shinsekai", "15:00–16:30", "15:00", "16:30", "Shinsekai", "Shinsekai / Tsutenkaku", "เดินย่าน retro Osaka / ถ่ายรูป / snack เบา ๆ", "https://maps.google.com/?q=Shinsekai+Tsutenkaku", "แค่เก็บบรรยากาศ", "ไม่ต้องอยู่นาน แค่เก็บบรรยากาศ"),
+      makeStep("d2-yasaka", "16:45–17:30", "16:45", "17:30", "Namba Yasaka Jinja", "Namba Yasaka Jinja", "แวะศาลเจ้าหัวสิงโต", "https://maps.google.com/?q=Namba+Yasaka+Jinja", "จุดถ่ายรูปเด่น", "จุดนี้ถ่ายรูปสวยและเดินไม่หนัก"),
+      makeStep("d2-dotonbori", "18:00–22:30", "18:00", "22:30", "Dotonbori Night", "Dotonbori / Hozenji Yokocho", "เดิน Glico / dinner / bar", "https://maps.google.com/?q=Dotonbori+Hozenji+Yokocho", "เลือกหน้างานได้", "Dinner เลือกหน้างานได้: sushi, yakiniku, izakaya หรือ Bar Nayuta"),
+    ],
+  });
+
+  Object.assign(byId["day-3"], {
+    title: "Kyoto Heritage Evening",
+    titleI18n: {
+      th: "Kyoto Heritage Evening",
+      en: "Kyoto Heritage Evening",
+      ja: "京都ヘリテージ・イブニング",
+      zh: "京都文化夜行程",
+    },
+    route: "Osaka → Kyoto Station → Toji → Ajikun → Fushimi Inari → Taxi to Kiyomizu → Higashiyama → Hanamikoji → Gion Duck Rice → Kamogawa → Kyoto-kawaramachi → Osaka",
+    routeI18n: {
+      th: "Osaka → Kyoto Station → Toji → Ajikun → Fushimi Inari → Taxi to Kiyomizu → Higashiyama → Hanamikoji → Gion Duck Rice → Kamogawa → Kyoto-kawaramachi → Osaka",
+      en: "Osaka → Kyoto Station → Toji → Ajikun → Fushimi Inari → Taxi to Kiyomizu → Higashiyama → Hanamikoji → Gion Duck Rice → Kamogawa → Kyoto-kawaramachi → Osaka",
+      ja: "大阪 → 京都駅 → 東寺 → 味君 → 伏見稲荷 → タクシーで清水寺方面 → 東山 → 花見小路 → Gion Duck Rice → 鴨川 → 京都河原町 → 大阪",
+      zh: "大阪 → 京都站 → 东寺 → Ajikun → 伏见稻荷 → Taxi 到清水寺 → 东山 → 花见小路 → Gion Duck Rice → 鸭川 → Kyoto-kawaramachi → 大阪",
+    },
+    summary: "Toji ตอนเช้า, Ajikun brunch, Fushimi Inari ถึง Yotsutsuji แล้วปิดวันด้วย Kiyomizu, Higashiyama, Gion และ Kamogawa",
+    summaryI18n: {
+      th: "Toji ตอนเช้า, Ajikun brunch, Fushimi Inari ถึง Yotsutsuji แล้วปิดวันด้วย Kiyomizu, Higashiyama, Gion และ Kamogawa",
+      en: "Morning Toji, Ajikun brunch, Fushimi Inari up to Yotsutsuji, then Kiyomizu, Higashiyama, Gion, and Kamogawa in the evening.",
+      ja: "朝の東寺、味君ブランチ、四ツ辻までの伏見稲荷。その後は清水寺、東山、祇園、鴨川へ。",
+      zh: "早上东寺、Ajikun brunch、伏见稻荷到四辻，之后接清水寺、东山、祇园和鸭川夜散步。",
+    },
+    previewNow: "2026-05-19T16:30:00+09:00",
+    events: [
+      makeStep("d3-osaka-kyoto", "09:00–10:00", "09:00", "10:00", "Osaka → Kyoto Station", "Kyoto Station", "09:09 เดินจาก VIA INN PRIME Shinsaibashi Yotsubashi ไป Shinsaibashi Station ประมาณ 7 นาที → 09:16 ขึ้น Osaka Metro Midosuji Line ไป Umeda → เดินตามป้าย JR Line ไป JR Osaka Station → 09:30 ขึ้น JR Special Rapid Service ที่ Platform 8 ไป Kyoto → 09:59 ถึง Kyoto Station", "https://maps.google.com/?q=Kyoto+Station", "ICOCA + JR Special Rapid", "ใช้ ICOCA แตะได้ทั้งหมด ไม่ต้องจอง ไม่ต้องซื้อตั๋วรถด่วนเพิ่ม เส้นนี้เหมาะกับการไป Toji ก่อนเพราะถึง Kyoto Station แล้วต่อ Kintetsu ได้ง่าย", [], { titleI18n: { en: "Osaka → Kyoto Station", ja: "大阪 → 京都駅", zh: "大阪 → 京都站" }, blurbI18n: { en: "Walk from VIA INN PRIME Shinsaibashi Yotsubashi to Shinsaibashi Station around 09:09, take the Osaka Metro Midosuji Line to Umeda, follow signs for JR Line to JR Osaka Station, then take the 09:30 JR Special Rapid Service from Platform 8 to Kyoto, arriving around 09:59.", ja: "09:09頃 VIA INN PRIME Shinsaibashi Yotsubashi から心斎橋駅へ徒歩約7分。御堂筋線で梅田へ移動し、JR Line の案内に従って JR 大阪駅へ。09:30頃 Platform 8 から JR 新快速で京都へ向かい、09:59頃京都駅到着。", zh: "09:09 从 VIA INN PRIME Shinsaibashi Yotsubashi 步行约 7 分钟到 Shinsaibashi Station，搭乘 Osaka Metro Midosuji Line 到 Umeda，再跟随 JR Line 指示前往 JR Osaka Station，09:30 从 Platform 8 搭乘 JR Special Rapid Service 到 Kyoto，约 09:59 抵达 Kyoto Station。" }, note: { th: { title: "ICOCA + JR Special Rapid", body: "ใช้ ICOCA แตะได้ทั้งหมด ไม่ต้องจอง ไม่ต้องซื้อตั๋วรถด่วนเพิ่ม เส้นนี้เหมาะกับการไป Toji ก่อนเพราะถึง Kyoto Station แล้วต่อ Kintetsu ได้ง่าย", list: [] }, en: { title: "ICOCA + JR Special Rapid", body: "ICOCA works for the whole route. No reservation or extra express ticket is needed. This route fits a Toji-first morning because Kyoto Station connects easily to Kintetsu.", list: [] }, ja: { title: "ICOCA + JR新快速", body: "全区間ICOCAで移動可能。予約や特急券は不要です。東寺から始める朝には、京都駅から近鉄へ接続しやすいこのルートが便利。", list: [] }, zh: { title: "ICOCA + JR Special Rapid", body: "全程可使用 ICOCA，不需要预约或加买特急券。因为今天先去东寺，到 Kyoto Station 后转 Kintetsu 很方便。", list: [] } } }),
+      makeStep("d3-toji", "10:00–11:00", "10:00", "11:00", "Toji Temple", "Toji Temple", "จาก Kyoto Station เดินเชื่อมไป Kintetsu Kyoto Station แตะ ICOCA ขึ้น Kintetsu Kyoto Line Local ลง Toji Station แล้วเดินต่อประมาณ 5 นาทีไป Toji Temple ชมเจดีย์ไม้ 5 ชั้น Kyoto morning atmosphere และถ่ายรูปสบาย ๆ", "https://maps.google.com/?q=Toji+Temple+Kyoto", "opening ของ Kyoto day", "ค่า Kintetsu ประมาณ ¥180 จาก Kyoto Station ไป Toji Station จุดนี้เป็น opening ของ Kyoto day ที่สงบและเดินไม่หนัก", [], { website: "https://toji.or.jp/en/", titleI18n: { en: "Toji Temple", ja: "東寺", zh: "东寺" }, blurbI18n: { en: "From Kyoto Station, connect to Kintetsu Kyoto Station, tap ICOCA, take the Kintetsu Kyoto Line Local to Toji Station, then walk about 5 minutes to Toji Temple. Enjoy the five-story pagoda, Kyoto morning atmosphere, and relaxed photos.", ja: "京都駅から近鉄京都駅へ移動し、ICOCAで近鉄京都線 Local に乗車。東寺駅で下車し、徒歩約5分で東寺へ。五重塔と朝の京都らしい雰囲気をゆっくり楽しみます。", zh: "从 Kyoto Station 走到 Kintetsu Kyoto Station，使用 ICOCA 搭乘 Kintetsu Kyoto Line Local 到 Toji Station，再步行约 5 分钟到东寺。慢慢欣赏五重塔和京都早晨氛围。" }, note: { th: { title: "opening ของ Kyoto day", body: "ค่า Kintetsu ประมาณ ¥180 จาก Kyoto Station ไป Toji Station จุดนี้เป็น opening ของ Kyoto day ที่สงบและเดินไม่หนัก", list: [] }, en: { title: "Calm Kyoto opening", body: "Kintetsu from Kyoto Station to Toji Station is around ¥180. This is a calm and easy opening for the Kyoto day.", list: [] }, ja: { title: "静かな京都の朝", body: "京都駅から東寺駅まで近鉄で約180円。静かで歩きすぎない京都の朝の始まりにぴったりです。", list: [] }, zh: { title: "京都安静开场", body: "从京都站到东寺站约 ¥180。这里适合作为京都日的安静开场，步行负担不重。", list: [] } } }),
+      makeStep("d3-ajikun", "11:00–12:00", "11:00", "12:00", "Ajikun Brunch", "Ajikun Kyoto", "เดินจาก Toji Temple ไปร้าน Ajikun ประมาณ 2–3 นาที กิน brunch ราเมงก่อนเริ่ม afternoon walk", "https://maps.google.com/?q=Ajikun+Kyoto", "cash-only brunch", "ร้านปิดวันอังคาร และไม่รับบัตรเครดิต / e-money เตรียมเงินสดประมาณ ¥1,000–1,500 ต่อคน ถ้ายังมีท้องสามารถแวะ Utau Pudding ก่อนเข้ารถไฟได้", [], { titleI18n: { en: "Ajikun Brunch", ja: "味君ブランチ", zh: "Ajikun Brunch" }, blurbI18n: { en: "Walk about 2–3 minutes from Toji Temple to Ajikun for a ramen brunch before the afternoon walking section.", ja: "東寺から徒歩約2〜3分の味君で、午後の散策前にラーメンブランチ。", zh: "从东寺步行约 2–3 分钟到 Ajikun，先吃拉面 brunch 再进入下午步行段。" }, note: { th: { title: "cash-only brunch", body: "ร้านปิดวันอังคาร และไม่รับบัตรเครดิต / e-money เตรียมเงินสดประมาณ ¥1,000–1,500 ต่อคน ถ้ายังมีท้องสามารถแวะ Utau Pudding ก่อนเข้ารถไฟได้", list: [] }, en: { title: "Cash-only brunch", body: "Closed on Tuesdays. Credit cards / e-money are not accepted, so prepare around ¥1,000–1,500 cash per person. If you still have room, Utau Pudding can be added before taking the train.", list: [] }, ja: { title: "現金のみのブランチ", body: "火曜定休。クレジットカード / 電子マネー不可のため、1人あたり約¥1,000〜1,500の現金を用意。余裕があれば電車に乗る前に Utau Pudding も追加できます。", list: [] }, zh: { title: "现金 brunch", body: "周二休息。不接受信用卡 / 电子支付，建议准备每人约 ¥1,000–1,500 现金。如果还有胃口，可在搭车前加 Utau Pudding。", list: [] } } }),
+      makeStep("d3-fushimi", "12:15–14:30", "12:15", "14:30", "Fushimi Inari — Tower Gate → Senbon Torii → Yotsutsuji", "Fushimi Inari Shrine Tower Gate", "จาก Ajikun เดินไป Toji Station → Kintetsu Kyoto Line ไป Kyoto → transfer ไป JR Nara Line → ลง Inari Station จากนั้นเดิน route: Fushimi Inari Shrine Tower Gate → Senbon Torii → Yotsutsuji Intersection → turn back down", "https://maps.google.com/?q=Fushimi+Inari+Shrine+Tower+Gate", "Yotsutsuji แล้วกลับ", "รวมค่าเดินทางประมาณ ¥330 ไม่ต้องขึ้น summit เพราะ highlight หลักอยู่ก่อนยอด หลัง Yotsutsuji เส้นทางเริ่ม repetitive และ fatigue เพิ่มมากกว่า reward", ["Fushimi Inari Shrine Tower Gate", "Senbon Torii", "Yotsutsuji Intersection", "Turn back down"], { titleI18n: { en: "Fushimi Inari — Tower Gate → Senbon Torii → Yotsutsuji", ja: "伏見稲荷 — 楼門 → 千本鳥居 → 四ツ辻", zh: "伏见稻荷 — 楼门 → 千本鸟居 → 四辻" }, blurbI18n: { en: "From Ajikun, walk to Toji Station, take the Kintetsu Kyoto Line to Kyoto, transfer to the JR Nara Line, and get off at Inari Station. Walk the route: Fushimi Inari Shrine Tower Gate → Senbon Torii → Yotsutsuji Intersection → turn back down.", ja: "味君から東寺駅へ歩き、近鉄京都線で京都へ。JR奈良線に乗り換えて稲荷駅で下車。伏見稲荷大社 楼門 → 千本鳥居 → 四ツ辻 → 下山の流れで歩きます。", zh: "从 Ajikun 步行到 Toji Station，搭乘 Kintetsu Kyoto Line 到 Kyoto，转 JR Nara Line 到 Inari Station。步行路线：伏见稻荷大社楼门 → 千本鸟居 → 四辻 → 原路下山。" }, note: { th: { title: "Yotsutsuji แล้วกลับ", body: "รวมค่าเดินทางประมาณ ¥330 ไม่ต้องขึ้น summit เพราะ highlight หลักอยู่ก่อนยอด หลัง Yotsutsuji เส้นทางเริ่ม repetitive และ fatigue เพิ่มมากกว่า reward", list: ["Fushimi Inari Shrine Tower Gate", "Senbon Torii", "Yotsutsuji Intersection", "Turn back down"] }, en: { title: "Turn back at Yotsutsuji", body: "Transport is around ¥330. No need to summit: the main highlights come before the peak, and after Yotsutsuji the route becomes more repetitive while fatigue rises more than the reward.", list: ["Fushimi Inari Shrine Tower Gate", "Senbon Torii", "Yotsutsuji Intersection", "Turn back down"] }, ja: { title: "四ツ辻で折り返し", body: "移動費は約¥330。山頂まで行く必要はありません。見どころは手前に集中しており、四ツ辻以降は変化が少なく、疲労のわりに満足度が増えにくいです。", list: ["伏見稲荷大社 楼門", "千本鳥居", "四ツ辻", "下山"] }, zh: { title: "四辻折返", body: "交通约 ¥330。不需要登顶；主要亮点在山顶前，四辻之后路线较重复，疲劳增加但回报感不明显。", list: ["伏见稻荷大社楼门", "千本鸟居", "四辻", "原路下山"] } } }),
+      makeStep("d3-taxi-kiyomizu", "14:45–15:00", "14:45", "15:00", "Taxi / Uber → Kiyomizu Area", "Kiyomizu-dera", "จาก Fushimi Inari base area เรียก Taxi / Uber ไป Kiyomizu-dera หรือ Kiyomizu area", "https://maps.google.com/?q=Kiyomizu-dera+Kyoto", "ตัด uphill fatigue", "ค่าโดยสารประมาณ ¥2,000–3,500 ใช้ taxi ตรงนี้คุ้มมาก เพราะตัด uphill เดินชันและ preserve พลังงานสำหรับช่วงเย็น", [], { titleI18n: { en: "Taxi / Uber → Kiyomizu Area", ja: "タクシー / Uber → 清水寺エリア", zh: "Taxi / Uber → 清水寺区域" }, blurbI18n: { en: "From the Fushimi Inari base area, take a Taxi / Uber to Kiyomizu-dera or the Kiyomizu area.", ja: "伏見稲荷の麓エリアから、タクシー / Uber で清水寺または清水寺エリアへ移動。", zh: "从伏见稻荷山脚区域搭 Taxi / Uber 前往清水寺或清水寺区域。" }, note: { th: { title: "ตัด uphill fatigue", body: "ค่าโดยสารประมาณ ¥2,000–3,500 ใช้ taxi ตรงนี้คุ้มมาก เพราะตัด uphill เดินชันและ preserve พลังงานสำหรับช่วงเย็น", list: [] }, en: { title: "Cut uphill fatigue", body: "Estimated fare is around ¥2,000–3,500. A taxi here is worth it because it cuts uphill walking and preserves energy for the evening flow.", list: [] }, ja: { title: "上り坂を省く", body: "料金目安は約¥2,000〜3,500。この区間でタクシーを使うと上り坂を省け、夕方の流れに体力を残せます。", list: [] }, zh: { title: "避开上坡疲劳", body: "预估车费约 ¥2,000–3,500。这里搭 taxi 很值得，可避开上坡步行，保留体力给傍晚行程。", list: [] } } }),
+      makeStep("d3-kiyomizu", "15:00–16:00", "15:00", "16:00", "Kiyomizu-dera", "Kiyomizu-dera", "ชมระเบียงไม้ Kyoto panoramic view และดื่มน้ำ Otowa waterfall", "https://maps.google.com/?q=Kiyomizu-dera+Kyoto", "Kyoto classic แบบพอดี", "ช่วงนี้เป็น high-impact Kyoto classic แต่ไม่ต้องฝืนเก็บทุกจุด ถ้าคนเยอะให้เน้นระเบียงไม้และวิว", [], { website: "https://www.kiyomizudera.or.jp/en/", titleI18n: { en: "Kiyomizu-dera", ja: "清水寺", zh: "清水寺" }, blurbI18n: { en: "Visit the wooden stage, enjoy the panoramic Kyoto view, and drink from Otowa waterfall.", ja: "清水の舞台、京都の眺望、音羽の滝を楽しみます。", zh: "参观清水舞台，欣赏京都全景，并体验音羽瀑布。" }, note: { th: { title: "Kyoto classic แบบพอดี", body: "ช่วงนี้เป็น high-impact Kyoto classic แต่ไม่ต้องฝืนเก็บทุกจุด ถ้าคนเยอะให้เน้นระเบียงไม้และวิว", list: [] }, en: { title: "Keep the classic focused", body: "This is a high-impact Kyoto classic, but do not force every corner. If crowded, focus on the wooden stage and the view.", list: [] }, ja: { title: "定番を無理なく", body: "京都らしい定番の見どころですが、混雑していれば全部回らず、舞台と景色を中心に楽しめば十分です。", list: [] }, zh: { title: "经典重点即可", body: "这是京都经典重点，但如果人多不必每个角落都走，重点看清水舞台和景色即可。", list: [] } } }),
+      makeStep("d3-higashiyama-evening", "16:00–17:45", "16:00", "17:45", "Higashiyama Evening Flow", "% Arabica Kyoto Higashiyama", "เดินลงเขาสบาย ๆ ผ่าน Sannenzaka → Ninenzaka → Yasaka Pagoda → % Arabica Kyoto Higashiyama ถ่ายรูปช่วง golden hour และพัก coffee break", "https://maps.google.com/?q=%25+Arabica+Kyoto+Higashiyama", "golden hour + coffee", "Optional pudding stop: Kyo Yasaka Pudding อยู่ใกล้ % Arabica แวะได้ถ้ายังมีท้องและไม่เหนื่อย", [], { titleI18n: { en: "Higashiyama Evening Flow", ja: "東山イブニングフロー", zh: "东山傍晚散步" }, blurbI18n: { en: "Walk gently downhill through Sannenzaka → Ninenzaka → Yasaka Pagoda → % Arabica Kyoto Higashiyama. Enjoy golden hour photos and a coffee break.", ja: "三年坂 → 二年坂 → 八坂の塔 → % Arabica Kyoto Higashiyama へ、ゆるやかに下りながら歩きます。ゴールデンアワーの写真とコーヒーブレイクを楽しむ時間。", zh: "沿着三年坂 → 二年坂 → 八坂塔 → % Arabica Kyoto Higashiyama 慢慢下坡散步，拍傍晚照片并喝咖啡休息。" }, note: { th: { title: "golden hour + coffee", body: "Optional pudding stop: Kyo Yasaka Pudding อยู่ใกล้ % Arabica แวะได้ถ้ายังมีท้องและไม่เหนื่อย", list: [] }, en: { title: "Golden hour + coffee", body: "Optional pudding stop: Kyo Yasaka Pudding is near % Arabica. Add it only if you still have room and are not too tired.", list: [] }, ja: { title: "夕方の写真とコーヒー", body: "Optional: % Arabica 近くの Kyo Yasaka Pudding も、余裕があれば追加できます。", list: [] }, zh: { title: "傍晚照片和咖啡", body: "可选：Kyo Yasaka Pudding 在 % Arabica 附近，如果还有胃口且不累可以顺路加。", list: [] } } }),
+      makeStep("d3-gion", "17:45–18:30", "17:45", "18:30", "Gion Walk", "Hanamikoji Street Gion walk", "เดิน Hanamikoji Street เก็บ Kyoto evening atmosphere, lantern streets และ slow walk ก่อน dinner", "https://maps.app.goo.gl/a6JFJow79U5WKR4LA", "เดินสุภาพ", "เดินสุภาพ ไม่ถ่ายคนใกล้ ๆ โดยเฉพาะ geisha / maiko และไม่ขวางทางเดิน", [], { titleI18n: { en: "Gion Walk", ja: "祇園散歩", zh: "祇园散步" }, blurbI18n: { en: "Walk Hanamikoji Street for Kyoto evening atmosphere, lantern streets, and a slow pre-dinner stroll.", ja: "花見小路を歩き、京都の夕方の雰囲気、灯りのある通り、夕食前のゆったりした散歩を楽しみます。", zh: "漫步花见小路，感受京都傍晚气氛、灯笼街景，并在晚餐前慢慢散步。" }, note: { th: { title: "เดินสุภาพ", body: "เดินสุภาพ ไม่ถ่ายคนใกล้ ๆ โดยเฉพาะ geisha / maiko และไม่ขวางทางเดิน", list: [] }, en: { title: "Walk respectfully", body: "Walk respectfully. Do not take close photos of people, especially geisha / maiko, and do not block the street.", list: [] }, ja: { title: "礼儀を守る", body: "礼儀を守って歩き、芸妓・舞妓を含む人物の近距離撮影や通行の妨げは避けてください。", list: [] }, zh: { title: "礼貌行走", body: "请礼貌行走，不要近距离拍摄他人，尤其是 geisha / maiko，也不要挡住道路。", list: [] } } }),
+      makeStep("d3-duck-rice", "18:30–19:30", "18:30", "19:30", "Dinner — Gion Duck Rice", "Gion Duck Rice", "Dinner + rest หลังเดินเต็มวัน ข้าวหน้าเป็ดแบบ Kyoto-style", "https://maps.google.com/?q=Gion+Duck+Rice+Kyoto", "recovery stop", "ร้านเล็ก อาจต้องรอคิว ไปช่วง 18:30 กำลังดี ถ้าร่างกายเริ่มล้าให้ใช้มื้อนี้เป็น recovery stop", [], { titleI18n: { en: "Dinner — Gion Duck Rice", ja: "夕食 — Gion Duck Rice", zh: "晚餐 — Gion Duck Rice" }, blurbI18n: { en: "Dinner and rest after a full walking day with Kyoto-style duck rice.", ja: "たくさん歩いた日の夕食と休憩。京都らしい鴨ごはんを楽しみます。", zh: "走了一整天后的晚餐和休息，享用 Kyoto-style duck rice。" }, note: { th: { title: "recovery stop", body: "ร้านเล็ก อาจต้องรอคิว ไปช่วง 18:30 กำลังดี ถ้าร่างกายเริ่มล้าให้ใช้มื้อนี้เป็น recovery stop", list: [] }, en: { title: "Recovery stop", body: "It is a small place and may have a queue. Around 18:30 is a good target. Use this as a recovery stop if you start feeling tired.", list: [] }, ja: { title: "回復ポイント", body: "小さなお店なので並ぶ可能性があります。18:30頃が目安。疲れてきたらここを回復ポイントに。", list: [] }, zh: { title: "恢复点", body: "店面较小，可能需要排队。18:30 左右较合适。如果开始累了，就把这里当作恢复点。", list: [] } } }),
+      makeStep("d3-kamogawa-evening", "19:30–20:00", "19:30", "20:00", "Kamogawa Evening Walk → Kyoto-kawaramachi", "Kyoto-kawaramachi Station", "เดินช้า ๆ ผ่านโซน Kamo River / Kamogawa ไปยัง Kyoto-kawaramachi Station เพื่อเตรียมกลับ Osaka", "https://maps.google.com/?q=Kyoto-kawaramachi+Station", "evening moment ระหว่างทาง", "ให้ Kamogawa เป็น evening moment ระหว่างทาง ไม่ใช่ destination แยก จะช่วยให้ flow กลับ Osaka ลื่นกว่า", [], { titleI18n: { en: "Kamogawa Evening Walk → Kyoto-kawaramachi", ja: "鴨川イブニングウォーク → 京都河原町", zh: "鸭川夜间散步 → Kyoto-kawaramachi" }, blurbI18n: { en: "Walk slowly through the Kamo River / Kamogawa area toward Kyoto-kawaramachi Station before returning to Osaka.", ja: "鴨川周辺をゆっくり歩き、京都河原町駅へ向かって大阪へ戻る準備をします。", zh: "慢慢经过 Kamo River / Kamogawa 区域，走向 Kyoto-kawaramachi Station，准备返回大阪。" }, note: { th: { title: "evening moment ระหว่างทาง", body: "ให้ Kamogawa เป็น evening moment ระหว่างทาง ไม่ใช่ destination แยก จะช่วยให้ flow กลับ Osaka ลื่นกว่า", list: [] }, en: { title: "Evening moment on the way", body: "Treat Kamogawa as an evening moment along the way, not a separate destination. This keeps the return to Osaka smoother.", list: [] }, ja: { title: "帰り道の雰囲気", body: "鴨川は目的地ではなく帰り道の雰囲気として楽しむと、大阪への戻りがスムーズです。", list: [] }, zh: { title: "回程路上的傍晚氛围", body: "把鸭川当作回程路上的傍晚氛围点，而不是单独目的地，返回大阪会更顺。", list: [] } } }),
+      makeStep("d3-return-osaka", "20:00 เป็นต้นไป", "20:00", "21:15", "Return to Osaka", "VIA INN PRIME Shinsaibashi Yotsubashi", "ขึ้น Hankyu Kyoto Line Limited Express จาก Kyoto-kawaramachi ไป Osaka-Umeda แล้วต่อ Osaka Metro กลับโรงแรม", "https://maps.google.com/?q=VIA+INN+PRIME+Shinsaibashi+Yotsubashi", "กลับด้วย Hankyu", "ขากลับใช้ Hankyu เพราะออกจาก Kyoto-kawaramachi สะดวกที่สุดหลัง Gion / Kamogawa", [], { titleI18n: { en: "Return to Osaka", ja: "大阪へ戻る", zh: "返回大阪" }, blurbI18n: { en: "Take the Hankyu Kyoto Line Limited Express from Kyoto-kawaramachi to Osaka-Umeda, then transfer to Osaka Metro back to the hotel.", ja: "京都河原町から阪急京都線 Limited Express で大阪梅田へ。大阪メトロに乗り換えてホテルへ戻ります。", zh: "从 Kyoto-kawaramachi 搭乘 Hankyu Kyoto Line Limited Express 到 Osaka-Umeda，再转大阪地铁回酒店。" }, note: { th: { title: "กลับด้วย Hankyu", body: "ขากลับใช้ Hankyu เพราะออกจาก Kyoto-kawaramachi สะดวกที่สุดหลัง Gion / Kamogawa", list: [] }, en: { title: "Return by Hankyu", body: "Use Hankyu on the return because Kyoto-kawaramachi is the most convenient departure point after Gion / Kamogawa.", list: [] }, ja: { title: "阪急で戻る", body: "祇園・鴨川のあとなら京都河原町発の阪急が最も便利です。", list: [] }, zh: { title: "搭 Hankyu 返回", body: "在祇园 / 鸭川之后，从 Kyoto-kawaramachi 搭 Hankyu 返回最方便。", list: [] } } }),
+    ],
+  });
+
+  Object.assign(byId["day-4"], {
+    title: "Katsuoji + Minoh Falls",
+    titleI18n: {
+      th: "Katsuoji + Minoh Falls",
+      en: "Katsuoji + Minoh Falls",
+      ja: "勝尾寺 + 箕面大滝",
+      zh: "胜尾寺 + 箕面瀑布",
+    },
+    route: "VIA INN → Shinsaibashi Station → Minoh-kayano → Katsuoji → Dainichi Parking Lot → Minoh Falls → Hankyu Minoh Station → Osaka",
+    routeI18n: {
+      th: "VIA INN → Shinsaibashi Station → Minoh-kayano → Katsuoji → Dainichi Parking Lot → Minoh Falls → Hankyu Minoh Station → Osaka",
+      en: "VIA INN → Shinsaibashi Station → Minoh-kayano → Katsuoji → Dainichi Parking Lot → Minoh Falls → Hankyu Minoh Station → Osaka",
+      ja: "VIA INN → 心斎橋駅 → 箕面萱野 → 勝尾寺 → 大日駐車場 → 箕面大滝 → 阪急箕面駅 → 大阪",
+      zh: "VIA INN → 心斋桥站 → 箕面萱野 → 胜尾寺 → 大日停车场 → 箕面瀑布 → Hankyu 箕面站 → 大阪",
+    },
+    summary: "ใช้แรงอย่างฉลาด เริ่มที่ Katsuoji แล้วตัด uphill ด้วย taxi ก่อนเดิน scenic downhill ไป Minoh Falls และลง Takimichi Path กลับสถานี",
+    summaryI18n: {
+      th: "ใช้แรงอย่างฉลาด เริ่มที่ Katsuoji แล้วตัด uphill ด้วย taxi ก่อนเดิน scenic downhill ไป Minoh Falls และลง Takimichi Path กลับสถานี",
+      en: "A smart scenic route: start at Katsuoji, skip the uphill section by taxi, then enjoy the downhill scenic walk to Minoh Falls and Takimichi Path.",
+      ja: "勝尾寺から始め、タクシーで上り坂を省略。箕面大滝までの下り道と滝道をゆっくり楽しむ効率的な自然ルート。",
+      zh: "聪明省力的风景路线：先去胜尾寺，再用 taxi 跳过上坡路段，之后沿下坡风景步道前往箕面瀑布与泷道。",
+    },
+    previewNow: "2026-05-20T12:50:00+09:00",
+    previewNote: "ตั้งเวลาไว้ช่วง scenic downhill จาก Dainichi Parking Lot ลงสู่น้ำตก เพื่อให้เห็น marker ในจุดที่สวยที่สุดของวัน",
+    events: [
+      makeStep("d4-slow-morning", "09:00–09:40", "09:00", "09:40", "Slow Morning at VIA INN", "VIA INN PRIME Shinsaibashi Yotsubashi", "ตื่นสบาย ๆ / กาแฟ / breakfast เบา ๆ / เตรียมออกเดินทาง", "https://maps.google.com/?q=VIA+INN+PRIME+Shinsaibashi+Yotsubashi", "เริ่มช้าได้", "วันนี้ไม่ควรรีบมาก เพราะช่วงสาย–เที่ยง atmosphere ดีที่สุด"),
+      makeStep("d4-walk-shinsaibashi", "09:40–09:50", "09:40", "09:50", "Walk to Shinsaibashi Station", "Shinsaibashi Station", "เดินจากโรงแรมไปสถานี Shinsaibashi", "https://maps.google.com/?q=Shinsaibashi+Station+Osaka", "เดินสั้นมาก", "ระยะประมาณ 5–7 นาที เดินสั้น ๆ เพื่อเริ่ม route ไป Minoh-kayano"),
+      makeStep("d4-midosuji-minoh-kayano", "09:50–10:20", "09:50", "10:20", "Midosuji Line to Minoh-kayano", "Minoh-kayano Station", "นั่ง Osaka Metro Midosuji Line จาก Shinsaibashi ไป Minoh-kayano ซึ่งเป็นสถานีสุดสาย", "https://maps.google.com/?q=Minoh-kayano+Station", "route ง่ายสุด", "route นี้ง่ายที่สุด ไม่ต้องเปลี่ยนหลายรอบ และไม่ต้องหลง Umeda"),
+      makeStep("d4-bus-katsuoji", "10:20–10:50", "10:20", "10:50", "Bus to Katsuoji", "Katsuoji Temple", "ออกจากสถานีไป Bus Stop No. 8 แล้วขึ้น Hankyu Bus ไป Katsuoji", "https://maps.google.com/?q=Katsuoji+Temple", "รถจอดหน้าวัด", "รถจอดหน้าวัด เดินน้อยมาก ค่าโดยสารประมาณ ¥800 / คน / เที่ยว หรือ ¥1,600 สำหรับ 2 คน"),
+      makeStep("d4-katsuoji", "11:00–12:30", "11:00", "12:30", "Katsuoji Temple", "Katsuoji Temple", "เดินวัด ถ่ายรูป Daruma slow walk และชมธรรมชาติ", "https://maps.google.com/?q=Katsuoji+Temple", "photogenic มาก", "หนึ่งในวัดที่ photogenic และ atmosphere ดีที่สุดของทริป ค่าเข้า ¥500 / คน", [], { website: "https://katsuo-ji-temple.or.jp/" }),
+      makeStep("d4-taxi-dainichi", "12:30–12:45", "12:30", "12:45", "Taxi to Dainichi Parking Lot", "Dainichi Parking Lot", "เรียก taxi จากหน้าวัด แล้วบอกคนขับว่า “Dainichi Parking Lot”", "https://maps.google.com/?q=Dainichi+Parking+Lot+Minoh", "key optimization", "นี่คือ key optimization ของทั้งวัน เพราะช่วยตัด uphill hiking ออก แต่ยังได้ scenic section ครบ ค่า taxi ประมาณ ¥1,500–2,500"),
+      makeStep("d4-downhill-falls", "12:45–13:15", "12:45", "13:15", "Scenic Downhill Walk to Minoh Falls", "Minoh Falls", "เดิน downhill scenic path ไปถึงน้ำตก Minoh", "https://maps.google.com/?q=Minoh+Falls", "ช่วงที่สวยที่สุด", "นี่คือช่วงที่สวยที่สุดของ route ใช้เวลาเดินประมาณ 15–25 นาที เดินลง ไม่เหนื่อย และได้ธรรมชาติเต็ม"),
+      makeStep("d4-takimichi", "13:15–14:00", "13:15", "14:00", "Walk Down Takimichi Path to Hankyu Minoh Station", "Hankyu Minoh Station", "เดิน downhill ผ่าน Takimichi Path จากน้ำตกลงไปยัง Hankyu Minoh Station", "https://maps.google.com/?q=Hankyu+Minoh+Station", "มีของกินเล่น", "ระยะประมาณ 2.7 km ใช้เวลา 35–45 นาที ระหว่างทางมีร้าน local, snack, souvenir, cafe และ forest atmosphere แนะนำลอง Momiji Tempura"),
+      makeStep("d4-return-osaka", "14:00–15:00", "14:00", "15:00", "Return to Osaka", "Shinsaibashi / Osaka-Umeda Station", "นั่ง Hankyu Minoh Line ไป Ishibashi handai-mae ต่อ Hankyu Takarazuka Line ไป Osaka-Umeda แล้วต่อ Metro กลับ Shinsaibashi / Yotsubashi", "https://maps.google.com/?q=Shinsaibashi+Osaka", "ขากลับสบาย", "ขากลับ relaxed ไม่รีบ และไม่ต้องใช้แรงแล้ว"),
+      makeStep("d4-relaxed-evening", "18:00–22:00", "18:00", "22:00", "Relaxed Evening", "Wine Bar Cave Osaka", "เลือกตามแรงจริง: wine bar, izakaya เบา ๆ, dinner ชิล ๆ หรือพักโรงแรม", "https://maps.google.com/?q=Wine+Bar+Cave+Osaka", "มื้อเย็นตามแรง", "วันนี้ใช้พลังกับธรรมชาติแล้ว ตอนเย็นควรเป็นมื้อเบา ๆ หรือพักสบาย ๆ"),
+    ],
+  });
+
+  Object.assign(byId["day-5"], {
+    title: "Two Options Day",
+    route: "Choose Uji Slow Tea Day or Gamba Osaka + Rose Festa + ExpoCity",
+    summary: "เลือกจังหวะของ Day 5 ตามพลังงานจริงของวัน ระหว่างครึ่งวันชาเขียวที่ Uji หรือ suburban Osaka day ที่ Suita + ExpoCity",
+    planSwitcherLabelI18n: {
+      th: "เลือกจังหวะของวันนี้",
+      en: "Choose today’s rhythm",
+      ja: "今日の過ごし方を選ぶ",
+      zh: "选择今天的节奏",
+    },
+    plans: {
+      uji: {
+        id: "uji",
+        image: "https://www.japan-guide.com/g17/3923_01.jpg",
+        titleI18n: {
+          th: "Uji Slow Tea Day",
+          en: "Uji Slow Tea Day",
+          ja: "宇治スローティーデイ",
+          zh: "Uji Slow Tea Day",
+        },
+        routeI18n: {
+          th: "Osaka → Keihan Uji Station → Byodo-in → Matcha Ramen → Tsujirihei Honten → Uji River → Byodo-in Omotesando → Osaka",
+          en: "Osaka → Keihan Uji Station → Byodo-in → Matcha Ramen → Tsujirihei Honten → Uji River → Byodo-in Omotesando → Osaka",
+          ja: "大阪 → 京阪宇治駅 → 平等院 → 抹茶ラーメン → 辻利兵衛本店 → 宇治川 → 平等院表参道 → 大阪",
+          zh: "大阪 → 京阪宇治站 → 平等院 → 抹茶拉面 → 辻利兵卫本店 → 宇治川 → 平等院表参道 → 大阪",
+        },
+        summaryI18n: {
+          th: "วันนี้ไม่ต้องเร่งและไม่ต้อง strict timeline เพราะ Uji เป็นเมืองเล็ก ทุกอย่างเดินถึงกันได้ง่าย เดินตาม mood ระหว่าง Byodo-in, matcha, tea shops, Uji River และ Omotesando ได้เลย",
+          en: "A slow matcha town experience. Uji is small and walkable, so today should stay flexible: move by mood between Byodo-in, matcha lunch, tea shops, Uji River, and Omotesando.",
+          ja: "宇治は小さく歩きやすい町なので、今日は厳密なタイムラインにしすぎず、平等院、抹茶ランチ、茶店、宇治川、表参道を気分に合わせて巡る日。",
+          zh: "宇治是一个小而好走的茶之城，所以今天不用排得太紧。可以按心情在平等院、抹茶午餐、茶铺、宇治川和表参道之间慢慢走。",
+        },
+        moodI18n: {
+          th: "Slow Matcha Town Experience",
+          en: "Slow Matcha Town Experience",
+          ja: "ゆったり自然を楽しむ日",
+          zh: "轻松自然风景日",
+        },
+        costI18n: {
+          th: "ประมาณ ¥9,000–12,000",
+          en: "Approx. ¥9,000–12,000",
+          ja: "約 ¥9,000–12,000",
+          zh: "约 ¥9,000–12,000",
+        },
+        previewNow: "2026-05-21T14:40:00+09:00",
+        previewNote: "ตั้งเวลาไว้ช่วงร้านชาและริมน้ำ เพื่อให้เห็น marker ของ Uji ในจังหวะที่เดินตาม mood ได้จริง",
+        events: [
+          makeStep("d5a-osaka-uji", "10:00–11:20", "10:00", "11:20", "Osaka → Uji", "Keihan Uji Station", "จาก Osaka เดินทางไป Keihan Uji Station ผ่าน Midosuji Line และ Keihan Line", "https://maps.google.com/?q=Keihan+Uji+Station", "อย่ารีบ", "ใช้เวลาประมาณ 1 ชั่วโมง 20 นาที วันนี้เป็น tea culture day ไม่ต้องรีบ", [], { titleI18n: { en: "Osaka → Uji", ja: "大阪 → 宇治", zh: "大阪 → 宇治" }, blurbI18n: { en: "Travel from Osaka to Keihan Uji Station using the Midosuji Line and Keihan Line.", ja: "御堂筋線と京阪線を使って、大阪から京阪宇治駅へ移動。", zh: "从大阪出发，搭乘 Midosuji Line 与 Keihan Line 前往 Keihan Uji Station。" }, note: { th: { title: "อย่ารีบ", body: "ใช้เวลาประมาณ 1 ชั่วโมง 20 นาที วันนี้เป็น tea culture day ไม่ต้องรีบ", list: [] }, en: { title: "Keep it relaxed", body: "Expect around 1 hour 20 minutes. Today is a tea-culture day, so keep the pace relaxed.", list: [] }, ja: { title: "急がなくて大丈夫", body: "所要約1時間20分。今日は茶文化をゆっくり楽しむ日なので、急がなくて大丈夫。", list: [] }, zh: { title: "不需要赶", body: "约 1 小时 20 分钟。今天是茶文化慢旅日，不需要赶。", list: [] } } }),
+          makeStep("d5a-byodoin", "11:30–12:20", "11:30", "12:20", "Byodo-in Temple", "Byodo-in Temple", "เดินชม Phoenix Hall, garden และบรรยากาศวัดแบบ slow walk", "https://maps.google.com/?q=Byodo-in+Temple+Uji", "main cultural highlight", "นี่คือ main cultural highlight ของวัน และเป็นจุดที่ควรให้เวลาแบบไม่เร่ง", [], { website: "https://www.byodoin.or.jp/en/", titleI18n: { en: "Byodo-in Temple", ja: "平等院", zh: "平等院" }, blurbI18n: { en: "Walk through Phoenix Hall, the garden, and the temple atmosphere at a slow pace.", ja: "鳳凰堂、庭園、境内の雰囲気をゆっくり歩いて楽しむ。", zh: "慢慢参观凤凰堂、庭园和寺院氛围。" }, note: { th: { title: "main cultural highlight", body: "นี่คือ main cultural highlight ของวัน และเป็นจุดที่ควรให้เวลาแบบไม่เร่ง", list: [] }, en: { title: "Main cultural highlight", body: "This is the main cultural highlight of the day, worth giving time without rushing.", list: [] }, ja: { title: "文化的ハイライト", body: "この日の文化的なメインハイライト。急がず時間を取りたい場所。", list: [] }, zh: { title: "文化亮点", body: "这是当天最重要的文化亮点，值得慢慢看。", list: [] } } }),
+          makeStep("d5a-matcha-ramen", "12:30–13:15", "12:30", "13:15", "Matcha Ramen Lunch", "Byodo-in area / Ramen Tanaka Kyu Shoten", "ลอง matcha ramen แถว Byodo-in area", "https://maps.google.com/?q=Ramen+Tanaka+Kyu+Shoten+Uji", "สลับกับวัดได้", "ถ้าหิวก่อนเข้าวัด สามารถสลับลำดับกับ Byodo-in ได้เลย อันนี้ flexible ตาม mood จริงดีที่สุด", [], { titleI18n: { en: "Matcha Ramen Lunch", ja: "抹茶ラーメンランチ", zh: "抹茶拉面午餐" }, blurbI18n: { en: "Try matcha ramen around the Byodo-in area.", ja: "平等院周辺で抹茶ラーメンを試す。", zh: "在平等院附近尝试抹茶拉面。" }, note: { th: { title: "สลับกับวัดได้", body: "ถ้าหิวก่อนเข้าวัด สามารถสลับลำดับกับ Byodo-in ได้เลย อันนี้ flexible ตาม mood จริงดีที่สุด", list: [] }, en: { title: "Can swap with the temple", body: "If you are hungry before the temple, swap this with Byodo-in. This part is best kept flexible.", list: [] }, ja: { title: "順番は入れ替えOK", body: "平等院の前にお腹が空いたら、順番を入れ替えてOK。ここは気分に合わせるのが一番。", list: [] }, zh: { title: "可与寺院对调", body: "如果进平等院前已经饿了，可以和 Byodo-in 调换顺序。这里保持弹性最好。", list: [] } } }),
+          makeStep("d5a-tsujirihei", "13:30–14:30", "13:30", "14:30", "Tsujirihei Honten", "Tsujirihei Honten - Kyoto Uji Main Shop", "ชาเขียว, parfait, dessert และ matcha experience", "https://maps.google.com/?q=Tsujirihei+Honten+Kyoto+Uji+Main+Shop", "iconic tea stop", "นี่คือ iconic tea stop ของวัน และเป็น highlight ฝั่ง dessert / tea culture", [], { website: "https://www.tsujirihei.co.jp/", titleI18n: { en: "Tsujirihei Honten", ja: "辻利兵衛本店", zh: "辻利兵卫本店" }, blurbI18n: { en: "Tea, parfait, dessert, and a proper matcha experience.", ja: "お茶、パフェ、スイーツ、宇治らしい抹茶体験。", zh: "茶、parfait、甜点，以及宇治风格的抹茶体验。" }, note: { th: { title: "iconic tea stop", body: "นี่คือ iconic tea stop ของวัน และเป็น highlight ฝั่ง dessert / tea culture", list: [] }, en: { title: "Iconic tea stop", body: "This is the iconic tea stop of the day and the main dessert / tea-culture highlight.", list: [] }, ja: { title: "象徴的なお茶スポット", body: "この日の象徴的なお茶スポット。スイーツと茶文化のハイライト。", list: [] }, zh: { title: "代表性茶铺", body: "这是当天最具代表性的茶铺，也是甜点与茶文化的重点。", list: [] } } }),
+          makeStep("d5a-uji-river", "14:30–15:15", "14:30", "15:15", "Uji River Walk", "Uji River", "เดินริมแม่น้ำ ถ่ายรูป และปล่อยให้บรรยากาศ Uji ทำงานแบบช้า ๆ", "https://maps.google.com/?q=Uji+River+Kyoto", "เดินเท่าที่สบาย", "ไม่ต้องเดินไกล แค่เดินช่วงที่รู้สึกดีและพักตามจังหวะจริง", [], { titleI18n: { en: "Uji River Walk", ja: "宇治川散歩", zh: "宇治川散步" }, blurbI18n: { en: "Walk along the river, take photos, and let Uji’s quiet atmosphere do the work.", ja: "川沿いを歩き、写真を撮りながら、宇治の静かな空気をゆっくり味わう。", zh: "沿着河边散步拍照，慢慢感受宇治安静的气氛。" }, note: { th: { title: "เดินเท่าที่สบาย", body: "ไม่ต้องเดินไกล แค่เดินช่วงที่รู้สึกดีและพักตามจังหวะจริง", list: [] }, en: { title: "Keep it easy", body: "No need to walk far. Just follow the pleasant parts and rest as needed.", list: [] }, ja: { title: "気持ちのいい範囲で", body: "遠くまで歩く必要はなく、気持ちのいい範囲だけ歩けば十分。", list: [] }, zh: { title: "走舒服的那一段", body: "不用走很远，走舒服的那一段就好，按体力休息。", list: [] } } }),
+          makeStep("d5a-omotesando", "15:15–16:00", "15:15", "16:00", "Byodo-in Omotesando", "Byodo-in Omotesando", "เดินร้านชา souvenir, tea snacks และ local shopping เบา ๆ", "https://maps.google.com/?q=Byodo-in+Omotesando+Uji", "สลับกับริมน้ำได้", "STEP 5 และ STEP 6 สามารถเดินสลับกัน วนไปมา และปรับตาม mood ได้เลย เพราะทั้ง area อยู่ติดกันและใกล้สถานีก่อนกลับ Osaka", [], { titleI18n: { en: "Byodo-in Omotesando", ja: "平等院表参道", zh: "平等院表参道" }, blurbI18n: { en: "Browse tea shops, souvenirs, tea snacks, and light local shopping.", ja: "茶店、お土産、茶菓子、軽いローカルショッピングを楽しむ。", zh: "逛茶铺、伴手礼、茶点和轻松的在地小店。" }, note: { th: { title: "สลับกับริมน้ำได้", body: "STEP 5 และ STEP 6 สามารถเดินสลับกัน วนไปมา และปรับตาม mood ได้เลย เพราะทั้ง area อยู่ติดกันและใกล้สถานีก่อนกลับ Osaka", list: [] }, en: { title: "Can loop naturally", body: "Steps 5 and 6 can be swapped or looped naturally. The river and Omotesando areas are close together and near the station for returning to Osaka.", list: [] }, ja: { title: "順番は柔軟でOK", body: "STEP 5とSTEP 6は順番を入れ替えたり、自然に行き来してOK。川沿いと表参道は近く、帰りの駅にもつながりやすい。", list: [] }, zh: { title: "可自然来回走", body: "STEP 5 和 STEP 6 可以互换或来回走。宇治川与表参道区域相邻，也方便之后回车站返回大阪。", list: [] } } }),
+          makeStep("d5a-return", "16:00–17:30", "16:00", "17:30", "Return Osaka", "Shinsaibashi Station", "Keihan Uji Line → Chushojima → Keihan Main Line → Yodoyabashi → Midosuji Line → Shinsaibashi", "https://maps.google.com/?q=Shinsaibashi+Station+Osaka", "กลับแบบไม่รีบ", "ใช้เวลาประมาณ 1 ชั่วโมง 30 นาที กลับเข้า Osaka แบบไม่รีบ", [], { titleI18n: { en: "Return Osaka", ja: "大阪へ戻る", zh: "返回大阪" }, blurbI18n: { en: "Keihan Uji Line → Chushojima → Keihan Main Line → Yodoyabashi → Midosuji Line → Shinsaibashi.", ja: "京阪宇治線 → 中書島 → 京阪本線 → 淀屋橋 → 御堂筋線 → 心斎橋。", zh: "Keihan Uji Line → Chushojima → Keihan Main Line → Yodoyabashi → Midosuji Line → Shinsaibashi。" }, note: { th: { title: "กลับแบบไม่รีบ", body: "ใช้เวลาประมาณ 1 ชั่วโมง 30 นาที กลับเข้า Osaka แบบไม่รีบ", list: [] }, en: { title: "Easy return", body: "Expect around 1 hour 30 minutes. Return to Osaka without rushing.", list: [] }, ja: { title: "ゆっくり戻る", body: "所要約1時間30分。急がず大阪へ戻る。", list: [] }, zh: { title: "慢慢返回", body: "约 1 小时 30 分钟，不赶时间地返回大阪。", list: [] } } }),
+        ],
+      },
+      gamba: {
+        id: "gamba",
+        image: "./assets/images/day5-expocity.jpg",
+        titleI18n: {
+          th: "Gamba Osaka + Rose Festa + ExpoCity",
+          en: "Gamba Osaka + Rose Festa + ExpoCity",
+          ja: "ガンバ大阪 + Rose Festa + ExpoCity",
+          zh: "Gamba Osaka + Rose Festa + ExpoCity",
+        },
+        routeI18n: {
+          th: "VIA INN → Suita → Panasonic Stadium → Rose Garden → ExpoCity → Osaka",
+          en: "VIA INN → Suita → Panasonic Stadium → Rose Garden → ExpoCity → Osaka",
+          ja: "VIA INN → 吹田 → パナソニックスタジアム → ローズガーデン → ExpoCity → 大阪",
+          zh: "VIA INN → 吹田 → 球场 → 玫瑰园 → ExpoCity → 大阪",
+        },
+        summaryI18n: {
+          th: "ฟุตบอลญี่ปุ่น สวนกุหลาบ และ ExpoCity ในจังหวะสบาย ๆ เป็นวัน suburban Osaka ที่ช่วยเติมความ modern, shopping และ local life ให้ทริป",
+          en: "A relaxed suburban Osaka day with Japanese football culture, roses, ExpoCity shopping, cafes, and modern local life.",
+          ja: "日本のサッカー文化、バラ園、ExpoCity、カフェをゆったり楽しむ大阪郊外の日。",
+          zh: "轻松的大阪近郊日，结合日本足球文化、玫瑰园、ExpoCity 购物、咖啡和在地生活感。",
+        },
+        moodI18n: {
+          th: "ฟุตบอล + Rose Festa + shopping",
+          en: "Football + Rose Festa + shopping",
+          ja: "サッカー + Rose Festa + ショッピング",
+          zh: "足球 + Rose Festa + 购物",
+        },
+        costI18n: {
+          th: "ประมาณ ¥8,500–11,000",
+          en: "Approx. ¥8,500–11,000",
+          ja: "約 ¥8,500–11,000",
+          zh: "约 ¥8,500–11,000",
+        },
+        previewNow: "2026-05-21T15:40:00+09:00",
+        previewNote: "ตั้งเวลาไว้ช่วง ExpoCity เพื่อให้เห็น marker ใน Gamba plan",
+        events: [
+          makeStep("d5b-light-morning", "10:00–10:30", "10:00", "10:30", "Light Morning", "VIA INN PRIME Shinsaibashi Yotsubashi", "ตื่นสาย / กาแฟเบา ๆ", "https://maps.google.com/?q=VIA+INN+PRIME+Shinsaibashi+Yotsubashi", "ไม่ต้องกินหนัก", "ไม่ต้องกินหนักก่อนออก ไปกินที่ ExpoCity ดีกว่า"),
+          makeStep("d5b-travel-suita", "10:30–11:30", "10:30", "11:30", "Travel to Suita", "Bampaku-kinen-koen Station", "Osaka Metro + Osaka Monorail", "https://maps.google.com/?q=Bampaku-kinen-koen+Station", "ใช้ ICOCA ได้", "ใช้ ICOCA ได้ทั้งหมด"),
+          makeStep("d5b-stadium", "11:30–12:30", "11:30", "12:30", "Panasonic Stadium Suita", "Panasonic Stadium Suita", "เดินรอบสนาม Gamba Osaka / ถ่ายรูป / ดู fan shop ถ้าเปิด", "https://maps.google.com/?q=Panasonic+Stadium+Suita", "คุ้มสำหรับสายฟุตบอล", "ถ้าไม่มี stadium tour ก็ยังคุ้มสำหรับสายฟุตบอล", [], { website: "https://www.gamba-osaka.net/english/" }),
+          makeStep("d5b-rose-festa", "12:45–14:00", "12:45", "14:00", "Rose Festa", "Expo ’70 Commemorative Park / Rose Garden", "เดินสวนกุหลาบ Rose Festa 2026", "https://maps.google.com/?q=Expo+70+Commemorative+Park+Rose+Garden", "seasonal event", "เป็น seasonal event เหมาะมากกับทริปช่วงนี้"),
+          makeStep("d5b-lunch-expocity", "14:00–15:30", "14:00", "15:30", "Lunch at ExpoCity", "EXPOCITY", "late lunch ใน mall", "https://maps.google.com/?q=EXPOCITY", "ไม่ต้องล็อคร้าน", "เลือกร้านหน้างานได้ ไม่ต้องล็อค เช่น tonkatsu, burger, ramen, cafe", [], { website: "https://www.expocity-mf.com/expo/" }),
+          makeStep("d5b-shopping-cafe", "15:30–18:00", "15:30", "18:00", "Shopping / Cafe", "EXPOCITY / Lalaport EXPOCITY", "shopping / sneaker / lifestyle store / cafe", "https://maps.google.com/?q=Lalaport+EXPOCITY", "เหมาะกับจังหวะสบาย", "เหมาะกับภรรยาและไม่เหนื่อยเท่า outlet"),
+          makeStep("d5b-return-osaka", "18:00–19:00", "18:00", "19:00", "Return Osaka", "Shinsaibashi / Namba", "กลับเข้าเมือง", "https://maps.google.com/?q=Shinsaibashi+Namba+Osaka", "กินง่าย ๆ ได้", "ถ้าเหนื่อย กินง่าย ๆ แถวโรงแรมได้เลย"),
+        ],
+      },
+    },
+  });
+
+  Object.assign(byId["day-6"], {
+    title: "Move Hotel + Free Shopping Day",
+    route: "VIA INN → Swissotel → Takashimaya / Daimaru / Namba Parks / PARCO",
+    summary: "วันย้ายโรงแรมและ shopping จริงแบบไม่ต้องล็อกเวลา แต่ยังแยก step ให้หยิบใช้ได้ตลอดวัน",
+    events: [
+      makeStep("d6-checkout", "10:30", "10:30", "10:45", "Check-out VIA INN", "VIA INN PRIME Shinsaibashi Yotsubashi", "Check-out", "https://maps.google.com/?q=VIA+INN+PRIME+Shinsaibashi+Yotsubashi", "อยู่ในเมืองทั้งวัน", "วันนี้ไม่ต้องออกนอกเมือง"),
+      makeStep("d6-drop-bags", "11:00", "11:00", "11:20", "Drop Bags at Swissôtel", "Swissôtel Nankai Osaka", "ฝากกระเป๋า", "https://maps.google.com/?q=Swissotel+Nankai+Osaka", "โลเคชันดีมาก", "โรงแรมติด Namba สะดวกมาก"),
+      makeStep("d6-dior", "11:30–13:00", "11:30", "13:00", "Dior Cosmetics", "Takashimaya Osaka / Daimaru Shinsaibashi", "ดู Dior cosmetics / skincare / fragrance", "https://maps.google.com/?q=Takashimaya+Osaka", "เริ่มที่ Takashimaya", "Takashimaya สะดวกสุดเพราะติด Swissôtel"),
+      makeStep("d6-fashion", "13:00–14:30", "13:00", "14:30", "Japanese Local Fashion", "Namba Parks / Namba City / Shinsaibashi PARCO", "เดินแบรนด์ญี่ปุ่น เช่น Beams, United Arrows, Urban Research, Journal Standard", "https://maps.google.com/?q=Namba+Parks", "เหมาะกับ local fashion", "เหมาะกับเสื้อผ้าวัยผู้ใหญ่ ใส่ง่าย ไม่ outlet"),
+      makeStep("d6-flower-mountain", "14:30–15:00", "14:30", "15:00", "Flower Mountain Shoes", "B’2nd Osaka / Shinsaibashi PARCO", "หา Flower Mountain หรือ sneaker ญี่ปุ่น niche", "https://maps.google.com/?q=Shinsaibashi+PARCO", "เช็ก stock หน้างาน", "ถ้าต้องการรุ่นเฉพาะ อาจต้องเช็ค stock หน้างาน"),
+      makeStep("d6-checkin-dinner", "15:00–21:00", "15:00", "21:00", "Check-in + Dinner", "Swissôtel Nankai Osaka / Table36", "Check-in → พัก → dinner หรือ wine", "https://maps.google.com/?q=Table36+Swissotel+Nankai+Osaka", "free day จริง", "วันนี้คือ free day จริง ไม่ต้องคุมเวลา"),
+    ],
+  });
+
+  Object.assign(byId["day-7"], {
+    title: "Kobe Slow Port City Day",
+    titleI18n: {
+      th: "Kobe Slow Port City Day",
+      en: "Kobe Slow Port City Day",
+      ja: "神戸スローポートシティデイ",
+      zh: "Kobe Slow Port City Day",
+    },
+    route: "Swissôtel → Osaka-Namba → Kobe-Sannomiya → Ikuta Shrine → Kitano → Kobe Beef → Nankinmachi → Harborland / Port Tower → Osaka",
+    routeI18n: {
+      th: "Swissôtel → Osaka-Namba → Kobe-Sannomiya → Ikuta Shrine → Kitano → Kobe Beef → Nankinmachi → Harborland / Port Tower → Osaka",
+      en: "Swissôtel → Osaka-Namba → Kobe-Sannomiya → Ikuta Shrine → Kitano → Kobe Beef → Nankinmachi → Harborland / Port Tower → Osaka",
+      ja: "Swissôtel → 大阪難波 → 神戸三宮 → 生田神社 → 北野 → 神戸ビーフ → 南京町 → ハーバーランド / ポートタワー → 大阪",
+      zh: "Swissôtel → Osaka-Namba → Kobe-Sannomiya → 生田神社 → 北野 → 神户牛 → 南京町 → Harborland / Port Tower → 大阪",
+    },
+    summary: "เมืองท่าแบบผู้ใหญ่ เดินช้า ๆ จากศาลเจ้าและย่าน Kitano ไปสู่ Kobe beef, Chinatown และ harbor atmosphere ช่วงเย็น",
+    summaryI18n: {
+      th: "เมืองท่าแบบผู้ใหญ่ เดินช้า ๆ จากศาลเจ้าและย่าน Kitano ไปสู่ Kobe beef, Chinatown และ harbor atmosphere ช่วงเย็น",
+      en: "A relaxed mature port city day: shrine, Kitano, Kobe beef, Chinatown, and an elegant harbor atmosphere toward evening.",
+      ja: "神戸らしい大人の港町をゆっくり楽しむ日。神社、北野、神戸ビーフ、中華街、夕方のハーバーを巡ります。",
+      zh: "成熟轻松的神户港口城市日：神社、北野、神户牛、中华街，以及傍晚的港湾氛围。",
+    },
+    previewNow: "2026-05-23T16:20:00+09:00",
+    previewNote: "ตั้งเวลาไว้ช่วงเดิน Harborland เพื่อให้เห็น marker ของ Kobe ในช่วงบรรยากาศท่าเรือที่ดีที่สุด",
+    events: [
+      makeStep("d7-slow-morning", "09:00–10:00", "09:00", "10:00", "Slow Morning at Swissôtel", "Swissôtel Nankai Osaka", "breakfast / กาแฟ / เตรียมตัวออกเดินทาง", "https://maps.google.com/?q=Swissotel+Nankai+Osaka", "ยังไม่ต้องรีบ", "วันนี้ไม่ต้องรีบออกเช้า Kobe สวยช่วง late morning → evening มากกว่า"),
+      makeStep("d7-osaka-kobe", "10:00–11:00", "10:00", "11:00", "Osaka → Kobe", "Kobe-Sannomiya Station", "เดินจาก Swissôtel ลงไป Osaka-Namba Station แล้วขึ้น Hanshin Namba Line Rapid Express ไป Kobe-Sannomiya", "https://maps.google.com/?q=Kobe-Sannomiya+Station", "Hanshin ตรงและง่าย", "ใช้ ICOCA แตะเข้าได้เลย ไม่ต้องซื้อตั๋ว ไม่ต้องจอง และไม่ต้องผ่าน Umeda chaos ให้ดูปลายทางขบวนว่า “Kobe-Sannomiya”", [], { note: { th: { title: "Hanshin ตรงและง่าย", body: "จาก Swissôtel Nankai Osaka เดินตามป้าย “Hanshin Railway / Kintetsu Railway” ไป Osaka-Namba Station แล้วขึ้น Hanshin Namba Line Rapid Express ที่ไป Kobe-Sannomiya นั่งยาวประมาณ 45–50 นาที ค่าเดินทางประมาณ ¥420 / คน Google Maps แม่นมาก ให้เช็ก platform และเวลา real-time ก่อนขึ้นรถ", list: [] }, en: { title: "Direct Hanshin route", body: "Walk from Swissôtel toward the Hanshin / Kintetsu signs to Osaka-Namba Station, then take the Hanshin Namba Line Rapid Express to Kobe-Sannomiya. About 45–50 minutes, around ¥420 per person. Check the real-time platform before boarding.", list: [] }, ja: { title: "阪神でそのまま三宮へ", body: "Swissôtel から「Hanshin Railway / Kintetsu Railway」の案内に沿って大阪難波駅へ進み、阪神なんば線快速急行で神戸三宮へ。所要約45〜50分、運賃は1人約¥420。乗車前にホームと時刻を確認。", list: [] }, zh: { title: "Hanshin 直达最轻松", body: "从 Swissôtel 沿着 “Hanshin Railway / Kintetsu Railway” 指示走到 Osaka-Namba Station，再搭 Hanshin Namba Line Rapid Express 前往 Kobe-Sannomiya。约 45–50 分钟，每人约 ¥420。上车前看一下实时站台与时间。", list: [] } } }),
+      makeStep("d7-ikuta", "11:00–11:40", "11:00", "11:40", "Ikuta Shrine", "Ikuta Shrine", "เดินวัด ถ่ายรูป และเปิดวันแบบ slow walk ใจกลาง Kobe", "https://maps.google.com/?q=Ikuta+Shrine+Kobe", "จุดเริ่มต้นที่ดี", "เดินจาก Kobe-Sannomiya ได้ง่าย เหมาะเป็นจุดเริ่มต้นของ Kobe day"),
+      makeStep("d7-kitano", "11:45–13:00", "11:45", "13:00", "Kitano Area Walk", "Kitano Ijinkan-Gai", "เดินย่านบ้านยุโรปเก่า ชมบรรยากาศ Kitano และถ่ายรูปวิว Kobe", "https://maps.google.com/?q=Kitano+Ijinkan-Gai+Kobe", "เดินพอประมาณ", "มีเนินบ้าง เดินช้า ๆ พอ ถ้าเริ่มเหนื่อยให้ลดวงเดิน ไม่ต้องเก็บทุกบ้าน Recommended stop: Kazamidori Pudding"),
+      makeStep(
+        "d7-kobe-beef",
+        "13:00–14:30",
+        "13:00",
+        "14:30",
+        "Kobe Beef Lunch — เลือก experience ที่อยากได้",
+        "Mouriya Honten",
+        "มื้อหลักของวัน เลือกระหว่าง Mouriya Honten ถ้าอยากโฟกัสรสชาติเนื้อแบบ calm / mature หรือ Misono ถ้าอยากได้ teppanyaki experience หน้าเตาแบบ iconic",
+        "https://maps.google.com/?q=Mouriya+Honten+Kobe",
+        "main recommendation คือ Mouriya",
+        "สำหรับทริปนี้ recommendation หลักคือ Mouriya Selection Beef หรือ Mouriya Kobe Beef tier กลาง เพราะ balance ดีสุด ยังได้ beef experience ดี และไม่ทำให้ทั้งวันหนักเกินไป",
+        [
+          "Mouriya Honten — focus on the beef itself",
+          "High beef quality / calmer atmosphere / mature & relaxed",
+          "Sweet spot: Mouriya Selection Beef ¥6,700–8,500",
+          "Kobe Beef tier: ¥11,000–18,000+",
+          "Misono Kobe Main Restaurant — classic teppanyaki experience",
+          "Iconic / historical / chef performance / livelier atmosphere",
+          "Sweet spot: Misono Lunch Set ¥3,850–5,500",
+          "Kobe Beef Lunch: ¥12,100–16,500+",
+        ],
+        {
+          titleI18n: {
+            en: "Kobe Beef Lunch — Choose Your Experience",
+            ja: "神戸ビーフランチ — 体験で選ぶ",
+            zh: "神户牛午餐 — 按体验选择",
+          },
+          blurbI18n: {
+            en: "The main meal of the day. Choose Mouriya Honten if you want a calmer beef-focused lunch, or Misono if you want the iconic teppanyaki counter experience.",
+            ja: "この日のメインランチ。落ち着いて肉そのものを楽しむなら Mouriya Honten、鉄板焼きのライブ感を楽しむなら Misono。",
+            zh: "当天主餐。如果想专注牛肉本身、气氛更成熟安静，选 Mouriya Honten；如果想要经典铁板烧体验，选 Misono。",
+          },
+          note: {
+            th: {
+              title: "main recommendation คือ Mouriya",
+              body: "สำหรับทริปนี้ recommendation หลักคือ Mouriya Selection Beef หรือ Mouriya Kobe Beef tier กลาง เพราะ balance ดีสุด ยังได้ beef experience ดี และไม่ทำให้ทั้งวันหนักเกินไป",
+              list: [
+                "Mouriya Honten — focus on the beef itself",
+                "เนื้อ quality สูง / atmosphere สงบกว่า / mature & relaxed",
+                "เหมาะถ้าสนใจรสชาติเนื้อมากกว่า performance",
+                "Sweet spot: Mouriya Selection Beef ¥6,700–8,500",
+                "Kobe Beef tier: ¥11,000–18,000+",
+                "Misono Kobe Main Restaurant — classic teppanyaki experience",
+                "iconic / historical / chef performance / atmosphere lively กว่า",
+                "เหมาะถ้าอยากได้หน้าเตาแบบ teppanyaki",
+                "Sweet spot: Misono Lunch Set ¥3,850–5,500",
+                "Kobe Beef Lunch: ¥12,100–16,500+",
+                "เลือกร้านตาม experience ที่อยากได้ ไม่ใช่ว่าใครชนะขาดลอย ทั้งสองร้านดีพอสำหรับ Kobe lunch",
+              ],
+            },
+            en: {
+              title: "Main recommendation: Mouriya",
+              body: "For this trip, the main recommendation is Mouriya Selection Beef or a mid-tier Mouriya Kobe Beef lunch. It gives the best balance: strong beef experience without making the day too heavy.",
+              list: [
+                "Mouriya Honten — focus on the beef itself",
+                "High beef quality",
+                "Calmer atmosphere",
+                "Mature / relaxed",
+                "Best if the focus is beef taste rather than performance",
+                "Sweet spot: Mouriya Selection Beef ¥6,700–8,500",
+                "Kobe Beef tier: ¥11,000–18,000+",
+                "Misono Kobe Main Restaurant — classic teppanyaki experience",
+                "Iconic / historical",
+                "Chef performance",
+                "Livelier atmosphere",
+                "Best if you want the classic teppanyaki counter experience",
+                "Sweet spot: Misono Lunch Set ¥3,850–5,500",
+                "Kobe Beef Lunch: ¥12,100–16,500+",
+                "Choose by the experience you want, not by a dramatic winner. Both are strong enough for a Kobe lunch.",
+              ],
+            },
+            ja: {
+              title: "主推は Mouriya",
+              body: "この旅では Mouriya Selection Beef、または Mouriya の中価格帯 Kobe Beef lunch が最もバランスよし。しっかり肉を楽しめて、1日全体が重くなりすぎません。",
+              list: [
+                "Mouriya Honten — 肉そのものを楽しむタイプ",
+                "肉質が高い",
+                "雰囲気が落ち着いている",
+                "大人っぽく relaxed",
+                "パフォーマンスより味重視ならこちら",
+                "Sweet spot: Mouriya Selection Beef ¥6,700–8,500",
+                "Kobe Beef tier: ¥11,000–18,000+",
+                "Misono Kobe Main Restaurant — 王道鉄板焼き体験",
+                "iconic / historical",
+                "シェフのパフォーマンス",
+                "より lively な雰囲気",
+                "鉄板前の体験重視ならこちら",
+                "Sweet spot: Misono Lunch Set ¥3,850–5,500",
+                "Kobe Beef Lunch: ¥12,100–16,500+",
+              ],
+            },
+            zh: {
+              title: "主要推荐 Mouriya",
+              body: "这趟旅行最推荐 Mouriya Selection Beef 或 Mouriya 的中档 Kobe Beef lunch。牛肉体验足够好，也不会让当天预算和节奏太重。",
+              list: [
+                "Mouriya Honten — 更专注牛肉本身",
+                "牛肉品质高",
+                "氛围更安静成熟",
+                "适合重视肉味本身的人",
+                "Sweet spot: Mouriya Selection Beef ¥6,700–8,500",
+                "Kobe Beef tier: ¥11,000–18,000+",
+                "Misono Kobe Main Restaurant — 经典铁板烧体验",
+                "iconic / historical",
+                "chef performance",
+                "气氛更 lively",
+                "适合想要经典铁板烧吧台体验的人",
+                "Sweet spot: Misono Lunch Set ¥3,850–5,500",
+                "Kobe Beef Lunch: ¥12,100–16,500+",
+              ],
+            },
+          },
+        },
+      ),
+      makeStep("d7-chinatown", "14:45–15:30", "14:45", "15:30", "Chinatown / Nankinmachi", "Nankinmachi", "เดิน Chinatown, street food, snack เบา ๆ และถ่ายรูป", "https://maps.google.com/?q=Nankinmachi+Kobe", "แวะสั้น ๆ พอ", "แวะสั้น ๆ พอ เพราะมื้อ Kobe beef เพิ่งจบ ไม่ต้องกินหนัก"),
+      makeStep("d7-harbor", "15:45–18:00", "15:45", "18:00", "Harborland & Port Area", "Kobe Harborland / Kobe Port Tower", "waterfront walk, sunset, shopping เบา ๆ, cafe และ evening atmosphere", "https://maps.google.com/?q=Kobe+Harborland+Kobe+Port+Tower", "highlight ของวัน", "นี่คือ highlight ของ Kobe day ถ้าอากาศดีให้เก็บช่วงเย็นไว้ตรงนี้ เพราะ harbor atmosphere สวยที่สุดช่วง late afternoon → evening"),
+      makeStep("d7-return-osaka", "19:00–20:00", "19:00", "20:00", "Return to Osaka", "Swissôtel Nankai Osaka", "นั่ง Hanshin Line จาก Kobe-Sannomiya กลับ Osaka-Namba แล้วเดินกลับ Swissôtel", "https://maps.google.com/?q=Swissotel+Nankai+Osaka", "ขากลับง่ายเหมือนเดิม", "ขากลับง่ายเหมือนขาไป แตะ ICOCA นั่งยาว ถึง Namba ถ้ายังอยากดื่มต่อ ค่อยเลือกใกล้โรงแรม"),
+    ],
+  });
+
+  Object.assign(byId["day-8"], {
+    title: "Departure",
+    route: "Swissotel → KIX → TPE → BKK",
+    summary: "วันกลับบ้านที่แยกช่วงเช้า สนามบิน และไฟลต์ไว้ชัดเพื่อใช้งานจริงง่ายที่สุด",
+    events: [
+      makeStep("d8-slow-morning", "08:30–09:30", "08:30", "09:30", "Slow Morning", "Swissôtel Nankai Osaka", "ตื่น / pack / check-out", "https://maps.google.com/?q=Swissotel+Nankai+Osaka", "อย่าออกช้า", "อย่าออกช้าเกิน เพราะบิน BR131 เวลา 12:55"),
+      makeStep("d8-to-kix", "10:00–11:00", "10:00", "11:00", "To KIX", "Kansai International Airport", "Nankai Airport Express หรือ Limousine", "https://maps.google.com/?q=Kansai+International+Airport", "ออกจาก Namba ง่าย", "Swissôtel อยู่บน Nankai Namba จึงสะดวกมาก"),
+      makeStep("d8-flight-home", "12:55–23:30", "12:55", "23:30", "Flight Home", "Kansai International Airport", "BR131 KIX → TPE / BR205 TPE → BKK", "https://maps.google.com/?q=Kansai+International+Airport", "เผื่อของฝากเล็ก ๆ", "เผื่อซื้อของฝากเล็ก ๆ ที่สนามบินได้ แต่ไม่ควรฝาก shopping หลักไว้วันสุดท้าย"),
+    ],
+  });
+}
+
+applyApprovedDayDetails();
+
 let currentPageLang = DEFAULT_PAGE_LANG;
 let currentHelpLang = DEFAULT_HELP_LANG;
 let currentNoteId = null;
 let currentHelpId = "nut";
 let helpCopyResetTimer = null;
 let currentDetailDayId = null;
+let isQuickSectionsOpen = false;
 
 function t(key, lang = currentPageLang) {
   return I18N[lang]?.[key] ?? I18N.th[key] ?? key;
@@ -2628,22 +3095,16 @@ function containsThai(text = "") {
 
 function getLocalizedEventTitle(event, lang = currentPageLang) {
   if (event.titleI18n?.[lang]) return event.titleI18n[lang];
-  if (lang === "th") return event.title;
-  if (!containsThai(event.title || "")) return event.title;
-  const place = event.place || (lang === "ja" ? "予定" : lang === "zh" ? "行程" : "Activity");
-  if (lang === "ja") return `${place} の予定`;
-  if (lang === "zh") return `${place} 行程`;
-  return `${place} activity`;
+  return event.title;
 }
 
 function getLocalizedEventBlurb(event, lang = currentPageLang) {
   if (event.blurbI18n?.[lang]) return event.blurbI18n[lang];
-  if (lang === "th") return event.blurb;
-  if (!containsThai(event.blurb || "")) return event.blurb;
-  const title = getLocalizedEventTitle(event, lang);
-  if (lang === "ja") return `${title} の時間です。地図・公式サイト・ノートを使って、当日の流れに沿って進めてください。`;
-  if (lang === "zh") return `当前是 ${title} 时间。可使用地图、官网与备注，按当天节奏进行。`;
-  return `This is the time for ${title}. Use the map, website, and notes to follow the day's flow.`;
+  return event.blurb;
+}
+
+function getLocalizedEventNote(event, lang = currentPageLang) {
+  return event.note?.[lang] ?? event.note?.th ?? null;
 }
 
 function getDaySummaryText(day, lang = currentPageLang) {
@@ -2703,6 +3164,20 @@ function renderMobileQuickMenu() {
   if (!list) return;
   list.innerHTML = "";
 
+  const menuChip = document.createElement("button");
+  menuChip.type = "button";
+  menuChip.className = "quick-menu-chip quick-menu-chip-menu";
+  menuChip.dataset.quickAction = "menu";
+  menuChip.textContent = t("quickMenu.menu");
+  list.appendChild(menuChip);
+
+  const helpChip = document.createElement("button");
+  helpChip.type = "button";
+  helpChip.className = "quick-menu-chip quick-menu-chip-help";
+  helpChip.dataset.quickAction = "help";
+  helpChip.textContent = t("help.shortcut");
+  list.appendChild(helpChip);
+
   const todayChip = document.createElement("button");
   todayChip.type = "button";
   todayChip.className = "quick-menu-chip quick-menu-chip-today";
@@ -2727,12 +3202,75 @@ function renderMobileQuickMenu() {
     list.appendChild(chip);
   });
 
+  const langChip = document.createElement("button");
+  langChip.type = "button";
+  langChip.className = "quick-menu-chip quick-menu-chip-lang";
+  langChip.dataset.quickAction = "lang";
+  langChip.textContent = (PAGE_LANGUAGE_META[currentPageLang] ?? PAGE_LANGUAGE_META[DEFAULT_PAGE_LANG]).flag;
+  langChip.setAttribute("aria-label", `Language: ${(PAGE_LANGUAGE_META[currentPageLang] ?? PAGE_LANGUAGE_META[DEFAULT_PAGE_LANG]).label}`);
+  langChip.setAttribute("title", (PAGE_LANGUAGE_META[currentPageLang] ?? PAGE_LANGUAGE_META[DEFAULT_PAGE_LANG]).label);
+  list.appendChild(langChip);
+
   const sosChip = document.createElement("button");
   sosChip.type = "button";
   sosChip.className = "quick-menu-chip is-sos";
   sosChip.dataset.quickAction = "sos";
   sosChip.textContent = t("quickMenu.sos");
   list.appendChild(sosChip);
+
+  menuChip.classList.toggle("is-active", isQuickSectionsOpen);
+}
+
+function renderQuickSectionsPanel() {
+  const panel = document.querySelector("#quick-sections-panel");
+  const list = document.querySelector("#quick-sections-list");
+  if (!panel || !list) return;
+
+  const items = [
+    { key: "flights", icon: "✈", target: "#flights" },
+    { key: "overview", icon: "🗺", target: "#overview" },
+    { key: "intel", icon: "🧳", target: "#trip-intel" },
+    { key: "highlights", icon: "✦", target: "#chapters" },
+    { key: "dayDetails", icon: "🗓", target: "#day-details" },
+    { key: "transport", icon: "🚆", target: "#intel-transport" },
+    { key: "cash", icon: "💳", target: "#intel-cash-card" },
+    { key: "emergency", icon: "☎", target: "#contacts" },
+  ];
+
+  list.innerHTML = items
+    .map(
+      (item) => `
+        <button type="button" class="quick-sections-item" data-quick-section="${item.target}">
+          <span class="quick-sections-icon" aria-hidden="true">${item.icon}</span>
+          <span class="quick-sections-label">${t(`quickSections.${item.key}`)}</span>
+          <span class="quick-sections-arrow" aria-hidden="true">›</span>
+        </button>
+      `,
+    )
+    .join("");
+
+  panel.hidden = !isQuickSectionsOpen;
+  panel.classList.toggle("is-open", isQuickSectionsOpen);
+}
+
+function closeQuickSectionsPanel() {
+  if (!isQuickSectionsOpen) return;
+  isQuickSectionsOpen = false;
+  renderMobileQuickMenu();
+  renderQuickSectionsPanel();
+}
+
+function openQuickSectionsPanel() {
+  if (isQuickSectionsOpen) return;
+  closeFloatingLangMenu();
+  isQuickSectionsOpen = true;
+  renderMobileQuickMenu();
+  renderQuickSectionsPanel();
+}
+
+function toggleQuickSectionsPanel() {
+  if (isQuickSectionsOpen) closeQuickSectionsPanel();
+  else openQuickSectionsPanel();
 }
 
 function renderDetailSummary(day) {
@@ -2749,17 +3287,20 @@ function renderDetailSummary(day) {
         <div class="day5-plan-grid">
           ${Object.values(day.plans)
             .map(
-              (plan) => `
+              (plan) => {
+                const planKey = plan.id === "uji" ? "planA" : "planB";
+                return `
               <button
                 type="button"
                 class="day5-plan-pill${plan.id === selectedPlanId ? " is-active" : ""}"
                 data-day5-plan="${plan.id}"
               >
-                <span>${t(`day5.switcher.${plan.id === "gamba" ? "planA" : "planB"}`)}</span>
-                <strong>${t(`day5.switcher.${plan.id === "gamba" ? "planA.title" : "planB.title"}`)}</strong>
+                <span>${t(`day5.switcher.${planKey}`)}</span>
+                <strong>${t(`day5.switcher.${planKey}.title`)}</strong>
                 <small>${plan.moodI18n?.[currentPageLang] ?? ""}</small>
                 <em>${plan.costI18n?.[currentPageLang] ?? ""}</em>
-              </button>`,
+              </button>`;
+              },
             )
             .join("")}
         </div>
@@ -2877,10 +3418,67 @@ function getEventDurationLabel(event) {
   return `${minutes}m`;
 }
 
-function createDetailCard(event) {
+function getEventCategoryTag(event) {
+  const source = `${event.id} ${event.place} ${event.title}`.toLowerCase();
+  if (source.includes("transit") || source.includes("transfer") || source.includes("เดินทาง") || source.includes("return")) {
+    return { th: "การเดินทาง", en: "Transit", ja: "移動", zh: "交通" }[currentPageLang];
+  }
+  if (
+    source.includes("lunch") ||
+    source.includes("dinner") ||
+    source.includes("coffee") ||
+    source.includes("cafe") ||
+    source.includes("ramen") ||
+    source.includes("izakaya") ||
+    source.includes("beer") ||
+    source.includes("wine") ||
+    source.includes("อาหาร") ||
+    source.includes("มื้อ")
+  ) {
+    return { th: "อาหาร / คาเฟ่", en: "Food / Cafe", ja: "食事 / カフェ", zh: "餐饮 / 咖啡" }[currentPageLang];
+  }
+  if (source.includes("shrine") || source.includes("jinja") || source.includes("temple") || source.includes("寺") || source.includes("ศาลเจ้า") || source.includes("วัด")) {
+    return { th: "ศาลเจ้า / วัด", en: "Shrine / Temple", ja: "寺社", zh: "神社 / 寺院" }[currentPageLang];
+  }
+  if (
+    source.includes("walk") ||
+    source.includes("park") ||
+    source.includes("castle") ||
+    source.includes("river") ||
+    source.includes("garden") ||
+    source.includes("shopping") ||
+    source.includes("outlets") ||
+    source.includes("shinsekai")
+  ) {
+    return { th: "เดินเล่น / เมือง", en: "Walk / City", ja: "散策 / 街歩き", zh: "散步 / 城市" }[currentPageLang];
+  }
+  return { th: "ช่วงของวัน", en: "Day Step", ja: "その日の流れ", zh: "当天步骤" }[currentPageLang];
+}
+
+function getEventTagList(event) {
+  const tags = [getEventCategoryTag(event)];
+  const duration = getEventDurationLabel(event);
+  if (duration) tags.push(duration);
+  if (event.place && !["Transit", "Night"].includes(event.place)) tags.push(event.place);
+  return tags.slice(0, 3);
+}
+
+function eventHasNote(event) {
+  return Boolean(event.note || NOTE_COPY[event.id]);
+}
+
+function getStepLabel(index) {
+  if (currentPageLang === "th") return `Step ${index}`;
+  if (currentPageLang === "ja") return `Step ${index}`;
+  if (currentPageLang === "zh") return `Step ${index}`;
+  return `Step ${index}`;
+}
+
+function createDetailCard(event, index) {
   const article = document.createElement("article");
   const localizedTitle = getLocalizedEventTitle(event, currentPageLang);
   const localizedBlurb = getLocalizedEventBlurb(event, currentPageLang);
+  const localizedNote = getLocalizedEventNote(event, currentPageLang);
   article.className = "detail-card";
   article.dataset.cardId = event.id;
   article.dataset.start = event.start;
@@ -2888,8 +3486,10 @@ function createDetailCard(event) {
   article.dataset.title = localizedTitle;
   const duration = getEventDurationLabel(event);
   const icon = getEventIcon(event);
+  const tags = getEventTagList(event);
   article.innerHTML = `
     <div class="detail-time">
+      <em>${getStepLabel(index + 1)}</em>
       <strong>${event.time}</strong>
       ${duration ? `<span>${duration}</span>` : ""}
     </div>
@@ -2897,16 +3497,25 @@ function createDetailCard(event) {
     <div class="detail-card-body">
       <div class="detail-card-top">
         <div>
-          <p class="detail-eyebrow">${event.place}</p>
+          <p class="detail-eyebrow">${currentPageLang === "th" ? "Google Maps" : currentPageLang === "ja" ? "Google Maps" : currentPageLang === "zh" ? "Google 地图" : "Google Maps"}</p>
           <h3>${localizedTitle}</h3>
         </div>
         <span class="detail-place">${event.place}</span>
       </div>
-      <p class="detail-copy">${localizedBlurb}</p>
+      <p class="detail-location"><strong>${currentPageLang === "th" ? "Location" : currentPageLang === "ja" ? "場所" : currentPageLang === "zh" ? "地点" : "Location"}</strong><span>${event.place}</span></p>
+      <p class="detail-copy"><strong>${currentPageLang === "th" ? "Plan" : currentPageLang === "ja" ? "予定" : currentPageLang === "zh" ? "安排" : "Plan"}</strong><span>${localizedBlurb}</span></p>
+      ${
+        localizedNote
+          ? `<div class="detail-note-snippet"><strong>${currentPageLang === "th" ? "Note" : currentPageLang === "ja" ? "メモ" : currentPageLang === "zh" ? "备注" : "Note"}</strong><p>${localizedNote.body}</p></div>`
+          : ""
+      }
+      <div class="detail-tags">
+        ${tags.map((tag) => `<span>${tag}</span>`).join("")}
+      </div>
       <div class="detail-actions">
         <a href="${event.map}" target="_blank" rel="noreferrer" class="action-map">${t("actions.map")}</a>
         ${event.website ? `<a href="${event.website}" target="_blank" rel="noreferrer" class="action-site">${t("actions.website")}</a>` : ""}
-        <button type="button" class="js-open-note" data-note-id="${event.id}">${t("actions.notes")}</button>
+        ${eventHasNote(event) ? `<button type="button" class="js-open-note" data-note-id="${event.id}">${t("actions.notes")}</button>` : ""}
       </div>
     </div>
   `;
@@ -2917,14 +3526,15 @@ function renderDetailTimeline(day) {
   const timeline = document.querySelector("#detail-timeline");
   if (!timeline) return;
   timeline.innerHTML = "";
-  day.events.forEach((event) => {
-    timeline.appendChild(createDetailCard(event));
+  day.events.forEach((event, index) => {
+    timeline.appendChild(createDetailCard(event, index));
   });
 }
 
 function renderDetailExplorer() {
   const day = getCurrentDayData();
   renderMobileQuickMenu();
+  renderQuickSectionsPanel();
   renderDetailPicker();
   renderDetailSummary(day);
   renderDetailTimeline(day);
@@ -2936,16 +3546,23 @@ function updatePageLangButton(lang) {
   const toggle = document.querySelector("#page-lang-toggle");
   const flag = menu?.querySelector(".page-lang-current .page-lang-flag");
   const code = menu?.querySelector(".page-lang-current .page-lang-code");
+  const floatingChip = document.querySelector('.quick-menu-chip[data-quick-action="lang"]');
   const meta = PAGE_LANGUAGE_META[lang] ?? PAGE_LANGUAGE_META[DEFAULT_PAGE_LANG];
   if (!menu || !toggle || !flag || !code) return;
 
   flag.textContent = meta.flag;
   code.textContent = meta.code;
   toggle.setAttribute("aria-label", `Language: ${meta.label}`);
+  if (floatingChip) {
+    floatingChip.textContent = meta.flag;
+    floatingChip.setAttribute("aria-label", `Language: ${meta.label}`);
+    floatingChip.setAttribute("title", meta.label);
+  }
   setActiveButtonState(".page-lang-option", lang, "data-lang");
+  setActiveButtonState(".floating-lang-option", lang, "data-lang");
 }
 
-function closePageLangMenu() {
+function closeHeaderLangMenu() {
   const menu = document.querySelector("#page-lang-menu");
   const toggle = document.querySelector("#page-lang-toggle");
   const options = document.querySelector("#page-lang-options");
@@ -2955,23 +3572,74 @@ function closePageLangMenu() {
   options.hidden = true;
 }
 
-function openPageLangMenu() {
+function openHeaderLangMenu() {
   const menu = document.querySelector("#page-lang-menu");
   const toggle = document.querySelector("#page-lang-toggle");
   const options = document.querySelector("#page-lang-options");
   if (!menu || !toggle || !options) return;
+  closeQuickSectionsPanel();
+  closeFloatingLangMenu();
   menu.classList.add("is-open");
   toggle.setAttribute("aria-expanded", "true");
   options.hidden = false;
 }
 
-function togglePageLangMenu() {
+function toggleHeaderLangMenu() {
   const toggle = document.querySelector("#page-lang-toggle");
   const options = document.querySelector("#page-lang-options");
   const isExpanded = toggle?.getAttribute("aria-expanded") === "true";
   const isHidden = options?.hidden !== false;
-  if (isExpanded || !isHidden) closePageLangMenu();
-  else openPageLangMenu();
+  if (isExpanded || !isHidden) closeHeaderLangMenu();
+  else openHeaderLangMenu();
+}
+
+function positionFloatingLangMenu() {
+  const trigger = document.querySelector('.quick-menu-chip[data-quick-action="lang"]');
+  const options = document.querySelector("#floating-lang-options");
+  const card = document.querySelector(".quick-menu-card");
+  if (!trigger || !options || !card) return;
+
+  const triggerRect = trigger.getBoundingClientRect();
+  const cardRect = card.getBoundingClientRect();
+  const optionWidth = Math.min(190, cardRect.width - 20);
+  const top = triggerRect.bottom - cardRect.top + 8;
+  const left = Math.min(Math.max(10, triggerRect.left - cardRect.left), Math.max(10, cardRect.width - optionWidth - 10));
+
+  options.style.top = `${top}px`;
+  options.style.left = `${left}px`;
+  options.style.minWidth = `${optionWidth}px`;
+}
+
+function closeFloatingLangMenu() {
+  const options = document.querySelector("#floating-lang-options");
+  const trigger = document.querySelector('.quick-menu-chip[data-quick-action="lang"]');
+  if (!options) return;
+  options.hidden = true;
+  options.removeAttribute("style");
+  trigger?.setAttribute("aria-expanded", "false");
+}
+
+function openFloatingLangMenu() {
+  const options = document.querySelector("#floating-lang-options");
+  const trigger = document.querySelector('.quick-menu-chip[data-quick-action="lang"]');
+  if (!options || !trigger) return;
+  closeQuickSectionsPanel();
+  closeHeaderLangMenu();
+  options.hidden = false;
+  trigger.setAttribute("aria-expanded", "true");
+  positionFloatingLangMenu();
+}
+
+function toggleFloatingLangMenu() {
+  const options = document.querySelector("#floating-lang-options");
+  if (!options) return;
+  if (options.hidden) openFloatingLangMenu();
+  else closeFloatingLangMenu();
+}
+
+function closeAllLangMenus() {
+  closeHeaderLangMenu();
+  closeFloatingLangMenu();
 }
 
 function applyTranslations(lang) {
@@ -3228,39 +3896,91 @@ function initHelpMode() {
 function initLanguageSwitcher() {
   const menu = document.querySelector("#page-lang-menu");
   const toggle = document.querySelector("#page-lang-toggle");
-  const options = document.querySelector("#page-lang-options");
-  if (!menu || !toggle || !options) return;
+  const headerOptions = document.querySelector("#page-lang-options");
+  const floatingOptions = document.querySelector("#floating-lang-options");
+  const quickMenuCard = document.querySelector(".quick-menu-card");
+  const quickMenuList = document.querySelector("#quick-menu-chip-list");
+  const quickSectionsPanel = document.querySelector("#quick-sections-panel");
+  const quickSectionsList = document.querySelector("#quick-sections-list");
+  if (!menu || !toggle || !headerOptions) return;
 
   toggle.addEventListener("click", (event) => {
     event.preventDefault();
     event.stopPropagation();
-    togglePageLangMenu();
+    toggleHeaderLangMenu();
   });
 
-  options.addEventListener("click", (event) => {
+  headerOptions.addEventListener("click", (event) => {
     event.stopPropagation();
   });
 
-  options.querySelectorAll(".page-lang-option").forEach((button) => {
+  headerOptions.querySelectorAll(".page-lang-option").forEach((button) => {
     button.addEventListener("click", (event) => {
       event.preventDefault();
       event.stopPropagation();
       const lang = button.dataset.lang || DEFAULT_PAGE_LANG;
       applyTranslations(lang);
-      closePageLangMenu();
+      closeAllLangMenus();
     });
   });
 
+  floatingOptions?.addEventListener("click", (event) => {
+    event.stopPropagation();
+  });
+
+  floatingOptions?.querySelectorAll(".floating-lang-option").forEach((button) => {
+    button.addEventListener("click", (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+      const lang = button.dataset.lang || DEFAULT_PAGE_LANG;
+      applyTranslations(lang);
+      closeAllLangMenus();
+    });
+  });
+
+  quickSectionsPanel?.addEventListener("click", (event) => {
+    event.stopPropagation();
+  });
+
+  quickSectionsList?.addEventListener("click", (event) => {
+    const item = event.target.closest("[data-quick-section]");
+    if (!item) return;
+    const target = document.querySelector(item.dataset.quickSection);
+    closeQuickSectionsPanel();
+    target?.scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+
   document.addEventListener("click", (event) => {
-    if (!menu.contains(event.target)) closePageLangMenu();
+    if (toggle.contains(event.target)) return;
+    if (event.target.closest('.quick-menu-chip[data-quick-action="lang"]')) return;
+    if (event.target.closest('.quick-menu-chip[data-quick-action="menu"]')) return;
+    if (menu.contains(event.target) || floatingOptions?.contains(event.target) || quickSectionsPanel?.contains(event.target)) return;
+    closeAllLangMenus();
+    closeQuickSectionsPanel();
   });
 
   document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape") closePageLangMenu();
+    if (event.key === "Escape") {
+      closeAllLangMenus();
+      closeQuickSectionsPanel();
+    }
   });
 
+  window.addEventListener("resize", () => {
+    if (!floatingOptions?.hidden) positionFloatingLangMenu();
+  }, { passive: true });
+  window.addEventListener("scroll", () => {
+    if (!floatingOptions?.hidden) positionFloatingLangMenu();
+  }, { passive: true });
+  quickMenuList?.addEventListener("scroll", () => {
+    if (!floatingOptions?.hidden) positionFloatingLangMenu();
+  }, { passive: true });
+  quickMenuCard?.addEventListener("scroll", () => {
+    if (!floatingOptions?.hidden) positionFloatingLangMenu();
+  }, { passive: true });
+
   updatePageLangButton(getSavedLanguage());
-  closePageLangMenu();
+  closeAllLangMenus();
 }
 
 function initThemeToggle() {
@@ -3292,11 +4012,30 @@ function initDetailExplorer() {
     const quickChip = event.target.closest(".quick-menu-chip");
     if (quickChip) {
       const action = quickChip.dataset.quickAction;
+      if (action === "menu") {
+        event.preventDefault();
+        event.stopImmediatePropagation();
+        toggleQuickSectionsPanel();
+        return;
+      }
+      if (action === "help") {
+        closeQuickSectionsPanel();
+        document.querySelector("[data-open-help][data-help-id='nut']")?.click();
+        return;
+      }
+      if (action === "lang") {
+        event.preventDefault();
+        event.stopImmediatePropagation();
+        toggleFloatingLangMenu();
+        return;
+      }
       if (action === "sos") {
+        closeQuickSectionsPanel();
         document.querySelector("#contacts")?.scrollIntoView({ behavior: "smooth", block: "start" });
         return;
       }
       if (action === "today") {
+        closeQuickSectionsPanel();
         const now = new Date();
         const matchedToday = PROTOTYPE_DAYS.find((day) => getDateKey(now, day.timeZone) === day.dateIso);
         if (matchedToday) {
@@ -3308,6 +4047,7 @@ function initDetailExplorer() {
         return;
       }
       if (quickChip.dataset.dayId) {
+        closeQuickSectionsPanel();
         currentDetailDayId = quickChip.dataset.dayId;
         localStorage.setItem(DETAIL_DAY_STORAGE_KEY, currentDetailDayId);
         renderDetailExplorer();
